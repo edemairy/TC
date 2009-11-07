@@ -50,12 +50,14 @@ class Mission {
     bool   isWorst;
     int    treated;
     int    untreated;
+    static bool orderMission( const MedicalEvent& e1, const MedicalEvent& e2) {
+        return (e1.mid < e2.mid);
+    }
 };
 
 set<MedicalResource, MedicalResource::orderRid > medicalResources;
 set<MedicalEvent, MedicalResource::orderRid >    medicalEvents;
-
-
+set<Mission>                                     missions;
 
 vector <string> SpaceMedkit::getMedkit(
             vector <string> availableResources,
@@ -64,5 +66,10 @@ vector <string> SpaceMedkit::getMedkit(
             double P,
             double C)
 {
+  //fillMedicalResources( availableResources );
+  //fillEvents(           requiredResources  );
+  //fillMissions(         missions           );
+  vector<string> result;
+  return result;
 }
 
