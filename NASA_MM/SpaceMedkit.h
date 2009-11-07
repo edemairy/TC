@@ -2,6 +2,7 @@
 
 #include <string>
 #include <vector>
+#include <set>
 using namespace std;
 
 class SpaceMedkit {
@@ -26,9 +27,11 @@ class MedicalResource {
     bool   isConsumable;
     int    mass;
     int    volume;
-    static bool orderRid( const MedicalResource& r1, const MedicalResource& r2) {
+    struct orderRid {
+      bool operator()( const MedicalResource& r1, const MedicalResource& r2) {
         return (r1.rid < r2.rid);
-    }
+      }
+    };
 };
 
 
@@ -37,9 +40,11 @@ class MedicalEvent {
     string mid;
     int    best;
     int    worst;
-    static bool orderRid( const MedicalEvent& e1, const MedicalEvent& e2) {
+    struct  orderRid {
+      bool operator()( const MedicalEvent& e1, const MedicalEvent& e2) {
         return (e1.mid < e2.mid);
-    }
+      }
+    };
 };
 
 class Mission {
@@ -50,9 +55,11 @@ class Mission {
     bool   isWorst;
     int    treated;
     int    untreated;
-    static bool orderMission( const MedicalEvent& e1, const MedicalEvent& e2) {
+    struct orderMission{
+      bool operator()( const MedicalEvent& e1, const MedicalEvent& e2) {
         return (e1.mid < e2.mid);
-    }
+      }
+    };
 };
 
 set<MedicalResource, MedicalResource::orderRid > medicalResources;
