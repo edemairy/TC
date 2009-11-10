@@ -1,1 +1,1 @@
-java -jar Tester.jar /user/edemairy/home/Personnel/TC/NASA_MM/build/SpaceMedKit 1
+java -jar Tester.jar "valgrind --tool=callgrind --dump-instr=yes --simulate-cache=yes `pwd`/build/SpaceMedKit" 1
