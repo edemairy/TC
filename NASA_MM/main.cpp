@@ -47,10 +47,10 @@ int main(int argc, char** argv) {
 
   SpaceMedkit spaceMedKit;
   vector<string> output = spaceMedKit.getMedkit(availableResources, requiredResources, missions, P, C);
-  cout << output.size();
+  cout << output.size() << endl;
   STATUS( output.size() );
   for(int i = 0; i < output.size(); i++){
-    cout << output[i];
+    cout << output[i] << endl;
     STATUS( output[i] );
   }
 }
