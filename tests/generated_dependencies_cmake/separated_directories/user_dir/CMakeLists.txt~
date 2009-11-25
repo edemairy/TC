@@ -1,0 +1,15 @@
+#project(main_program)
+
+add_executable(hello 
+  ${CMAKE_BINARY_DIR}/main.cpp
+)
+
+#set_source_files_properties( 
+#  ${CMAKE_BINARY_DIR}/main.cpp
+#  PROPERTIES GENERATED true 
+#)
+
+#add_custom_command(
+#  TARGET hello
+#  COMMAND rm ${CMAKE_BINARY_DIR}/main.cpp
+#)

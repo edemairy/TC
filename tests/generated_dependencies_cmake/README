@@ -1,0 +1,3 @@
+Test pour comprendre comment fonctionne les dépendances avec des fichiers générés. 
+(cause : problème dans sup récurrent avec context.h)
+
