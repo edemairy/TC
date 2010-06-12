@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="Planarity" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="C:/Users/edemairy/TC/planarity/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile all" />
+            <CompileFile command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile &quot;$file&quot;" />
+            <Clean command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile clean" />
+            <DistClean command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="Planarity">
+         <Option output="C:/Users/edemairy/TC/planarity/qtcreator-build/Planarity.exe" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="C:/Users/edemairy/TC/planarity/qtcreator-build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+         </Compiler>
+         <MakeCommands>
+            <Build command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile Planarity" />
+            <CompileFile command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile &quot;$file&quot;" />
+            <Clean command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile clean" />
+            <DistClean command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="Planarity/fast">
+         <Option output="C:/Users/edemairy/TC/planarity/qtcreator-build/Planarity.exe" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="C:/Users/edemairy/TC/planarity/qtcreator-build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+         </Compiler>
+         <MakeCommands>
+            <Build command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile Planarity/fast" />
+            <CompileFile command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile &quot;$file&quot;" />
+            <Clean command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile clean" />
+            <DistClean command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="C:/Users/edemairy/TC/planarity/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile edit_cache" />
+            <CompileFile command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile &quot;$file&quot;" />
+            <Clean command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile clean" />
+            <DistClean command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="C:/Users/edemairy/TC/planarity/qtcreator-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile rebuild_cache" />
+            <CompileFile command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile &quot;$file&quot;" />
+            <Clean command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile clean" />
+            <DistClean command="C:/Qt/qtcreator-1.3.0/mingw/bin/mingw32-make.exe -f C:/Users/edemairy/TC/planarity/qtcreator-build/Makefile clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="C:/Users/edemairy/TC/planarity/Planarity.cpp">
+      </Unit>
+      <Unit filename="C:/Users/edemairy/TC/planarity/main.cpp">
+      </Unit>
+      <Unit filename="C:/Users/edemairy/TC/planarity/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>
