@@ -1,44 +1,28 @@
-#include "StreetSales.h" 
+#include <QObject>
 #include <iostream>
 #include <sstream>
+#include <cassert>
 using namespace std;
+#include <QApplication>
+#include "gridviewer.h"
+#include <QSemaphore>
+#include "mainProcessingThread.h"
 
+QSemaphore semaphore;
+extern vector<string> districtMap;
+GridViewer* grid;
 
-template <class T>
-T readLine() {
-  T result;
-  string nbElementsString;
-  getline( cin, nbElementsString );
-  istringstream is( nbElementsString );
-  is >> result;
-}
 
 int main( int argc, char** argv ) {
-    StreetSales streetsales;
-    int H = readLine<int>();
-    vector<string> districtMap(H);
-    for (int i=0; i<H; i++)
-        districtMap[i] = readLine<string>();
-    int W = districtMap[0].size();
-    int G = readLine<int>();
-    vector<int> warehousePrices(G);
-    for (int i=0; i<G; i++)
-        warehousePrices[i] = readLine<int>();
-    int C = readLine<int>();
-    int S = readLine<int>();
-    streetsales.init(districtMap, warehousePrices, C, S);
+   qRegisterMetaType<vector<string> >("vector<string>");
 
-   for (int day=0; day < 3000; day++)
-   {
-       vector<int> visitedHouses(H*W);
-       for (int i=0; i < H*W; i++)
-           visitedHouses[i] = readLine<int>();
-       vector<string> route = streetsales.dayTrade(visitedHouses);
-       int r = route.size();
-       cout << r << endl;
-       for (int i=0; i < r; i++)
-           cout << route[i] << endl;
-   }
-
-   cout << flush;
+   QThread* thread = new MainProcessingThread( );
+   thread->start();
+  // thread->exec();
+   QApplication* app = new QApplication( argc, argv );
+   semaphore.acquire();
+   grid = new GridViewer(districtMap);
+   QObject::connect( thread, SIGNAL(sendPath(vector<string>)), grid, SLOT(sendPath(vector<string>))); //, Qt::QueuedConnection );
+   grid->show();
+   app->exec();
 }
