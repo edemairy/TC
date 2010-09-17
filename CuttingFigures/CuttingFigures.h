@@ -6,6 +6,7 @@
 #include <map>
 #include <bitset>
 #include <set>
+#include <cstdlib>
 
 using namespace std;
 
@@ -16,11 +17,14 @@ struct CuttingFigures {
     int K;
     int orderCount;
     int processedOrders;
+    int threshold;
     map<int, vector<bool> > plate;
     /*!
         \return Value ignored.
     */
     int init( vector<string> i_plate, int i_K, int i_orderCnt ) {
+        char* charThreshold = getenv("THRESHOLD");
+        threshold = atoi( charThreshold );
         K = i_K;
         orderCount = i_orderCnt;
         H = i_plate.size();
@@ -39,7 +43,8 @@ struct CuttingFigures {
     vector<int>  processOrder( vector<string> i_figure, int i_income ) {
 
         vector<int> result(0);
-        if (i_income < 50) return result;
+
+        if (i_income < threshold ) return result;
         set<vector<int> > possible_result;
 
         int fh = i_figure.size();

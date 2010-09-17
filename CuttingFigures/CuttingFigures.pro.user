@@ -57,6 +57,7 @@
   <valuemap type="QVariantMap">
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
    <value key="QtVersionId" type="int">0</value>
+   <value key="ToolChain" type="int">0</value>
    <value key="buildConfiguration" type="int">2</value>
   </valuemap>
  </data>
@@ -74,68 +75,59 @@
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList">
     <value type="QString">CVS_RSH=ssh</value>
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-pGK9K2dnJS,guid=17b2798aea7b793c337db63f4c8f0998</value>
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-6a4bZma72R,guid=495b29cad378a2020104325300000053</value>
     <value type="QString">DESKTOP_SESSION=kde</value>
-    <value type="QString">DISABLE_IMSETTINGS=1</value>
     <value type="QString">DISPLAY=:0</value>
-    <value type="QString">DRY_RUN=1</value>
     <value type="QString">EDITOR=vi</value>
     <value type="QString">GDMSESSION=kde</value>
     <value type="QString">GDM_KEYBOARD_LAYOUT=us	intl</value>
     <value type="QString">GDM_LANG=en_US.UTF-8</value>
-    <value type="QString">GNOME_KEYRING_PID=2571</value>
-    <value type="QString">GNOME_KEYRING_SOCKET=/tmp/keyring-96AQjt/socket</value>
-    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-EJ4Z3J/S.gpg-agent:2684:1</value>
+    <value type="QString">GNOME_KEYRING_CONTROL=/tmp/keyring-AGhsRd</value>
+    <value type="QString">GNOME_KEYRING_PID=1594</value>
+    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-Pa7NZA/S.gpg-agent:1658:1</value>
     <value type="QString">GS_LIB=</value>
-    <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/user/edemairy/home/.gtkrc-2.0::/home/edemairy/.kde/share/config/gtkrc-2.0</value>
-    <value type="QString">GTK_IM_MODULE=gtk-im-context-simple</value>
-    <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/user/edemairy/home/.gtkrc::/home/edemairy/.kde/share/config/gtkrc</value>
+    <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/edemairy/.gtkrc-2.0::/home/edemairy/.kde/share/config/gtkrc-2.0</value>
+    <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/home/edemairy/.gtkrc::/home/edemairy/.kde/share/config/gtkrc</value>
     <value type="QString">G_BROKEN_FILENAMES=1</value>
-    <value type="QString">HISTCONTROL=ignoreboth</value>
+    <value type="QString">HISTCONTROL=ignoredups</value>
     <value type="QString">HISTSIZE=1000</value>
-    <value type="QString">HOME=/user/edemairy/home</value>
-    <value type="QString">HOSTNAME=pan.inria.fr</value>
-    <value type="QString">IMSETTINGS_INTEGRATE_DESKTOP=yes</value>
-    <value type="QString">IMSETTINGS_MODULE=none</value>
+    <value type="QString">HOME=/home/edemairy</value>
+    <value type="QString">HOSTNAME=microscopium</value>
     <value type="QString">KDEDIRS=/usr</value>
     <value type="QString">KDE_FULL_SESSION=true</value>
     <value type="QString">KDE_IS_PRELINKED=1</value>
     <value type="QString">KDE_MULTIHEAD=false</value>
     <value type="QString">KDE_SESSION_UID=1505</value>
     <value type="QString">KDE_SESSION_VERSION=4</value>
-    <value type="QString">KMIX_PULSEAUDIO_DISABLE=1</value>
     <value type="QString">LANG=en_US.UTF-8</value>
     <value type="QString">LANGUAGE=</value>
     <value type="QString">LESSOPEN=|/usr/bin/lesspipe.sh %s</value>
     <value type="QString">LOGNAME=edemairy</value>
     <value type="QString">MAIL=/var/spool/mail/edemairy</value>
-    <value type="QString">MAKEFLAGS=-j4</value>
     <value type="QString">PATH=/usr/lib/qt4/bin:/usr/lib/qt-3.3/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/lib/ccache:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin</value>
     <value type="QString">PWD=/home/edemairy</value>
     <value type="QString">QTDIR=/usr/lib/qt4</value>
     <value type="QString">QTINC=/usr/lib/qt-3.3/include</value>
     <value type="QString">QTLIB=/usr/lib/qt-3.3/lib</value>
-    <value type="QString">QT_IM_MODULE=xim</value>
-    <value type="QString">QT_PLUGIN_PATH=/user/edemairy/home/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString">SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2770,unix/unix:/tmp/.ICE-unix/2770</value>
+    <value type="QString">QT_PLUGIN_PATH=/home/edemairy/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
+    <value type="QString">SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/1704,unix/unix:/tmp/.ICE-unix/1704</value>
     <value type="QString">SHELL=/bin/bash</value>
     <value type="QString">SHLVL=2</value>
-    <value type="QString">SSH_AGENT_PID=2635</value>
+    <value type="QString">SSH_AGENT_PID=1617</value>
     <value type="QString">SSH_ASKPASS=/usr/bin/ksshaskpass</value>
-    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-AJQOvJ2578/agent.2578</value>
-    <value type="QString">TERM=dumb</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-YZEKvU1601/agent.1601</value>
     <value type="QString">USER=edemairy</value>
     <value type="QString">USERNAME=edemairy</value>
-    <value type="QString">XAUTHORITY=/var/run/gdm/auth-for-edemairy-wlDh33/database</value>
+    <value type="QString">WINDOWPATH=1</value>
+    <value type="QString">XAUTHORITY=/var/run/gdm/auth-for-edemairy-Qd6nCg/database</value>
     <value type="QString">XCURSOR_THEME=default</value>
     <value type="QString">XDG_DATA_DIRS=/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share</value>
     <value type="QString">XDG_MENU_PREFIX=kde4-</value>
-    <value type="QString">XDG_SESSION_COOKIE=e383cdbec1a9a85aa13e090047692084-1284442520.420798-1194333076</value>
-    <value type="QString">XMODIFIERS=@im=none</value>
+    <value type="QString">XDG_SESSION_COOKIE=3486301e827b453942cdd7414ad31b00-1284655758.330395-70688725</value>
     <value type="QString">_=/usr/libexec/kde4/start_kdeinit_wrapper</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList">
-    <value type="QString">/home/edemairy/Dropbox/personnel/TC/CuttingFigures/CuttingFigures.pro</value>
+    <value type="QString">/home/edemairy/Dropbox/personnel/devel/TC/CuttingFigures/CuttingFigures.pro</value>
     <value type="QString">-spec</value>
     <value type="QString">linux-g++</value>
     <value type="QString">-r</value>
@@ -143,7 +135,7 @@
    </valuelist>
    <value key="abstractProcess.command" type="QString">/usr/bin/qmake-qt4</value>
    <value key="abstractProcess.enabled" type="bool">false</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/edemairy/Dropbox/personnel/TC/CuttingFigures</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/edemairy/Dropbox/personnel/devel/TC/CuttingFigures</value>
   </valuemap>
  </data>
  <data>
@@ -152,64 +144,55 @@
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList">
     <value type="QString">CVS_RSH=ssh</value>
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-pGK9K2dnJS,guid=17b2798aea7b793c337db63f4c8f0998</value>
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-6a4bZma72R,guid=495b29cad378a2020104325300000053</value>
     <value type="QString">DESKTOP_SESSION=kde</value>
-    <value type="QString">DISABLE_IMSETTINGS=1</value>
     <value type="QString">DISPLAY=:0</value>
-    <value type="QString">DRY_RUN=1</value>
     <value type="QString">EDITOR=vi</value>
     <value type="QString">GDMSESSION=kde</value>
     <value type="QString">GDM_KEYBOARD_LAYOUT=us	intl</value>
     <value type="QString">GDM_LANG=en_US.UTF-8</value>
-    <value type="QString">GNOME_KEYRING_PID=2571</value>
-    <value type="QString">GNOME_KEYRING_SOCKET=/tmp/keyring-96AQjt/socket</value>
-    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-EJ4Z3J/S.gpg-agent:2684:1</value>
+    <value type="QString">GNOME_KEYRING_CONTROL=/tmp/keyring-AGhsRd</value>
+    <value type="QString">GNOME_KEYRING_PID=1594</value>
+    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-Pa7NZA/S.gpg-agent:1658:1</value>
     <value type="QString">GS_LIB=</value>
-    <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/user/edemairy/home/.gtkrc-2.0::/home/edemairy/.kde/share/config/gtkrc-2.0</value>
-    <value type="QString">GTK_IM_MODULE=gtk-im-context-simple</value>
-    <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/user/edemairy/home/.gtkrc::/home/edemairy/.kde/share/config/gtkrc</value>
+    <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/edemairy/.gtkrc-2.0::/home/edemairy/.kde/share/config/gtkrc-2.0</value>
+    <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/home/edemairy/.gtkrc::/home/edemairy/.kde/share/config/gtkrc</value>
     <value type="QString">G_BROKEN_FILENAMES=1</value>
-    <value type="QString">HISTCONTROL=ignoreboth</value>
+    <value type="QString">HISTCONTROL=ignoredups</value>
     <value type="QString">HISTSIZE=1000</value>
-    <value type="QString">HOME=/user/edemairy/home</value>
-    <value type="QString">HOSTNAME=pan.inria.fr</value>
-    <value type="QString">IMSETTINGS_INTEGRATE_DESKTOP=yes</value>
-    <value type="QString">IMSETTINGS_MODULE=none</value>
+    <value type="QString">HOME=/home/edemairy</value>
+    <value type="QString">HOSTNAME=microscopium</value>
     <value type="QString">KDEDIRS=/usr</value>
     <value type="QString">KDE_FULL_SESSION=true</value>
     <value type="QString">KDE_IS_PRELINKED=1</value>
     <value type="QString">KDE_MULTIHEAD=false</value>
     <value type="QString">KDE_SESSION_UID=1505</value>
     <value type="QString">KDE_SESSION_VERSION=4</value>
-    <value type="QString">KMIX_PULSEAUDIO_DISABLE=1</value>
     <value type="QString">LANG=en_US.UTF-8</value>
     <value type="QString">LANGUAGE=</value>
     <value type="QString">LESSOPEN=|/usr/bin/lesspipe.sh %s</value>
     <value type="QString">LOGNAME=edemairy</value>
     <value type="QString">MAIL=/var/spool/mail/edemairy</value>
-    <value type="QString">MAKEFLAGS=-j4</value>
     <value type="QString">PATH=/usr/lib/qt4/bin:/usr/lib/qt-3.3/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/lib/ccache:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin</value>
     <value type="QString">PWD=/home/edemairy</value>
     <value type="QString">QTDIR=/usr/lib/qt4</value>
     <value type="QString">QTINC=/usr/lib/qt-3.3/include</value>
     <value type="QString">QTLIB=/usr/lib/qt-3.3/lib</value>
-    <value type="QString">QT_IM_MODULE=xim</value>
-    <value type="QString">QT_PLUGIN_PATH=/user/edemairy/home/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString">SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2770,unix/unix:/tmp/.ICE-unix/2770</value>
+    <value type="QString">QT_PLUGIN_PATH=/home/edemairy/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
+    <value type="QString">SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/1704,unix/unix:/tmp/.ICE-unix/1704</value>
     <value type="QString">SHELL=/bin/bash</value>
     <value type="QString">SHLVL=2</value>
-    <value type="QString">SSH_AGENT_PID=2635</value>
+    <value type="QString">SSH_AGENT_PID=1617</value>
     <value type="QString">SSH_ASKPASS=/usr/bin/ksshaskpass</value>
-    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-AJQOvJ2578/agent.2578</value>
-    <value type="QString">TERM=dumb</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-YZEKvU1601/agent.1601</value>
     <value type="QString">USER=edemairy</value>
     <value type="QString">USERNAME=edemairy</value>
-    <value type="QString">XAUTHORITY=/var/run/gdm/auth-for-edemairy-wlDh33/database</value>
+    <value type="QString">WINDOWPATH=1</value>
+    <value type="QString">XAUTHORITY=/var/run/gdm/auth-for-edemairy-Qd6nCg/database</value>
     <value type="QString">XCURSOR_THEME=default</value>
     <value type="QString">XDG_DATA_DIRS=/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share</value>
     <value type="QString">XDG_MENU_PREFIX=kde4-</value>
-    <value type="QString">XDG_SESSION_COOKIE=e383cdbec1a9a85aa13e090047692084-1284442520.420798-1194333076</value>
-    <value type="QString">XMODIFIERS=@im=none</value>
+    <value type="QString">XDG_SESSION_COOKIE=3486301e827b453942cdd7414ad31b00-1284655758.330395-70688725</value>
     <value type="QString">_=/usr/libexec/kde4/start_kdeinit_wrapper</value>
    </valuelist>
    <value key="abstractProcess.IgnoreReturnValue" type="bool">false</value>
@@ -218,83 +201,13 @@
    </valuelist>
    <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
    <value key="abstractProcess.enabled" type="bool">true</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/edemairy/Dropbox/personnel/TC/CuttingFigures</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/edemairy/Dropbox/personnel/devel/TC/CuttingFigures</value>
   </valuemap>
  </data>
  <data>
   <variable>buildconfiguration-Debug-cleanstep0</variable>
   <valuemap type="QVariantMap">
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
-   <valuelist key="abstractProcess.Environment" type="QVariantList">
-    <value type="QString">CVS_RSH=ssh</value>
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-pGK9K2dnJS,guid=17b2798aea7b793c337db63f4c8f0998</value>
-    <value type="QString">DESKTOP_SESSION=kde</value>
-    <value type="QString">DISABLE_IMSETTINGS=1</value>
-    <value type="QString">DISPLAY=:0</value>
-    <value type="QString">DRY_RUN=1</value>
-    <value type="QString">EDITOR=vi</value>
-    <value type="QString">GDMSESSION=kde</value>
-    <value type="QString">GDM_KEYBOARD_LAYOUT=us	intl</value>
-    <value type="QString">GDM_LANG=en_US.UTF-8</value>
-    <value type="QString">GNOME_KEYRING_PID=2571</value>
-    <value type="QString">GNOME_KEYRING_SOCKET=/tmp/keyring-96AQjt/socket</value>
-    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-EJ4Z3J/S.gpg-agent:2684:1</value>
-    <value type="QString">GS_LIB=</value>
-    <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/user/edemairy/home/.gtkrc-2.0::/home/edemairy/.kde/share/config/gtkrc-2.0</value>
-    <value type="QString">GTK_IM_MODULE=gtk-im-context-simple</value>
-    <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/user/edemairy/home/.gtkrc::/home/edemairy/.kde/share/config/gtkrc</value>
-    <value type="QString">G_BROKEN_FILENAMES=1</value>
-    <value type="QString">HISTCONTROL=ignoreboth</value>
-    <value type="QString">HISTSIZE=1000</value>
-    <value type="QString">HOME=/user/edemairy/home</value>
-    <value type="QString">HOSTNAME=pan.inria.fr</value>
-    <value type="QString">IMSETTINGS_INTEGRATE_DESKTOP=yes</value>
-    <value type="QString">IMSETTINGS_MODULE=none</value>
-    <value type="QString">KDEDIRS=/usr</value>
-    <value type="QString">KDE_FULL_SESSION=true</value>
-    <value type="QString">KDE_IS_PRELINKED=1</value>
-    <value type="QString">KDE_MULTIHEAD=false</value>
-    <value type="QString">KDE_SESSION_UID=1505</value>
-    <value type="QString">KDE_SESSION_VERSION=4</value>
-    <value type="QString">KMIX_PULSEAUDIO_DISABLE=1</value>
-    <value type="QString">LANG=en_US.UTF-8</value>
-    <value type="QString">LANGUAGE=</value>
-    <value type="QString">LESSOPEN=|/usr/bin/lesspipe.sh %s</value>
-    <value type="QString">LOGNAME=edemairy</value>
-    <value type="QString">MAIL=/var/spool/mail/edemairy</value>
-    <value type="QString">MAKEFLAGS=-j4</value>
-    <value type="QString">PATH=/usr/lib/qt4/bin:/usr/lib/qt-3.3/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/lib/ccache:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin</value>
-    <value type="QString">PWD=/home/edemairy</value>
-    <value type="QString">QTDIR=/usr/lib/qt4</value>
-    <value type="QString">QTINC=/usr/lib/qt-3.3/include</value>
-    <value type="QString">QTLIB=/usr/lib/qt-3.3/lib</value>
-    <value type="QString">QT_IM_MODULE=xim</value>
-    <value type="QString">QT_PLUGIN_PATH=/user/edemairy/home/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString">SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2770,unix/unix:/tmp/.ICE-unix/2770</value>
-    <value type="QString">SHELL=/bin/bash</value>
-    <value type="QString">SHLVL=2</value>
-    <value type="QString">SSH_AGENT_PID=2635</value>
-    <value type="QString">SSH_ASKPASS=/usr/bin/ksshaskpass</value>
-    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-AJQOvJ2578/agent.2578</value>
-    <value type="QString">TERM=dumb</value>
-    <value type="QString">USER=edemairy</value>
-    <value type="QString">USERNAME=edemairy</value>
-    <value type="QString">XAUTHORITY=/var/run/gdm/auth-for-edemairy-wlDh33/database</value>
-    <value type="QString">XCURSOR_THEME=default</value>
-    <value type="QString">XDG_DATA_DIRS=/usr/share/kde-settings/kde-profile/default/share:/usr/local/share:/usr/share</value>
-    <value type="QString">XDG_MENU_PREFIX=kde4-</value>
-    <value type="QString">XDG_SESSION_COOKIE=e383cdbec1a9a85aa13e090047692084-1284442520.420798-1194333076</value>
-    <value type="QString">XMODIFIERS=@im=none</value>
-    <value type="QString">_=/usr/libexec/kde4/start_kdeinit_wrapper</value>
-   </valuelist>
-   <value key="abstractProcess.IgnoreReturnValue" type="bool">true</value>
-   <valuelist key="abstractProcess.arguments" type="QVariantList">
-    <value type="QString">clean</value>
-    <value type="QString">-w</value>
-   </valuelist>
-   <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
-   <value key="abstractProcess.enabled" type="bool">true</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/edemairy/Dropbox/personnel/TC/CuttingFigures</value>
    <value key="cleanConfig" type="bool">true</value>
    <valuelist key="makeargs" type="QVariantList">
     <value type="QString">clean</value>
