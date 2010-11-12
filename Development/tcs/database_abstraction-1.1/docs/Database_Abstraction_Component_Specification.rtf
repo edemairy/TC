@@ -1,0 +1,811 @@
+{\rtf1\ansi\ansicpg936\uc2 \deff0\deflang1033\deflangfe2052{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman{\*\falt Times New Roman};}{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial{\*\falt Arial};}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New{\*\falt Courier New};}{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol{\*\falt Symbol};}
+{\f14\fnil\fcharset2\fprq2{\*\panose 05000000000000000000}Wingdings{\*\falt Wingdings};}{\f17\fnil\fcharset134\fprq2{\*\panose 02010600030101010101}\'cb\'ce\'cc\'e5{\*\falt SimSun};}
+{\f28\fswiss\fcharset128\fprq2{\*\panose 020b0604020202020204}Arial Unicode MS;}{\f29\fswiss\fcharset128\fprq2{\*\panose 020b0604020202020204}@Arial Unicode MS;}{\f59\fnil\fcharset134\fprq2{\*\panose 02010600030101010101}@\'cb\'ce\'cc\'e5;}
+{\f60\froman\fcharset238\fprq2 Times New Roman CE{\*\falt Times New Roman};}{\f61\froman\fcharset204\fprq2 Times New Roman Cyr{\*\falt Times New Roman};}{\f63\froman\fcharset161\fprq2 Times New Roman Greek{\*\falt Times New Roman};}
+{\f64\froman\fcharset162\fprq2 Times New Roman Tur{\*\falt Times New Roman};}{\f65\froman\fcharset177\fprq2 Times New Roman (Hebrew){\*\falt Times New Roman};}{\f66\froman\fcharset178\fprq2 Times New Roman (Arabic){\*\falt Times New Roman};}
+{\f67\froman\fcharset186\fprq2 Times New Roman Baltic{\*\falt Times New Roman};}{\f68\fswiss\fcharset238\fprq2 Arial CE{\*\falt Arial};}{\f69\fswiss\fcharset204\fprq2 Arial Cyr{\*\falt Arial};}{\f71\fswiss\fcharset161\fprq2 Arial Greek{\*\falt Arial};}
+{\f72\fswiss\fcharset162\fprq2 Arial Tur{\*\falt Arial};}{\f73\fswiss\fcharset177\fprq2 Arial (Hebrew){\*\falt Arial};}{\f74\fswiss\fcharset178\fprq2 Arial (Arabic){\*\falt Arial};}{\f75\fswiss\fcharset186\fprq2 Arial Baltic{\*\falt Arial};}
+{\f76\fmodern\fcharset238\fprq1 Courier New CE{\*\falt Courier New};}{\f77\fmodern\fcharset204\fprq1 Courier New Cyr{\*\falt Courier New};}{\f79\fmodern\fcharset161\fprq1 Courier New Greek{\*\falt Courier New};}
+{\f80\fmodern\fcharset162\fprq1 Courier New Tur{\*\falt Courier New};}{\f81\fmodern\fcharset177\fprq1 Courier New (Hebrew){\*\falt Courier New};}{\f82\fmodern\fcharset178\fprq1 Courier New (Arabic){\*\falt Courier New};}
+{\f83\fmodern\fcharset186\fprq1 Courier New Baltic{\*\falt Courier New};}{\f198\fnil\fcharset0\fprq2 SimSun Western{\*\falt SimSun};}{\f534\fnil\fcharset0\fprq2 @\'cb\'ce\'cc\'e5 Western;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;
+\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;
+\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;\red204\green204\blue204;}{\stylesheet{\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 
+\fs24\lang1033\langfe1033\loch\f0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 \snext0 Normal;}{\s1\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar\jclisttab\tx360\aspalpha\aspnum\faauto\ls1\outlinelevel0\adjustright\rin0\lin0\itap0 
+\b\fs24\lang1033\langfe1033\loch\f1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext0 heading 1;}{\s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\f1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 \sbasedon1 \snext0 heading 2;}{\s3\ql \li0\ri0\sb120\sa60\sl240\slmult0
+\keepn\nowidctlpar\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl2\outlinelevel2\adjustright\rin0\lin0\itap0 \i\fs20\lang1033\langfe1033\loch\f1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 \sbasedon1 \snext0 heading 3;}{
+\s4\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl3\outlinelevel3\adjustright\rin0\lin0\itap0 \fs20\lang1033\langfe1033\loch\f1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 \sbasedon1 \snext0 
+heading 4;}{\s5\ql \li0\ri0\sb240\sa60\sl240\slmult0\nowidctlpar\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl4\outlinelevel4\adjustright\rin0\lin0\itap0 \fs22\lang1033\langfe1033\loch\f1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 
+\sbasedon0 \snext0 heading 5;}{\s6\ql \li0\ri0\sb240\sa60\sl240\slmult0\nowidctlpar\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl5\outlinelevel5\adjustright\rin0\lin0\itap0 
+\i\fs22\lang1033\langfe1033\loch\f1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext0 heading 6;}{\s7\ql \li0\ri0\sb240\sa60\sl240\slmult0\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl6\outlinelevel6\adjustright\rin0\lin0\itap0 \fs20\lang1033\langfe1033\loch\f1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext0 heading 7;}{\s8\ql \li0\ri0\sb240\sa60\sl240\slmult0
+\nowidctlpar\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl7\outlinelevel7\adjustright\rin0\lin0\itap0 \i\fs20\lang1033\langfe1033\loch\f1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext0 heading 8;}{
+\s9\ql \li0\ri0\sb240\sa60\sl240\slmult0\nowidctlpar\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl8\outlinelevel8\adjustright\rin0\lin0\itap0 \b\i\fs18\lang1033\langfe1033\loch\f1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext0 
+heading 9;}{\*\cs10 \additive Default Paragraph Font;}{\*\cs15 \additive \ul\cf2 \sbasedon10 Hyperlink;}{\s16\ql \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 
+\fs20\lang1033\langfe1033\loch\f1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext16 Body Text;}{\s17\ql \li720\ri0\sa120\sl240\slmult0\nowidctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 
+\i\fs20\cf2\lang1033\langfe1033\loch\f1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext16 \sautoupd InfoBlue;}{\s18\ql \fi-360\li1440\ri0\widctlpar\jclisttab\tx1440\aspalpha\aspnum\faauto\ls6\adjustright\rin0\lin1440\itap0 
+\fs24\lang1033\langfe1033\loch\f0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext18 Style Heading 3 + 10 pt Not Bold;}{\s19\ql \li360\ri0\sa120\sl480\slmult1\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin360\itap0 
+\fs24\lang1033\langfe1033\loch\f0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 \sbasedon0 \snext19 Body Text Indent 2;}{\*\cs20 \additive \fs20\loch\f2\hich\af2\dbch\af0 \sbasedon10 HTML Keyboard;}{\*\cs21 \additive \i \sbasedon10 Emphasis;}}
+{\*\listtable{\list\listtemplateid-985754512{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s1
+\jclisttab\tx360 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'03\'00.\'01;}{\levelnumbers\'01\'03;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s2\jclisttab\tx0 }{\listlevel
+\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'05\'00.\'01.\'02;}{\levelnumbers\'01\'03\'05;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s3\jclisttab\tx0 }{\listlevel\levelnfc0\levelnfcn0
+\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'07\'00.\'01.\'02.\'03;}{\levelnumbers\'01\'03\'05\'07;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s4\jclisttab\tx0 }{\listlevel\levelnfc0\levelnfcn0\leveljc0
+\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'09\'00.\'01.\'02.\'03.\'04;}{\levelnumbers\'01\'03\'05\'07\'09;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s5\jclisttab\tx0 }{\listlevel\levelnfc0\levelnfcn0\leveljc0
+\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0b\'00.\'01.\'02.\'03.\'04.\'05;}{\levelnumbers\'01\'03\'05\'07\'09\'0b;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s6\jclisttab\tx0 }{\listlevel\levelnfc0\levelnfcn0
+\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0d\'00.\'01.\'02.\'03.\'04.\'05.\'06;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s7\jclisttab\tx0 }{\listlevel
+\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0f\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s8
+\jclisttab\tx0 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'11\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\chbrdr
+\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \s9\jclisttab\tx0 }{\listname ;}\listid-5}{\list\listtemplateid-1070945508\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext
+\leveltemplateid-1747410484\'01{\uc1\u-3928 ?};}{\levelnumbers;}\f3\cf0\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li1080\jclisttab\tx1080 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\leveltemplateid1797261944\'02\'01);}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li1800\jclisttab\tx1800 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat4
+\levelspace0\levelindent0{\leveltext\leveltemplateid-110097646\'01-;}{\levelnumbers;}\loch\af0\hich\af0\dbch\af0\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li2700\jclisttab\tx2700 }{\listlevel\levelnfc0\levelnfcn0\leveljc0
+\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698703\'02\'03.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li3240\jclisttab\tx3240 }{\listlevel\levelnfc4\levelnfcn4\leveljc0
+\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698713\'02\'04.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li3960\jclisttab\tx3960 }{\listlevel\levelnfc2\levelnfcn2\leveljc2
+\leveljcn2\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698715\'02\'05.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-180\li4680\jclisttab\tx4680 }{\listlevel\levelnfc0\levelnfcn0\leveljc0
+\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698703\'02\'06.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li5400\jclisttab\tx5400 }{\listlevel\levelnfc4\levelnfcn4\leveljc0
+\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698713\'02\'07.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li6120\jclisttab\tx6120 }{\listlevel\levelnfc2\levelnfcn2\leveljc2
+\leveljcn2\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698715\'02\'08.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-180\li6840\jclisttab\tx6840 }{\listname ;}\listid352419108}
+{\list\listtemplateid-360799582\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\'01{\uc1\u-3913 ?};}{\levelnumbers;}\f3\chbrdr\brdrnone\brdrcf1 
+\chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li1440\jclisttab\tx1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\chbrdr
+\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li2160\jclisttab\tx2160 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698693
+\'01{\uc1\u-3929 ?};}{\levelnumbers;}\f14\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li2880\jclisttab\tx2880 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext
+\leveltemplateid67698689\'01{\uc1\u-3913 ?};}{\levelnumbers;}\f3\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li3600\jclisttab\tx3600 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360
+\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li4320\jclisttab\tx4320 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1
+\levelspace360\levelindent0{\leveltext\leveltemplateid67698693\'01{\uc1\u-3929 ?};}{\levelnumbers;}\f14\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li5040\jclisttab\tx5040 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0
+\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698689\'01{\uc1\u-3913 ?};}{\levelnumbers;}\f3\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li5760\jclisttab\tx5760 }{\listlevel\levelnfc23
+\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li6480\jclisttab\tx6480 }{\listlevel
+\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698693\'01{\uc1\u-3929 ?};}{\levelnumbers;}\f14\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li7200
+\jclisttab\tx7200 }{\listname ;}\listid388654499}{\list\listtemplateid-1322099010\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\'01{\uc1\u-3913 ?};}{\levelnumbers;}\f3
+\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li1440\jclisttab\tx1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698691
+\'01o;}{\levelnumbers;}\f2\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li2160\jclisttab\tx2160 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext
+\leveltemplateid67698693\'01{\uc1\u-3929 ?};}{\levelnumbers;}\f14\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li2880\jclisttab\tx2880 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360
+\levelindent0{\leveltext\leveltemplateid67698689\'01{\uc1\u-3913 ?};}{\levelnumbers;}\f3\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li3600\jclisttab\tx3600 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0
+\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li4320\jclisttab\tx4320 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0
+\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698693\'01{\uc1\u-3929 ?};}{\levelnumbers;}\f14\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li5040\jclisttab\tx5040 }{\listlevel\levelnfc23
+\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698689\'01{\uc1\u-3913 ?};}{\levelnumbers;}\f3\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li5760\jclisttab\tx5760 }
+{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li6480
+\jclisttab\tx6480 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698693\'01{\uc1\u-3929 ?};}{\levelnumbers;}\f14\chbrdr\brdrnone\brdrcf1 
+\chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li7200\jclisttab\tx7200 }{\listname ;}\listid710152788}{\list\listtemplateid-160384884\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\'01{\uc1\u-3913 ?};}{\levelnumbers;}\f3\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li1080\jclisttab\tx1080 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\leveltemplateid67698713\'02\'01.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li1800\jclisttab\tx1800 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\leveltemplateid67698715\'02\'02.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-180\li2520\jclisttab\tx2520 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\leveltemplateid67698703\'02\'03.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li3240\jclisttab\tx3240 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\leveltemplateid67698713\'02\'04.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li3960\jclisttab\tx3960 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\leveltemplateid67698715\'02\'05.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-180\li4680\jclisttab\tx4680 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\leveltemplateid67698703\'02\'06.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li5400\jclisttab\tx5400 }{\listlevel\levelnfc4\levelnfcn4\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\leveltemplateid67698713\'02\'07.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-360\li6120\jclisttab\tx6120 }{\listlevel\levelnfc2\levelnfcn2\leveljc2\leveljcn2\levelfollow0\levelstartat1\levelspace0\levelindent0
+{\leveltext\leveltemplateid67698715\'02\'08.;}{\levelnumbers\'01;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \fi-180\li6840\jclisttab\tx6840 }{\listname ;}\listid806357716}{\list\listtemplateid932329388\listhybrid{\listlevel\levelnfc23
+\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'01{\uc1\u-3913 ?};}{\levelnumbers;}\f3\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li1080\jclisttab\tx1080 }{\listlevel\levelnfc23
+\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li1800\jclisttab\tx1800 }{\listlevel
+\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698693\'01{\uc1\u-3929 ?};}{\levelnumbers;}\f14\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li2520
+\jclisttab\tx2520 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698689\'01{\uc1\u-3913 ?};}{\levelnumbers;}\f3\chbrdr\brdrnone\brdrcf1 
+\chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li3240\jclisttab\tx3240 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\chbrdr
+\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li3960\jclisttab\tx3960 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\leveltemplateid67698693
+\'01{\uc1\u-3929 ?};}{\levelnumbers;}\f14\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li4680\jclisttab\tx4680 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext
+\leveltemplateid67698689\'01{\uc1\u-3913 ?};}{\levelnumbers;}\f3\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li5400\jclisttab\tx5400 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0
+\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li6120\jclisttab\tx6120 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1
+\levelspace0\levelindent0{\leveltext\leveltemplateid67698693\'01{\uc1\u-3929 ?};}{\levelnumbers;}\f14\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li6840\jclisttab\tx6840 }{\listname ;}\listid876431865}{\list\listtemplateid495234002
+{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\'01{\uc1\u-3929 ?};}{\levelnumbers;}\f14\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li1080\jclisttab\tx1080 }
+{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'03\'00.\'01;}{\levelnumbers\'01\'03;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \jclisttab\tx720 }{\listlevel\levelnfc0
+\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'05\'00.\'01.\'02;}{\levelnumbers\'01\'03\'05;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \jclisttab\tx720 }{\listlevel\levelnfc0\levelnfcn0\leveljc0
+\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'07\'00.\'01.\'02.\'03;}{\levelnumbers\'01\'03\'05\'07;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \jclisttab\tx720 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'09\'00.\'01.\'02.\'03.\'04;}{\levelnumbers\'01\'03\'05\'07\'09;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \jclisttab\tx720 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0b\'00.\'01.\'02.\'03.\'04.\'05;}{\levelnumbers\'01\'03\'05\'07\'09\'0b;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \jclisttab\tx720 }{\listlevel\levelnfc0\levelnfcn0\leveljc0
+\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0d\'00.\'01.\'02.\'03.\'04.\'05.\'06;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \jclisttab\tx720 }{\listlevel\levelnfc0
+\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'0f\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f;}\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 
+\jclisttab\tx720 }{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'11\'00.\'01.\'02.\'03.\'04.\'05.\'06.\'07.\'08;}{\levelnumbers\'01\'03\'05\'07\'09\'0b\'0d\'0f\'11;}\chbrdr
+\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1 \jclisttab\tx720 }{\listname ;}\listid1565142215}{\list\listtemplateid537939130\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext
+\leveltemplateid592376902\'01{\uc1\u-3929 ?};}{\levelnumbers;}\f14\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \s18\fi-360\li1440\jclisttab\tx1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1
+\levelspace360\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li2160\jclisttab\tx2160 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0
+\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698693\'01{\uc1\u-3929 ?};}{\levelnumbers;}\f14\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li2880\jclisttab\tx2880 }{\listlevel\levelnfc23\levelnfcn23\leveljc0
+\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698689\'01{\uc1\u-3913 ?};}{\levelnumbers;}\f3\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li3600\jclisttab\tx3600 }{\listlevel\levelnfc23
+\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li4320\jclisttab\tx4320 }{\listlevel
+\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698693\'01{\uc1\u-3929 ?};}{\levelnumbers;}\f14\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li5040
+\jclisttab\tx5040 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698689\'01{\uc1\u-3913 ?};}{\levelnumbers;}\f3\chbrdr\brdrnone\brdrcf1 
+\chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li5760\jclisttab\tx5760 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698691\'01o;}{\levelnumbers;}\f2\chbrdr
+\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li6480\jclisttab\tx6480 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\leveltext\leveltemplateid67698693
+\'01{\uc1\u-3929 ?};}{\levelnumbers;}\f14\chbrdr\brdrnone\brdrcf1 \chshdng0\chcfpat1\chcbpat1\fbias0 \fi-360\li7200\jclisttab\tx7200 }{\listname ;}\listid2113427810}}{\*\listoverridetable{\listoverride\listid-5\listoverridecount0\ls1}
+{\listoverride\listid806357716\listoverridecount9{\lfolevel}{\lfolevel\listoverridestartat\levelstartat1}{\lfolevel\listoverridestartat\levelstartat1}{\lfolevel\listoverridestartat\levelstartat1}{\lfolevel\listoverridestartat\levelstartat1}{\lfolevel
+\listoverridestartat\levelstartat1}{\lfolevel\listoverridestartat\levelstartat1}{\lfolevel\listoverridestartat\levelstartat1}{\lfolevel\listoverridestartat\levelstartat1}\ls2}{\listoverride\listid876431865\listoverridecount9{\lfolevel}{\lfolevel}
+{\lfolevel}{\lfolevel}{\lfolevel}{\lfolevel}{\lfolevel}{\lfolevel}{\lfolevel}\ls3}{\listoverride\listid876431865\listoverridecount0\ls4}{\listoverride\listid806357716\listoverridecount0\ls5}{\listoverride\listid2113427810\listoverridecount0\ls6}
+{\listoverride\listid388654499\listoverridecount0\ls7}{\listoverride\listid-5\listoverridecount0\ls8}{\listoverride\listid-5\listoverridecount9{\lfolevel\listoverridestartat\levelstartat1}{\lfolevel\listoverridestartat\levelstartat1}{\lfolevel
+\listoverridestartat\levelstartat1}{\lfolevel\listoverridestartat\levelstartat1}{\lfolevel\listoverridestartat\levelstartat1}{\lfolevel\listoverridestartat\levelstartat1}{\lfolevel\listoverridestartat\levelstartat1}{\lfolevel\listoverridestartat
+\levelstartat1}{\lfolevel\listoverridestartat\levelstartat1}\ls9}{\listoverride\listid710152788\listoverridecount0\ls10}{\listoverride\listid1565142215\listoverridecount0\ls11}{\listoverride\listid352419108\listoverridecount0\ls12}}{\info
+{\title <<Component>> <<Version>> Component Specification}{\author gpaul}{\operator ghj}{\creatim\yr2004\mo6\dy16\hr17\min44}{\revtim\yr2006\mo6\dy22\hr19\min11}{\version24}{\edmins1489}{\nofpages13}{\nofwords3562}{\nofchars20306}{\*\company TopCoder}
+{\nofcharsws0}{\vern8249}}\paperw12240\paperh15840\margl1800\margr1800\margt1440\margb1440\gutter0 \ftnbj\aenddoc\noxlattoyen\expshrtn\noultrlspc\dntblnsbdb\nospaceforul\hyphcaps0\formshade\horzdoc\dgmargin\dghspace180\dgvspace180\dghorigin1800
+\dgvorigin1440\dghshow1\dgvshow1\jexpand\viewkind1\viewscale100\pgbrdrhead\pgbrdrfoot\splytwnine\ftnlytwnine\htmautsp\nolnhtadjtbl\useltbaln\alntblind\lytcalctblwd\lyttblrtgr\lnbrkrule \fet0\sectd \linex0\endnhere\sectlinegrid360\sectdefaultcl 
+{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta \dbch .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta \dbch .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta \dbch .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang
+{\pntxta \dbch )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb \dbch (}{\pntxta \dbch )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb \dbch (}{\pntxta \dbch )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb \dbch (}
+{\pntxta \dbch )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb \dbch (}{\pntxta \dbch )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb \dbch (}{\pntxta \dbch )}}\pard\plain \s1\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\tx720\aspalpha\aspnum\faauto\outlinelevel0\adjustright\rin0\lin0\itap0 \b\fs24\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\fs28\ul \hich\af1\dbch\af28\loch\f1 Database Abstraction 1.1\hich\af1\dbch\af28\loch\f1 
+ Component Specification
+\par }\pard\plain \s16\ql \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp1033 {
+\par }\pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 
+Additions to this document from version 1.1 are in red, changes to existing documentation are in blue.
+\par }\pard\plain \s16\ql \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp1033 {
+\par {\listtext\pard\plain\s1 \b\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 1.\tab}}\pard\plain \s1\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx360\aspalpha\aspnum\faauto\ls1\outlinelevel0\adjustright\rin0\lin0\itap0 \b\fs24\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Design
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 The generated CustomResultSet cl
+\hich\af0\dbch\af17\loch\f0 
+osely resembles java.sql.ResultSet. This is intentionally done to facilitate familiarity. Method names, where applicable, are identical, and so are the underlying actions. Both classes have metadata objects. This component stores metadata information in t
+\hich\af0\dbch\af17\loch\f0 h\hich\af0\dbch\af17\loch\f0 e CustomResultSetMetaData object using a collection of Column objects. Data retrieval is also identical. All columns and rows are 1-indexed.
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\hich\af0\dbch\af17\loch\f0 Additional methods for sorting have been added, with robust use of comparators. 
+\par 
+\par }\pard \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 Version 1.1 enhances the previou\hich\af0\dbch\af17\loch\f0 
+s version with the ability to convert values on the fly to the type desired by a user.  The new version supports a strict superset of functionality of the old version.  That is, the API is completely backwards compatible.  By default, the new version beha
+\hich\af0\dbch\af17\loch\f0 v\hich\af0\dbch\af17\loch\f0 es exactly as the old version.  
+\par 
+\par \hich\af0\dbch\af17\loch\f0 Where the previous version required explicit conversion, version 1.1 can convert between compatible types on the fly.  The set of conversion that are accessible through this feature can be configured, similar to how the ex
+\hich\af0\dbch\af17\loch\f0 isting explicit conversion can be configured.  A large set of default conversions covering all JDBC types are provided.
+\par \line \hich\af0\dbch\af17\loch\f0 Version 1.1 seeks to maintain a similar feel to the version 1.0 API.  Many methods accept null as a valid value, additionally, invalid \hich\af0\dbch\af17\loch\f0 
+values (like a column index that is too large or small) are handled by returning a default value, not throwing an exception.  In most cases, this choice is forced by the need to remain consistent with the 1.0 API.
+\par }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {
+\par {\listtext\pard\plain\s2 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 1.1\tab}}\pard\plain \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Design Patterns 
+\par {\listtext\pard\plain\s18 \f14\lang1033\langfe1033\langfenp1033 \loch\af14\dbch\af17\hich\f14 \'a7\tab}}\pard\plain \s18\ql \fi-360\li1440\ri0\widctlpar\jclisttab\tx1440\aspalpha\aspnum\faauto\ls6\adjustright\rin0\lin1440\itap0 
+\fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 Delegation
+\par {\listtext\pard\plain\s18 \f14\lang1033\langfe1033\langfenp1033 \loch\af14\dbch\af17\hich\f14 \'a7\tab}\hich\af0\dbch\af17\loch\f0 Facto\hich\af0\dbch\af17\loch\f0 ry
+\par {\listtext\pard\plain\s18 \f14\lang1033\langfe1033\langfenp1033 \loch\af14\dbch\af17\hich\f14 \'a7\tab}\hich\af0\dbch\af17\loch\f0 \hich\f0 Fa\'e7\loch\f0 ade
+\par {\listtext\pard\plain\s18 \f14\cf6\lang1033\langfe1033\langfenp1033 \loch\af14\dbch\af17\hich\f14 \'a7\tab}}{\cf6 \hich\af0\dbch\af17\loch\f0 The Strategy pattern is used for the on-demand mapping functionality.
+\par }\pard\plain \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar\aspalpha\aspnum\faauto\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {
+\par {\listtext\pard\plain\s2 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 1.2\tab}}\pard \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 {\hich\af1\dbch\af28\loch\f1 Industry Standards 
+\par {\listtext\pard\plain\s18 \f14\lang1033\langfe1033\langfenp1033 \loch\af14\dbch\af17\hich\f14 \'a7\tab}}\pard\plain \s18\ql \fi-360\li1440\ri0\widctlpar\jclisttab\tx1440\aspalpha\aspnum\faauto\ls6\adjustright\rin0\lin1440\itap0 
+\fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 JDBC 2.0
+\par {\listtext\pard\plain\s18 \f14\lang1033\langfe1033\langfenp1033 \loch\af14\dbch\af17\hich\f14 \'a7\tab}\hich\af0\dbch\af17\loch\f0 java.sql.ResultSet functionality for corresponding methods used in CustomResultSet
+\par {\listtext\pard\plain\s18 \f14\lang1033\langfe1033\langfenp1033 \loch\af14\dbch\af17\hich\f14 \'a7\tab}\hich\af0\dbch\af17\loch\f0 java.sql.ResultSetMetaData functionality for corr\hich\af0\dbch\af17\loch\f0 
+esponding methods used in CustomResultSetMetaData.
+\par }\pard\plain \s16\ql \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp1033 {
+\par {\listtext\pard\plain\s2 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 1.3\tab}}\pard\plain \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Required Algorithms
+\par {\listtext\pard\plain\s3 \i\fs20\cf6\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 1.3.1\tab}}\pard\plain \s3\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl2\outlinelevel2\adjustright\rin0\lin0\itap0 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\cf6 \hich\af1\dbch\af28\loch\f1 Version 1.1 Algorithms
+\par {\listtext\pard\plain\s4 \fs20\cf6\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 1.3.1.1\tab}}\pard\plain \s4\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl3\outlinelevel3\adjustright\rin0\lin0\itap0 \fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\cf6 \hich\af1\dbch\af28\loch\f1 
+Getting a value from the results set - getObject(int columnIndex, Class desiredType)
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\cf6 \hich\af0\dbch\af17\loch\f0 In versio\hich\af0\dbch\af17\loch\f0 
+n 1.1, 4 methods are tried (in order) to retrieve a value of the desired type:
+\par {\listtext\pard\plain\s18 \f14\cf6\lang1033\langfe1033\langfenp1033 \loch\af14\dbch\af17\hich\f14 \'a7\tab}}\pard\plain \s18\ql \fi-360\li1440\ri0\widctlpar\jclisttab\tx1440\aspalpha\aspnum\faauto\ls6\adjustright\rin0\lin1440\itap0 
+\fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\cf6 \hich\af0\dbch\af17\loch\f0 If the explicitly mapped value for the current row and given column is of desiredType, return it.
+\par {\listtext\pard\plain\s18 \f14\cf6\lang1033\langfe1033\langfenp1033 \loch\af14\dbch\af17\hich\f14 \'a7\tab}\hich\af0\dbch\af17\loch\f0 If the original value in the current row and given column is of desiredType\hich\af0\dbch\af17\loch\f0 , return it.
+
+\par {\listtext\pard\plain\s18 \f14\cf6\lang1033\langfe1033\langfenp1033 \loch\af14\dbch\af17\hich\f14 \'a7\tab}\hich\af0\dbch\af17\loch\f0 Try to convert the original value using the on-demand mapper.  If this can be done, return the converted value.
+\par {\listtext\pard\plain\s18 \f14\cf6\lang1033\langfe1033\langfenp1033 \loch\af14\dbch\af17\hich\f14 \'a7\tab}\hich\af0\dbch\af17\loch\f0 Try to convert the explicitly mapped value using the on-demand mapper.  If this can be done, return the converted value.
+
+\par }\pard \s18\ql \fi-360\li1440\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin1440\itap0 {\cf6 
+\par \hich\af0\dbch\af17\loch\f0 If no\hich\af0\dbch\af17\loch\f0 ne of the above work, null is returned.
+\par }\pard \s18\ql \li1080\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin1080\itap0 {
+\par {\listtext\pard\plain\s3 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 1.3.2\tab}}\pard\plain \s3\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl2\outlinelevel2\adjustright\rin0\lin0\itap0 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Sorting
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 
+The developer is free to use whatever sorting algorithm or paradigm he/she desires. When sorting based on column names, retrieve column numbers and call the equivalent method based on column numbers. I\hich\af0\dbch\af17\loch\f0 
+t goes without saying that the integrity of rows must be preserved in a single- or multiple-column sorting.
+\par }\pard \ql \li1080\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin1080\itap0 {
+\par {\listtext\pard\plain\s3 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 1.3.3\tab}}\pard\plain \s3\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl2\outlinelevel2\adjustright\rin0\lin0\itap0 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Column Value getter methods
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 
+When getting column values based on column name, retrieve column number and call the equivalent method based on t\hich\af0\dbch\af17\loch\f0 hat column number.
+\par 
+\par {\listtext\pard\plain\s3 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 1.3.4\tab}}\pard\plain \s3\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl2\outlinelevel2\adjustright\rin0\lin0\itap0 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Storing data in the CustomResultSet
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\cf2 \hich\af0\dbch\af17\loch\f0 
+Each field in a row is stored in a List which contains all values for the row, and all  rows are stored in a List}{\hich\af0\dbch\af17\loch\f0 . }{\cf2 \hich\af0\dbch\af17\loch\f0 
+ In each of the row lists, all data values are stored wrapped in RowDataValue o\hich\af0\dbch\af17\loch\f0 
+bjects which maintain both the original and explicitly mapped values for the data.  In version 1.0 the items in the lists of lists were the data values themselves.}{
+\par 
+\par \hich\af0\dbch\af17\loch\f0 Thus the CustomResultSet object has a List of Lists of RowDataValues. Because all this stor\hich\af0\dbch\af17\loch\f0 
+age is internal (the List is never returned to the user), the developer is free to use any implementing class of List, and use its methods explicitly.
+\par }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {
+\par {\listtext\pard\plain\s2 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 1.4\tab}}\pard\plain \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Component Class Overview
+\par }\pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\tab }{\b\cf6 \hich\af0\dbch\af17\loch\f0 CustomResultSet}{\cf6 
+\hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The CustomResultSet class i\hich\af0\dbch\af17\loch\f0 
+s similar to the JDBC ResultSet class in the public API that it exposes.  This is intentional, in order to facility familiarity and ease of use of the class.
+\par 
+\par \hich\af0\dbch\af17\loch\f0 One note about this class is that exceptions do not follow current TopCoder standards.  This is n\hich\af0\dbch\af17\loch\f0 
+ecessitated by the requirement that the API remain the same, so adding exceptions is not an option.  For many methods, this means that instead of throwing an exception, either null or some default value (for primitive types) is returned.
+\par \line \tab \hich\af0\dbch\af17\loch\f0 Version 1.1 uses\hich\af0\dbch\af17\loch\f0 
+ a different data structure to store the row data.  In version 1.0, data was stored in a rows list, which each entry being a list that contained the column values for the row.  In version 1.1, both the currently mapped value and the original JDBC value ne
+\hich\af0\dbch\af17\loch\f0 e\hich\af0\dbch\af17\loch\f0 
+d to be preserved through the use of the RowDataValue class.  By keeping track of the original value, the component allows for on demand conversions to be applied to both the original or mapped value. 
+\par 
+\par \hich\af0\dbch\af17\loch\f0 Besides updating the sort and getXXX methods for this\hich\af0\dbch\af17\loch\f0 
+ class (which mostly involves implementing the getObject(int, Class) method and directing the other methods to call it, little should be needed in version 1.1 over the previous version.  This class is mutable.
+\par 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 DatabaseAbstractor}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The DatabaseAbstractor cl\hich\af0\dbch\af17\loch\f0 
+ass permits a factory type pattern to be used for creation of CustomResultSets.  This class is simply a storage facility for a mapper and an on-demand mapper, both of which it passes to any CustomResultSets that is creates.  The only changes in version 1.
+\hich\af0\dbch\af17\loch\f0 1\hich\af0\dbch\af17\loch\f0  to this class are the addition of the OnDemandMapper methods and fields. This class is mutable.
+\par }{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 Mapper}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The Mapper class simply maintains a column name to Converter map of the mapping to apply when the remap method of the Custo
+\hich\af0\dbch\af17\loch\f0 mResultSet class is called.  This class is simply a wrapper around a HashMap, and should need no changes from version 1.0 to 1.1.  This class is mutable.
+\par }{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 Converter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The Converter interface defines how explicit conversion is done.  In order to use the vers\hich\af0\dbch\af17\loch\f0 
+ion 1.0 explicit conversion capabilities of this component, a user must create a class implementing the Converter interface, register it with a Mapper and register the Mapper with a DatabaseAbstractor.  No changes should be needed from version 1.0 to 1.1.
+\hich\af0\dbch\af17\loch\f0  \hich\af0\dbch\af17\loch\f0  This interface makes no demands on immutability or thread safety.
+\par }{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 OnDemandMapper}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 
+The OnDemandMapper class is the main focal point of the version 1.1 additions to this component.  The OnDemandMapper is similar to the Mapper class, but contains a set of O\hich\af0\dbch\af17\loch\f0 
+nDemandConverters (and since they can be used on any column, no map from column names is needed).  Additionally, it exposes a more type-safe set of methods than the Mapper class.  This class is quite simply to implement as all the methods either redirect 
+\hich\af0\dbch\af17\loch\f0 t\hich\af0\dbch\af17\loch\f0 o the contained set, or iterate over the set, calling the corresponding method on each element of the set.  This class is mutable.
+\par }{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 OnDemandConverter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The OnDemandConverter interface is the counterpart of the Converter interface, updated to allow for versi
+\hich\af0\dbch\af17\loch\f0 
+on 1.1. on-demand conversion.  In order to support this, the conversion method takes in an extra parameter, the desired returned type.  This interface also exposes a method to determine whether a conversion can be done.  This interface makes no thread-saf
+\hich\af0\dbch\af17\loch\f0 e\hich\af0\dbch\af17\loch\f0 ty or mutability requirements.
+\par }{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 CustomResultSetMetaData}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 
+The CustomResultSetMetaData class is the counterpart of the JDBC ResultSetMetaData interface.  It stores information about the columns in the CustomResultSet and exposes them through an interface ver\hich\af0\dbch\af17\loch\f0 
+y similar to the ResultSetMetaData interface.  In addition to imitating the ResultSetMetaData interface, this class allows some pieces of data to for each column to be set in addition to being retrieved.  This class is immutable.
+\par }{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 Column:}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The Column class \hich\af0\dbch\af17\loch\f0 
+is used by the CustomResultSetMetaData class to store information about each column in a CustomResultSet.  This class is a simple data store for the several related values about a column, and no complicated logic is needed.  All the methods are simple get
+\hich\af0\dbch\af17\loch\f0 t\hich\af0\dbch\af17\loch\f0 ers/setters.  This class is mutable.
+\par }{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 RowDataValue}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The RowDataValue class is used to store the two data values associated with a row and column \hich\f0 \endash \loch\f0 
+ the original data value and the currently mapped value.  This class is simply a container for these two varia\hich\af0\dbch\af17\loch\f0 bles and contains only simple getters and setters.  This class is mutable
+\par 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 BigDecimalConverter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 
+The BigDecimalConverter class handles on demand conversions from the BigDecimal type to various other data types.  It implements the OnDemandConverter interface\hich\af0\dbch\af17\loch\f0 
+ and has no state.  All the complications in this class lie in the convert and canConvert methods, each of which will essentially be one if/else block based on the desired conversion output type. This class is immutable.
+\par 
+\par }{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 BlobConverter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The BlobConverter \hich\af0\dbch\af17\loch\f0 
+class handles on demand conversions from the Blob type to various other data types.  It implements the OnDemandConverter interface and has no state.  All the complications in this class lie in the convert and canConvert methods, each of which will essenti
+\hich\af0\dbch\af17\loch\f0 a\hich\af0\dbch\af17\loch\f0 lly be one if/else block based on the desired conversion output type. This class is immutable.
+\par 
+\par }{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 BooleanConverter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 
+The BooleanConverter class handles on demand conversions from the Boolean type to various other data types.  It implements the OnDemandConver\hich\af0\dbch\af17\loch\f0 
+ter interface and has no state.  All the complications in this class lie in the convert and canConvert methods, each of which will essentially be one if/else block based on the desired conversion output type. This class is immutable.
+\par 
+\par 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 ByteConverter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The B\hich\af0\dbch\af17\loch\f0 
+yteConverter class handles on demand conversions from the Byte type to various other data types.  It implements the OnDemandConverter interface and has no state.  All the complications in this class lie in the convert and canConvert methods, each of which
+\hich\af0\dbch\af17\loch\f0  \hich\af0\dbch\af17\loch\f0 will essentially be one if/else block based on the desired conversion output type. This class is immutable.
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 
+\par \hich\af0\dbch\af17\loch\f0 ByteArrayConverter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The ByteArrayConverter class handles on demand conversions from byte arrays to various other data types.  It implements the OnD
+\hich\af0\dbch\af17\loch\f0 
+emandConverter interface and has no state.  All the complications in this class lie in the convert and canConvert methods, each of which will essentially be one if/else block based on the desired conversion output type. This class is immutable.
+\par 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 DateConver\hich\af0\dbch\af17\loch\f0 ter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 
+The DateConverter class handles on demand conversions from the Date type to various other data types.  It implements the OnDemandConverter interface and has no state.  All the complications in this class lie in the convert and canConvert methods, each
+\hich\af0\dbch\af17\loch\f0  of which will essentially be one if/else block based on the desired conversion output type. This class is immutable.
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 
+\par \hich\af0\dbch\af17\loch\f0 DoubleConverter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The DoubleConverter class handles on demand conversions from the Double type to various other data types.  It implements
+\hich\af0\dbch\af17\loch\f0 
+ the OnDemandConverter interface and has no state.  All the complications in this class lie in the convert and canConvert methods, each of which will essentially be one if/else block based on the desired conversion output type. This class is immutable.
+
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 
+\par \hich\af0\dbch\af17\loch\f0 FloatConverter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 
+The FloatConverter class handles on demand conversions from the Float type to various other data types.  It implements the OnDemandConverter interface and has no state.  All the complications in this class lie in the convert and canConvert 
+\hich\af0\dbch\af17\loch\f0 methods, each of which will essentially be one if/else block based on the desired conversion output type. This class is immutable.
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 
+\par \hich\af0\dbch\af17\loch\f0 IntConverter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The IntConverter class handles on demand conversions from the Integer type to various other data types.  It im
+\hich\af0\dbch\af17\loch\f0 
+plements the OnDemandConverter interface and has no state.  All the complications in this class lie in the convert and canConvert methods, each of which will essentially be one if/else block based on the desired conversion output type. This class is immut
+\hich\af0\dbch\af17\loch\f0 a\hich\af0\dbch\af17\loch\f0 ble.
+\par }{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 LongConverter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 
+The LongConverter class handles on demand conversions from the Long type to various other data types.  It implements the OnDemandConverter interface and has no state.  All the complications in this class lie in the convert and canConve
+\hich\af0\dbch\af17\loch\f0 rt methods, each of which will essentially be one if/else block based on the desired conversion output type. This class is immutable.
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 
+\par \hich\af0\dbch\af17\loch\f0 ShortConverter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The ShortConverter class handles on demand conversions from the Short type to various other data types.  
+\hich\af0\dbch\af17\loch\f0 
+It implements the OnDemandConverter interface and has no state.  All the complications in this class lie in the convert and canConvert methods, each of which will essentially be one if/else block based on the desired conversion output type. This class is 
+\hich\af0\dbch\af17\loch\f0 i\hich\af0\dbch\af17\loch\f0 mmutable.
+\par }{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 StringConverter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 
+The StringConverter class handles on demand conversions from the String type to various other data types.  It implements the OnDemandConverter interface and has no state.  All the complications in this class lie in the convert a
+\hich\af0\dbch\af17\loch\f0 nd canConvert methods, each of which will essentially be one if/else block based on the desired conversion output type. This class is immutable.
+\par }{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 TimeConverter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The TimeConverter class handles on demand conversions from the Time\hich\af0\dbch\af17\loch\f0 
+ type to various other data types.  It implements the OnDemandConverter interface and has no state.  All the complications in this class lie in the convert and canConvert methods, each of which will essentially be one if/else block based on the desired co
+\hich\af0\dbch\af17\loch\f0 n\hich\af0\dbch\af17\loch\f0 version output type. This class is immutable.
+\par }{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 ClobConverter}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 
+The ClobConverter class handles on demand conversions from the Clob type to various other data types.  It implements the OnDemandConverter interface and has no state.  All the complications in t\hich\af0\dbch\af17\loch\f0 
+his class lie in the convert and canConvert methods, each of which will essentially be one if/else block based on the desired conversion output type. This class is immutable.
+\par }{\b\cf6 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 TimestampConverter}{\cf6 \hich\af0\dbch\af17\loch\f0 :
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The TimestampConverter class handles on demand conversions f\hich\af0\dbch\af17\loch\f0 
+rom the Timestamp type to various other data types.  It implements the OnDemandConverter interface and has no state.  All the complications in this class lie in the convert and canConvert methods, each of which will essentially be one if/else block based 
+\hich\af0\dbch\af17\loch\f0 o\hich\af0\dbch\af17\loch\f0 n the desired conversion output type. This class is immutable.
+\par }\pard\plain \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar\aspalpha\aspnum\faauto\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {
+\par {\listtext\pard\plain\s2 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 1.5\tab}}\pard \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 {\hich\af1\dbch\af28\loch\f1 Component Exception Definitions
+\par }\pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\cf6 \tab }{\b\cf6 \hich\af0\dbch\af17\loch\f0 IllegalMappingException}{\cf6 
+\hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 The IllegalMappingException is thrown when \hich\af0\dbch\af17\loch\f0 
+a Converter or OnDemandConverter is not able to make a conversion for an implementation defined reason.
+\par }\pard \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \tab \hich\af0\dbch\af17\loch\f0 
+This exception is thrown by implementations of the Converter and OnDemandConverter interfaces in the convert method, and propagates through the OnDeman\hich\af0\dbch\af17\loch\f0 dMapper and CustomResultSet classes.
+\par 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\b\cf6 \hich\af0\dbch\af17\loch\f0 InvalidCursorStateException}{\cf6 \hich\af0\dbch\af17\loch\f0 :}{\f1\fs20\cf6 
+\par }\pard \ql \fi720\li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\cf6 \hich\af0\dbch\af17\loch\f0 
+The InvalidCursorStateException is thrown by a CustomResultSet to indicate that it is not currently positioned on any row.  This could be because it is positioned before the first row or af\hich\af0\dbch\af17\loch\f0 ter the last row.
+\par \hich\af0\dbch\af17\loch\f0 This exception is thrown by CustomResultSet in the getXXX methods when data can not be retrieved because of the current row position of the CustomResultSet.
+\par }\pard\plain \s16\ql \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp1033 {
+\par 
+\par {\listtext\pard\plain\s2 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 1.6\tab}}\pard\plain \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Thread Safety
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\cf6 \hich\af0\dbch\af17\loch\f0 
+This component is not thread safe.  First, almost all of the \hich\af0\dbch\af17\loch\f0 
+classes are mutable, so this makes thread safety difficult.  Second, version 1.0 was not thread safe, and adding thread safety to the existing API would be difficult.  Third, this component is designed to mirror the JDBC ResultSet which is not thread-safe
+\hich\af0\dbch\af17\loch\f0 .\hich\af0\dbch\af17\loch\f0   Not having a thread-safe component will not come as a surprise to the primary users of this component.
+\par 
+\par \hich\af0\dbch\af17\loch\f0 To make the component thread safe is a matter of synchronizing the methods of the various mutable classes.
+\par }{
+\par {\listtext\pard\plain\s1 \b\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 2.\tab}}\pard\plain \s1\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx360\aspalpha\aspnum\faauto\ls1\outlinelevel0\adjustright\rin0\lin0\itap0 \b\fs24\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Environment Requirements\tab \tab 
+\par {\listtext\pard\plain\s2 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 2.1\tab}}\pard\plain \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Environm\hich\af1\dbch\af28\loch\f1 ent
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 
+Java 1.4 is needed for compilation, testing, and use of this component.
+\par 
+\par {\listtext\pard\plain\s2 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 2.2\tab}}\pard\plain \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 TopCoder Software Components
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 None.
+\par }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\i 
+\par }\pard \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {\i \hich\af0\dbch\af17\loch\f0 
+NOTE: The default location for TopCoder Software component jars is../lib/tcs/COMPONENT_NAME/COMPONENT_VERSION relative to the component ins\hich\af0\dbch\af17\loch\f0 tallation.}{\i\cf1 \hich\af0\dbch\af17\loch\f0 
+  Setting the tcs_libdir property in topcoder_global.properties will overwrite this default location.}{\f1\fs20 
+\par }\pard\plain \s16\ql \li720\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp1033 {
+\par {\listtext\pard\plain\s2 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 2.3\tab}}\pard\plain \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Third Party Components
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 None.
+\par }\pard\plain \s3\ql \li720\ri0\sb120\sa60\sl240\slmult0\nowidctlpar\tx720\aspalpha\aspnum\faauto\outlinelevel2\adjustright\rin0\lin720\itap0 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\cf1 
+\hich\af1\dbch\af28\loch\f1 NOTE: The default location for 3}{\cf1\super \hich\af1\dbch\af28\loch\f1 rd}{\cf1 \hich\af1\dbch\af28\loch\f1  party packages is ../lib relative to this component installation.  Setting \hich\af1\dbch\af28\loch\f1 
+the ext_libdir property in topcoder_global.properties will overwrite this default location
+\par \hich\af1\dbch\af28\loch\f1 .}{
+\par {\listtext\pard\plain\s1 \b\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 3.\tab}}\pard\plain \s1\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx360\aspalpha\aspnum\faauto\ls1\outlinelevel0\adjustright\rin0\lin0\itap0 \b\fs24\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Installation and Configuration
+\par {\listtext\pard\plain\s2 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 3.1\tab}}\pard\plain \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Package Name
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 com.topcoder.util.sql.databaseabstraction
+\par \hich\af0\dbch\af17\loch\f0 com.topcoder.util.sql.databaseabstraction.ondemandconversion
+\par }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {
+\par {\listtext\pard\plain\s2 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 3.2\tab}}\pard\plain \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Configuration Parameters
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 None.
+\par }\trowd \trgaph108\trleft-108\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 
+\tpvpara\tposx827\tposy0\tdfrmtxtLeft180\tdfrmtxtRight180\trftsWidth1\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3\tabsnoovrlp1 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr
+\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth2280 \cellx2172\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth3600 \cellx5772\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl
+\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth2148 \cellx7920\pard \ql \li0\ri0\widctlpar\intbl\pvpara\posx827\posy0\dxfrtext180\dfrmtxtx180\dfrmtxty0\aspalpha\aspnum\faauto\adjustright\rin0\lin0\absnoovrlp1 {
+\b \hich\af0\dbch\af17\loch\f0 Parameter}{\b\f1\fs20 \cell }{\b \hich\af0\dbch\af17\loch\f0 Description}{\b\f1\fs20 \cell }{\b \hich\af0\dbch\af17\loch\f0 Values}{\b\f1\fs20 \cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft-108\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 
+\tpvpara\tposx827\tposy0\tdfrmtxtLeft180\tdfrmtxtRight180\trftsWidth1\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3\tabsnoovrlp1 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr
+\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth2280 \cellx2172\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth3600 \cellx5772\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl
+\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth2148 \cellx7920\row }\trowd \trgaph108\trleft-108\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 
+\tpvpara\tposx827\tposy0\tdfrmtxtLeft180\tdfrmtxtRight180\trftsWidth1\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3\tabsnoovrlp1 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr
+\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth2280 \cellx2172\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth3600 \cellx5772\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl
+\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth2148 \cellx7920\pard\plain 
+\s16\ql \li0\ri0\sa120\widctlpar\intbl\pvpara\posx827\posy0\dxfrtext180\dfrmtxtx180\dfrmtxty0\aspalpha\aspnum\faauto\adjustright\rin0\lin0\absnoovrlp1 \fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp1033 {\cell \cell \cell 
+}\pard\plain \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\trowd \trgaph108\trleft-108\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb
+\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \tpvpara\tposx827\tposy0\tdfrmtxtLeft180\tdfrmtxtRight180\trftsWidth1\trautofit1\trpaddl108\trpaddr108\trpaddfl3\trpaddft3\trpaddfb3\trpaddfr3\tabsnoovrlp1 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth2280 \cellx2172\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth3600 \cellx5772\clvertalt
+\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth2148 \cellx7920\row }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\f1\fs20 
+\par }\pard\plain \s16\ql \li0\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp1033 {\lbr3 \line }{
+\par {\listtext\pard\plain\s2 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 3.3\tab}}\pard\plain \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Dependencies Configuration
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 None.
+\par }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {
+\par {\listtext\pard\plain\s1 \b\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 4.\tab}}\pard\plain \s1\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx360\aspalpha\aspnum\faauto\ls1\outlinelevel0\adjustright\rin0\lin0\itap0 \b\fs24\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Usage Notes
+\par }\pard\plain \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {
+\par {\listtext\pard\plain\s2 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 4.1\tab}}\pard\plain \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Required steps to test the component
+\par {\listtext\pard\plain\s16 \f3\fs20\lang1033\langfe1033\langfenp1033 \loch\af3\dbch\af17\hich\f3 \'b7\tab}}\pard\plain \s16\ql \fi-360\li1080\ri0\sa120\widctlpar\jclisttab\tx1080\aspalpha\aspnum\faauto\ls3\adjustright\rin0\lin1080\itap0 
+\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af17\loch\f1 Extract the component distribution.
+\par {\listtext\pard\plain\s16 \f3\fs20\lang1033\langfe1033\langfenp1033 \loch\af3\dbch\af17\hich\f3 \'b7\tab}\hich\af1\dbch\af17\loch\f1 Follow }{\field\fldedit{\*\fldinst {\hich\af1\dbch\af17\loch\f1  HYPERLINK "C:\\filez\\work\\tc\\tcs_corp\\
+\hich\af1\dbch\af17\loch\f1 templates\\component\\" \\l "_Dependencies_Configuration" }{{\*\datafield 
+00d0c9ea79f9bace118c8200aa004ba90b02000000010000000303000000000000c00000000000004600002900000066696c657a776f726b74637463735f636f727074656d706c61746573636f6d706f6e656e7422206c00ffffadde00000000000000000000000000000000000000000000000000000000000000}}
+}{\fldrslt {\cs15\ul\cf2 \hich\af1\dbch\af17\loch\f1 Dependencies Configuration}}}{\hich\af1\dbch\af17\loch\f1 .
+\par {\listtext\pard\plain\s16 \f3\fs20\lang1033\langfe1033\langfenp1033 \loch\af3\dbch\af17\hich\f3 \'b7\tab}\hich\af1\dbch\af17\loch\f1 Execute \hich\f1 \lquote \loch\f1 ant test\hich\f1 \rquote \loch\f1 
+ within the directory that the distribution was extracted to.
+\par }\pard \s16\ql \li720\ri0\sa120\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {
+\par {\listtext\pard\plain\s2 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 4.2\tab}}\pard\plain \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Required steps to use the component
+\par {\listtext\pard\plain\s3 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 4.2.1\tab}}\pard\plain \s3\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl2\outlinelevel2\adjustright\rin0\lin0\itap0 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Data Type Conversion
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 The java.sql.ResultS\hich\af0\dbch\af17\loch\f0 
+etMetaData and the CustomResultSetMetaData contain three key parameters: }{\b\i \hich\af0\dbch\af17\loch\f0 columnClassName}{\hich\af0\dbch\af17\loch\f0 , }{\b\i \hich\af0\dbch\af17\loch\f0 columnType}{\hich\af0\dbch\af17\loch\f0 , and }{\b\i 
+\hich\af0\dbch\af17\loch\f0 columnTypeName}{\hich\af0\dbch\af17\loch\f0 . These are important when dealing with data type conversions.
+\par 
+\par }{\b\i \hich\af0\dbch\af17\loch\f0 columnClassName}{\hich\af0\dbch\af17\loch\f0  refers to the fully-qualified java class name of this da\hich\af0\dbch\af17\loch\f0 
+ta type. The data in this column had been converted to objects of this java class. Any custom remapping will need to be able to remap from this java class.
+\par 
+\par }{\b\i \hich\af0\dbch\af17\loch\f0 columnType}{\hich\af0\dbch\af17\loch\f0  refers to the JDBC 2.0 SQL data type. Table 1 shows some of the common SQL to  Java mapp\hich\af0\dbch\af17\loch\f0 
+ings in JDBC 2.0. These are not relevant to the conversion process.
+\par 
+\par }{\b\i \hich\af0\dbch\af17\loch\f0 columnTypeName}{\hich\af0\dbch\af17\loch\f0  refers to the database-specific types. The mapping of data types is based on these types, which the ResultSet contains in its metadata, and not JDBC 2.0  SQL data types, wh
+\hich\af0\dbch\af17\loch\f0 ich are ubiquitous.
+\par 
+\par \hich\af0\dbch\af17\loch\f0 The user needs to implement Converter objects to handle mapping, and a Mapper object to coordinate remapping.
+\par 
+\par \hich\af0\dbch\af17\loch\f0 The Converter class accepts as input the Object to be converter, the column number, and the metadata for any column-specific\hich\af0\dbch\af17\loch\f0 
+ information, such as the precision. This may be of relevance, in spite of the Object already being a Java Object. 
+\par 
+\par \hich\af0\dbch\af17\loch\f0 Table 1 shows the default mappings, where applicable, of the three database types to JDBC 2.0 SQL types and Java types.  
+\par 
+\par }\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \clcbpat17\cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \clcbpat17\cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr
+\brdrs\brdrw10 \clcbpat17\cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \clcbpat17\cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt
+\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \clcbpat17\cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\b \hich\af0\dbch\af17\loch\f0 
+JDBC 2.0 SQL Typ\hich\af0\dbch\af17\loch\f0 e\cell \hich\af0\dbch\af17\loch\f0 Java Type\cell \hich\af0\dbch\af17\loch\f0 SQL Server 2000 Type\cell \hich\af0\dbch\af17\loch\f0 Informix Type\cell \hich\af0\dbch\af17\loch\f0 Oracle Type\cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \clcbpat17\cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \clcbpat17\cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr
+\brdrs\brdrw10 \clcbpat17\cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \clcbpat17\cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt
+\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \clcbpat17\cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr
+\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr
+\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl
+\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {
+\hich\af0\dbch\af17\loch\f0 CHAR\cell \hich\af0\dbch\af17\loch\f0 String\cell \hich\af0\dbch\af17\loch\f0 char, nchar, uniqueidentifier\cell }{\cs20\f2\fs20 \hich\af2\dbch\af17\loch\f2 CHAR}{\hich\af0\dbch\af17\loch\f0 (}{\cs21\i 
+\hich\af0\dbch\af17\loch\f0 n}{\hich\af0\dbch\af17\loch\f0 )\cell \hich\af0\dbch\af17\loch\f0 CHAR\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl
+\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl
+\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 VARCHAR\cell \hich\af0\dbch\af17\loch\f0 String\cell \hich\af0\dbch\af17\loch\f0 Nvarchar, sql_variant, sysname\cell }{\cs20\f2\fs20 
+\hich\af2\dbch\af17\loch\f2 VARCHAR}{\hich\af0\dbch\af17\loch\f0 (}{\cs21\i \hich\af0\dbch\af17\loch\f0 m}{\hich\af0\dbch\af17\loch\f0 ,}{\cs21\i \hich\af0\dbch\af17\loch\f0 r}{\hich\af0\dbch\af17\loch\f0 )\cell \hich\af0\dbch\af17\loch\f0 VARCHAR2\cell 
+}\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt
+\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 LONGVARCHAR\cell \hich\af0\dbch\af17\loch\f0 
+String\cell \hich\af0\dbch\af17\loch\f0 ntext, text\cell }{\cs20\f2\fs20 \hich\af2\dbch\af17\loch\f2 TEXT}{\cell \hich\af0\dbch\af17\loch\f0 LONG\~\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd 
+\trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 NUMERIC\cell \hich\af0\dbch\af17\loch\f0 java.math.BigDecimal\cell \hich\af0\dbch\af17\loch\f0 numeric, numeric() identity\cell }{\cs20\f2\fs20 
+\hich\af2\dbch\af17\loch\f2 DECIMAL}{\cell \hich\af0\dbch\af17\loch\f0 NUMBER\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb
+\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb
+\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt
+\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 DECIMAL\cell \hich\af0\dbch\af17\loch\f0 java.math.BigDecimal\cell \hich\af0\dbch\af17\loch\f0 decimal, decimal() identity, money, smallmoney\cell }{
+\cs20\f2\fs20 \hich\af2\dbch\af17\loch\f2 DECIMAL}{\cell \hich\af0\dbch\af17\loch\f0 NUMBER\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 
+\trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb
+\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt
+\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 BIT\cell \hich\af0\dbch\af17\loch\f0 boolean\cell \hich\af0\dbch\af17\loch\f0 bit,\cell \hich\af0\dbch\af17\loch\f0 Not supported\cell 
+\hich\af0\dbch\af17\loch\f0 NUMBER\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh
+\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt
+\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 
+TINYINT\cell \hich\af0\dbch\af17\loch\f0 byte\cell \hich\af0\dbch\af17\loch\f0 tinyint, tinyint identity\cell }{\cs20\f2\fs20 \hich\af2\dbch\af17\loch\f2 SMALLINT}{\cell \hich\af0\dbch\af17\loch\f0 NUMBER\cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt
+\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 SMALLINT\cell \hich\af0\dbch\af17\loch\f0 short
+\cell \hich\af0\dbch\af17\loch\f0 smallint, smallint identity\cell }{\cs20\f2\fs20 \hich\af2\dbch\af17\loch\f2 SMALLINT}{\cell \hich\af0\dbch\af17\loch\f0 NUMBER\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {
+\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt
+\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 INTEGER\cell \hich\af0\dbch\af17\loch\f0 int
+\cell \hich\af0\dbch\af17\loch\f0 int, int identity\cell }{\cs20\f2\fs20 \hich\af2\dbch\af17\loch\f2 INTEGER}{\cell \hich\af0\dbch\af17\loch\f0 NUMBER\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd 
+\trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\trowd 
+\trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalc\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 BIGINT\cell \hich\af0\dbch\af17\loch\f0 long \cell \hich\af0\dbch\af17\loch\f0 bigint, bigint identity\cell }{\cs20\f2\fs20 \hich\af2\dbch\af17\loch\f2 
+INT}{\hich\af0\dbch\af17\loch\f0 8\cell \hich\af0\dbch\af17\loch\f0 NUMBER\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb
+\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb
+\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalc\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt
+\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 
+\trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl
+\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 REAL\cell \hich\af0\dbch\af17\loch\f0 float\cell \hich\af0\dbch\af17\loch\f0 real\cell }{\cs20\f2\fs20 \hich\af2\dbch\af17\loch\f2 SMALLFLOAT}{\cell 
+\hich\af0\dbch\af17\loch\f0 NUMBER\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh
+\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt
+\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 
+FLOAT\cell \hich\af0\dbch\af17\loch\f0 double\cell \hich\af0\dbch\af17\loch\f0 float\cell }{\cs20\f2\fs20 \hich\af2\dbch\af17\loch\f2 SMALLFLOAT}{\cell \hich\af0\dbch\af17\loch\f0 NUMBER\cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt
+\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 DOUBLE\cell \hich\af0\dbch\af17\loch\f0 double
+\cell \cell }{\cs20\f2\fs20 \hich\af2\dbch\af17\loch\f2 FLOAT}{\cell \hich\af0\dbch\af17\loch\f0 NUMBER\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl
+\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl
+\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 BINARY\cell \hich\af0\dbch\af17\loch\f0 byte[]\cell \hich\af0\dbch\af17\loch\f0 binary, timestamp\cell }{\cs20\f2\fs20 \hich\af2\dbch\af17\loch\f2 BYTE}
+{\cell \hich\af0\dbch\af17\loch\f0 RAW\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh
+\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt
+\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 
+VARBINARY\cell \hich\af0\dbch\af17\loch\f0 byte[]\cell \cell }{\cs20\f2\fs20 \hich\af2\dbch\af17\loch\f2 BYTE}{\cell \hich\af0\dbch\af17\loch\f0 RAW\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd 
+\trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 LONGVARBINARY\cell \hich\af0\dbch\af17\loch\f0 byte[]\cell \hich\af0\dbch\af17\loch\f0 image\cell }{\cs20\f2\fs20 \hich\af2\dbch\af17\loch\f2 BYTE}{
+\cell \hich\af0\dbch\af17\loch\f0 LONGRAW\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 
+\trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt
+\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\trowd \trgaph108\trleft720\trkeep\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr
+\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr
+\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl
+\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {
+\hich\af0\dbch\af17\loch\f0 DATE\cell \hich\af0\dbch\af17\loch\f0 java.sql.Date\cell \cell }{\cs20\f2\fs20 \hich\af2\dbch\af17\loch\f2 DATE}{\cell \hich\af0\dbch\af17\loch\f0 DATE\cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trkeep\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt
+\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv
+\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 
+\cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr
+\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl
+\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 TIME\cell \hich\af0\dbch\af17\loch\f0 
+java.sql.Time\cell \cell }{\cs20\f2\fs20 \hich\af2\dbch\af17\loch\f2 DATETIME}{\cell \hich\af0\dbch\af17\loch\f0 DATE\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 
+\trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl
+\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 TIMESTAMP\cell \hich\af0\dbch\af17\loch\f0 java.sql.Timestamp\cell \hich\af0\dbch\af17\loch\f0 datetime, smalldatetime\cell }{\cs20\f2\fs20 
+\hich\af2\dbch\af17\loch\f2 DATETIME}{\cell \hich\af0\dbch\af17\loch\f0 DATE\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb
+\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb
+\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt
+\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 BLOB\cell \hich\af0\dbch\af17\loch\f0 java.sql.Blob\~\cell \cell \cell \hich\af0\dbch\af17\loch\f0 BLOB\cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt
+\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 CLOB\~\cell \hich\af0\dbch\af17\loch\f0 
+java.sql.Clob\~\cell \cell \cell \hich\af0\dbch\af17\loch\f0 CLOB\~\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 
+\trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr
+\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl
+\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {
+\hich\af0\dbch\af17\loch\f0 STRUCT\cell \hich\af0\dbch\af17\loch\f0 java.sql.Struct\~\cell \cell \cell \hich\af0\dbch\af17\loch\f0 user-defined object\~\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd 
+\trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 
+\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 REF\cell \hich\af0\dbch\af17\loch\f0 java.sql.Ref\~\cell \cell \cell \hich\af0\dbch\af17\loch\f0 user-defined reference\~\cell }\pard 
+\ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 
+\trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt
+\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 
+\clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv
+\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 
+\cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr
+\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl
+\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\hich\af0\dbch\af17\loch\f0 ARRAY\cell \hich\af0\dbch\af17\loch\f0 
+java.sql.Array\~\cell \cell \cell \hich\af0\dbch\af17\loch\f0 user-defined collection\~\cell }\pard \ql \li0\ri0\widctlpar\intbl\aspalpha\aspnum\faauto\adjustright\rin0\lin0 {\trowd \trgaph108\trleft720\trbrdrt\brdrs\brdrw10 \trbrdrl\brdrs\brdrw10 
+\trbrdrb\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrh\brdrs\brdrw10 \trbrdrv\brdrs\brdrw10 \trftsWidth3\trwWidth8100\trftsWidthB3\trftsWidthA3\trpaddl108\trpaddr108\trpaddfl3\trpaddfr3 \clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb
+\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx2340\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx3960\clvertalt\clbrdrt
+\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1620 \cellx5580\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 
+\cltxlrtb\clftsWidth3\clwWidth1440 \cellx7020\clvertalt\clbrdrt\brdrs\brdrw10 \clbrdrl\brdrs\brdrw10 \clbrdrb\brdrs\brdrw10 \clbrdrr\brdrs\brdrw10 \cltxlrtb\clftsWidth3\clwWidth1800 \cellx8820\row }\pard 
+\ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 {
+\par \hich\af0\dbch\af17\loch\f0  
+\par {\listtext\pard\plain\s3 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 4.2.2\tab}}\pard\plain \s3\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl2\outlinelevel2\adjustright\rin0\lin0\itap0 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Sorting
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 
+When sorting with an array of comparators, the component can accept null comparators, upon which it will attempt to sort the column using the natural ordering of the column\hich\f0 \rquote \loch\f0 s elements.
+\par 
+\par \hich\af0\dbch\af17\loch\f0 After sorting, the cursor is set before the first row (i.e. cursor=0).\hich\af0\dbch\af17\loch\f0  See section 4.1.3, below.
+\par 
+\par \hich\af0\dbch\af17\loch\f0 
+Multiple row sorts will be done in descending importance. Therefore the first element in the array will be sorted first, then the next element, etc. Note that column sorts will not change the order of the previous sorts, except 
+\hich\af0\dbch\af17\loch\f0 when it is ambiguous.
+\par 
+\par {\listtext\pard\plain\s3 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 4.2.3\tab}}\pard\plain \s3\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl2\outlinelevel2\adjustright\rin0\lin0\itap0 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Cursor state
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 
+The user should not guess where the cursor is, because the position is not always guaranteed. When retrieving data, the use of the relative next() method is ok. When performing sorting, the cursor will be reset to \hich\af0\dbch\af17\loch\f0 
+zero. Once the remapping process is complete, the cursor is reset to zero. 
+\par 
+\par \hich\af0\dbch\af17\loch\f0 The robust navigation methods are used for exact cursor positioning. Recall that rows are 1-based.
+\par 
+\par {\listtext\pard\plain\s3 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 4.2.4\tab}}\pard\plain \s3\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl2\outlinelevel2\adjustright\rin0\lin0\itap0 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Getter methods
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 
+The most generic way to access data is through the getObje\hich\af0\dbch\af17\loch\f0 ct methods. However, there are getter methods for most Java datatypes that the user can use in lieu of type casting. 
+\par }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {
+\par {\listtext\pard\plain\s3 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 4.2.5\tab}}\pard\plain \s3\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl2\outlinelevel2\adjustright\rin0\lin0\itap0 \i\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Method summary
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {
+\par \hich\af0\dbch\af17\loch\f0 CustomResultSet
+\par {\listtext\pard\plain\f3\lang1033\langfe1033\langfenp1033 \loch\af3\dbch\af17\hich\f3 \'a8\tab}}\pard \ql \fi-360\li1080\ri0\widctlpar\jclisttab\tx1080\aspalpha\aspnum\faauto\ls12\adjustright\rin0\lin1080\itap0 {\hich\af0\dbch\af17\loch\f0 sortXXX methods
+
+\par }\pard \ql \li1080\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin1080\itap0 {\hich\af0\dbch\af17\loch\f0 These methods are use f\hich\af0\dbch\af17\loch\f0 
+or sorting. Sorting can be done my column name or index, with single or multiple columns to be sorted, and for either descending or ascending sorts.
+\par 
+\par {\listtext\pard\plain\f3\lang1033\langfe1033\langfenp1033 \loch\af3\dbch\af17\hich\f3 \'a8\tab}}\pard \ql \fi-360\li1080\ri0\widctlpar\jclisttab\tx1080\aspalpha\aspnum\faauto\ls12\adjustright\rin0\lin1080\itap0 {\hich\af0\dbch\af17\loch\f0 
+navigation methods
+\par }\pard \ql \li1080\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin1080\itap0 {\hich\af0\dbch\af17\loch\f0 absolute, beforeLast, afterFirst, first, isAfterLast, isBeforeFirst, isFirst, isLast,\hich\af0\dbch\af17\loch\f0  next, previous, relative.
+
+\par 
+\par \hich\af0\dbch\af17\loch\f0 These methods will act in the same fashion as they do in java.sql.ResultSet. That is, as the name of method suggest. Recall that row numbers are 1-based.
+\par 
+\par {\listtext\pard\plain\f3\lang1033\langfe1033\langfenp1033 \loch\af3\dbch\af17\hich\f3 \'a8\tab}}\pard \ql \fi-360\li1080\ri0\widctlpar\jclisttab\tx1080\aspalpha\aspnum\faauto\ls12\adjustright\rin0\lin1080\itap0 {\hich\af0\dbch\af17\loch\f0 getXXX methods
+
+\par }\pard \ql \li1080\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin1080\itap0 {\hich\af0\dbch\af17\loch\f0 These methods will act in the same fashion as they do in\hich\af0\dbch\af17\loch\f0 
+ java.sql.ResultSet. That is, to retrieve data of the give type.
+\par }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {
+\par {\listtext\pard\plain\f3\lang1033\langfe1033\langfenp1033 \loch\af3\dbch\af17\hich\f3 \'a8\tab}}\pard \ql \fi-360\li1080\ri0\widctlpar\jclisttab\tx1080\aspalpha\aspnum\faauto\ls12\adjustright\rin0\lin1080\itap0 {\hich\af0\dbch\af17\loch\f0 other methods
+
+\par }\pard \ql \li1080\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin1080\itap0 {\hich\af0\dbch\af17\loch\f0 remap \hich\f0 \endash \loch\f0  used for remapping
+\par \hich\af0\dbch\af17\loch\f0 findColumn \hich\f0 \endash \loch\f0  used to find column index given a column name
+\par }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {
+\par {\listtext\pard\plain\s2 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 4.3\tab}}\pard\plain \s2\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx0\aspalpha\aspnum\faauto\ls1\ilvl1\outlinelevel1\adjustright\rin0\lin0\itap0 \b\fs20\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Demo
+\par }\pard\plain \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 
+// Database configuration(In Oracle):
+\par \hich\af2\dbch\af17\loch\f2 // table: ABSTRACTION_TABLE
+\par \hich\af2\dbch\af17\loch\f2 // Column }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2      }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 name }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2      }{
+\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 type }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2         }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 can-be-null
+\par \hich\af2\dbch\af17\loch\f2 // }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2             }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 ID }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2        }{
+\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 NUMBER(10) }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2   }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 no
+\par \hich\af2\dbch\af17\loch\f2 // }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2             }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 NAME }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2      }{
+\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 VARCHAR2(10) no
+\par \hich\af2\dbch\af17\loch\f2 // }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2             }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 AGE }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2       }{
+\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 L\hich\af2\dbch\af17\loch\f2 ONG }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2         }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 yes
+\par \hich\af2\dbch\af17\loch\f2 // }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2             }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 BLOB_T }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2    }{
+\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 BLOB }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2         }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 yes}{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2  }{
+\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 
+\par }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 // }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2             }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 CLOB_T }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 
+\hich\af2\dbch\af17\loch\f2    }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 CLOB }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2         }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 yes
+\par \hich\af2\dbch\af17\loch\f2 // }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2             }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 DATE_T }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2    }{
+\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 DATE }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2         }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 yes
+\par \hich\af2\dbch\af17\loch\f2 //
+\par \hich\af2\dbch\af17\loch\f2 // Values in table ABSTRACTION_TABLE
+\par \hich\af2\dbch\af17\loch\f2 // }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2   }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 50 TOPCODER 10 EMPTY_BLOB EMPTY_CLOB 2006-06-18
+\par \hich\af2\dbch\af17\loch\f2 // }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2   }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 100 TEST 20 NOT-EMPTY NOT\hich\af2\dbch\af17\loch\f2 -EMPTY 2006-06-19
+\par \hich\af2\dbch\af17\loch\f2 // NOT-EMPTY above means that it contains value
+\par 
+\par \hich\af2\dbch\af17\loch\f2 // Create database connection.
+\par \hich\af2\dbch\af17\loch\f2 Connection conn = UnitTestHelper.getDatabaseConnection();
+\par \hich\af2\dbch\af17\loch\f2 // Retrieve ResultSet for Database.
+\par \hich\af2\dbch\af17\loch\f2 ResultSet rs = UnitTestH\hich\af2\dbch\af17\loch\f2 elper.getResultSet(conn);
+\par \hich\af2\dbch\af17\loch\f2 // Create DatabaseAbstractor
+\par \hich\af2\dbch\af17\loch\f2 DatabaseAbstractor dbAbstractor = new DatabaseAbstractor();
+\par 
+\par \hich\af2\dbch\af17\loch\f2 // Initialize mapper
+\par \hich\af2\dbch\af17\loch\f2 HashMap map = new HashMap();
+\par \hich\af2\dbch\af17\loch\f2 // Class MockConverterBoolean which converts BigDe\hich\af2\dbch\af17\loch\f2 cimal }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 
+\par \hich\af2\dbch\af17\loch\f2 // }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 value to Boolean(true)}{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2  }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 and throw IllegalMappingException }{
+\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 
+\par \hich\af2\dbch\af17\loch\f2 // }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 if it is not BigDecimal value.
+\par \hich\af2\dbch\af17\loch\f2 class MockConverterBoolean implements Converter \{
+\par }\pard \ql \fi1200\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0\cufi600 {\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 // simple implementation.
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2     }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 /**
+\par \hich\af2\dbch\af17\loch\f2      \hich\af2\dbch\af17\loch\f2 * Convert value to Boolean\hich\af2\dbch\af17\loch\f2 (true), if it is a BigDecimal.
+\par \hich\af2\dbch\af17\loch\f2      \hich\af2\dbch\af17\loch\f2 *
+\par \hich\af2\dbch\af17\loch\f2     \hich\af2\dbch\af17\loch\f2  * @return the converted result (may be null)
+\par \hich\af2\dbch\af17\loch\f2     \hich\af2\dbch\af17\loch\f2  * @param value the original object value
+\par \hich\af2\dbch\af17\loch\f2     \hich\af2\dbch\af17\loch\f2  * @param column the column the value came from
+\par \hich\af2\dbch\af17\loch\f2     \hich\af2\dbch\af17\loch\f2  * @param metaData metadata for the result set
+\par }\pard \ql \fi-800\li1518\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin1518\itap0\cufi-400\culi299 {\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2     \hich\af2\dbch\af17\loch\f2  * \hich\af2\dbch\af17\loch\f2 @throws IllegalMappi}{\f2\fs20\cf6 
+\hich\af2\dbch\af17\loch\f2 ngException when value is not
+\par }\pard \ql \fi-200\li1515\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin1515\itap0\cufi-100\culi548 {\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2 *\hich\af2\dbch\af17\loch\f2          }{\f2\fs20\cf6 
+\hich\af2\dbch\af17\loch\f2 BigDecimal
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2       }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 */
+\par }\pard \ql \fi-3200\li3918\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin3918\itap0\cufi-1600\culi299 {\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2      \hich\af2\dbch\af17\loch\f2 public Object convert(Object value, int column, 
+\hich\af2\dbch\af17\loch\f2 C\hich\af2\dbch\af17\loch\f2 ustomResultSetMetaData metaData)
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2          \hich\af2\dbch\af17\loch\f2        throws IllegalMappingException \{
+\par \hich\af2\dbch\af17\loch\f2            \hich\af2\dbch\af17\loch\f2 if (value.getClass().equals(BigDecimal.class)) \{
+\par \hich\af2\dbch\af17\loch\f2                   \hich\af2\dbch\af17\loch\f2 return new Boolean(true);
+\par \hich\af2\dbch\af17\loch\f2            \}\hich\af2\dbch\af17\loch\f2  else \{
+\par \hich\af2\dbch\af17\loch\f2            \hich\af2\dbch\af17\loch\f2    }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2     }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 throw new }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 
+
+\par }\pard \ql \fi2920\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0\cufi1460 {\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 IllegalMappingException("illegalException.");
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2     }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2         }{\f2\fs20\cf6 \}
+\par }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2        }{\f2\fs20\cf6 \}
+\par }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2  }{\f2\fs20\cf6 \}
+\par }{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2  }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2 /}{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 / map instance of Converter to the column type named "number"
+\par \hich\af2\dbch\af17\loch\f2  \hich\af2\dbch\af17\loch\f2 map.put("number", new MockConverterBoolean());
+\par \hich\af2\dbch\af17\loch\f2  \hich\af2\dbch\af17\loch\f2 // create mapper with one converter which aims to convert number}{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 
+\par }\pard \ql \fi920\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0\cufi460 {\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2 //}{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2  column to boolean.
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2  \hich\af2\dbch\af17\loch\f2 Mapper mapper = new Mapper(map);
+\par 
+\par \hich\af2\dbch\af17\loch\f2  // set mapper of DatabaseAbstractor.
+\par \hich\af2\dbch\af17\loch\f2  dbAbstractor.setMapper(mapper);
+\par 
+\par \hich\af2\dbch\af17\loch\f2  // Get CustomResultSet.
+\par \hich\af2\dbch\af17\loch\f2  CustomResultSet crs = dbAbstractor.convertResultSet(rs);
+\par \hich\af2\dbch\af17\loch\f2  while (crs.next()) \{
+\par \hich\af2\dbch\af17\loch\f2        // Get original value of CustomResultValue.
+\par \hich\af2\dbch\af17\loch\f2        crs.getBigDecimal("ID");
+\par 
+\par \hich\af2\dbch\af17\loch\f2        // Get mapped value of CustomResultSet.
+\par \hich\af2\dbch\af17\loch\f2        crs.getBoolean(1);
+\par 
+\par \hich\af2\dbch\af17\loch\f2        // Get not exist value will result in ClassCastException.
+\par \hich\af2\dbch\af17\loch\f2        // crs.getByte(1);
+\par 
+\par \hich\af2\dbch\af17\loch\f2   \}
+\par 
+\par \hich\af2\dbch\af17\loch\f2  // Here demos improved function of version 1.1
+\par }\pard \ql \fi920\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0\cufi460 {\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 DatabaseAbstractor dbAbstractor2 = new DatabaseAbstractor();
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\f2\fs20\cf6 
+\par \hich\af2\dbch\af17\loch\f2  \hich\af2\dbch\af17\loch\f2 // set On-Demand Mapper of DatabaseAbstractor.
+\par }\pard \ql \li718\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin718\itap0\culi299 {\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2         \hich\af2\dbch\af17\loch\f2 dbAbstractor2.setOnDemand\hich\af2\dbch\af17\loch\f2 
+Mapper(OnDemandMapper.createDefaultOnDemandMapper());
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\f2\fs20\cf6 
+\par \hich\af2\dbch\af17\loch\f2 // Set Mapper.
+\par \hich\af2\dbch\af17\loch\f2 dbAbstractor2.setMapper(mapper);
+\par 
+\par \hich\af2\dbch\af17\loch\f2 // Get CustomResultSet.
+\par \hich\af2\dbch\af17\loch\f2 CustomResultSet crs2 = dbAbstractor2.convertResultSet(rs);
+\par \hich\af2\dbch\af17\loch\f2 while (crs2.next()) \{
+\par \hich\af2\dbch\af17\loch\f2  \hich\af2\dbch\af17\loch\f2      // Get original value of CustomResultValue.
+\par \hich\af2\dbch\af17\loch\f2       crs.getBigDecimal("ID");
+\par 
+\par \hich\af2\dbch\af17\loch\f2       // Get mapped value of CustomResultSet.
+\par \hich\af2\dbch\af17\loch\f2       crs.getBoolean(1);
+\par 
+\par \hich\af2\dbch\af17\loch\f2       // Get not exist value in original value or mapped value, }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 
+\par }\pard \ql \fi1400\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0\cufi700 {\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2 //}{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 but was convert
+\hich\af2\dbch\af17\loch\f2 ed from BigDecimal to}{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2  Byte\hich\af2\dbch\af17\loch\f2 .}{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2       crs.getByte("ID");
+\par \hich\af2\dbch\af17\loch\f2       // Get not exist value in original value or mapped value, }{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 
+\par }\pard \ql \fi1400\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0\cufi700 {\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2 //}{\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2 but was converted from BigDecimal to}{
+\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \hich\af2\dbch\af17\loch\f2  String.}{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 
+\par }\pard \ql \fi720\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\f2\fs20\cf6 \hich\af2\dbch\af17\loch\f2       crs.getString(1);
+\par \}
+\par 
+\par \hich\af2\dbch\af17\loch\f2 // Demo the sort method of CustomResultSet.
+\par \hich\af2\dbch\af17\loch\f2 crs2.sortAscending("ID");
+\par 
+\par \hich\af2\dbch\af17\loch\f2 // Retrieve value of sorted CustomResultSet.
+\par \hich\af2\dbch\af17\loch\f2 while (crs2.next()) \{
+\par \hich\af2\dbch\af17\loch\f2        crs.getBigDecimal("ID");
+\par \}
+\par 
+\par \hich\af2\dbch\af17\loch\f2 // Close connection.
+\par \hich\af2\dbch\af17\loch\f2 c\hich\af2\dbch\af17\loch\f2 onn.close();}{\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 
+\par }\pard \ql \fi400\li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0\cufi200 {\f2\fs20\cf6\lang1033\langfe2052\langfenp2052 \}
+\par }\pard \ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 {\f2\fs20 
+\par {\listtext\pard\plain\s1 \b\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\langfenp1033 \hich\af1\dbch\af28\loch\f1 5.\tab}}\pard\plain \s1\ql \li0\ri0\sb120\sa60\sl240\slmult0\keepn\nowidctlpar
+\jclisttab\tx360\aspalpha\aspnum\faauto\ls1\outlinelevel0\adjustright\rin0\lin0\itap0 \b\fs24\lang1033\langfe1033\loch\af1\hich\af1\dbch\af28\cgrid\langnp1033\langfenp1033 {\hich\af1\dbch\af28\loch\f1 Future Enhancements
+\par }\pard\plain \ql \li720\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin720\itap0 \fs24\lang1033\langfe1033\loch\af0\hich\af0\dbch\af17\cgrid\langnp1033\langfenp1033 {\hich\af0\dbch\af17\loch\f0 Provide additional on demand conversions.
+\par }}

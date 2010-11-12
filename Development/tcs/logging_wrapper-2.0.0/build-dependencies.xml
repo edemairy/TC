@@ -1,0 +1,35 @@
+<project name="Dependency Import" default="dist" basedir=".">
+    <!-- property file defining the component's dependencies -->
+
+    <!-- define base_exception.jar : could be auto generated instead -->
+    <property name="base_exception.name" value="base_exception" />
+    <property name="base_exception.version" value="2.0.0" />
+    <property name="base_exception.path" value="${base_exception.name}/${base_exception.version}" />
+    <property name="base_exception.jar" value="${tcs_libdir}/${base_exception.path}/${base_exception.name}.jar" />
+
+    <!-- define typesafe_enum.jar : could be auto generated instead -->
+    <property name="typesafe_enum.name" value="typesafe_enum" />
+    <property name="typesafe_enum.version" value="1.1.0" />
+    <property name="typesafe_enum.path" value="${typesafe_enum.name}/${typesafe_enum.version}" />
+    <property name="typesafe_enum.jar" value="${tcs_libdir}/${typesafe_enum.path}/${typesafe_enum.name}.jar" />
+
+    <!-- define object_formatter.jar : could be auto generated instead -->
+    <property name="object_formatter.name" value="object_formatter" />
+    <property name="object_formatter.version" value="1.0.0" />
+    <property name="object_formatter.path" value="${object_formatter.name}/${object_formatter.version}" />
+    <property name="object_formatter.jar" value="${tcs_libdir}/${object_formatter.path}/${object_formatter.name}.jar" />
+
+    <!-- 3rd party libraries -->
+    <property name="log4j.jar" value="${ext_libdir}/log4j/1.2.14/log4j-1.2.14.jar"/>
+
+    <!-- the required path elements must be defined even if empty -->
+    <path id="component.tcs-dependencies">
+        <pathelement location="${typesafe_enum.jar}" />
+        <pathelement location="${object_formatter.jar}" />
+        <pathelement location="${base_exception.jar}" />
+    </path>
+    <path id="component.3rdParty-dependencies">
+        <pathelement location="${log4j.jar}" />
+    </path>
+    <path id="component.test.3rdParty-dependencies" />
+</project>
