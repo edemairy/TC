@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="44" failures="81" hostname="powo" name="com.topcoder.bloom.AllTests" tests="236" time="1.038" timestamp="2010-11-15T16:54:03">
+  <properties>
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="document_generator.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/document_generator.jar" />
+    <property name="resource_management_persistence.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/resource_management_persistence.jar" />
+    <property name="dist_testfiles" value="build/dist/bloom_filter-1.0/test_files" />
+    <property name="netbeans.system_http_proxy" value="DIRECT" />
+    <property name="java.home" value="/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre" />
+    <property name="review_data_structure.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/review_data_structure.jar" />
+    <property name="deliverable_management.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/deliverable_management.jar" />
+    <property name="dist_javadocs" value="build/dist/bloom_filter-1.0/docs/javadocs" />
+    <property name="debug" value="off" />
+    <property name="build_distdir" value="build/dist" />
+    <property name="distfilename" value="bloom_filter" />
+    <property name="review_management_persistence.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/review_management_persistence.jar" />
+    <property name="component.dist.jar" value="build/dist/bloom_filter-1.0.jar" />
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/endorsed" />
+    <property name="object_factory.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/object_factory.jar" />
+    <property name="sun.java2d.noddraw" value="true" />
+    <property name="auto_screening_management.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/auto_screening_management.jar" />
+    <property name="netbeans.hash.code" value="unique=NB_CND_FX_GFMOD_GROOVY_JAVA_MOB_PHP_RUBY_WEBEE086a3e7d7-c7d3-46fe-8ed7-90637f482893_addc17dc-2518-42b3-ab3a-23ce1b5a1285" />
+    <property name="mail.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/mail.jar" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="design_dist.jar" value="Bloom_Filter_1.0_design_dist.jar" />
+    <property name="javadocsdir" value="docs/javadocs" />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
+    <property name="java.version" value="1.6.0_18" />
+    <property name="scorecard_management.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/scorecard_management.jar" />
+    <property name="nb.show.statistics.ui" value="usageStatisticsEnabled" />
+    <property name="j2ee.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/jboss-j2ee.jar" />
+    <property name="org.openide.major.version" value="IDE/1" />
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="netbeans.autoupdate.variant" value="" />
+    <property name="dist_src" value="build/dist/bloom_filter-1.0/src" />
+    <property name="netbeans.buildnumber" value="201007282301" />
+    <property name="ant.project.invoked-targets" value="reports" />
+    <property name="ifxjdbc.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/ifxjdbc.jar" />
+    <property name="user.name" value="edemairy" />
+    <property name="packagedir" value="com/topcoder/bloom" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="component_version" value="1.0" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
+    <property name="project_management_persistence.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/project_management_persistence.jar" />
+    <property name="jdk.home" value="/usr/lib/jvm/java" />
+    <property name="reports" value="reports" />
+    <property name="build_webdir" value="build/web" />
+    <property name="component.jar" value="build/dist/lib/tcs/bloom_filter/1.0/bloom_filter.jar" />
+    <property name="netbeans.autoupdate.version" value="1.23" />
+    <property name="netbeans.dirs" value="/home/edemairy/Documents/Netbeans-6.9.1/nb:/home/edemairy/Documents/Netbeans-6.9.1/ergonomics:/home/edemairy/Documents/Netbeans-6.9.1/ide:/home/edemairy/Documents/Netbeans-6.9.1/java:/home/edemairy/Documents/Netbeans-6.9.1/bin/../xml:/home/edemairy/Documents/Netbeans-6.9.1/apisupport:/home/edemairy/Documents/Netbeans-6.9.1/bin/../webcommon:/home/edemairy/Documents/Netbeans-6.9.1/websvccommon:/home/edemairy/Documents/Netbeans-6.9.1/enterprise:/home/edemairy/Documents/Netbeans-6.9.1/mobility:/home/edemairy/Documents/Netbeans-6.9.1/profiler:/home/edemairy/Documents/Netbeans-6.9.1/ruby:/home/edemairy/Documents/Netbeans-6.9.1/bin/../python:/home/edemairy/Documents/Netbeans-6.9.1/php:/home/edemairy/Documents/Netbeans-6.9.1/bin/../visualweb:/home/edemairy/Documents/Netbeans-6.9.1/bin/../soa:/home/edemairy/Documents/Netbeans-6.9.1/identity:/home/edemairy/Documents/Netbeans-6.9.1/bin/../uml:/home/edemairy/Documents/Netbeans-6.9.1/harness:/home/edemairy/Documents/Netbeans-6.9.1/cnd:/home/edemairy/Documents/Netbeans-6.9.1/dlight:/home/edemairy/Documents/Netbeans-6.9.1/groovy:/home/edemairy/Documents/Netbeans-6.9.1/bin/../extra:/home/edemairy/Documents/Netbeans-6.9.1/javafx:/home/edemairy/Documents/Netbeans-6.9.1/bin/../javacard:" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="javamain" value="src/java/main" />
+    <property name="build_lib" value="build/lib" />
+    <property name="user.timezone" value="" />
+    <property name="netbeans.system_http_non_proxy_hosts" value="" />
+    <property name="org.openide.specification.version" value="6.2" />
+    <property name="path.separator" value=":" />
+    <property name="srcdir" value="src" />
+    <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="ant.project.default-target" value="dist" />
+    <property name="https.nonProxyHosts" value="localhost|127.0.0.1|powo" />
+    <property name="command_line_utility.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/command_line_utility.jar" />
+    <property name="activation.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/activation.jar" />
+    <property name="ant.file" value="/home/edemairy/Documents/Personnal/TC/Development/BloomFilter/build.xml" />
+    <property name="javasrc" value="src/java" />
+    <property name="search_builder.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/search_builder.jar" />
+    <property name="component.tests.jar" value="build/dist/lib/tcs/bloom_filter_tests.jar" />
+    <property name="netbeans.autoupdate.language" value="en" />
+    <property name="java.io.tmpdir" value="/tmp" />
+    <property name="review_management.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/review_management.jar" />
+    <property name="user.language" value="en" />
+    <property name="ant.file.Bloom Filter" value="/home/edemairy/Documents/Personnal/TC/Development/BloomFilter/build.xml" />
+    <property name="line.separator" value="
+" />
+    <property name="apple.laf.useScreenMenuBar" value="true" />
+    <property name="verbose" value="no" />
+    <property name="jar_ext_libdir" value="lib/third_party" />
+    <property name="phase_management.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/phase_management.jar" />
+    <property name="project_phases.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/project_phases.jar" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="component_path" value="bloom_filter/1.0" />
+    <property name="sun.desktop" value="gnome" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="deliverable_management_persistence.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/deliverable_management_persistence.jar" />
+    <property name="builddir" value="build" />
+    <property name="class_associations.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/class_associations.jar" />
+    <property name="netbeans.dynamic.classpath" value="/home/edemairy/Documents/Netbeans-6.9.1/platform/core/core.jar:/home/edemairy/Documents/Netbeans-6.9.1/platform/core/org-openide-filesystems.jar:/home/edemairy/Documents/Netbeans-6.9.1/platform/core/locale/core_zh_CN.jar:/home/edemairy/Documents/Netbeans-6.9.1/platform/core/locale/core_ja.jar:/home/edemairy/Documents/Netbeans-6.9.1/platform/core/locale/org-openide-filesystems_ja.jar:/home/edemairy/Documents/Netbeans-6.9.1/platform/core/locale/org-openide-filesystems_pt_BR.jar:/home/edemairy/Documents/Netbeans-6.9.1/platform/core/locale/org-openide-filesystems_zh_CN.jar:/home/edemairy/Documents/Netbeans-6.9.1/platform/core/locale/core_pt_BR.jar:/home/edemairy/Documents/Netbeans-6.9.1/nb/core/org-netbeans-upgrader.jar:/home/edemairy/Documents/Netbeans-6.9.1/nb/core/locale/org-netbeans-upgrader_pt_BR.jar:/home/edemairy/Documents/Netbeans-6.9.1/nb/core/locale/org-netbeans-upgrader_zh_CN.jar:/home/edemairy/Documents/Netbeans-6.9.1/nb/core/locale/core_nb_zh_CN.jar:/home/edemairy/Documents/Netbeans-6.9.1/nb/core/locale/core_nb_pt_BR.jar:/home/edemairy/Documents/Netbeans-6.9.1/nb/core/locale/core_nb_ja.jar:/home/edemairy/Documents/Netbeans-6.9.1/nb/core/locale/core_nb.jar:/home/edemairy/Documents/Netbeans-6.9.1/nb/core/locale/org-netbeans-upgrader_ja.jar" />
+    <property name="maven.mode.standalone" value="true" />
+    <property name="dist_conf" value="build/dist/bloom_filter-1.0/conf" />
+    <property name="review_score_aggregator.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/review_score_aggregator.jar" />
+    <property name="id_generator.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/id_generator.jar" />
+    <property name="http.nonProxyHosts" value="localhost|127.0.0.1|powo" />
+    <property name="configuration_manager.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/configuration_manager.jar" />
+    <property name="jna.boot.library.path" value="/user/edemairy/home/.netbeans/6.9/var/cache/jna" />
+    <property name="netbeans.autoupdate.country" value="US" />
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
+    <property name="dist_lib" value="build/dist/lib/tcs" />
+    <property name="junit.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/junit.jar" />
+    <property name="configdir" value="conf" />
+    <property name="build_tcsdistdir" value="build/dist/bloom_filter-1.0" />
+    <property name="ant.version" value="Apache Ant version 1.8.1 compiled on April 30 2010" />
+    <property name="netbeans.home" value="/home/edemairy/Documents/Netbeans-6.9.1/platform" />
+    <property name="netbeans.importclass" value="org.netbeans.upgrade.AutoUpgrade" />
+    <property name="dist_docs" value="build/dist/bloom_filter-1.0/docs" />
+    <property name="workdays.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/workdays.jar" />
+    <property name="useJavaUtilZip" value="true" />
+    <property name="testlogdir" value="log" />
+    <property name="configuration_api.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/configuration_api.jar" />
+    <property name="apple.awt.graphics.UseQuartz" value="true" />
+    <property name="os.name" value="Linux" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM" />
+    <property name="scorecard_data_structure.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/scorecard_data_structure.jar" />
+    <property name="org.openide.version" value="deprecated" />
+    <property name="java.library.path" value="/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64/server:/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64:/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib" />
+    <property name="docpackage.jar" value="bloom_filter_docs.jar" />
+    <property name="shared.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/shared.jar" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="basedir" value="/home/edemairy/Documents/Personnal/TC/Development/BloomFilter" />
+    <property name="java.class.version" value="50.0" />
+    <property name="sun.awt.exception.handler" value="org.netbeans.core.startup.TopLogging$AWTHandler" />
+    <property name="ant.home" value="/home/edemairy/Documents/Netbeans-6.9.1/java/ant" />
+    <property name="component.war" value="${dist_examples}/bloom_filter.war" />
+    <property name="object_factory_configuration_api_plugin.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/object_factory_configuration_api_plugin.jar" />
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/amd64" />
+    <property name="ext_libdir" value="lib/third_party" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Server Compiler" />
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
+    <property name="jar_tcs_libdir" value="lib/tcs" />
+    <property name="build_targetclassdir" value="build/targetclasses" />
+    <property name="docsdir" value="docs" />
+    <property name="dev_dist.jar" value="Bloom_Filter_1.0_dev_dist.jar" />
+    <property name="build.compiler.emacs" value="true" />
+    <property name="scorecard_management_persistence.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/scorecard_management_persistence.jar" />
+    <property name="ant.project.name" value="Bloom Filter" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="webdir" value="web" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="build_javadocsdir" value="build/docs/javadocs" />
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/ext:/usr/java/packages/lib/ext" />
+    <property name="os.version" value="2.6.32.23-170.fc12.x86_64" />
+    <property name="user.home" value="/user/edemairy/home" />
+    <property name="javadoc.jar" value="javadocs.jar" />
+    <property name="build_classdir" value="build/classes" />
+    <property name="org.xml.sax.driver" value="com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser" />
+    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="build_testclassdir" value="build/testClasses" />
+    <property name="package" value="com.topcoder.bloom" />
+    <property name="base_exception.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/base_exception.jar" />
+    <property name="typesafe_enum.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/typesafe_enum.jar" />
+    <property name="user.dir" value="/home/edemairy" />
+    <property name="data_validation.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/data_validation.jar" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="dist_docpackage" value="build/doc_package" />
+    <property name="java.vm.version" value="14.0-b16" />
+    <property name="dev_submission.jar" value="Bloom_Filter_1.0_dev_submission.jar" />
+    <property name="java.class.path" value="/home/edemairy/Documents/Personnal/TC/Development/BloomFilter/build/testClasses:/home/edemairy/Documents/Personnal/TC/Development/BloomFilter/build/classes:/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/junit.jar:/home/edemairy/Documents/Netbeans-6.9.1/java/ant/lib/ant-launcher.jar:/home/edemairy/Documents/Netbeans-6.9.1/java/ant/lib/ant.jar:/home/edemairy/Documents/Netbeans-6.9.1/java/ant/patches/72080.jar" />
+    <property name="database_abstraction.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/database_abstraction.jar" />
+    <property name="os.arch" value="amd64" />
+    <property name="netbeans.user" value="/user/edemairy/home/.netbeans/6.9" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="user_project_data_store.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/user_project_data_store.jar" />
+    <property name="ant.core.lib" value="/home/edemairy/Documents/Netbeans-6.9.1/java/ant/lib/ant.jar" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="file.separator" value="/" />
+    <property name="java.runtime.version" value="1.6.0_18-b18" />
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/lib/rhino.jar:/usr/lib/jvm/java-1.6.0-openjdk-1.6.0.0.x86_64/jre/classes" />
+    <property name="phase_management_persistence.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/phase_management_persistence.jar" />
+    <property name="build_docsdir" value="build/docs" />
+    <property name="javax.accessibility.assistive_technologies" value="org.GNOME.Accessibility.JavaBridge" />
+    <property name="design_submission.jar" value="Bloom_Filter_1.0_design_submission.jar" />
+    <property name="project_management.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/project_management.jar" />
+    <property name="log4j-1.2.14.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/log4j-1.2.14.jar" />
+    <property name="java.util.logging.config.class" value="org.netbeans.core.startup.TopLogging" />
+    <property name="ant.file.type.Bloom Filter" value="file" />
+    <property name="user.country" value="US" />
+    <property name="tcs_libdir" value="lib/tcs" />
+    <property name="resource_management.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/resource_management.jar" />
+    <property name="component" value="Bloom_Filter" />
+    <property name="logging_wrapper.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/logging_wrapper.jar" />
+    <property name="java_1_3_bootclasspath" value="c:\program files\JavaSoft\JRE\1.3.1\lib\rt.jar" />
+    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="db_connection_factory.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/db_connection_factory.jar" />
+    <property name="email_engine.jar" value="/user/edemairy/home/Documents/Personnal/TC/Development/Online_Review_Phases_v1.6/libs/email_engine.jar" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="testfiles" value="test_files" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="javatests" value="src/java/tests" />
+  </properties>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor1NegativeCapacity" time="0.002" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor1ZeroCapacity" time="0.001" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor1NegativeErrorRate" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor1BadErrorRate1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor1BadErrorRate2" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor1BadErrorRate3" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor1VeryBigBitSet" time="0.151" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor1VerySmallBitSet" time="0.003">
+    <failure message="Expected length 2 expected:&lt;2&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Expected length 2 expected:&lt;2&gt; but was:&lt;0&gt;
+	at com.topcoder.bloom.BloomFilterTests.testConstructor1VerySmallBitSet(BloomFilterTests.java:152)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor1Accuracy1" time="0.002">
+    <failure message="Bad Bit Set size expected:&lt;481&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Bad Bit Set size expected:&lt;481&gt; but was:&lt;0&gt;
+	at com.topcoder.bloom.BloomFilterTests.testConstructor1Accuracy1(BloomFilterTests.java:162)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor1Accuracy2" time="0.001">
+    <failure message="Bad Bit Set size expected:&lt;3374&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Bad Bit Set size expected:&lt;3374&gt; but was:&lt;0&gt;
+	at com.topcoder.bloom.BloomFilterTests.testConstructor1Accuracy2(BloomFilterTests.java:173)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor1Accuracy3" time="0.001">
+    <failure message="Bad Bit Set size expected:&lt;288&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Bad Bit Set size expected:&lt;288&gt; but was:&lt;0&gt;
+	at com.topcoder.bloom.BloomFilterTests.testConstructor1Accuracy3(BloomFilterTests.java:184)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor2NegativeCapacity" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor2ZeroCapacity" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor2NegativeErrorRate" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor2BadErrorRate1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor2BadErrorRate2" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor2BadErrorRate3" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor2NullClass" time="0.001">
+    <error message="Impossible to instantiate the hash function." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:157)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor2NullClass(BloomFilterTests.java:273)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor2BadClass" time="0.001" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor2VeryBigBitSet" time="0.15" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor2VerySmallBitSet" time="0.001">
+    <error message="Impossible to instantiate the hash function." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:157)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor2VerySmallBitSet(BloomFilterTests.java:316)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor2Accuracy1" time="0.001">
+    <error message="Impossible to instantiate the hash function." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:157)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor2Accuracy1(BloomFilterTests.java:327)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor2Accuracy2" time="0.002">
+    <error message="Impossible to instantiate the hash function." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:157)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor2Accuracy2(BloomFilterTests.java:340)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor2Accuracy3" time="0.001">
+    <error message="Impossible to instantiate the hash function." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:157)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor2Accuracy3(BloomFilterTests.java:353)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor3ZeroSize" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor3NullHashFamily" time="0.001">
+    <error message="hash functions must not be null." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: hash functions must not be null.
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:179)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor3NullHashFamily(BloomFilterTests.java:379)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor3VeryBigBitSet" time="0.152" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor3BitSetLength1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor3Accuracy1" time="0.001">
+    <failure message="Bad Bit Set size expected:&lt;100&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Bad Bit Set size expected:&lt;100&gt; but was:&lt;0&gt;
+	at com.topcoder.bloom.BloomFilterTests.testConstructor3Accuracy1(BloomFilterTests.java:424)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor3Accuracy2" time="0.001">
+    <failure message="Bad Bit Set size expected:&lt;1000000&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Bad Bit Set size expected:&lt;1000000&gt; but was:&lt;0&gt;
+	at com.topcoder.bloom.BloomFilterTests.testConstructor3Accuracy2(BloomFilterTests.java:436)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor4NullSerialized" time="0.001">
+    <failure message="NullPointerException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: NullPointerException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4NullSerialized(BloomFilterTests.java:447)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor4EmptySerialized" time="0.001">
+    <failure message="BloomFilterSerializeException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4EmptySerialized(BloomFilterTests.java:460)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor4NullHashFunctions" time="0.001">
+    <failure message="NullPointerException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: NullPointerException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4NullHashFunctions(BloomFilterTests.java:473)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor4InvalidSerialized1" time="0.001">
+    <failure message="BloomFilterSerializeException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4InvalidSerialized1(BloomFilterTests.java:486)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor4InvalidSerialized2" time="0.001">
+    <failure message="BloomFilterSerializeException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4InvalidSerialized2(BloomFilterTests.java:500)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor4InvalidSerialized3" time="0.001">
+    <failure message="BloomFilterSerializeException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4InvalidSerialized3(BloomFilterTests.java:514)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor4InvalidSerialized4" time="0.001">
+    <failure message="BloomFilterSerializeException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4InvalidSerialized4(BloomFilterTests.java:529)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor4BitSetLength1" time="0.001">
+    <failure message="BloomFilterSerializeException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4BitSetLength1(BloomFilterTests.java:542)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor4AllBase64" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor4EmptyBitSet" time="0.0">
+    <failure message="hashFamily was not correctly set expected:&lt;com.topcoder.bloom.DefaultHashFunctionFamily@4&gt; but was:&lt;null&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: hashFamily was not correctly set expected:&lt;com.topcoder.bloom.DefaultHashFunctionFamily@4&gt; but was:&lt;null&gt;
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4EmptyBitSet(BloomFilterTests.java:562)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor4FullBitSet" time="0.0">
+    <failure message="hashFamily was not correctly set expected:&lt;com.topcoder.bloom.DefaultHashFunctionFamily@4&gt; but was:&lt;null&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: hashFamily was not correctly set expected:&lt;com.topcoder.bloom.DefaultHashFunctionFamily@4&gt; but was:&lt;null&gt;
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4FullBitSet(BloomFilterTests.java:573)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor4FromSerialized" time="0.0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4FromSerialized(BloomFilterTests.java:583)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5NullSerialized" time="0.0">
+    <error message="exception when building the hashFunctions object" type="com.topcoder.bloom.BloomFilterSerializeException">com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:238)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5NullSerialized(BloomFilterTests.java:599)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5EmptySerialized" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5InvalidSerialized1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5InvalidSerialized2" time="0.001">
+    <failure message="BloomFilterSerializeException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized2(BloomFilterTests.java:640)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5InvalidSerialized3" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5InvalidSerialized4" time="0.001" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5InvalidSerialized5" time="0.001">
+    <failure message="BloomFilterSerializeException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized5(BloomFilterTests.java:682)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5InvalidSerialized6" time="0.001">
+    <error message="For input string: &quot;4x&quot;" type="java.lang.NumberFormatException">java.lang.NumberFormatException: For input string: &quot;4x&quot;
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:481)
+	at java.lang.Integer.parseInt(Integer.java:514)
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:242)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized6(BloomFilterTests.java:695)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5InvalidSerialized7" time="0.001">
+    <failure message="BloomFilterSerializeException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized7(BloomFilterTests.java:710)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5InvalidSerialized8" time="0.001">
+    <failure message="BloomFilterSerializeException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized8(BloomFilterTests.java:725)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5InvalidSerialized9" time="0.001" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5BitSetLength1" time="0.001">
+    <failure message="BloomFilterSerializeException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5BitSetLength1(BloomFilterTests.java:751)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5AllBase64" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5HashFunctionFamily1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5HashFunctionFamily2" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5EmptyBitSet" time="0.001">
+    <failure message="bad size expected:&lt;40&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: bad size expected:&lt;40&gt; but was:&lt;0&gt;
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5EmptyBitSet(BloomFilterTests.java:801)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5FullBitSet" time="0.001">
+    <failure message="the bit set is not well built from serialization expected:&lt;1000&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: the bit set is not well built from serialization expected:&lt;1000&gt; but was:&lt;0&gt;
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5FullBitSet(BloomFilterTests.java:811)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testConstructor5FromSerialized" time="0.001">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5FromSerialized(BloomFilterTests.java:820)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testAddNull" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testAddAccuracy1" time="0.0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testAddAccuracy1(BloomFilterTests.java:846)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testAddAccuracy2" time="0.0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testAddAccuracy2(BloomFilterTests.java:864)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testAddAllNull" time="0.0">
+    <failure message="NullPointerException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: NullPointerException expected
+	at com.topcoder.bloom.BloomFilterTests.testAddAllNull(BloomFilterTests.java:878)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testAddAllNullElement" time="0.0">
+    <failure message="IllegalArgumentException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: IllegalArgumentException expected
+	at com.topcoder.bloom.BloomFilterTests.testAddAllNullElement(BloomFilterTests.java:895)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testAddAllAccuracy1" time="0.0">
+    <failure message="element &apos;cat&apos; not found" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: element &apos;cat&apos; not found
+	at com.topcoder.bloom.BloomFilterTests.testAddAllAccuracy1(BloomFilterTests.java:912)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testAddAll" time="0.001">
+    <failure message="element expected to be in filter: 3" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: element expected to be in filter: 3
+	at com.topcoder.bloom.BloomFilterTests.testAddAll(BloomFilterTests.java:934)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testContainsNull" time="0.001">
+    <failure message="NullPointerException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: NullPointerException expected
+	at com.topcoder.bloom.BloomFilterTests.testContainsNull(BloomFilterTests.java:948)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testContainsAccuracy1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testContainsAccuracy2" time="0.001">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testContainsAccuracy2(BloomFilterTests.java:969)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testContainsAccuracy3" time="0.001">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testContainsAccuracy3(BloomFilterTests.java:984)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testContainsAllNull" time="0.001">
+    <failure message="NullPointerException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: NullPointerException expected
+	at com.topcoder.bloom.BloomFilterTests.testContainsAllNull(BloomFilterTests.java:997)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testContainsAllNullElement" time="0.001">
+    <failure message="IllegalArgumentException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: IllegalArgumentException expected
+	at com.topcoder.bloom.BloomFilterTests.testContainsAllNullElement(BloomFilterTests.java:1014)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testContainsAllAccuracyEmptyList" time="0.001">
+    <failure message="containsAll must return true when the collection is empty" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: containsAll must return true when the collection is empty
+	at com.topcoder.bloom.BloomFilterTests.testContainsAllAccuracyEmptyList(BloomFilterTests.java:1025)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testContainsAllAccuracy1" time="0.001">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testContainsAllAccuracy1(BloomFilterTests.java:1034)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testEqualsNull" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testEqualsDifferentClass" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testEqualsAccuracyDifferentBitSize" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testEqualsAccuracyDifferentHashFunctionFamily" time="0.001" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testEqualsAccuracyDifferentContents" time="0.001">
+    <error message="maxHash must be positive. maxHash=-1" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1
+	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)
+	at com.topcoder.bloom.BloomFilterTests.testEqualsAccuracyDifferentContents(BloomFilterTests.java:1095)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testEqualsAccuracyEqual" time="0.0">
+    <error message="maxHash must be positive. maxHash=-1" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1
+	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)
+	at com.topcoder.bloom.BloomFilterTests.testEqualsAccuracyEqual(BloomFilterTests.java:1107)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testHashCodeAccuracyBitSet" time="0.0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testHashCodeAccuracyBitSet(BloomFilterTests.java:1131)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testHashCodeAccuracyHashFunction" time="0.002">
+    <failure message="hashCode doesn&apos;t seem to have a good distribution expected:&lt;100&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: hashCode doesn&apos;t seem to have a good distribution expected:&lt;100&gt; but was:&lt;1&gt;
+	at com.topcoder.bloom.BloomFilterTests.testHashCodeAccuracyHashFunction(BloomFilterTests.java:1153)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testIsEmpty" time="0.001">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testIsEmpty(BloomFilterTests.java:1165)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testUniteNull" time="0.001">
+    <failure message="NullPointerException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: NullPointerException expected
+	at com.topcoder.bloom.BloomFilterTests.testUniteNull(BloomFilterTests.java:1179)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testUniteDifferentBitSetSize" time="0.001">
+    <failure message="IncompatibleBloomFiltersException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: IncompatibleBloomFiltersException expected
+	at com.topcoder.bloom.BloomFilterTests.testUniteDifferentBitSetSize(BloomFilterTests.java:1195)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testUniteDifferentHashFunctionFamily" time="0.001">
+    <failure message="IncompatibleBloomFiltersException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: IncompatibleBloomFiltersException expected
+	at com.topcoder.bloom.BloomFilterTests.testUniteDifferentHashFunctionFamily(BloomFilterTests.java:1211)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testUniteAccuracy1" time="0.001">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testUniteAccuracy1(BloomFilterTests.java:1222)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testIntersectNull" time="0.0">
+    <failure message="NullPointerException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: NullPointerException expected
+	at com.topcoder.bloom.BloomFilterTests.testIntersectNull(BloomFilterTests.java:1248)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testIntersectDifferentBitSetSize" time="0.0">
+    <failure message="IncompatibleBloomFiltersException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: IncompatibleBloomFiltersException expected
+	at com.topcoder.bloom.BloomFilterTests.testIntersectDifferentBitSetSize(BloomFilterTests.java:1264)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testIntersectDifferentHashFunctionFamily" time="0.0">
+    <failure message="IncompatibleBloomFiltersException expected" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: IncompatibleBloomFiltersException expected
+	at com.topcoder.bloom.BloomFilterTests.testIntersectDifferentHashFunctionFamily(BloomFilterTests.java:1280)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testIntersectAccuracy1" time="0.001">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testIntersectAccuracy1(BloomFilterTests.java:1291)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testClearAccuracy1" time="0.001">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testClearAccuracy1(BloomFilterTests.java:1315)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testGetSerializedBitSetAccuracy1" time="0.002">
+    <failure message="Bad serialization string returned expected:&lt;[6:0]&gt; but was:&lt;[]&gt;" type="junit.framework.ComparisonFailure">junit.framework.ComparisonFailure: Bad serialization string returned expected:&lt;[6:0]&gt; but was:&lt;[]&gt;
+	at com.topcoder.bloom.BloomFilterTests.testGetSerializedBitSetAccuracy1(BloomFilterTests.java:1329)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testGetSerializedBitSetAccuracy2" time="0.001">
+    <error message="/ by zero" type="java.lang.ArithmeticException">java.lang.ArithmeticException: / by zero
+	at com.topcoder.bloom.MockHashFunctionFamily.computeHash(MockHashFunctionFamily.java:69)
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)
+	at com.topcoder.bloom.BloomFilterTests.testGetSerializedBitSetAccuracy2(BloomFilterTests.java:1348)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testGetSerializedAccuracy1" time="0.001">
+    <failure message="Bad serialization string returned expected:&lt;[com.topcoder.bloom.DefaultHashFunctionFamily|5|6:0]&gt; but was:&lt;[]&gt;" type="junit.framework.ComparisonFailure">junit.framework.ComparisonFailure: Bad serialization string returned expected:&lt;[com.topcoder.bloom.DefaultHashFunctionFamily|5|6:0]&gt; but was:&lt;[]&gt;
+	at com.topcoder.bloom.BloomFilterTests.testGetSerializedAccuracy1(BloomFilterTests.java:1365)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testGetSerializedAccuracy2" time="0.001">
+    <error message="/ by zero" type="java.lang.ArithmeticException">java.lang.ArithmeticException: / by zero
+	at com.topcoder.bloom.MockHashFunctionFamily.computeHash(MockHashFunctionFamily.java:69)
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)
+	at com.topcoder.bloom.BloomFilterTests.testGetSerializedAccuracy2(BloomFilterTests.java:1387)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testGetHashFunctionFamilyAccuracy1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testGetHashFunctionFamilyAccuracy2" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testCloneAccuracy1" time="0.001">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testCloneAccuracy1(BloomFilterTests.java:1430)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testCloneAccuracy2" time="0.001">
+    <error message="maxHash must be positive. maxHash=-1" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1
+	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)
+	at com.topcoder.bloom.BloomFilterTests.testCloneAccuracy2(BloomFilterTests.java:1443)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testCloneAccuracy3" time="0.0">
+    <error message="maxHash must be positive. maxHash=-1" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1
+	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)
+	at com.topcoder.bloom.BloomFilterTests.testCloneAccuracy3(BloomFilterTests.java:1465)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testGetBitSetLengthAccuracy1" time="0.0">
+    <failure message="wrong bitSetLength expected:&lt;50&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: wrong bitSetLength expected:&lt;50&gt; but was:&lt;0&gt;
+	at com.topcoder.bloom.BloomFilterTests.testGetBitSetLengthAccuracy1(BloomFilterTests.java:1483)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.BloomFilterTests" name="testGetBitSetLengthAccuracy2" time="0.001">
+    <failure message="wrong bitSetLength expected:&lt;30&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: wrong bitSetLength expected:&lt;30&gt; but was:&lt;0&gt;
+	at com.topcoder.bloom.BloomFilterTests.testGetBitSetLengthAccuracy2(BloomFilterTests.java:1495)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testEqualsNull" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testEqualsDifferentClass" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testImplements" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testConstructorIntZero" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testConstructorIntNegative" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testConstructorIntPositive" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testConstructorStringNull" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testConstructorStringInvalid" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testConstructorStringNegative" time="0.001" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testConstructorStringPositive" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testComputeHashNullObj" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testComputeHashNegativeFunctionIndex" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testComputeHashBadFunctionIndex" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testComputeHashZeroMaxHash" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testComputeHashDifferentFunctions" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testComputeHashDifferentObjects" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testGetSerialized" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testEqualsDifferentFunctionCount" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testEqualsSameFunctionCount" time="0.0" />
+  <testcase classname="com.topcoder.bloom.DefaultHashFunctionFamilyTests" name="testHashCode" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterExceptionTests" name="testBloomFilterExceptionExtends" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterExceptionTests" name="testBloomFilterExceptionConstructor1" time="0.001" />
+  <testcase classname="com.topcoder.bloom.BloomFilterExceptionTests" name="testBloomFilterExceptionConstructor2" time="0.0" />
+  <testcase classname="com.topcoder.bloom.IncompatibleBloomFilterExceptionTests" name="testIncompatibleBloomFiltersExceptionExtends" time="0.0" />
+  <testcase classname="com.topcoder.bloom.IncompatibleBloomFilterExceptionTests" name="testIncompatibleBloomFiltersExceptionConstructor1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.IncompatibleBloomFilterExceptionTests" name="testIncompatibleBloomFiltersExceptionConstructor2" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterSerializeExceptionTests" name="testBloomFilterSerializeExceptionExtends" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterSerializeExceptionTests" name="testBloomFilterSerializeExceptionConstructor1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.BloomFilterSerializeExceptionTests" name="testBloomFilterSerializeExceptionConstructor2" time="0.0" />
+  <testcase classname="com.topcoder.bloom.Demo" name="testSpecDemo" time="0.0">
+    <error message="Impossible to instantiate the hash function." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:157)
+	at com.topcoder.bloom.Demo.testSpecDemo(Demo.java:29)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.Demo" name="testDemoAddContains" time="0.001">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.Demo.testDemoAddContains(Demo.java:105)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.Demo" name="testDemoUniteIntersect" time="0.001" />
+  <testcase classname="com.topcoder.bloom.Demo" name="testDemoSerializing" time="0.001">
+    <error message="exception when building the hashFunctions object" type="com.topcoder.bloom.BloomFilterSerializeException">com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:238)
+	at com.topcoder.bloom.Demo.testDemoSerializing(Demo.java:194)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testconstruct" time="0.0" />
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testconstruct_withClass" time="0.001">
+    <error message="Impossible to instantiate the hash function." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:157)
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testconstruct_withClass(BloomFilterAccuracyTests.java:49)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testconstruct_withserializedAndFunctionFamily" time="0.0" />
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testInheritance" time="0.001" />
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testconstruct_withbitSetSize" time="0.0" />
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testconstruct_withserialized" time="0.0" />
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testaddAndContains" time="0.0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testaddAndContains(BloomFilterAccuracyTests.java:96)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testaddAllAndContainsAll" time="0.0">
+    <failure message="The object1 is added." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The object1 is added.
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testaddAllAndContainsAll(BloomFilterAccuracyTests.java:117)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testEquals1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testEquals2" time="0.0" />
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testEquals3" time="0.001">
+    <failure message="The bloomFilter is euqal to the BloomFilter." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The bloomFilter is euqal to the BloomFilter.
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testEquals3(BloomFilterAccuracyTests.java:151)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testisEmpty" time="0.001">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testisEmpty(BloomFilterAccuracyTests.java:160)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testunite" time="0.0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testunite(BloomFilterAccuracyTests.java:179)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testintersect" time="0.0">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testintersect(BloomFilterAccuracyTests.java:206)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testClear" time="0.001">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testClear(BloomFilterAccuracyTests.java:224)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testgetSerializedBitSet" time="0.001">
+    <failure message="The SerializedBitSet should be the same as the set one. expected:&lt;[48:topcoder]&gt; but was:&lt;[]&gt;" type="junit.framework.ComparisonFailure">junit.framework.ComparisonFailure: The SerializedBitSet should be the same as the set one. expected:&lt;[48:topcoder]&gt; but was:&lt;[]&gt;
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testgetSerializedBitSet(BloomFilterAccuracyTests.java:238)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testgetSerialized" time="0.001">
+    <failure message="The SerializedString should be the same as the set one. expected:&lt;[com.topcoder.bloom.DefaultHashFunctionFamily|5|48:topcoder]&gt; but was:&lt;[]&gt;" type="junit.framework.ComparisonFailure">junit.framework.ComparisonFailure: The SerializedString should be the same as the set one. expected:&lt;[com.topcoder.bloom.DefaultHashFunctionFamily|5|48:topcoder]&gt; but was:&lt;[]&gt;
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testgetSerialized(BloomFilterAccuracyTests.java:249)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testgetHashFunctionFamily" time="0.001">
+    <failure message="The HashFunctionFamily should be DefaultHashFunctionFamily." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The HashFunctionFamily should be DefaultHashFunctionFamily.
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testgetHashFunctionFamily(BloomFilterAccuracyTests.java:257)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testhashCode" time="0.001">
+    <failure message="The value should the same as the target." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The value should the same as the target.
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testhashCode(BloomFilterAccuracyTests.java:271)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testgetBitSetLength" time="0.0">
+    <failure message="The length of the BigSet should be 5. expected:&lt;5&gt; but was:&lt;0&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The length of the BigSet should be 5. expected:&lt;5&gt; but was:&lt;0&gt;
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testgetBitSetLength(BloomFilterAccuracyTests.java:279)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testEquals" time="0.0" />
+  <testcase classname="com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests" name="testEqualsAndClone" time="0.001">
+    <failure message="The clone object should be equal to itself." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The clone object should be equal to itself.
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testEqualsAndClone(BloomFilterAccuracyTests.java:300)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.accuracytests.DefaultHashFunctionFamilyAccuracyTests" name="testgetSerialized" time="0.0" />
+  <testcase classname="com.topcoder.bloom.accuracytests.DefaultHashFunctionFamilyAccuracyTests" name="testhashCode" time="0.0" />
+  <testcase classname="com.topcoder.bloom.accuracytests.DefaultHashFunctionFamilyAccuracyTests" name="testconstruct_Withserialized" time="0.0" />
+  <testcase classname="com.topcoder.bloom.accuracytests.DefaultHashFunctionFamilyAccuracyTests" name="testconstruct_WithfunctionCount" time="0.0" />
+  <testcase classname="com.topcoder.bloom.accuracytests.DefaultHashFunctionFamilyAccuracyTests" name="testgetFunctionCount" time="0.0" />
+  <testcase classname="com.topcoder.bloom.accuracytests.DefaultHashFunctionFamilyAccuracyTests" name="testequals1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.accuracytests.DefaultHashFunctionFamilyAccuracyTests" name="testequals2" time="0.0" />
+  <testcase classname="com.topcoder.bloom.accuracytests.DefaultHashFunctionFamilyAccuracyTests" name="testcomputeHash" time="0.001" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor1_InvalidCapacity" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor1_InvalidErrorRate1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor1_InvalidErrorRate2" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor2_InvalidCapacity" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor2_InvalidErrorRate1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor2_InvalidErrorRate2" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor2_NullHashFunctionClass" time="0.001">
+    <error message="Impossible to instantiate the hash function." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:157)
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor2_NullHashFunctionClass(BloomFilterFailureTest.java:151)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor2_InvalidHashFunctionClass" time="0.001" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor3_TooLarge" time="0.076">
+    <failure message="IAE should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: IAE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor3_TooLarge(BloomFilterFailureTest.java:180)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor3_InvalidLength" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor3_NullHashFunctionClass" time="0.0">
+    <error message="hash functions must not be null." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: hash functions must not be null.
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:179)
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor3_NullHashFunctionClass(BloomFilterFailureTest.java:207)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor4_NullString" time="0.0">
+    <failure message="NPE should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: NPE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_NullString(BloomFilterFailureTest.java:222)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor4_InvalidString1" time="0.0">
+    <failure message="BloomFilterSerializeException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString1(BloomFilterFailureTest.java:236)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor4_InvalidString2" time="0.0">
+    <failure message="BloomFilterSerializeException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString2(BloomFilterFailureTest.java:250)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor4_InvalidString3" time="0.0">
+    <failure message="BloomFilterSerializeException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString3(BloomFilterFailureTest.java:264)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor4_InvalidString4" time="0.001">
+    <failure message="BloomFilterSerializeException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString4(BloomFilterFailureTest.java:278)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor4_InvalidString5" time="0.001">
+    <failure message="BloomFilterSerializeException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString5(BloomFilterFailureTest.java:292)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor4_InvalidString6" time="0.001">
+    <failure message="BloomFilterSerializeException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString6(BloomFilterFailureTest.java:306)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor4_InvalidString7" time="0.001">
+    <failure message="BloomFilterSerializeException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString7(BloomFilterFailureTest.java:320)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor4_TooLarge" time="0.0">
+    <failure message="BloomFilterSerializeException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_TooLarge(BloomFilterFailureTest.java:335)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor4_NullHashFunctionFamily" time="0.001">
+    <failure message="NPE should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: NPE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_NullHashFunctionFamily(BloomFilterFailureTest.java:349)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_NullString" time="0.001">
+    <error message="exception when building the hashFunctions object" type="com.topcoder.bloom.BloomFilterSerializeException">com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:238)
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_NullString(BloomFilterFailureTest.java:362)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_InvalidString1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_InvalidString2" time="0.0">
+    <error message="For input string: &quot;13abc&quot;" type="java.lang.NumberFormatException">java.lang.NumberFormatException: For input string: &quot;13abc&quot;
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:481)
+	at java.lang.Integer.parseInt(Integer.java:514)
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:242)
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString2(BloomFilterFailureTest.java:390)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_InvalidString3" time="0.0">
+    <failure message="BloomFilterSerializeException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString3(BloomFilterFailureTest.java:407)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_InvalidString4" time="0.002">
+    <error message="For input string: &quot;a&quot;" type="java.lang.NumberFormatException">java.lang.NumberFormatException: For input string: &quot;a&quot;
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:481)
+	at java.lang.Integer.parseInt(Integer.java:514)
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:242)
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString4(BloomFilterFailureTest.java:420)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_InvalidString5" time="0.001">
+    <failure message="BloomFilterSerializeException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString5(BloomFilterFailureTest.java:437)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_InvalidString6" time="0.0">
+    <failure message="BloomFilterSerializeException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString6(BloomFilterFailureTest.java:452)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_InvalidString7" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_InvalidString8" time="0.001" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_InvalidString9" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_InvalidString10" time="0.001" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_InvalidString11" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_InvalidString12" time="0.001" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_InvalidString13" time="0.0">
+    <failure message="BloomFilterSerializeException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString13(BloomFilterFailureTest.java:554)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_InvalidString14" time="0.0">
+    <error message="nbits &lt; 0: -13" type="java.lang.NegativeArraySizeException">java.lang.NegativeArraySizeException: nbits &lt; 0: -13
+	at java.util.BitSet.&lt;init&gt;(BitSet.java:157)
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:243)
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString14(BloomFilterFailureTest.java:567)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_InvalidString15" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testConstructor5_TooLarge" time="0.069">
+    <failure message="BloomFilterSerializeException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_TooLarge(BloomFilterFailureTest.java:599)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testAdd_NullObj" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testAddAll_NullObj" time="0.0">
+    <failure message="NPE should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: NPE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testAddAll_NullObj(BloomFilterFailureTest.java:625)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testAddAll_InvalidObj" time="0.001">
+    <failure message="IAE should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: IAE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testAddAll_InvalidObj(BloomFilterFailureTest.java:642)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testContains_NullObj" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testContainsAll_NullObj" time="0.0">
+    <failure message="NPE should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: NPE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testContainsAll_NullObj(BloomFilterFailureTest.java:668)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testContainsAll_InvalidObj" time="0.0">
+    <failure message="IAE should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: IAE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testContainsAll_InvalidObj(BloomFilterFailureTest.java:685)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testUnite_NullObj" time="0.0">
+    <failure message="NPE should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: NPE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testUnite_NullObj(BloomFilterFailureTest.java:698)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testUnite_InvalidObj1" time="0.0">
+    <failure message="IncompatibleBloomFiltersException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testUnite_InvalidObj1(BloomFilterFailureTest.java:711)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testUnite_InvalidObj2" time="0.001">
+    <failure message="IncompatibleBloomFiltersException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testUnite_InvalidObj2(BloomFilterFailureTest.java:724)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testUnite_InvalidObj3" time="0.0">
+    <failure message="IncompatibleBloomFiltersException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testUnite_InvalidObj3(BloomFilterFailureTest.java:737)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testIntersect_NullObj" time="0.001">
+    <failure message="NPE should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: NPE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testIntersect_NullObj(BloomFilterFailureTest.java:750)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testIntersect_InvalidObj1" time="0.0">
+    <failure message="IncompatibleBloomFiltersException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testIntersect_InvalidObj1(BloomFilterFailureTest.java:763)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testIntersect_InvalidObj2" time="0.0">
+    <failure message="IncompatibleBloomFiltersException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testIntersect_InvalidObj2(BloomFilterFailureTest.java:776)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.BloomFilterFailureTest" name="testIntersect_InvalidObj3" time="0.0">
+    <failure message="IncompatibleBloomFiltersException should be thrown." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testIntersect_InvalidObj3(BloomFilterFailureTest.java:789)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.failuretests.DefaultHashFunctionFamilyFailureTest" name="testConstructor1_InvalidInt" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.DefaultHashFunctionFamilyFailureTest" name="testConstructor2_NullParam" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.DefaultHashFunctionFamilyFailureTest" name="testConstructor2_InvalidString1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.DefaultHashFunctionFamilyFailureTest" name="testConstructor2_InvalidString2" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.DefaultHashFunctionFamilyFailureTest" name="testConstructor2_InvalidString3" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.DefaultHashFunctionFamilyFailureTest" name="testConstructor2_InvalidString4" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.DefaultHashFunctionFamilyFailureTest" name="testComputeHash_NullObj" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.DefaultHashFunctionFamilyFailureTest" name="testComputeHash_InvalidFunctionIndex1" time="0.0" />
+  <testcase classname="com.topcoder.bloom.failuretests.DefaultHashFunctionFamilyFailureTest" name="testComputeHash_InvalidFunctionIndex2" time="0.001" />
+  <testcase classname="com.topcoder.bloom.failuretests.DefaultHashFunctionFamilyFailureTest" name="testComputeHash_InvalidMaxHash" time="0.0" />
+  <testcase classname="com.topcoder.bloom.stresstests.BloomFilterStressTests" name="testCtor" time="0.001">
+    <error message="exception when building the hashFunctions object" type="com.topcoder.bloom.BloomFilterSerializeException">com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object
+	at com.topcoder.bloom.BloomFilter.&lt;init&gt;(BloomFilter.java:238)
+	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testCtor(BloomFilterStressTests.java:51)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.stresstests.BloomFilterStressTests" name="testCtor2" time="0.146">
+    <failure message="The length of bitset is too large." type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: The length of bitset is too large.
+	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testCtor2(BloomFilterStressTests.java:66)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.stresstests.BloomFilterStressTests" name="testAdd" time="0.006">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testAdd(BloomFilterStressTests.java:85)
+</error>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.stresstests.BloomFilterStressTests" name="testUnit" time="0.001">
+    <failure message="The result is incorrect. expected:&lt;[30:33333]&gt; but was:&lt;[]&gt;" type="junit.framework.ComparisonFailure">junit.framework.ComparisonFailure: The result is incorrect. expected:&lt;[30:33333]&gt; but was:&lt;[]&gt;
+	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testUnit(BloomFilterStressTests.java:117)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.stresstests.BloomFilterStressTests" name="testIntersect" time="0.001">
+    <failure message="The result is incorrect. expected:&lt;[30:00000]&gt; but was:&lt;[]&gt;" type="junit.framework.ComparisonFailure">junit.framework.ComparisonFailure: The result is incorrect. expected:&lt;[30:00000]&gt; but was:&lt;[]&gt;
+	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testIntersect(BloomFilterStressTests.java:139)
+</failure>
+  </testcase>
+  <testcase classname="com.topcoder.bloom.stresstests.DefaultHashFunctionFamilyStressTestes" name="testCreate" time="0.02" />
+  <testcase classname="com.topcoder.bloom.stresstests.DefaultHashFunctionFamilyStressTestes" name="testComputeHash" time="0.03" />
+  <system-out><![CDATA[Even with the bigger size possible (2 GigaBits) there was memory enough for the filter in  testConstructor1VeryBig
+Even with the bigger size possible (2 GigaBits) there was memory enough for the filter.  
+------------< Demo for Add and Contains >------------
+------------< Demo for Unite and Intersect >------------
+'cat' is included in union: false
+'keyboard' is included in union: false
+'mouse' is included in union: false
+'pencil' is included in union: false
+
+'cat' is included in intersection: false
+'keyboard' is included in intersection: false
+'mouse' is included in intersection: false
+'pencil' is included in intersection: false
+------------< End Demo for Unite and Intersect >------------
+------------< Demo for Serealization/Desrealization >------------
+Stress Tests ----- Create DefaultHashFunctionFamily instance : 1000 times, 19 ms
+Stress Tests ----- computeHash  : 1000 times, 1000 threads29 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

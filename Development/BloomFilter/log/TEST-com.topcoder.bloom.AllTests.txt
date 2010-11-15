@@ -1,0 +1,943 @@
+Testsuite: com.topcoder.bloom.AllTests
+Tests run: 236, Failures: 81, Errors: 44, Time elapsed: 1.038 sec
+------------- Standard Output ---------------
+Even with the bigger size possible (2 GigaBits) there was memory enough for the filter in  testConstructor1VeryBig
+Even with the bigger size possible (2 GigaBits) there was memory enough for the filter.  
+------------< Demo for Add and Contains >------------
+------------< Demo for Unite and Intersect >------------
+'cat' is included in union: false
+'keyboard' is included in union: false
+'mouse' is included in union: false
+'pencil' is included in union: false
+
+'cat' is included in intersection: false
+'keyboard' is included in intersection: false
+'mouse' is included in intersection: false
+'pencil' is included in intersection: false
+------------< End Demo for Unite and Intersect >------------
+------------< Demo for Serealization/Desrealization >------------
+Stress Tests ----- Create DefaultHashFunctionFamily instance : 1000 times, 19 ms
+Stress Tests ----- computeHash  : 1000 times, 1000 threads29 ms
+------------- ---------------- ---------------
+
+Testcase: testConstructor1NegativeCapacity took 0.001 sec
+Testcase: testConstructor1ZeroCapacity took 0.001 sec
+Testcase: testConstructor1NegativeErrorRate took 0 sec
+Testcase: testConstructor1BadErrorRate1 took 0 sec
+Testcase: testConstructor1BadErrorRate2 took 0 sec
+Testcase: testConstructor1BadErrorRate3 took 0.001 sec
+Testcase: testConstructor1VeryBigBitSet took 0.15 sec
+Testcase: testConstructor1VerySmallBitSet took 0.001 sec
+	FAILED
+Expected length 2 expected:<2> but was:<0>
+junit.framework.AssertionFailedError: Expected length 2 expected:<2> but was:<0>
+	at com.topcoder.bloom.BloomFilterTests.testConstructor1VerySmallBitSet(BloomFilterTests.java:152)
+
+Testcase: testConstructor1Accuracy1 took 0 sec
+	FAILED
+Bad Bit Set size expected:<481> but was:<0>
+junit.framework.AssertionFailedError: Bad Bit Set size expected:<481> but was:<0>
+	at com.topcoder.bloom.BloomFilterTests.testConstructor1Accuracy1(BloomFilterTests.java:162)
+
+Testcase: testConstructor1Accuracy2 took 0 sec
+	FAILED
+Bad Bit Set size expected:<3374> but was:<0>
+junit.framework.AssertionFailedError: Bad Bit Set size expected:<3374> but was:<0>
+	at com.topcoder.bloom.BloomFilterTests.testConstructor1Accuracy2(BloomFilterTests.java:173)
+
+Testcase: testConstructor1Accuracy3 took 0 sec
+	FAILED
+Bad Bit Set size expected:<288> but was:<0>
+junit.framework.AssertionFailedError: Bad Bit Set size expected:<288> but was:<0>
+	at com.topcoder.bloom.BloomFilterTests.testConstructor1Accuracy3(BloomFilterTests.java:184)
+
+Testcase: testConstructor2NegativeCapacity took 0 sec
+Testcase: testConstructor2ZeroCapacity took 0 sec
+Testcase: testConstructor2NegativeErrorRate took 0 sec
+Testcase: testConstructor2BadErrorRate1 took 0 sec
+Testcase: testConstructor2BadErrorRate2 took 0 sec
+Testcase: testConstructor2BadErrorRate3 took 0 sec
+Testcase: testConstructor2NullClass took 0 sec
+	Caused an ERROR
+Impossible to instantiate the hash function.
+java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor2NullClass(BloomFilterTests.java:273)
+
+Testcase: testConstructor2BadClass took 0.001 sec
+Testcase: testConstructor2VeryBigBitSet took 0.15 sec
+Testcase: testConstructor2VerySmallBitSet took 0 sec
+	Caused an ERROR
+Impossible to instantiate the hash function.
+java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor2VerySmallBitSet(BloomFilterTests.java:316)
+
+Testcase: testConstructor2Accuracy1 took 0 sec
+	Caused an ERROR
+Impossible to instantiate the hash function.
+java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor2Accuracy1(BloomFilterTests.java:327)
+
+Testcase: testConstructor2Accuracy2 took 0.001 sec
+	Caused an ERROR
+Impossible to instantiate the hash function.
+java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor2Accuracy2(BloomFilterTests.java:340)
+
+Testcase: testConstructor2Accuracy3 took 0.001 sec
+	Caused an ERROR
+Impossible to instantiate the hash function.
+java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor2Accuracy3(BloomFilterTests.java:353)
+
+Testcase: testConstructor3ZeroSize took 0 sec
+Testcase: testConstructor3NullHashFamily took 0 sec
+	Caused an ERROR
+hash functions must not be null.
+java.lang.IllegalArgumentException: hash functions must not be null.
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:179)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor3NullHashFamily(BloomFilterTests.java:379)
+
+Testcase: testConstructor3VeryBigBitSet took 0.151 sec
+Testcase: testConstructor3BitSetLength1 took 0 sec
+Testcase: testConstructor3Accuracy1 took 0 sec
+	FAILED
+Bad Bit Set size expected:<100> but was:<0>
+junit.framework.AssertionFailedError: Bad Bit Set size expected:<100> but was:<0>
+	at com.topcoder.bloom.BloomFilterTests.testConstructor3Accuracy1(BloomFilterTests.java:424)
+
+Testcase: testConstructor3Accuracy2 took 0.001 sec
+	FAILED
+Bad Bit Set size expected:<1000000> but was:<0>
+junit.framework.AssertionFailedError: Bad Bit Set size expected:<1000000> but was:<0>
+	at com.topcoder.bloom.BloomFilterTests.testConstructor3Accuracy2(BloomFilterTests.java:436)
+
+Testcase: testConstructor4NullSerialized took 0 sec
+	FAILED
+NullPointerException expected
+junit.framework.AssertionFailedError: NullPointerException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4NullSerialized(BloomFilterTests.java:447)
+
+Testcase: testConstructor4EmptySerialized took 0 sec
+	FAILED
+BloomFilterSerializeException expected
+junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4EmptySerialized(BloomFilterTests.java:460)
+
+Testcase: testConstructor4NullHashFunctions took 0 sec
+	FAILED
+NullPointerException expected
+junit.framework.AssertionFailedError: NullPointerException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4NullHashFunctions(BloomFilterTests.java:473)
+
+Testcase: testConstructor4InvalidSerialized1 took 0 sec
+	FAILED
+BloomFilterSerializeException expected
+junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4InvalidSerialized1(BloomFilterTests.java:486)
+
+Testcase: testConstructor4InvalidSerialized2 took 0 sec
+	FAILED
+BloomFilterSerializeException expected
+junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4InvalidSerialized2(BloomFilterTests.java:500)
+
+Testcase: testConstructor4InvalidSerialized3 took 0 sec
+	FAILED
+BloomFilterSerializeException expected
+junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4InvalidSerialized3(BloomFilterTests.java:514)
+
+Testcase: testConstructor4InvalidSerialized4 took 0 sec
+	FAILED
+BloomFilterSerializeException expected
+junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4InvalidSerialized4(BloomFilterTests.java:529)
+
+Testcase: testConstructor4BitSetLength1 took 0 sec
+	FAILED
+BloomFilterSerializeException expected
+junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4BitSetLength1(BloomFilterTests.java:542)
+
+Testcase: testConstructor4AllBase64 took 0 sec
+Testcase: testConstructor4EmptyBitSet took 0 sec
+	FAILED
+hashFamily was not correctly set expected:<com.topcoder.bloom.DefaultHashFunctionFamily@4> but was:<null>
+junit.framework.AssertionFailedError: hashFamily was not correctly set expected:<com.topcoder.bloom.DefaultHashFunctionFamily@4> but was:<null>
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4EmptyBitSet(BloomFilterTests.java:562)
+
+Testcase: testConstructor4FullBitSet took 0 sec
+	FAILED
+hashFamily was not correctly set expected:<com.topcoder.bloom.DefaultHashFunctionFamily@4> but was:<null>
+junit.framework.AssertionFailedError: hashFamily was not correctly set expected:<com.topcoder.bloom.DefaultHashFunctionFamily@4> but was:<null>
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4FullBitSet(BloomFilterTests.java:573)
+
+Testcase: testConstructor4FromSerialized took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor4FromSerialized(BloomFilterTests.java:583)
+
+Testcase: testConstructor5NullSerialized took 0 sec
+	Caused an ERROR
+exception when building the hashFunctions object
+com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:238)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5NullSerialized(BloomFilterTests.java:599)
+
+Testcase: testConstructor5EmptySerialized took 0 sec
+Testcase: testConstructor5InvalidSerialized1 took 0 sec
+Testcase: testConstructor5InvalidSerialized2 took 0.001 sec
+	FAILED
+BloomFilterSerializeException expected
+junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized2(BloomFilterTests.java:640)
+
+Testcase: testConstructor5InvalidSerialized3 took 0 sec
+Testcase: testConstructor5InvalidSerialized4 took 0.001 sec
+Testcase: testConstructor5InvalidSerialized5 took 0 sec
+	FAILED
+BloomFilterSerializeException expected
+junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized5(BloomFilterTests.java:682)
+
+Testcase: testConstructor5InvalidSerialized6 took 0 sec
+	Caused an ERROR
+For input string: "4x"
+java.lang.NumberFormatException: For input string: "4x"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:481)
+	at java.lang.Integer.parseInt(Integer.java:514)
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:242)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized6(BloomFilterTests.java:695)
+
+Testcase: testConstructor5InvalidSerialized7 took 0 sec
+	FAILED
+BloomFilterSerializeException expected
+junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized7(BloomFilterTests.java:710)
+
+Testcase: testConstructor5InvalidSerialized8 took 0 sec
+	FAILED
+BloomFilterSerializeException expected
+junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized8(BloomFilterTests.java:725)
+
+Testcase: testConstructor5InvalidSerialized9 took 0.001 sec
+Testcase: testConstructor5BitSetLength1 took 0 sec
+	FAILED
+BloomFilterSerializeException expected
+junit.framework.AssertionFailedError: BloomFilterSerializeException expected
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5BitSetLength1(BloomFilterTests.java:751)
+
+Testcase: testConstructor5AllBase64 took 0 sec
+Testcase: testConstructor5HashFunctionFamily1 took 0 sec
+Testcase: testConstructor5HashFunctionFamily2 took 0 sec
+Testcase: testConstructor5EmptyBitSet took 0 sec
+	FAILED
+bad size expected:<40> but was:<0>
+junit.framework.AssertionFailedError: bad size expected:<40> but was:<0>
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5EmptyBitSet(BloomFilterTests.java:801)
+
+Testcase: testConstructor5FullBitSet took 0 sec
+	FAILED
+the bit set is not well built from serialization expected:<1000> but was:<0>
+junit.framework.AssertionFailedError: the bit set is not well built from serialization expected:<1000> but was:<0>
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5FullBitSet(BloomFilterTests.java:811)
+
+Testcase: testConstructor5FromSerialized took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testConstructor5FromSerialized(BloomFilterTests.java:820)
+
+Testcase: testAddNull took 0 sec
+Testcase: testAddAccuracy1 took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testAddAccuracy1(BloomFilterTests.java:846)
+
+Testcase: testAddAccuracy2 took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testAddAccuracy2(BloomFilterTests.java:864)
+
+Testcase: testAddAllNull took 0 sec
+	FAILED
+NullPointerException expected
+junit.framework.AssertionFailedError: NullPointerException expected
+	at com.topcoder.bloom.BloomFilterTests.testAddAllNull(BloomFilterTests.java:878)
+
+Testcase: testAddAllNullElement took 0 sec
+	FAILED
+IllegalArgumentException expected
+junit.framework.AssertionFailedError: IllegalArgumentException expected
+	at com.topcoder.bloom.BloomFilterTests.testAddAllNullElement(BloomFilterTests.java:895)
+
+Testcase: testAddAllAccuracy1 took 0 sec
+	FAILED
+element 'cat' not found
+junit.framework.AssertionFailedError: element 'cat' not found
+	at com.topcoder.bloom.BloomFilterTests.testAddAllAccuracy1(BloomFilterTests.java:912)
+
+Testcase: testAddAll took 0 sec
+	FAILED
+element expected to be in filter: 3
+junit.framework.AssertionFailedError: element expected to be in filter: 3
+	at com.topcoder.bloom.BloomFilterTests.testAddAll(BloomFilterTests.java:934)
+
+Testcase: testContainsNull took 0 sec
+	FAILED
+NullPointerException expected
+junit.framework.AssertionFailedError: NullPointerException expected
+	at com.topcoder.bloom.BloomFilterTests.testContainsNull(BloomFilterTests.java:948)
+
+Testcase: testContainsAccuracy1 took 0 sec
+Testcase: testContainsAccuracy2 took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testContainsAccuracy2(BloomFilterTests.java:969)
+
+Testcase: testContainsAccuracy3 took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testContainsAccuracy3(BloomFilterTests.java:984)
+
+Testcase: testContainsAllNull took 0 sec
+	FAILED
+NullPointerException expected
+junit.framework.AssertionFailedError: NullPointerException expected
+	at com.topcoder.bloom.BloomFilterTests.testContainsAllNull(BloomFilterTests.java:997)
+
+Testcase: testContainsAllNullElement took 0 sec
+	FAILED
+IllegalArgumentException expected
+junit.framework.AssertionFailedError: IllegalArgumentException expected
+	at com.topcoder.bloom.BloomFilterTests.testContainsAllNullElement(BloomFilterTests.java:1014)
+
+Testcase: testContainsAllAccuracyEmptyList took 0 sec
+	FAILED
+containsAll must return true when the collection is empty
+junit.framework.AssertionFailedError: containsAll must return true when the collection is empty
+	at com.topcoder.bloom.BloomFilterTests.testContainsAllAccuracyEmptyList(BloomFilterTests.java:1025)
+
+Testcase: testContainsAllAccuracy1 took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testContainsAllAccuracy1(BloomFilterTests.java:1034)
+
+Testcase: testEqualsNull took 0 sec
+Testcase: testEqualsDifferentClass took 0 sec
+Testcase: testEqualsAccuracyDifferentBitSize took 0 sec
+Testcase: testEqualsAccuracyDifferentHashFunctionFamily took 0 sec
+Testcase: testEqualsAccuracyDifferentContents took 0 sec
+	Caused an ERROR
+maxHash must be positive. maxHash=-1
+java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1
+	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)
+	at com.topcoder.bloom.BloomFilterTests.testEqualsAccuracyDifferentContents(BloomFilterTests.java:1095)
+
+Testcase: testEqualsAccuracyEqual took 0 sec
+	Caused an ERROR
+maxHash must be positive. maxHash=-1
+java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1
+	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)
+	at com.topcoder.bloom.BloomFilterTests.testEqualsAccuracyEqual(BloomFilterTests.java:1107)
+
+Testcase: testHashCodeAccuracyBitSet took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testHashCodeAccuracyBitSet(BloomFilterTests.java:1131)
+
+Testcase: testHashCodeAccuracyHashFunction took 0.001 sec
+	FAILED
+hashCode doesn't seem to have a good distribution expected:<100> but was:<1>
+junit.framework.AssertionFailedError: hashCode doesn't seem to have a good distribution expected:<100> but was:<1>
+	at com.topcoder.bloom.BloomFilterTests.testHashCodeAccuracyHashFunction(BloomFilterTests.java:1153)
+
+Testcase: testIsEmpty took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testIsEmpty(BloomFilterTests.java:1165)
+
+Testcase: testUniteNull took 0 sec
+	FAILED
+NullPointerException expected
+junit.framework.AssertionFailedError: NullPointerException expected
+	at com.topcoder.bloom.BloomFilterTests.testUniteNull(BloomFilterTests.java:1179)
+
+Testcase: testUniteDifferentBitSetSize took 0 sec
+	FAILED
+IncompatibleBloomFiltersException expected
+junit.framework.AssertionFailedError: IncompatibleBloomFiltersException expected
+	at com.topcoder.bloom.BloomFilterTests.testUniteDifferentBitSetSize(BloomFilterTests.java:1195)
+
+Testcase: testUniteDifferentHashFunctionFamily took 0 sec
+	FAILED
+IncompatibleBloomFiltersException expected
+junit.framework.AssertionFailedError: IncompatibleBloomFiltersException expected
+	at com.topcoder.bloom.BloomFilterTests.testUniteDifferentHashFunctionFamily(BloomFilterTests.java:1211)
+
+Testcase: testUniteAccuracy1 took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testUniteAccuracy1(BloomFilterTests.java:1222)
+
+Testcase: testIntersectNull took 0 sec
+	FAILED
+NullPointerException expected
+junit.framework.AssertionFailedError: NullPointerException expected
+	at com.topcoder.bloom.BloomFilterTests.testIntersectNull(BloomFilterTests.java:1248)
+
+Testcase: testIntersectDifferentBitSetSize took 0 sec
+	FAILED
+IncompatibleBloomFiltersException expected
+junit.framework.AssertionFailedError: IncompatibleBloomFiltersException expected
+	at com.topcoder.bloom.BloomFilterTests.testIntersectDifferentBitSetSize(BloomFilterTests.java:1264)
+
+Testcase: testIntersectDifferentHashFunctionFamily took 0 sec
+	FAILED
+IncompatibleBloomFiltersException expected
+junit.framework.AssertionFailedError: IncompatibleBloomFiltersException expected
+	at com.topcoder.bloom.BloomFilterTests.testIntersectDifferentHashFunctionFamily(BloomFilterTests.java:1280)
+
+Testcase: testIntersectAccuracy1 took 0.001 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testIntersectAccuracy1(BloomFilterTests.java:1291)
+
+Testcase: testClearAccuracy1 took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testClearAccuracy1(BloomFilterTests.java:1315)
+
+Testcase: testGetSerializedBitSetAccuracy1 took 0.001 sec
+	FAILED
+Bad serialization string returned expected:<[6:0]> but was:<[]>
+junit.framework.ComparisonFailure: Bad serialization string returned expected:<[6:0]> but was:<[]>
+	at com.topcoder.bloom.BloomFilterTests.testGetSerializedBitSetAccuracy1(BloomFilterTests.java:1329)
+
+Testcase: testGetSerializedBitSetAccuracy2 took 0 sec
+	Caused an ERROR
+/ by zero
+java.lang.ArithmeticException: / by zero
+	at com.topcoder.bloom.MockHashFunctionFamily.computeHash(MockHashFunctionFamily.java:69)
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)
+	at com.topcoder.bloom.BloomFilterTests.testGetSerializedBitSetAccuracy2(BloomFilterTests.java:1348)
+
+Testcase: testGetSerializedAccuracy1 took 0 sec
+	FAILED
+Bad serialization string returned expected:<[com.topcoder.bloom.DefaultHashFunctionFamily|5|6:0]> but was:<[]>
+junit.framework.ComparisonFailure: Bad serialization string returned expected:<[com.topcoder.bloom.DefaultHashFunctionFamily|5|6:0]> but was:<[]>
+	at com.topcoder.bloom.BloomFilterTests.testGetSerializedAccuracy1(BloomFilterTests.java:1365)
+
+Testcase: testGetSerializedAccuracy2 took 0 sec
+	Caused an ERROR
+/ by zero
+java.lang.ArithmeticException: / by zero
+	at com.topcoder.bloom.MockHashFunctionFamily.computeHash(MockHashFunctionFamily.java:69)
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)
+	at com.topcoder.bloom.BloomFilterTests.testGetSerializedAccuracy2(BloomFilterTests.java:1387)
+
+Testcase: testGetHashFunctionFamilyAccuracy1 took 0 sec
+Testcase: testGetHashFunctionFamilyAccuracy2 took 0 sec
+Testcase: testCloneAccuracy1 took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.BloomFilterTests.testCloneAccuracy1(BloomFilterTests.java:1430)
+
+Testcase: testCloneAccuracy2 took 0.001 sec
+	Caused an ERROR
+maxHash must be positive. maxHash=-1
+java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1
+	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)
+	at com.topcoder.bloom.BloomFilterTests.testCloneAccuracy2(BloomFilterTests.java:1443)
+
+Testcase: testCloneAccuracy3 took 0 sec
+	Caused an ERROR
+maxHash must be positive. maxHash=-1
+java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1
+	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)
+	at com.topcoder.bloom.BloomFilterTests.testCloneAccuracy3(BloomFilterTests.java:1465)
+
+Testcase: testGetBitSetLengthAccuracy1 took 0 sec
+	FAILED
+wrong bitSetLength expected:<50> but was:<0>
+junit.framework.AssertionFailedError: wrong bitSetLength expected:<50> but was:<0>
+	at com.topcoder.bloom.BloomFilterTests.testGetBitSetLengthAccuracy1(BloomFilterTests.java:1483)
+
+Testcase: testGetBitSetLengthAccuracy2 took 0 sec
+	FAILED
+wrong bitSetLength expected:<30> but was:<0>
+junit.framework.AssertionFailedError: wrong bitSetLength expected:<30> but was:<0>
+	at com.topcoder.bloom.BloomFilterTests.testGetBitSetLengthAccuracy2(BloomFilterTests.java:1495)
+
+Testcase: testEqualsNull took 0 sec
+Testcase: testEqualsDifferentClass took 0 sec
+Testcase: testImplements took 0 sec
+Testcase: testConstructorIntZero took 0 sec
+Testcase: testConstructorIntNegative took 0 sec
+Testcase: testConstructorIntPositive took 0 sec
+Testcase: testConstructorStringNull took 0 sec
+Testcase: testConstructorStringInvalid took 0 sec
+Testcase: testConstructorStringNegative took 0 sec
+Testcase: testConstructorStringPositive took 0 sec
+Testcase: testComputeHashNullObj took 0 sec
+Testcase: testComputeHashNegativeFunctionIndex took 0 sec
+Testcase: testComputeHashBadFunctionIndex took 0 sec
+Testcase: testComputeHashZeroMaxHash took 0 sec
+Testcase: testComputeHashDifferentFunctions took 0 sec
+Testcase: testComputeHashDifferentObjects took 0 sec
+Testcase: testGetSerialized took 0 sec
+Testcase: testEqualsDifferentFunctionCount took 0 sec
+Testcase: testEqualsSameFunctionCount took 0 sec
+Testcase: testHashCode took 0 sec
+Testcase: testBloomFilterExceptionExtends took 0 sec
+Testcase: testBloomFilterExceptionConstructor1 took 0.001 sec
+Testcase: testBloomFilterExceptionConstructor2 took 0 sec
+Testcase: testIncompatibleBloomFiltersExceptionExtends took 0 sec
+Testcase: testIncompatibleBloomFiltersExceptionConstructor1 took 0 sec
+Testcase: testIncompatibleBloomFiltersExceptionConstructor2 took 0 sec
+Testcase: testBloomFilterSerializeExceptionExtends took 0 sec
+Testcase: testBloomFilterSerializeExceptionConstructor1 took 0 sec
+Testcase: testBloomFilterSerializeExceptionConstructor2 took 0 sec
+Testcase: testSpecDemo took 0 sec
+	Caused an ERROR
+Impossible to instantiate the hash function.
+java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)
+	at com.topcoder.bloom.Demo.testSpecDemo(Demo.java:29)
+
+Testcase: testDemoAddContains took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.Demo.testDemoAddContains(Demo.java:105)
+
+Testcase: testDemoUniteIntersect took 0 sec
+Testcase: testDemoSerializing took 0 sec
+	Caused an ERROR
+exception when building the hashFunctions object
+com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:238)
+	at com.topcoder.bloom.Demo.testDemoSerializing(Demo.java:194)
+
+Testcase: testconstruct took 0 sec
+Testcase: testconstruct_withClass took 0 sec
+	Caused an ERROR
+Impossible to instantiate the hash function.
+java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testconstruct_withClass(BloomFilterAccuracyTests.java:49)
+
+Testcase: testconstruct_withserializedAndFunctionFamily took 0 sec
+Testcase: testInheritance took 0.001 sec
+Testcase: testconstruct_withbitSetSize took 0 sec
+Testcase: testconstruct_withserialized took 0 sec
+Testcase: testaddAndContains took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testaddAndContains(BloomFilterAccuracyTests.java:96)
+
+Testcase: testaddAllAndContainsAll took 0 sec
+	FAILED
+The object1 is added.
+junit.framework.AssertionFailedError: The object1 is added.
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testaddAllAndContainsAll(BloomFilterAccuracyTests.java:117)
+
+Testcase: testEquals1 took 0 sec
+Testcase: testEquals2 took 0 sec
+Testcase: testEquals3 took 0 sec
+	FAILED
+The bloomFilter is euqal to the BloomFilter.
+junit.framework.AssertionFailedError: The bloomFilter is euqal to the BloomFilter.
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testEquals3(BloomFilterAccuracyTests.java:151)
+
+Testcase: testisEmpty took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testisEmpty(BloomFilterAccuracyTests.java:160)
+
+Testcase: testunite took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testunite(BloomFilterAccuracyTests.java:179)
+
+Testcase: testintersect took 0 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testintersect(BloomFilterAccuracyTests.java:206)
+
+Testcase: testClear took 0.001 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testClear(BloomFilterAccuracyTests.java:224)
+
+Testcase: testgetSerializedBitSet took 0 sec
+	FAILED
+The SerializedBitSet should be the same as the set one. expected:<[48:topcoder]> but was:<[]>
+junit.framework.ComparisonFailure: The SerializedBitSet should be the same as the set one. expected:<[48:topcoder]> but was:<[]>
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testgetSerializedBitSet(BloomFilterAccuracyTests.java:238)
+
+Testcase: testgetSerialized took 0 sec
+	FAILED
+The SerializedString should be the same as the set one. expected:<[com.topcoder.bloom.DefaultHashFunctionFamily|5|48:topcoder]> but was:<[]>
+junit.framework.ComparisonFailure: The SerializedString should be the same as the set one. expected:<[com.topcoder.bloom.DefaultHashFunctionFamily|5|48:topcoder]> but was:<[]>
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testgetSerialized(BloomFilterAccuracyTests.java:249)
+
+Testcase: testgetHashFunctionFamily took 0 sec
+	FAILED
+The HashFunctionFamily should be DefaultHashFunctionFamily.
+junit.framework.AssertionFailedError: The HashFunctionFamily should be DefaultHashFunctionFamily.
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testgetHashFunctionFamily(BloomFilterAccuracyTests.java:257)
+
+Testcase: testhashCode took 0 sec
+	FAILED
+The value should the same as the target.
+junit.framework.AssertionFailedError: The value should the same as the target.
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testhashCode(BloomFilterAccuracyTests.java:271)
+
+Testcase: testgetBitSetLength took 0 sec
+	FAILED
+The length of the BigSet should be 5. expected:<5> but was:<0>
+junit.framework.AssertionFailedError: The length of the BigSet should be 5. expected:<5> but was:<0>
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testgetBitSetLength(BloomFilterAccuracyTests.java:279)
+
+Testcase: testEquals took 0 sec
+Testcase: testEqualsAndClone took 0 sec
+	FAILED
+The clone object should be equal to itself.
+junit.framework.AssertionFailedError: The clone object should be equal to itself.
+	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testEqualsAndClone(BloomFilterAccuracyTests.java:300)
+
+Testcase: testgetSerialized took 0 sec
+Testcase: testhashCode took 0 sec
+Testcase: testconstruct_Withserialized took 0 sec
+Testcase: testconstruct_WithfunctionCount took 0 sec
+Testcase: testgetFunctionCount took 0 sec
+Testcase: testequals1 took 0 sec
+Testcase: testequals2 took 0 sec
+Testcase: testcomputeHash took 0 sec
+Testcase: testConstructor1_InvalidCapacity took 0 sec
+Testcase: testConstructor1_InvalidErrorRate1 took 0 sec
+Testcase: testConstructor1_InvalidErrorRate2 took 0 sec
+Testcase: testConstructor2_InvalidCapacity took 0 sec
+Testcase: testConstructor2_InvalidErrorRate1 took 0 sec
+Testcase: testConstructor2_InvalidErrorRate2 took 0 sec
+Testcase: testConstructor2_NullHashFunctionClass took 0.001 sec
+	Caused an ERROR
+Impossible to instantiate the hash function.
+java.lang.IllegalArgumentException: Impossible to instantiate the hash function.
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor2_NullHashFunctionClass(BloomFilterFailureTest.java:151)
+
+Testcase: testConstructor2_InvalidHashFunctionClass took 0.001 sec
+Testcase: testConstructor3_TooLarge took 0.075 sec
+	FAILED
+IAE should be thrown.
+junit.framework.AssertionFailedError: IAE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor3_TooLarge(BloomFilterFailureTest.java:180)
+
+Testcase: testConstructor3_InvalidLength took 0 sec
+Testcase: testConstructor3_NullHashFunctionClass took 0 sec
+	Caused an ERROR
+hash functions must not be null.
+java.lang.IllegalArgumentException: hash functions must not be null.
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:179)
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor3_NullHashFunctionClass(BloomFilterFailureTest.java:207)
+
+Testcase: testConstructor4_NullString took 0 sec
+	FAILED
+NPE should be thrown.
+junit.framework.AssertionFailedError: NPE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_NullString(BloomFilterFailureTest.java:222)
+
+Testcase: testConstructor4_InvalidString1 took 0 sec
+	FAILED
+BloomFilterSerializeException should be thrown.
+junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString1(BloomFilterFailureTest.java:236)
+
+Testcase: testConstructor4_InvalidString2 took 0 sec
+	FAILED
+BloomFilterSerializeException should be thrown.
+junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString2(BloomFilterFailureTest.java:250)
+
+Testcase: testConstructor4_InvalidString3 took 0 sec
+	FAILED
+BloomFilterSerializeException should be thrown.
+junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString3(BloomFilterFailureTest.java:264)
+
+Testcase: testConstructor4_InvalidString4 took 0 sec
+	FAILED
+BloomFilterSerializeException should be thrown.
+junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString4(BloomFilterFailureTest.java:278)
+
+Testcase: testConstructor4_InvalidString5 took 0 sec
+	FAILED
+BloomFilterSerializeException should be thrown.
+junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString5(BloomFilterFailureTest.java:292)
+
+Testcase: testConstructor4_InvalidString6 took 0 sec
+	FAILED
+BloomFilterSerializeException should be thrown.
+junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString6(BloomFilterFailureTest.java:306)
+
+Testcase: testConstructor4_InvalidString7 took 0.001 sec
+	FAILED
+BloomFilterSerializeException should be thrown.
+junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString7(BloomFilterFailureTest.java:320)
+
+Testcase: testConstructor4_TooLarge took 0 sec
+	FAILED
+BloomFilterSerializeException should be thrown.
+junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_TooLarge(BloomFilterFailureTest.java:335)
+
+Testcase: testConstructor4_NullHashFunctionFamily took 0.001 sec
+	FAILED
+NPE should be thrown.
+junit.framework.AssertionFailedError: NPE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_NullHashFunctionFamily(BloomFilterFailureTest.java:349)
+
+Testcase: testConstructor5_NullString took 0 sec
+	Caused an ERROR
+exception when building the hashFunctions object
+com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:238)
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_NullString(BloomFilterFailureTest.java:362)
+
+Testcase: testConstructor5_InvalidString1 took 0 sec
+Testcase: testConstructor5_InvalidString2 took 0 sec
+	Caused an ERROR
+For input string: "13abc"
+java.lang.NumberFormatException: For input string: "13abc"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:481)
+	at java.lang.Integer.parseInt(Integer.java:514)
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:242)
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString2(BloomFilterFailureTest.java:390)
+
+Testcase: testConstructor5_InvalidString3 took 0 sec
+	FAILED
+BloomFilterSerializeException should be thrown.
+junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString3(BloomFilterFailureTest.java:407)
+
+Testcase: testConstructor5_InvalidString4 took 0.001 sec
+	Caused an ERROR
+For input string: "a"
+java.lang.NumberFormatException: For input string: "a"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:481)
+	at java.lang.Integer.parseInt(Integer.java:514)
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:242)
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString4(BloomFilterFailureTest.java:420)
+
+Testcase: testConstructor5_InvalidString5 took 0 sec
+	FAILED
+BloomFilterSerializeException should be thrown.
+junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString5(BloomFilterFailureTest.java:437)
+
+Testcase: testConstructor5_InvalidString6 took 0 sec
+	FAILED
+BloomFilterSerializeException should be thrown.
+junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString6(BloomFilterFailureTest.java:452)
+
+Testcase: testConstructor5_InvalidString7 took 0 sec
+Testcase: testConstructor5_InvalidString8 took 0.001 sec
+Testcase: testConstructor5_InvalidString9 took 0 sec
+Testcase: testConstructor5_InvalidString10 took 0.001 sec
+Testcase: testConstructor5_InvalidString11 took 0 sec
+Testcase: testConstructor5_InvalidString12 took 0.001 sec
+Testcase: testConstructor5_InvalidString13 took 0 sec
+	FAILED
+BloomFilterSerializeException should be thrown.
+junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString13(BloomFilterFailureTest.java:554)
+
+Testcase: testConstructor5_InvalidString14 took 0 sec
+	Caused an ERROR
+nbits < 0: -13
+java.lang.NegativeArraySizeException: nbits < 0: -13
+	at java.util.BitSet.<init>(BitSet.java:157)
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:243)
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString14(BloomFilterFailureTest.java:567)
+
+Testcase: testConstructor5_InvalidString15 took 0 sec
+Testcase: testConstructor5_TooLarge took 0.068 sec
+	FAILED
+BloomFilterSerializeException should be thrown.
+junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_TooLarge(BloomFilterFailureTest.java:599)
+
+Testcase: testAdd_NullObj took 0 sec
+Testcase: testAddAll_NullObj took 0 sec
+	FAILED
+NPE should be thrown.
+junit.framework.AssertionFailedError: NPE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testAddAll_NullObj(BloomFilterFailureTest.java:625)
+
+Testcase: testAddAll_InvalidObj took 0 sec
+	FAILED
+IAE should be thrown.
+junit.framework.AssertionFailedError: IAE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testAddAll_InvalidObj(BloomFilterFailureTest.java:642)
+
+Testcase: testContains_NullObj took 0 sec
+Testcase: testContainsAll_NullObj took 0 sec
+	FAILED
+NPE should be thrown.
+junit.framework.AssertionFailedError: NPE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testContainsAll_NullObj(BloomFilterFailureTest.java:668)
+
+Testcase: testContainsAll_InvalidObj took 0 sec
+	FAILED
+IAE should be thrown.
+junit.framework.AssertionFailedError: IAE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testContainsAll_InvalidObj(BloomFilterFailureTest.java:685)
+
+Testcase: testUnite_NullObj took 0 sec
+	FAILED
+NPE should be thrown.
+junit.framework.AssertionFailedError: NPE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testUnite_NullObj(BloomFilterFailureTest.java:698)
+
+Testcase: testUnite_InvalidObj1 took 0 sec
+	FAILED
+IncompatibleBloomFiltersException should be thrown.
+junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testUnite_InvalidObj1(BloomFilterFailureTest.java:711)
+
+Testcase: testUnite_InvalidObj2 took 0 sec
+	FAILED
+IncompatibleBloomFiltersException should be thrown.
+junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testUnite_InvalidObj2(BloomFilterFailureTest.java:724)
+
+Testcase: testUnite_InvalidObj3 took 0 sec
+	FAILED
+IncompatibleBloomFiltersException should be thrown.
+junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testUnite_InvalidObj3(BloomFilterFailureTest.java:737)
+
+Testcase: testIntersect_NullObj took 0 sec
+	FAILED
+NPE should be thrown.
+junit.framework.AssertionFailedError: NPE should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testIntersect_NullObj(BloomFilterFailureTest.java:750)
+
+Testcase: testIntersect_InvalidObj1 took 0 sec
+	FAILED
+IncompatibleBloomFiltersException should be thrown.
+junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testIntersect_InvalidObj1(BloomFilterFailureTest.java:763)
+
+Testcase: testIntersect_InvalidObj2 took 0 sec
+	FAILED
+IncompatibleBloomFiltersException should be thrown.
+junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testIntersect_InvalidObj2(BloomFilterFailureTest.java:776)
+
+Testcase: testIntersect_InvalidObj3 took 0.001 sec
+	FAILED
+IncompatibleBloomFiltersException should be thrown.
+junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.
+	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testIntersect_InvalidObj3(BloomFilterFailureTest.java:789)
+
+Testcase: testConstructor1_InvalidInt took 0 sec
+Testcase: testConstructor2_NullParam took 0 sec
+Testcase: testConstructor2_InvalidString1 took 0 sec
+Testcase: testConstructor2_InvalidString2 took 0 sec
+Testcase: testConstructor2_InvalidString3 took 0 sec
+Testcase: testConstructor2_InvalidString4 took 0 sec
+Testcase: testComputeHash_NullObj took 0 sec
+Testcase: testComputeHash_InvalidFunctionIndex1 took 0 sec
+Testcase: testComputeHash_InvalidFunctionIndex2 took 0.001 sec
+Testcase: testComputeHash_InvalidMaxHash took 0 sec
+Testcase: testCtor took 0.001 sec
+	Caused an ERROR
+exception when building the hashFunctions object
+com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object
+	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:238)
+	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testCtor(BloomFilterStressTests.java:51)
+
+Testcase: testCtor2 took 0.145 sec
+	FAILED
+The length of bitset is too large.
+junit.framework.AssertionFailedError: The length of bitset is too large.
+	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testCtor2(BloomFilterStressTests.java:66)
+
+Testcase: testAdd took 0.005 sec
+	Caused an ERROR
+null
+java.lang.NullPointerException
+	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)
+	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testAdd(BloomFilterStressTests.java:85)
+
+Testcase: testUnit took 0 sec
+	FAILED
+The result is incorrect. expected:<[30:33333]> but was:<[]>
+junit.framework.ComparisonFailure: The result is incorrect. expected:<[30:33333]> but was:<[]>
+	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testUnit(BloomFilterStressTests.java:117)
+
+Testcase: testIntersect took 0 sec
+	FAILED
+The result is incorrect. expected:<[30:00000]> but was:<[]>
+junit.framework.ComparisonFailure: The result is incorrect. expected:<[30:00000]> but was:<[]>
+	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testIntersect(BloomFilterStressTests.java:139)
+
+Testcase: testCreate took 0.02 sec
+Testcase: testComputeHash took 0.03 sec

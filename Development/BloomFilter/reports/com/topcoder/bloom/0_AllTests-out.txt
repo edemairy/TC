@@ -1,0 +1,18 @@
+Even with the bigger size possible (2 GigaBits) there was memory enough for the filter in  testConstructor1VeryBig
+Even with the bigger size possible (2 GigaBits) there was memory enough for the filter.  
+------------< Demo for Add and Contains >------------
+------------< Demo for Unite and Intersect >------------
+'cat' is included in union: false
+'keyboard' is included in union: false
+'mouse' is included in union: false
+'pencil' is included in union: false
+
+'cat' is included in intersection: false
+'keyboard' is included in intersection: false
+'mouse' is included in intersection: false
+'pencil' is included in intersection: false
+------------< End Demo for Unite and Intersect >------------
+------------< Demo for Serealization/Desrealization >------------
+Stress Tests ----- Create DefaultHashFunctionFamily instance : 1000 times, 19 ms
+Stress Tests ----- computeHash  : 1000 times, 1000 threads29 ms
+
