@@ -1,0 +1,12 @@
+<CMConfig>
+  <Config name="HibernateHelper">
+    
+    <!-- Property for defining the path of file from which Hibernate is configured. -->
+    <Property name="hibernateConfigFilePath">
+      <Value>sampleHibernateConfig.cfg.xml</Value>
+    </Property>
+    <Property name="empty">
+      <Value></Value>
+    </Property>
+  </Config>
+</CMConfig>

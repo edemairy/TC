@@ -1,0 +1,10 @@
+<project xmlns:au="antlib:org.apache.ant.antunit">
+	<import file="macros.ant" />
+
+	<target name="testCharacterize_Upload">
+		<junitbuild target="clean" />
+	
+		<!-- Should work without error -->
+		<junitbuild target="upload.to.sourceforge" />
+	</target>
+</project>

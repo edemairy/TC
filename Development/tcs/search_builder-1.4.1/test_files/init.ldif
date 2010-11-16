@@ -1,0 +1,6 @@
+dn: dc=guessant,dc=org
+objectclass: top
+objectclass: dcObject
+objectclass: organization
+o: guessant
+dc: guessant

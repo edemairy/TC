@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.topcoder.search.builder.hibernate">
+   <class name="Person" table="Person">
+		<id name="id" type="integer" column="ID">
+			<generator class="native"/>
+		</id>
+        <property name="name" column="NAME"/>
+        <property name="age" column="AGE"/>
+        <property name="sex" column="SEX"/>
+
+        <many-to-one name="company" column="company_id"
+			class="com.topcoder.search.builder.hibernate.Company" />
+    </class>
+</hibernate-mapping>

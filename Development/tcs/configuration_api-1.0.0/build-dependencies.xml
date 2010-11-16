@@ -1,0 +1,16 @@
+<project name="Dependency Import" default="dist" basedir=".">
+    <!-- property file defining the component's dependencies -->
+
+    <!-- define base_exception.jar : could be auto generated instead -->
+    <property name="base_exception.name" value="base_exception"/>
+    <property name="base_exception.version" value="2.0.0"/>
+    <property name="base_exception.path" value="${base_exception.name}/${base_exception.version}"/>
+    <property name="base_exception.jar" value="${tcs_libdir}/${base_exception.path}/${base_exception.name}.jar"/>
+
+    <!-- the required path elements must be defined even if empty -->
+    <path id="component.tcs-dependencies">
+        <pathelement location="${base_exception.jar}" />
+    </path>
+    <path id="component.3rdParty-dependencies" />
+    <path id="component.test.3rdParty-dependencies" />
+</project>

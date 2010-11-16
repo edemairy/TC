@@ -1,0 +1,14 @@
+DROP TABLE id_sequences;
+DROP TABLE deliverable_lu;
+DROP TABLE resource_submission;
+DROP TABLE submission;
+DROP TABLE submission_type_lu;
+DROP TABLE submission_status_lu;
+DROP TABLE upload;
+DROP TABLE upload_status_lu;
+DROP TABLE upload_type_lu;
+DROP TABLE resource;
+DROP TABLE resource_role_lu;
+DROP TABLE project_phase;
+DROP TABLE phase_type_lu;
+DROP TABLE project;

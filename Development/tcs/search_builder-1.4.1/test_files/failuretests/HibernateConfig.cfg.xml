@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.informix.jdbc.IfxDriver</property>
+        <property name="connection.url">jdbc:informix-sqli://192.168.1.104:1526/sysmaster:INFORMIXSERVER=ol_vpc</property>
+        <property name="connection.username">informix</property>
+        <property name="connection.password">topcoder</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+						
+        <!-- hibernate configuration -->
+        <property name="dialect">org.hibernate.dialect.InformixDialect</property>
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+        <!-- mapping files -->
+        <mapping resource="Person.hbm.xml"/>
+        <mapping resource="Company.hbm.xml"/>
+    </session-factory>
+
+</hibernate-configuration>

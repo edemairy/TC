@@ -1,0 +1,9 @@
+#property file defining the components information
+component.name=Search Builder
+component.distfilename=search_builder
+component.package=com.topcoder.search.builder
+component.packagedir=com/topcoder/search/builder
+component.version.major=1
+component.version.minor=4
+component.version.micro=1
+component.version.build=1

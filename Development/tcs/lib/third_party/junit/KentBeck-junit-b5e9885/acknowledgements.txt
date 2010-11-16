@@ -1,0 +1,46 @@
+2006 March 9
+	Matthias Schmidt: improved org.junit package javadoc
+	
+2006 August 3
+	giovanni: better test for TestCase without a name.
+	Matthias Pfau: better error message when test case constructor fails
+	
+2006 November 21
+	dakcalouro: Found defect with comparing ints and longs (1555161)
+	Ben Maurer: Found defect with timeouts taking twice as long as specified (1536198)
+	
+2007 February 08
+	Kazimierz Pogoda: Found defect with null array elements (1438163)
+	
+2007 July 09
+	wangqq: Found defect with @After not running after a timeout (1745048)
+
+2007 July 18
+    Andrew Dick: Found defect with assertEquals comparing non-Integer Numbers (1715326)
+	Michael Schechter: Found defect with Filters and suite() methods (1739095)
+
+2008 February 5
+	Walter Gildersleeve: Found assertEquals(null, "null") defect (1857283)
+	
+2008 July 1
+	Johannes Link: Submitted test for running subclasses of Suite
+	
+2008 July 23
+	Daniel Brolund: Submitted patch for build.xml, fixing 1.5 compatibility (2021396)
+	
+2008 Aug 1
+	Nat Pryce: Found defect in treatment of validation errors from custom 
+	           subclasses of the legacy JUnit4ClassRunner.
+	           
+2008 Aug 18
+	Nir Soffer: Suggested adding to the cookbook information about running
+				running JUnit from the command line.
+				           
+2008 Aug 19
+	Jack Woehr: Discovered build.xml was missing from junit-4.x.zip
+	
+2009 Jan 5
+	Amanda Robinson: Fixed overly permissive @DataPoint processing.
+	
+2009 Feb 9
+	Mark Shapiro: Discovered bug in test counting after an ignored method (2106324)
