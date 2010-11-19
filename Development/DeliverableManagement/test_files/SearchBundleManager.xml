@@ -15,7 +15,8 @@
                         <Value>com.informix.jdbc.IfxDriver</Value>
                     </Property>
                     <Property name="jdbc_url">
-                        <Value>jdbc:informix-sqli://192.168.1.114:9088/demo:informixserver=ol_topcoder</Value>
+                  <!--      <Value>jdbc:informix-sqli://ysera:23898/topcoder:informixserver=ol_informix1170_2</Value> -->
+                        <Value>jdbc:informix-sqli://ysera:23898/topcoder:informixserver=ol_informix1170_2</Value>
                     </Property>
                     <Property name="SelectMethod">
                         <Value>cursor</Value>
@@ -24,7 +25,7 @@
                         <Value>informix</Value>
                     </Property>
                     <Property name="password">
-                        <Value>system</Value>
+                        <Value>informix</Value>
                     </Property>
                 </Property>
             </Property>

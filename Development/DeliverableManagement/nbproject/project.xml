@@ -17,23 +17,23 @@
                 </source-folder>
                 <source-folder>
                     <label>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/main</label>
-                    <type>java</type>
                     <location>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/main</location>
-                    <encoding>UTF-8</encoding>
                 </source-folder>
                 <source-folder>
                     <label>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/tests</label>
-                    <type>java</type>
                     <location>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/tests</location>
-                    <encoding>UTF-8</encoding>
                 </source-folder>
                 <source-folder>
                     <label>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/main</label>
+                    <type>java</type>
                     <location>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/main</location>
+                    <encoding>UTF-8</encoding>
                 </source-folder>
                 <source-folder>
                     <label>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/tests</label>
+                    <type>java</type>
                     <location>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/tests</location>
+                    <encoding>UTF-8</encoding>
                 </source-folder>
             </folders>
             <ide-actions>

@@ -1,3 +1,4 @@
+CREATE DATABASE topcoder WITH LOG;
 CREATE TABLE project (
   project_id                    INTEGER                         NOT NULL,
   PRIMARY KEY(project_id)

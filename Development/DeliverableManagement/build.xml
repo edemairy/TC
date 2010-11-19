@@ -116,6 +116,7 @@
         <javac srcdir="${javamain}" destdir="${build_classdir}" includes="${packagedir}/**" debug="true"
                verbose="${verbose}" includeAntRuntime="no" encoding="${javac.encoding}">
             <classpath refid="buildlibs"/>
+            <compilerarg value="-Xlint:unchecked"/>
         </javac>
     </target>
 
@@ -161,7 +162,7 @@
         <!-- standard test task -->
         <sequential>
             <mkdir dir="${testlogdir}"/>
-            <junit fork="true" haltonerror="false">
+            <junit fork="true" haltonerror="false" showoutput="false">
                 <classpath location="${build_testclassdir}"/>
                 <classpath refid="test.build.classpath"/>
                 <test name="${package}.AllTests" todir="${testlogdir}">

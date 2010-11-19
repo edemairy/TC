@@ -1,0 +1,6 @@
+<project name="Dependency Import" default="dist" basedir=".">
+    <!-- property file defining the component's dependencies -->
+    <path id="component.tcs-dependencies" />
+    <path id="component.3rdParty-dependencies" />
+    <path id="component.test.3rdParty-dependencies" />
+</project>

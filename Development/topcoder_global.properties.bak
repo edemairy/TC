@@ -1,0 +1,2 @@
+com.topcoder.util.config.ConfigManager=test_files/com/topcoder/util/config/ConfigManager.properties
+com.topcoder.util.log=test_files/com/topcoder/util/log/Logging.xml

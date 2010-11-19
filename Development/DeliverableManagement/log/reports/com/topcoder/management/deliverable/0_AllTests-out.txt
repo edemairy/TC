@@ -1,0 +1,96 @@
+Invoke createUploadType method 10 times cost 0.039 second.
+Invoke updateUploadTye method for 10 times cost 0.028 seconds.
+Invoke createUploadType method 10 times cost 0.03 second.
+Invoke removeUploadType for 10 times cost 0.026 seconds.
+Invoke createUploadType method 10 times cost 0.03 second.
+Invoke getAllUploadTypes method for 10 times cost 0.057 seconds.
+Invoke createUploadStatus method 2o times cost 0.033 second.
+Invoke updateUploadStatus for 10 times cost 0.034 seconds
+Invoke createUploadStatus method 2o times cost 0.031 second.
+Invoke removeUploadStatus for 10 times cost 0.025 second.
+Invoke createUploadStatus method 2o times cost 0.032 second.
+Invoke getAllUploadStatus for 10 times cost 0.059 seconds
+Invoke createSubmissionStatus 10 times cost 0.035 seconds.
+Invoke updateSubmissionStatus 10 times cost 0.027 seconds
+Invoke createSubmissionStatus 10 times cost 0.031 seconds.
+Invoke createSubmissionType 10 times cost 0.029 seconds.
+Invoke updateSubmissionType 10 times cost 0.029 seconds
+Invoke removeSubmissionType for 10 times cost 0.028 seconds.
+Invoke createUploadType method 10 times cost 0.03 second.
+Invoke createUploadStatus method 2o times cost 0.029 second.
+Created Upload with ID: 9
+Created Upload with ID: 10
+Invoke createUpload method 10 times cost 0.029 second.
+Invoke createUploadType method 10 times cost 0.028 second.
+Invoke createUploadStatus method 2o times cost 0.049 second.
+Invoke updateUpload method 10 times cost 0.03 second.
+Invoke createUploadType method 10 times cost 0.043 second.
+Invoke createUploadStatus method 2o times cost 0.029 second.
+Created Upload with ID: 11
+Created Upload with ID: 12
+Invoke createUpload method 10 times cost 0.03 second.
+Invoke removeUpload method 10 times cost 0.0 second.
+Invoke createUploadType method 10 times cost 0.029 second.
+Invoke createUploadStatus method 2o times cost 0.028 second.
+Created Upload with ID: 13
+Created Upload with ID: 14
+Invoke createUpload method 10 times cost 0.031 second.
+Invoke getUpload method 10 times cost 0.029 second.
+Invoke createUploadType method 10 times cost 0.03 second.
+Invoke createUploadStatus method 2o times cost 0.028 second.
+Created Upload with ID: 15
+Created Upload with ID: 16
+Invoke createUpload method 10 times cost 0.032 second.
+Invoke createSubmissionStatus 10 times cost 0.03 seconds.
+Invoke createSubmissionType 10 times cost 0.028 seconds.
+Invoke searchSubmission for 10 times cost 0.014 seconds.
+Invoke createSubmission for 10 times cost 0.014 seconds.
+Invoke createUploadType method 10 times cost 0.029 second.
+Invoke createUploadStatus method 2o times cost 0.028 second.
+Created Upload with ID: 17
+Created Upload with ID: 18
+Invoke createUpload method 10 times cost 0.029 second.
+Invoke createSubmissionStatus 10 times cost 0.028 seconds.
+Invoke createSubmissionType 10 times cost 0.031 seconds.
+Invoke updateSubmission for 10 times cost 0.028 seconds.
+Invoke createUploadType method 10 times cost 0.03 second.
+Invoke createUploadStatus method 2o times cost 0.028 second.
+Created Upload with ID: 19
+Created Upload with ID: 20
+Invoke createUpload method 10 times cost 0.029 second.
+Invoke createSubmissionStatus 10 times cost 0.029 seconds.
+Invoke createSubmissionType 10 times cost 0.034 seconds.
+Invoke searchSubmission for 10 times cost 0.014 seconds.
+Invoke createSubmission for 10 times cost 0.014 seconds.
+Invoke removeSubmission for 10 times cost 0.013 seconds.
+Invoke createUploadType method 10 times cost 0.029 second.
+Invoke createUploadStatus method 2o times cost 0.033 second.
+Created Upload with ID: 6
+Created Upload with ID: 7
+Invoke createUpload method 10 times cost 0.044 second.
+Invoke createSubmissionStatus 10 times cost 0.03 seconds.
+Invoke createSubmissionType 10 times cost 0.028 seconds.
+Invoke searchSubmission for 10 times cost 0.014 seconds.
+Invoke createSubmission for 10 times cost 0.016 seconds.
+Invoke getSubmission for 10 times cost 0.035 seconds.
+Invoke createSubmissionType 10 times cost 0.03 seconds.
+Invoke createUploadType method 10 times cost 0.029 second.
+Invoke createUploadStatus method 2o times cost 0.029 second.
+Created Upload with ID: 8
+Created Upload with ID: 9
+Invoke createUpload method 10 times cost 0.029 second.
+Invoke createSubmissionStatus 10 times cost 0.045 seconds.
+Invoke createSubmissionType 10 times cost 0.046 seconds.
+Invoke searchSubmission for 10 times cost 0.015 seconds.
+Invoke createSubmission for 10 times cost 0.016 seconds.
+Invoke searchSubmission for 10 times cost 0.014 seconds.
+Invoke searchSubmission for 10 times cost 0.014 seconds.
+Invoke createUploadType method 10 times cost 0.029 second.
+Invoke createUploadStatus method 2o times cost 0.028 second.
+Created Upload with ID: 10
+Created Upload with ID: 11
+Invoke createUpload method 10 times cost 0.031 second.
+Invoke SearchUploads method 10 times cost 0.028 second.
+Invoke SearchDeliverablesWithSubmissions for 20 times cost 0.313 seconds.
+Invoke SearchDeliverables for 20 times cost 0.587 seconds.
+
