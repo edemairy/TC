@@ -16,6 +16,7 @@
                     <encoding>UTF-8</encoding>
                 </source-folder>
                 <source-folder>
+<<<<<<< Updated upstream
                     <label>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/main</label>
                     <location>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/main</location>
                 </source-folder>
@@ -35,6 +36,19 @@
                     <location>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/tests</location>
                     <encoding>UTF-8</encoding>
                 </source-folder>
+=======
+                    <label>src/java/main</label>
+                    <type>java</type>
+                    <location>src/java/main</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+                <source-folder>
+                    <label>src/java/tests</label>
+                    <type>java</type>
+                    <location>src/java/tests</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+>>>>>>> Stashed changes
             </folders>
             <ide-actions>
                 <action name="build">
@@ -54,15 +68,20 @@
                     <target>compile</target>
                 </action>
             </ide-actions>
+            <export>
+                <type>jar</type>
+                <location>build/dist/lib/tcs/deliverable_management/1.2.0/deliverable_management.jar</location>
+                <build-target>compile</build-target>
+            </export>
             <view>
                 <items>
                     <source-folder style="packages">
-                        <label>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/main</label>
-                        <location>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/main</location>
+                        <label>src/java/main</label>
+                        <location>src/java/main</location>
                     </source-folder>
                     <source-folder style="packages">
-                        <label>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/tests</label>
-                        <location>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/tests</location>
+                        <label>src/java/tests</label>
+                        <location>src/java/tests</location>
                     </source-folder>
                     <source-file>
                         <location>build.xml</location>
@@ -80,11 +99,13 @@
         </general-data>
         <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/2">
             <compilation-unit>
-                <package-root>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/main</package-root>
+                <package-root>src/java/main</package-root>
+                <classpath mode="compile">../tcs/lib/third_party/junit/4.6/junit-4.6.jar:../tcs/lib/tcs/base_exception/2.0.0/base_exception.jar:../tcs/lib/tcs/search_builder/1.4.1/search_builder.jar:../tcs/lib/tcs/configuration_api/1.0.0/configuration_api.jar:../tcs/lib/tcs/configuration_manager/2.1.5/configuration_manager.jar:../tcs/lib/tcs/data_validation/1.1.1/data_validation.jar:../tcs/lib/tcs/database_abstraction/1.1/database_abstraction.jar:../tcs/lib/tcs/db_connection_factory/1.1/db_connection_factory.jar:../tcs/lib/tcs/id_generator/3.0.0/id_generator.jar:../tcs/lib/tcs/logging_wrapper/1.2/logging_wrapper.jar:../tcs/lib/tcs/search_builder/1.4.1/search_builder.jar</classpath>
+                <built-to>build/dist/lib/tcs/deliverable_management/1.2.0/deliverable_management.jar</built-to>
                 <source-level>1.5</source-level>
             </compilation-unit>
             <compilation-unit>
-                <package-root>/home/edemairy/Personnel/TC/Development/DeliverableManagement/src/java/tests</package-root>
+                <package-root>src/java/tests</package-root>
                 <unit-tests/>
                 <source-level>1.5</source-level>
             </compilation-unit>

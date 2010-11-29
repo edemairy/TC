@@ -117,19 +117,7 @@ public class BloomFilter implements Cloneable {
      * there is not enough memory to allocate the filter.
      */
     public BloomFilter(int capacity, float errorRate) {
-        if (capacity <= 0) {
-            throw new IllegalArgumentException("Capacity must be positive");
-        }
-        if ((errorRate <= 0) || (errorRate >= 1)) {
-            throw new IllegalArgumentException("Error rate must be positive");
-        }
-        this.bitSetSize =
-                (int) Math.ceil(
-                -(capacity * Math.log(errorRate)) / (Math.log(2)));
-        this.bitSet = new BitSet(bitSetSize);
-        if (this.bitSet == null) {
-            throw new IllegalArgumentException("Not enough memory available to allocate the bitset.");
-        }
+        this(capacity, errorRate, DefaultHashFunctionFamily.class);
     }
 
     /**
@@ -150,12 +138,30 @@ public class BloomFilter implements Cloneable {
      * @throws NullPointerException if hashFunctionsClass is null
      */
     public BloomFilter(int capacity, float errorRate, Class hashFunctionsClass) {
-        this(capacity, errorRate);
+        System.out.println(capacity);
+        if (capacity <= 0) {
+            throw new IllegalArgumentException("Capacity must be positive");
+        }
+        if ((errorRate <= 0) || (errorRate >= 1)) {
+            throw new IllegalArgumentException("Error rate must be positive");
+        }
+        this.bitSetSize =
+                (int) Math.ceil(
+                -(capacity * Math.log(errorRate)) / (Math.log(2)*Math.log(2)));
+        this.bitSetSize = Math.max(2,this.bitSetSize);
+        this.bitSet = new BitSet(bitSetSize);
+        if (this.bitSet == null) {
+            throw new IllegalArgumentException("Not enough memory available to allocate the bitset.");
+        }
+        if (hashFunctionsClass == null) {
+            throw new NullPointerException("hashFunctionClass must not be null.");
+        }
         try {
-            hashFunctions = (HashFunctionFamily) hashFunctionsClass.newInstance();
-        } catch(Exception e) {
-          throw new IllegalArgumentException("Impossible to instantiate the hash function.");
-        } 
+            Constructor constructor = hashFunctionsClass.getConstructor(new Class[]{int.class});
+            hashFunctions = (HashFunctionFamily) constructor.newInstance(bitSetSize);
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Impossible to instantiate the hash function: " + e.getMessage());
+        }
     }
 
     /**
@@ -172,11 +178,17 @@ public class BloomFilter implements Cloneable {
      * @throws NullPointerException if hashFunctions is null
      */
     public BloomFilter(int bitSetSize, HashFunctionFamily hashFunctions) {
-        if (bitSetSize<2) throw new IllegalArgumentException("bitSetSize must be greater or equal than 2.");
+        if (bitSetSize < 2) {
+            throw new IllegalArgumentException("bitSetSize must be greater or equal than 2.");
+        }
         this.bitSetSize = bitSetSize;
-        this.bitSet = new BitSet( bitSetSize );
-        if (bitSet == null  ) throw new IllegalArgumentException("Imposible to allocate bitset.");
-        if (hashFunctions==null) throw new IllegalArgumentException("hash functions must not be null.");
+        this.bitSet = new BitSet(bitSetSize);
+        if (bitSet == null) {
+            throw new IllegalArgumentException("Imposible to allocate bitset.");
+        }
+        if (hashFunctions == null) {
+            throw new NullPointerException("hash functions must not be null.");
+        }
         this.hashFunctions = hashFunctions;
     }
 
@@ -201,6 +213,14 @@ public class BloomFilter implements Cloneable {
      * @throws BloomFilterSerializeException if the specified string representation is invalid
      */
     public BloomFilter(String serialized, HashFunctionFamily hashFunctions) {
+        if (serialized == null) {
+            throw new NullPointerException("serialized must not be null");
+        }
+        if (hashFunctions == null) {
+            throw new NullPointerException("hashFunctions must not be null");
+        }
+        buildBitSet(serialized);
+        this.hashFunctions = hashFunctions;
     }
 
     /**
@@ -225,6 +245,9 @@ public class BloomFilter implements Cloneable {
      * error happens when using Java reflection to restore hash function family
      */
     public BloomFilter(String serialized) {
+        if (serialized == null) {
+            throw new NullPointerException("serialized must not be null");
+        }
         String lengthValues = "0:0";
         try {
             String[] splits = serialized.split(SEPARATION_REGEX);
@@ -235,13 +258,20 @@ public class BloomFilter implements Cloneable {
             this.hashFunctions = (HashFunctionFamily) constructor.newInstance(hashSerializedString);
 
         } catch (Exception ex) {
-            throw new BloomFilterSerializeException("exception when building the hashFunctions object");
+            throw new BloomFilterSerializeException("exception when building the hashFunctions object: " + ex.getMessage());
         }
-        if (this.hashFunctions == null) throw new NullPointerException("hash function is null.");
-        String[] splitValues = lengthValues.split("[:]");
-        bitSetSize = Integer.parseInt(splitValues[0]);
-        bitSet = new BitSet(bitSetSize);
-        
+        if (this.hashFunctions == null) {
+            throw new NullPointerException("hash functions is null.");
+        }
+        try {
+            String[] splitValues = lengthValues.split(":");
+            bitSetSize = Integer.parseInt(splitValues[0]);
+            bitSet = new BitSet(bitSetSize);
+        } catch (Exception ex) {
+            throw new BloomFilterSerializeException("exception when parsing length of serialized: " + ex.getMessage());
+        }
+
+
     }
 
     /**
@@ -254,6 +284,9 @@ public class BloomFilter implements Cloneable {
      * @throws NullPointerException if item is null
      */
     public void add(Object item) {
+        if (item == null) {
+            throw new NullPointerException("item is null.");
+        }
         int maxHash = getBitSetLength() - 1;
         // compute the hash for each function in the family and set that bit.
         for (int i = 0; i < hashFunctions.getFunctionCount(); i++) {
@@ -273,6 +306,16 @@ public class BloomFilter implements Cloneable {
      * @throws IllegalArgumentException if collection has at least one null element
      */
     public void addAll(Collection collection) {
+        if (collection == null) {
+            throw new NullPointerException("collection is null.");
+        }
+        try {
+            for (Object object : collection) {
+                this.add(object);
+            }
+        } catch (NullPointerException e) {
+            throw new IllegalArgumentException("The collection must not contain any null element: " + e.getMessage());
+        }
     }
 
     /**
@@ -289,7 +332,17 @@ public class BloomFilter implements Cloneable {
      * @throws NullPointerException if item is null
      */
     public boolean contains(Object item) {
-        return false;
+        if (item == null) {
+            throw new NullPointerException("one object is null in the collection.");
+        }
+        boolean result = true;
+        int maxHash = getBitSetLength() - 1;
+        // compute the hash for each function in the family and set that bit.
+        for (int i = 0; ((i < hashFunctions.getFunctionCount()) && (result)); i++) {
+            result &= bitSet.get(hashFunctions.computeHash(i, maxHash, item));
+
+        }
+        return result;
     }
 
     /**
@@ -307,7 +360,19 @@ public class BloomFilter implements Cloneable {
      * @throws IllegalArgumentException if any of the collection items is null
      */
     public boolean containsAll(Collection collection) {
-        return false;
+        if (collection == null) {
+            throw new NullPointerException("null collection");
+        }
+        boolean result = true;
+        try {
+            for (Iterator it = collection.iterator(); it.hasNext() && result;) {
+                Object object = it.next();
+                result &= this.contains(object);
+            }
+        } catch (NullPointerException ex) {
+            throw new IllegalArgumentException("One item of the collection is null: " + ex);
+        }
+        return result;
     }
 
     /**
@@ -324,7 +389,19 @@ public class BloomFilter implements Cloneable {
      * @return true if the specified Object is equal to this Bloom filter
      */
     public boolean equals(Object obj) {
-        return false;
+        boolean result = true;
+        BloomFilter filter = null;
+        try {
+            filter = (BloomFilter) obj;
+        } catch (ClassCastException e) {
+            return false;
+        }
+        result &= (filter != null);
+        if (result) {
+            result &= (this.bitSet.equals(filter.bitSet));
+            result &= (this.hashFunctions.equals(filter.hashFunctions));
+        }
+        return result;
     }
 
     /**
@@ -371,7 +448,18 @@ public class BloomFilter implements Cloneable {
      * @throws IncompatibleBloomFiltersException if the two Bloom filters are incompatible
      */
     public BloomFilter unite(BloomFilter bloomFilter) {
-        return bloomFilter;
+        if (bloomFilter == null) {
+            throw new NullPointerException("bloomFilter is null.");
+        }
+        if ((this.bitSetSize != bloomFilter.bitSetSize) || (!this.hashFunctions.equals(bloomFilter.hashFunctions))) {
+            throw new IncompatibleBloomFiltersException("the two Bloom filters are incompatible");
+        }
+
+        BitSet bs = bloomFilter.bitSet;
+        for (int i = bs.nextSetBit(0); i >= 0; i = bs.nextSetBit(i + 1)) {
+            this.bitSet.set(i);
+        }
+        return this;
     }
 
     /**
@@ -390,7 +478,18 @@ public class BloomFilter implements Cloneable {
      * @throws IncompatibleBloomFiltersException if the two Bloom filters are incompatible
      */
     public BloomFilter intersect(BloomFilter bloomFilter) {
-        return bloomFilter;
+        if (bloomFilter == null) {
+            throw new NullPointerException("bloomFilter is null.");
+        }
+        if ((this.bitSetSize != bloomFilter.bitSetSize) || (!this.hashFunctions.equals(bloomFilter.hashFunctions))) {
+            throw new IncompatibleBloomFiltersException("");
+        }
+
+        BitSet bs = bloomFilter.bitSet;
+        for (int i = 0; i < bloomFilter.bitSetSize; ++i) {
+            this.bitSet.set(i, this.bitSet.get(i) && bs.get(i));
+        }
+        return this;
     }
 
     /**
@@ -399,6 +498,7 @@ public class BloomFilter implements Cloneable {
      * </p>
      */
     public void clear() {
+        this.bitSet.clear();
     }
 
     /**
@@ -418,7 +518,18 @@ public class BloomFilter implements Cloneable {
      * @return string representation of this Bloom filter's bit set.
      */
     public String getSerializedBitSet() {
-        return "";
+        String result = bitSetSize + ":";
+        char val;
+        for (int nbc = 0; nbc < bitSetSize; nbc += 6) {
+            val = 0;
+            for (int j = 5; j > 0; --j) {
+                if (bitSet.get(nbc + (5 - j))) {
+                    val += (2 ^ j);
+                }
+            }
+            result += BASE64_CHARS.charAt(val);
+        }
+        return result;
     }
 
     /**
@@ -440,7 +551,13 @@ public class BloomFilter implements Cloneable {
      * @return a string representation of the Bloom filter
      */
     public String getSerialized() {
-        return "";
+        String result = hashFunctions.getClass().getName()
+                + SEPARATION_CHAR
+                + hashFunctions.getSerialized()
+                + SEPARATION_CHAR
+                + getSerializedBitSet();
+
+        return result;
     }
 
     /**
@@ -477,7 +594,7 @@ public class BloomFilter implements Cloneable {
      * @return the length of bit set used by this Bloom filter.
      */
     public int getBitSetLength() {
-        return 0;
+        return bitSetSize;
     }
 
     /**
@@ -498,6 +615,31 @@ public class BloomFilter implements Cloneable {
      * @param bitSetString the serialized representation of a bitSet
      */
     private void buildBitSet(String bitSetString) {
+        try {
+            String[] splits = bitSetString.split(":",1);
+            bitSetSize = Integer.parseInt(splits[0]);
+            bitSet = new BitSet(bitSetSize);
+            System.err.println("bitSetSize="+bitSetSize);
+            bitSetString = splits[1];
+            int nbc=0;
+            for (int i = 0; i < bitSetSize; i += BITS_PER_BASE64_CHAR, nbc++) {
+                int val = BASE64_CHARS.indexOf(bitSetString.charAt(nbc));
+                for (int j = i+BITS_PER_BASE64_CHAR-1; j >=i ; j--) {
+                    bitSet.set(j, val % 2);
+                    val /= 2;
+                }
+            }
+            int remainingBits = bitSetSize % BITS_PER_BASE64_CHAR;
+            if ((remainingBits) > 0) {
+                int val = BASE64_CHARS.indexOf(bitSetString.charAt(nbc));
+                for (int j = bitSetSize-1; j > bitSetSize-remainingBits-1; j--) {
+                    bitSet.set(remainingBits - j - 1, val % 2);
+                    val /= 2;
+                }
+            }
+        } catch (Exception e) {
+            throw new BloomFilterSerializeException("object can't be built from the serialized string: " + e.getMessage());
+        }
     }
 
     /**

@@ -356,7 +356,7 @@
 <th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
 </tr>
 <tr valign="top" class="Error">
-<td><a href="0_AllTests.html" title="Display all tests">AllTests</a></td><td><a href="0_AllTests.html" title="Display all tests">236</a></td><td><a href="0_AllTests-errors.html" title="Display only errors">44</a></td><td><a href="0_AllTests-fails.html" title="Display only failures">81</a></td><td>1.037</td><td>2010-11-15T16:52:29</td><td>powo</td>
+<td><a href="0_AllTests.html" title="Display all tests">AllTests</a></td><td><a href="0_AllTests.html" title="Display all tests">236</a></td><td><a href="0_AllTests-errors.html" title="Display only errors">10</a></td><td><a href="0_AllTests-fails.html" title="Display only failures">32</a></td><td>3.014</td><td>2010-11-16T15:37:24</td><td>powo</td>
 </tr>
 </table>
 <h2>Tests</h2>
@@ -365,45 +365,43 @@
 <th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor1NegativeCapacity"></a>testConstructor1NegativeCapacity</td><td>Success</td><td></td><td>0.002</td>
+<td><a name="testConstructor1NegativeCapacity"></a>testConstructor1NegativeCapacity</td><td>Success</td><td></td><td>0.004</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor1ZeroCapacity"></a>testConstructor1ZeroCapacity</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testConstructor1ZeroCapacity"></a>testConstructor1ZeroCapacity</td><td>Success</td><td></td><td>0.002</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor1NegativeErrorRate"></a>testConstructor1NegativeErrorRate</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor1BadErrorRate1"></a>testConstructor1BadErrorRate1</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testConstructor1BadErrorRate1"></a>testConstructor1BadErrorRate1</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor1BadErrorRate2"></a>testConstructor1BadErrorRate2</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testConstructor1BadErrorRate2"></a>testConstructor1BadErrorRate2</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor1BadErrorRate3"></a>testConstructor1BadErrorRate3</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor1VeryBigBitSet"></a>testConstructor1VeryBigBitSet</td><td>Success</td><td></td><td>0.149</td>
+<td><a name="testConstructor1VeryBigBitSet"></a>testConstructor1VeryBigBitSet</td><td>Success</td><td></td><td>0.238</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor1VerySmallBitSet"></a>testConstructor1VerySmallBitSet</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Failure">
-<td><a name="testConstructor1VerySmallBitSet"></a>testConstructor1VerySmallBitSet</td><td>Failure</td><td>Expected length 2 expected:&lt;2&gt; but was:&lt;0&gt;<br>
+<td><a name="testConstructor1Accuracy1"></a>testConstructor1Accuracy1</td><td>Failure</td><td>Bad Bit Set size expected:&lt;481&gt; but was:&lt;480&gt;<br>
 <br>
-<code>junit.framework.AssertionFailedError: Expected length 2 expected:<2> but was:<0><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor1VerySmallBitSet(BloomFilterTests.java:152)<br/></code></td><td>0.003</td>
+<code>junit.framework.AssertionFailedError: Bad Bit Set size expected:<481> but was:<480><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor1Accuracy1(BloomFilterTests.java:162)<br/></code></td><td>0.003</td>
 </tr>
 <tr valign="top" class="Failure">
-<td><a name="testConstructor1Accuracy1"></a>testConstructor1Accuracy1</td><td>Failure</td><td>Bad Bit Set size expected:&lt;481&gt; but was:&lt;0&gt;<br>
+<td><a name="testConstructor1Accuracy2"></a>testConstructor1Accuracy2</td><td>Failure</td><td>Bad Bit Set size expected:&lt;3374&gt; but was:&lt;3350&gt;<br>
 <br>
-<code>junit.framework.AssertionFailedError: Bad Bit Set size expected:<481> but was:<0><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor1Accuracy1(BloomFilterTests.java:162)<br/></code></td><td>0.001</td>
+<code>junit.framework.AssertionFailedError: Bad Bit Set size expected:<3374> but was:<3350><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor1Accuracy2(BloomFilterTests.java:173)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Failure">
-<td><a name="testConstructor1Accuracy2"></a>testConstructor1Accuracy2</td><td>Failure</td><td>Bad Bit Set size expected:&lt;3374&gt; but was:&lt;0&gt;<br>
+<td><a name="testConstructor1Accuracy3"></a>testConstructor1Accuracy3</td><td>Failure</td><td>Bad number of functions used expected:&lt;10&gt; but was:&lt;288&gt;<br>
 <br>
-<code>junit.framework.AssertionFailedError: Bad Bit Set size expected:<3374> but was:<0><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor1Accuracy2(BloomFilterTests.java:173)<br/></code></td><td>0.002</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor1Accuracy3"></a>testConstructor1Accuracy3</td><td>Failure</td><td>Bad Bit Set size expected:&lt;288&gt; but was:&lt;0&gt;<br>
-<br>
-<code>junit.framework.AssertionFailedError: Bad Bit Set size expected:<288> but was:<0><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor1Accuracy3(BloomFilterTests.java:184)<br/></code></td><td>0.002</td>
+<code>junit.framework.AssertionFailedError: Bad number of functions used expected:<10> but was:<288><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor1Accuracy3(BloomFilterTests.java:185)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor2NegativeCapacity"></a>testConstructor2NegativeCapacity</td><td>Success</td><td></td><td>0.000</td>
@@ -418,128 +416,102 @@
 <td><a name="testConstructor2BadErrorRate1"></a>testConstructor2BadErrorRate1</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor2BadErrorRate2"></a>testConstructor2BadErrorRate2</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testConstructor2BadErrorRate2"></a>testConstructor2BadErrorRate2</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor2BadErrorRate3"></a>testConstructor2BadErrorRate3</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor2NullClass"></a>testConstructor2NullClass</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
-<br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor2NullClass(BloomFilterTests.java:273)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor2NullClass"></a>testConstructor2NullClass</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor2BadClass"></a>testConstructor2BadClass</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testConstructor2BadClass"></a>testConstructor2BadClass</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor2VeryBigBitSet"></a>testConstructor2VeryBigBitSet</td><td>Success</td><td></td><td>0.149</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor2VerySmallBitSet"></a>testConstructor2VerySmallBitSet</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
-<br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor2VerySmallBitSet(BloomFilterTests.java:316)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor2Accuracy1"></a>testConstructor2Accuracy1</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
-<br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor2Accuracy1(BloomFilterTests.java:327)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor2Accuracy2"></a>testConstructor2Accuracy2</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
-<br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor2Accuracy2(BloomFilterTests.java:340)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor2Accuracy3"></a>testConstructor2Accuracy3</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
-<br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor2Accuracy3(BloomFilterTests.java:353)<br/></code></td><td>0.001</td>
+<td><a name="testConstructor2VeryBigBitSet"></a>testConstructor2VeryBigBitSet</td><td>Success</td><td></td><td>0.387</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor3ZeroSize"></a>testConstructor3ZeroSize</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testConstructor2VerySmallBitSet"></a>testConstructor2VerySmallBitSet</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor3NullHashFamily"></a>testConstructor3NullHashFamily</td><td>Error</td><td>hash functions must not be null.<br>
+<tr valign="top" class="Failure">
+<td><a name="testConstructor2Accuracy1"></a>testConstructor2Accuracy1</td><td>Failure</td><td>Bad Bit Set size expected:&lt;481&gt; but was:&lt;480&gt;<br>
 <br>
-<code>java.lang.IllegalArgumentException: hash functions must not be null.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:179)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor3NullHashFamily(BloomFilterTests.java:379)<br/></code></td><td>0.001</td>
+<code>junit.framework.AssertionFailedError: Bad Bit Set size expected:<481> but was:<480><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor2Accuracy1(BloomFilterTests.java:329)<br/></code></td><td>0.001</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a name="testConstructor2Accuracy2"></a>testConstructor2Accuracy2</td><td>Failure</td><td>Bad Bit Set size expected:&lt;3374&gt; but was:&lt;3350&gt;<br>
+<br>
+<code>junit.framework.AssertionFailedError: Bad Bit Set size expected:<3374> but was:<3350><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor2Accuracy2(BloomFilterTests.java:342)<br/></code></td><td>0.001</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a name="testConstructor2Accuracy3"></a>testConstructor2Accuracy3</td><td>Failure</td><td>Bad number of functions used expected:&lt;10&gt; but was:&lt;288&gt;<br>
+<br>
+<code>junit.framework.AssertionFailedError: Bad number of functions used expected:<10> but was:<288><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor2Accuracy3(BloomFilterTests.java:356)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor3VeryBigBitSet"></a>testConstructor3VeryBigBitSet</td><td>Success</td><td></td><td>0.151</td>
+<td><a name="testConstructor3ZeroSize"></a>testConstructor3ZeroSize</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor3NullHashFamily"></a>testConstructor3NullHashFamily</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor3VeryBigBitSet"></a>testConstructor3VeryBigBitSet</td><td>Success</td><td></td><td>0.150</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor3BitSetLength1"></a>testConstructor3BitSetLength1</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor3Accuracy1"></a>testConstructor3Accuracy1</td><td>Failure</td><td>Bad Bit Set size expected:&lt;100&gt; but was:&lt;0&gt;<br>
-<br>
-<code>junit.framework.AssertionFailedError: Bad Bit Set size expected:<100> but was:<0><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor3Accuracy1(BloomFilterTests.java:424)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor3Accuracy2"></a>testConstructor3Accuracy2</td><td>Failure</td><td>Bad Bit Set size expected:&lt;1000000&gt; but was:&lt;0&gt;<br>
-<br>
-<code>junit.framework.AssertionFailedError: Bad Bit Set size expected:<1000000> but was:<0><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor3Accuracy2(BloomFilterTests.java:436)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4NullSerialized"></a>testConstructor4NullSerialized</td><td>Failure</td><td>NullPointerException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: NullPointerException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4NullSerialized(BloomFilterTests.java:447)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4EmptySerialized"></a>testConstructor4EmptySerialized</td><td>Failure</td><td>BloomFilterSerializeException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4EmptySerialized(BloomFilterTests.java:460)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4NullHashFunctions"></a>testConstructor4NullHashFunctions</td><td>Failure</td><td>NullPointerException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: NullPointerException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4NullHashFunctions(BloomFilterTests.java:473)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4InvalidSerialized1"></a>testConstructor4InvalidSerialized1</td><td>Failure</td><td>BloomFilterSerializeException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4InvalidSerialized1(BloomFilterTests.java:486)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4InvalidSerialized2"></a>testConstructor4InvalidSerialized2</td><td>Failure</td><td>BloomFilterSerializeException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4InvalidSerialized2(BloomFilterTests.java:500)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4InvalidSerialized3"></a>testConstructor4InvalidSerialized3</td><td>Failure</td><td>BloomFilterSerializeException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4InvalidSerialized3(BloomFilterTests.java:514)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4InvalidSerialized4"></a>testConstructor4InvalidSerialized4</td><td>Failure</td><td>BloomFilterSerializeException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4InvalidSerialized4(BloomFilterTests.java:529)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4BitSetLength1"></a>testConstructor4BitSetLength1</td><td>Failure</td><td>BloomFilterSerializeException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4BitSetLength1(BloomFilterTests.java:542)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor3Accuracy1"></a>testConstructor3Accuracy1</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor4AllBase64"></a>testConstructor4AllBase64</td><td>Success</td><td></td><td>0.001</td>
+<td><a name="testConstructor3Accuracy2"></a>testConstructor3Accuracy2</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4EmptyBitSet"></a>testConstructor4EmptyBitSet</td><td>Failure</td><td>hashFamily was not correctly set expected:&lt;com.topcoder.bloom.DefaultHashFunctionFamily@4&gt; but was:&lt;null&gt;<br>
-<br>
-<code>junit.framework.AssertionFailedError: hashFamily was not correctly set expected:<com.topcoder.bloom.DefaultHashFunctionFamily@4> but was:<null><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4EmptyBitSet(BloomFilterTests.java:562)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4NullSerialized"></a>testConstructor4NullSerialized</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4FullBitSet"></a>testConstructor4FullBitSet</td><td>Failure</td><td>hashFamily was not correctly set expected:&lt;com.topcoder.bloom.DefaultHashFunctionFamily@4&gt; but was:&lt;null&gt;<br>
-<br>
-<code>junit.framework.AssertionFailedError: hashFamily was not correctly set expected:<com.topcoder.bloom.DefaultHashFunctionFamily@4> but was:<null><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4FullBitSet(BloomFilterTests.java:573)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4EmptySerialized"></a>testConstructor4EmptySerialized</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4NullHashFunctions"></a>testConstructor4NullHashFunctions</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4InvalidSerialized1"></a>testConstructor4InvalidSerialized1</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4InvalidSerialized2"></a>testConstructor4InvalidSerialized2</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4InvalidSerialized3"></a>testConstructor4InvalidSerialized3</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4InvalidSerialized4"></a>testConstructor4InvalidSerialized4</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4BitSetLength1"></a>testConstructor4BitSetLength1</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testConstructor4FromSerialized"></a>testConstructor4FromSerialized</td><td>Error</td><td>N/A<br>
+<td><a name="testConstructor4AllBase64"></a>testConstructor4AllBase64</td><td>Error</td><td>object can't be built from the serialized string: For input string: "384:0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_:"<br>
 <br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4FromSerialized(BloomFilterTests.java:583)<br/></code></td><td>0.001</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "384:0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_:"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4AllBase64(BloomFilterTests.java:553)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testConstructor5NullSerialized"></a>testConstructor5NullSerialized</td><td>Error</td><td>exception when building the hashFunctions object<br>
+<td><a name="testConstructor4EmptyBitSet"></a>testConstructor4EmptyBitSet</td><td>Error</td><td>object can't be built from the serialized string: For input string: "40:0000000"<br>
 <br>
-<code>com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:238)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5NullSerialized(BloomFilterTests.java:599)<br/></code></td><td>0.001</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "40:0000000"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4EmptyBitSet(BloomFilterTests.java:561)<br/></code></td><td>0.001</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a name="testConstructor4FullBitSet"></a>testConstructor4FullBitSet</td><td>Error</td><td>object can't be built from the serialized string: For input string: "54::::::::::"<br>
+<br>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "54::::::::::"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4FullBitSet(BloomFilterTests.java:572)<br/></code></td><td>0.001</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a name="testConstructor4FromSerialized"></a>testConstructor4FromSerialized</td><td>Error</td><td>object can't be built from the serialized string: For input string: "9586:HGHHGEHHHHHHHHHHHHHHHHHHHHEHHEHBHHHHGHHHHHHHAHH4EHHHHGHHHEHHHHHHHHBHHHHHHHHHHHHEHHAHHHHHHHHBEHHHHHGHHHHHHBHHHHHHHHHHBHHHHHHHHAHHHGHEHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHBHHHHHH8HHHHHHHHHEHHEHHHAHHHHHHHHHHHHHHHHHBHHHHHHHEHHHHHHHHHHHBHHEHHHH4EHHGGHHHHHHHHHEHHGHHHHHHHHHHHEHHHHHHHHHHHHHHHAHHHHHHHHHHHHHBHHHHHHHBHHABEHHHHBHHHHHHHHBAHGHHHHHHHHHHHHHHHABEHHHHHEGEHHHAHHHHHHHHHHHH9AHHHHHHHHHHHHHHHHHBHHHEHHABHHHHHEHGHAGEHHHEGHHHHHBHHHAHEHHHHHHHHHHHHHHHHBBHHHHHHHHHBHHHHEHHHHHAHHHHHHHHHHHGGHH7HHH4HEGHHHHHHHHHHHHHHHHHHHHH7HHEHHHHGHAHHAHHHHHHHHHEHEEHHHHHGHHHHBHHHHHHHHHHHHHBHHH9HHHHDHHHHHHHHHHHHBHGHH7HHHHHHHHGHHGHHHHHHHHHHHHEAHAHHHHHHHHHHHBHHEHHHHHHHBHHGHHHHHHHGBHHGHHHHHHHHHHAHHGHHAHEHHHAHHHHHHEHHHHHHHHHHHGHHEHHHHHHAHHHHHAHHHHHHBHHHBAHHHHHHBBHHHHGHHHEHHBHHHHHHHHHHHHHHBHHAHEHGAHHHHEHHH7BHEHHHHAHHHHEEHHHHHHHHHHHHAHHHHHHHAHHHHHHHHAHHHHHHHHHHHHHHHHEHHHBHHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHE7HHHAHHHGHHAHHHHHHHGHEHHHHHHHHAHHHHHAHHHHHHHHHHHGHAHHHHHHHHHBHHHHHHGHHHHHHHAHHHHHHGHHEHHBHHHHHHHHHHHHHHHBHHEHHHHHHHHHHHHHHHHHAAHAHHHHHHHHHAHHBHHGAHHHHHHHHAEHBEHHHHHHHHHHGHHHHHHHEHGEHHHHHHHHHHHHAHHHHHHHHHHHHHHH8HHHEHHHEHHHHHHHEHHHHHHHHEHGHHBHBHHEHBHHHHHHGHHAHHHHHHHHHHAGAHHHHEHHHHHHBAHHHHHHHBGHHHHHHHHHHHAHAHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHAHBHEEHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHGHHHBAEHBHEHHAEHHHEHHHHBHBHHHHHHHHHHHEHHHHHHHHHHHHHHHHHDHHHHGHA8EHHHHEHHHHHHHHHHHGHHHHHHBHHHEHHHHHHHHHHHHAHHEAHHHHBHHHHHHBHHHEHGHHHHHHHHHHHHHHHHHHHBHHHHHHHGHABHHHHHHHHHHHBHAHHHHHHHHGHHHHHGHHHHHHEHHH4HHHHBGHHHEHHHHHEHHHHBHHHHGEHHEAHHGBHHHHHHHHHHHHBGGHHHHHHHHEHHBHHHHHHGHHHHHHHHAHHHHAHHHHEHHHHHHHBHHHHHHHHHHHHHHHHHHE"<br>
+<br>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "9586:HGHHGEHHHHHHHHHHHHHHHHHHHHEHHEHBHHHHGHHHHHHHAHH4EHHHHGHHHEHHHHHHHHBHHHHHHHHHHHHEHHAHHHHHHHHBEHHHHHGHHHHHHBHHHHHHHHHHBHHHHHHHHAHHHGHEHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHBHHHHHH8HHHHHHHHHEHHEHHHAHHHHHHHHHHHHHHHHHBHHHHHHHEHHHHHHHHHHHBHHEHHHH4EHHGGHHHHHHHHHEHHGHHHHHHHHHHHEHHHHHHHHHHHHHHHAHHHHHHHHHHHHHBHHHHHHHBHHABEHHHHBHHHHHHHHBAHGHHHHHHHHHHHHHHHABEHHHHHEGEHHHAHHHHHHHHHHHH9AHHHHHHHHHHHHHHHHHBHHHEHHABHHHHHEHGHAGEHHHEGHHHHHBHHHAHEHHHHHHHHHHHHHHHHBBHHHHHHHHHBHHHHEHHHHHAHHHHHHHHHHHGGHH7HHH4HEGHHHHHHHHHHHHHHHHHHHHH7HHEHHHHGHAHHAHHHHHHHHHEHEEHHHHHGHHHHBHHHHHHHHHHHHHBHHH9HHHHDHHHHHHHHHHHHBHGHH7HHHHHHHHGHHGHHHHHHHHHHHHEAHAHHHHHHHHHHHBHHEHHHHHHHBHHGHHHHHHHGBHHGHHHHHHHHHHAHHGHHAHEHHHAHHHHHHEHHHHHHHHHHHGHHEHHHHHHAHHHHHAHHHHHHBHHHBAHHHHHHBBHHHHGHHHEHHBHHHHHHHHHHHHHHBHHAHEHGAHHHHEHHH7BHEHHHHAHHHHEEHHHHHHHHHHHHAHHHHHHHAHHHHHHHHAHHHHHHHHHHHHHHHHEHHHBHHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHE7HHHAHHHGHHAHHHHHHHGHEHHHHHHHHAHHHHHAHHHHHHHHHHHGHAHHHHHHHHHBHHHHHHGHHHHHHHAHHHHHHGHHEHHBHHHHHHHHHHHHHHHBHHEHHHHHHHHHHHHHHHHHAAHAHHHHHHHHHAHHBHHGAHHHHHHHHAEHBEHHHHHHHHHHGHHHHHHHEHGEHHHHHHHHHHHHAHHHHHHHHHHHHHHH8HHHEHHHEHHHHHHHEHHHHHHHHEHGHHBHBHHEHBHHHHHHGHHAHHHHHHHHHHAGAHHHHEHHHHHHBAHHHHHHHBGHHHHHHHHHHHAHAHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHAHBHEEHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHGHHHBAEHBHEHHAEHHHEHHHHBHBHHHHHHHHHHHEHHHHHHHHHHHHHHHHHDHHHHGHA8EHHHHEHHHHHHHHHHHGHHHHHHBHHHEHHHHHHHHHHHHAHHEAHHHHBHHHHHHBHHHEHGHHHHHHHHHHHHHHHHHHHBHHHHHHHGHABHHHHHHHHHHHBHAHHHHHHHHGHHHHHGHHHHHHEHHH4HHHHBGHHHEHHHHHEHHHHBHHHHGEHHEAHHGBHHHHHHHHHHHHBGGHHHHHHHHEHHBHHHHHHGHHHHHHHHAHHHHAHHHHEHHHHHHHBHHHHHHHHHHHHHHHHHHE"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4FromSerialized(BloomFilterTests.java:587)<br/></code></td><td>0.019</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor5NullSerialized"></a>testConstructor5NullSerialized</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor5EmptySerialized"></a>testConstructor5EmptySerialized</td><td>Success</td><td></td><td>0.001</td>
@@ -553,7 +525,7 @@
 <code>junit.framework.AssertionFailedError: BloomFilterSerializeException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized2(BloomFilterTests.java:640)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor5InvalidSerialized3"></a>testConstructor5InvalidSerialized3</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testConstructor5InvalidSerialized3"></a>testConstructor5InvalidSerialized3</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor5InvalidSerialized4"></a>testConstructor5InvalidSerialized4</td><td>Success</td><td></td><td>0.000</td>
@@ -561,17 +533,15 @@
 <tr valign="top" class="Failure">
 <td><a name="testConstructor5InvalidSerialized5"></a>testConstructor5InvalidSerialized5</td><td>Failure</td><td>BloomFilterSerializeException expected<br>
 <br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized5(BloomFilterTests.java:682)<br/></code></td><td>0.000</td>
+<code>junit.framework.AssertionFailedError: BloomFilterSerializeException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized5(BloomFilterTests.java:682)<br/></code></td><td>0.001</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor5InvalidSerialized6"></a>testConstructor5InvalidSerialized6</td><td>Error</td><td>For input string: "4x"<br>
-<br>
-<code>java.lang.NumberFormatException: For input string: "4x"<br/>	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)<br/>	at java.lang.Integer.parseInt(Integer.java:481)<br/>	at java.lang.Integer.parseInt(Integer.java:514)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:242)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized6(BloomFilterTests.java:695)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor5InvalidSerialized6"></a>testConstructor5InvalidSerialized6</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="Failure">
 <td><a name="testConstructor5InvalidSerialized7"></a>testConstructor5InvalidSerialized7</td><td>Failure</td><td>BloomFilterSerializeException expected<br>
 <br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized7(BloomFilterTests.java:710)<br/></code></td><td>0.000</td>
+<code>junit.framework.AssertionFailedError: BloomFilterSerializeException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized7(BloomFilterTests.java:710)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Failure">
 <td><a name="testConstructor5InvalidSerialized8"></a>testConstructor5InvalidSerialized8</td><td>Failure</td><td>BloomFilterSerializeException expected<br>
@@ -579,7 +549,7 @@
 <code>junit.framework.AssertionFailedError: BloomFilterSerializeException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized8(BloomFilterTests.java:725)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor5InvalidSerialized9"></a>testConstructor5InvalidSerialized9</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testConstructor5InvalidSerialized9"></a>testConstructor5InvalidSerialized9</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Failure">
 <td><a name="testConstructor5BitSetLength1"></a>testConstructor5BitSetLength1</td><td>Failure</td><td>BloomFilterSerializeException expected<br>
@@ -587,7 +557,7 @@
 <code>junit.framework.AssertionFailedError: BloomFilterSerializeException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5BitSetLength1(BloomFilterTests.java:751)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor5AllBase64"></a>testConstructor5AllBase64</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testConstructor5AllBase64"></a>testConstructor5AllBase64</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor5HashFunctionFamily1"></a>testConstructor5HashFunctionFamily1</td><td>Success</td><td></td><td>0.000</td>
@@ -595,91 +565,69 @@
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor5HashFunctionFamily2"></a>testConstructor5HashFunctionFamily2</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor5EmptyBitSet"></a>testConstructor5EmptyBitSet</td><td>Failure</td><td>bad size expected:&lt;40&gt; but was:&lt;0&gt;<br>
-<br>
-<code>junit.framework.AssertionFailedError: bad size expected:<40> but was:<0><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5EmptyBitSet(BloomFilterTests.java:801)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor5EmptyBitSet"></a>testConstructor5EmptyBitSet</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Failure">
 <td><a name="testConstructor5FullBitSet"></a>testConstructor5FullBitSet</td><td>Failure</td><td>the bit set is not well built from serialization expected:&lt;1000&gt; but was:&lt;0&gt;<br>
 <br>
-<code>junit.framework.AssertionFailedError: the bit set is not well built from serialization expected:<1000> but was:<0><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5FullBitSet(BloomFilterTests.java:811)<br/></code></td><td>0.001</td>
+<code>junit.framework.AssertionFailedError: the bit set is not well built from serialization expected:<1000> but was:<0><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5FullBitSet(BloomFilterTests.java:811)<br/></code></td><td>0.002</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor5FromSerialized"></a>testConstructor5FromSerialized</td><td>Error</td><td>N/A<br>
+<tr valign="top" class="Failure">
+<td><a name="testConstructor5FromSerialized"></a>testConstructor5FromSerialized</td><td>Failure</td><td>filter created form serialized is different than original expected:&lt;com.topcoder.bloom.BloomFilter@0&gt; but was:&lt;com.topcoder.bloom.BloomFilter@0&gt;<br>
 <br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5FromSerialized(BloomFilterTests.java:820)<br/></code></td><td>0.000</td>
+<code>junit.framework.AssertionFailedError: filter created form serialized is different than original expected:<com.topcoder.bloom.BloomFilter@0> but was:<com.topcoder.bloom.BloomFilter@0><br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5FromSerialized(BloomFilterTests.java:825)<br/></code></td><td>0.012</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testAddNull"></a>testAddNull</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testAddAccuracy1"></a>testAddAccuracy1</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testAddAccuracy1(BloomFilterTests.java:846)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testAddAccuracy2"></a>testAddAccuracy2</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testAddAccuracy2(BloomFilterTests.java:864)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testAddAccuracy1"></a>testAddAccuracy1</td><td>Success</td><td></td><td>0.004</td>
 </tr>
 <tr valign="top" class="Failure">
-<td><a name="testAddAllNull"></a>testAddAllNull</td><td>Failure</td><td>NullPointerException expected<br>
+<td><a name="testAddAccuracy2"></a>testAddAccuracy2</td><td>Failure</td><td>Invalid number of positives received expected:&lt;9&gt; but was:&lt;143&gt;<br>
 <br>
-<code>junit.framework.AssertionFailedError: NullPointerException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testAddAllNull(BloomFilterTests.java:878)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testAddAllNullElement"></a>testAddAllNullElement</td><td>Failure</td><td>IllegalArgumentException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: IllegalArgumentException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testAddAllNullElement(BloomFilterTests.java:895)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testAddAllAccuracy1"></a>testAddAllAccuracy1</td><td>Failure</td><td>element 'cat' not found<br>
-<br>
-<code>junit.framework.AssertionFailedError: element 'cat' not found<br/>	at com.topcoder.bloom.BloomFilterTests.testAddAllAccuracy1(BloomFilterTests.java:912)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testAddAll"></a>testAddAll</td><td>Failure</td><td>element expected to be in filter: 3<br>
-<br>
-<code>junit.framework.AssertionFailedError: element expected to be in filter: 3<br/>	at com.topcoder.bloom.BloomFilterTests.testAddAll(BloomFilterTests.java:934)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testContainsNull"></a>testContainsNull</td><td>Failure</td><td>NullPointerException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: NullPointerException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testContainsNull(BloomFilterTests.java:948)<br/></code></td><td>0.001</td>
+<code>junit.framework.AssertionFailedError: Invalid number of positives received expected:<9> but was:<143><br/>	at com.topcoder.bloom.BloomFilterTests.testAddAccuracy2(BloomFilterTests.java:867)<br/></code></td><td>0.134</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testContainsAccuracy1"></a>testContainsAccuracy1</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testAddAllNull"></a>testAddAllNull</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testContainsAccuracy2"></a>testContainsAccuracy2</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testContainsAccuracy2(BloomFilterTests.java:969)<br/></code></td><td>0.000</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testAddAllNullElement"></a>testAddAllNullElement</td><td>Success</td><td></td><td>0.001</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testContainsAccuracy3"></a>testContainsAccuracy3</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testContainsAccuracy3(BloomFilterTests.java:984)<br/></code></td><td>0.000</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testAddAllAccuracy1"></a>testAddAllAccuracy1</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Failure">
-<td><a name="testContainsAllNull"></a>testContainsAllNull</td><td>Failure</td><td>NullPointerException expected<br>
+<td><a name="testAddAll"></a>testAddAll</td><td>Failure</td><td>Invalid number of positives received expected:&lt;17&gt; but was:&lt;1000&gt;<br>
 <br>
-<code>junit.framework.AssertionFailedError: NullPointerException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testContainsAllNull(BloomFilterTests.java:997)<br/></code></td><td>0.000</td>
+<code>junit.framework.AssertionFailedError: Invalid number of positives received expected:<17> but was:<1000><br/>	at com.topcoder.bloom.BloomFilterTests.testAddAll(BloomFilterTests.java:937)<br/></code></td><td>0.195</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testContainsNull"></a>testContainsNull</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testContainsAccuracy1"></a>testContainsAccuracy1</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testContainsAccuracy2"></a>testContainsAccuracy2</td><td>Success</td><td></td><td>0.002</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testContainsAccuracy3"></a>testContainsAccuracy3</td><td>Success</td><td></td><td>0.393</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testContainsAllNull"></a>testContainsAllNull</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="Failure">
 <td><a name="testContainsAllNullElement"></a>testContainsAllNullElement</td><td>Failure</td><td>IllegalArgumentException expected<br>
 <br>
 <code>junit.framework.AssertionFailedError: IllegalArgumentException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testContainsAllNullElement(BloomFilterTests.java:1014)<br/></code></td><td>0.001</td>
 </tr>
-<tr valign="top" class="Failure">
-<td><a name="testContainsAllAccuracyEmptyList"></a>testContainsAllAccuracyEmptyList</td><td>Failure</td><td>containsAll must return true when the collection is empty<br>
-<br>
-<code>junit.framework.AssertionFailedError: containsAll must return true when the collection is empty<br/>	at com.topcoder.bloom.BloomFilterTests.testContainsAllAccuracyEmptyList(BloomFilterTests.java:1025)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testContainsAllAccuracyEmptyList"></a>testContainsAllAccuracyEmptyList</td><td>Success</td><td></td><td>0.001</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testContainsAllAccuracy1"></a>testContainsAllAccuracy1</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testContainsAllAccuracy1(BloomFilterTests.java:1034)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testContainsAllAccuracy1"></a>testContainsAllAccuracy1</td><td>Success</td><td></td><td>0.002</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testEqualsNull"></a>testEqualsNull</td><td>Success</td><td></td><td>0.001</td>
@@ -687,132 +635,98 @@
 <tr valign="top" class="TableRowColor">
 <td><a name="testEqualsDifferentClass"></a>testEqualsDifferentClass</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="TableRowColor">
-<td><a name="testEqualsAccuracyDifferentBitSize"></a>testEqualsAccuracyDifferentBitSize</td><td>Success</td><td></td><td>0.000</td>
+<tr valign="top" class="Failure">
+<td><a name="testEqualsAccuracyDifferentBitSize"></a>testEqualsAccuracyDifferentBitSize</td><td>Failure</td><td>equals expected to return false when object have different bit size<br>
+<br>
+<code>junit.framework.AssertionFailedError: equals expected to return false when object have different bit size<br/>	at com.topcoder.bloom.BloomFilterTests.testEqualsAccuracyDifferentBitSize(BloomFilterTests.java:1075)<br/></code></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testEqualsAccuracyDifferentHashFunctionFamily"></a>testEqualsAccuracyDifferentHashFunctionFamily</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testEqualsAccuracyDifferentContents"></a>testEqualsAccuracyDifferentContents</td><td>Error</td><td>maxHash must be positive. maxHash=-1<br>
-<br>
-<code>java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1<br/>	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)<br/>	at com.topcoder.bloom.BloomFilterTests.testEqualsAccuracyDifferentContents(BloomFilterTests.java:1095)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testEqualsAccuracyDifferentContents"></a>testEqualsAccuracyDifferentContents</td><td>Success</td><td></td><td>0.001</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testEqualsAccuracyEqual"></a>testEqualsAccuracyEqual</td><td>Error</td><td>maxHash must be positive. maxHash=-1<br>
-<br>
-<code>java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1<br/>	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)<br/>	at com.topcoder.bloom.BloomFilterTests.testEqualsAccuracyEqual(BloomFilterTests.java:1107)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testEqualsAccuracyEqual"></a>testEqualsAccuracyEqual</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testHashCodeAccuracyBitSet"></a>testHashCodeAccuracyBitSet</td><td>Error</td><td>N/A<br>
+<tr valign="top" class="Failure">
+<td><a name="testHashCodeAccuracyBitSet"></a>testHashCodeAccuracyBitSet</td><td>Failure</td><td>hashCode doesn't seem to have a good distribution expected:&lt;100&gt; but was:&lt;1&gt;<br>
 <br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testHashCodeAccuracyBitSet(BloomFilterTests.java:1131)<br/></code></td><td>0.001</td>
+<code>junit.framework.AssertionFailedError: hashCode doesn't seem to have a good distribution expected:<100> but was:<1><br/>	at com.topcoder.bloom.BloomFilterTests.testHashCodeAccuracyBitSet(BloomFilterTests.java:1135)<br/></code></td><td>0.021</td>
 </tr>
 <tr valign="top" class="Failure">
 <td><a name="testHashCodeAccuracyHashFunction"></a>testHashCodeAccuracyHashFunction</td><td>Failure</td><td>hashCode doesn't seem to have a good distribution expected:&lt;100&gt; but was:&lt;1&gt;<br>
 <br>
-<code>junit.framework.AssertionFailedError: hashCode doesn't seem to have a good distribution expected:<100> but was:<1><br/>	at com.topcoder.bloom.BloomFilterTests.testHashCodeAccuracyHashFunction(BloomFilterTests.java:1153)<br/></code></td><td>0.003</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testIsEmpty"></a>testIsEmpty</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testIsEmpty(BloomFilterTests.java:1165)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testUniteNull"></a>testUniteNull</td><td>Failure</td><td>NullPointerException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: NullPointerException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testUniteNull(BloomFilterTests.java:1179)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testUniteDifferentBitSetSize"></a>testUniteDifferentBitSetSize</td><td>Failure</td><td>IncompatibleBloomFiltersException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: IncompatibleBloomFiltersException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testUniteDifferentBitSetSize(BloomFilterTests.java:1195)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testUniteDifferentHashFunctionFamily"></a>testUniteDifferentHashFunctionFamily</td><td>Failure</td><td>IncompatibleBloomFiltersException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: IncompatibleBloomFiltersException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testUniteDifferentHashFunctionFamily(BloomFilterTests.java:1211)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testUniteAccuracy1"></a>testUniteAccuracy1</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testUniteAccuracy1(BloomFilterTests.java:1222)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testIntersectNull"></a>testIntersectNull</td><td>Failure</td><td>NullPointerException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: NullPointerException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testIntersectNull(BloomFilterTests.java:1248)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testIntersectDifferentBitSetSize"></a>testIntersectDifferentBitSetSize</td><td>Failure</td><td>IncompatibleBloomFiltersException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: IncompatibleBloomFiltersException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testIntersectDifferentBitSetSize(BloomFilterTests.java:1264)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testIntersectDifferentHashFunctionFamily"></a>testIntersectDifferentHashFunctionFamily</td><td>Failure</td><td>IncompatibleBloomFiltersException expected<br>
-<br>
-<code>junit.framework.AssertionFailedError: IncompatibleBloomFiltersException expected<br/>	at com.topcoder.bloom.BloomFilterTests.testIntersectDifferentHashFunctionFamily(BloomFilterTests.java:1280)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testIntersectAccuracy1"></a>testIntersectAccuracy1</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testIntersectAccuracy1(BloomFilterTests.java:1291)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testClearAccuracy1"></a>testClearAccuracy1</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testClearAccuracy1(BloomFilterTests.java:1315)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testGetSerializedBitSetAccuracy1"></a>testGetSerializedBitSetAccuracy1</td><td>Failure</td><td>Bad serialization string returned expected:&lt;[6:0]&gt; but was:&lt;[]&gt;<br>
-<br>
-<code>junit.framework.ComparisonFailure: Bad serialization string returned expected:<[6:0]> but was:<[]><br/>	at com.topcoder.bloom.BloomFilterTests.testGetSerializedBitSetAccuracy1(BloomFilterTests.java:1329)<br/></code></td><td>0.002</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testGetSerializedBitSetAccuracy2"></a>testGetSerializedBitSetAccuracy2</td><td>Error</td><td>/ by zero<br>
-<br>
-<code>java.lang.ArithmeticException: / by zero<br/>	at com.topcoder.bloom.MockHashFunctionFamily.computeHash(MockHashFunctionFamily.java:69)<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)<br/>	at com.topcoder.bloom.BloomFilterTests.testGetSerializedBitSetAccuracy2(BloomFilterTests.java:1348)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testGetSerializedAccuracy1"></a>testGetSerializedAccuracy1</td><td>Failure</td><td>Bad serialization string returned expected:&lt;[com.topcoder.bloom.DefaultHashFunctionFamily|5|6:0]&gt; but was:&lt;[]&gt;<br>
-<br>
-<code>junit.framework.ComparisonFailure: Bad serialization string returned expected:<[com.topcoder.bloom.DefaultHashFunctionFamily|5|6:0]> but was:<[]><br/>	at com.topcoder.bloom.BloomFilterTests.testGetSerializedAccuracy1(BloomFilterTests.java:1365)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testGetSerializedAccuracy2"></a>testGetSerializedAccuracy2</td><td>Error</td><td>/ by zero<br>
-<br>
-<code>java.lang.ArithmeticException: / by zero<br/>	at com.topcoder.bloom.MockHashFunctionFamily.computeHash(MockHashFunctionFamily.java:69)<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)<br/>	at com.topcoder.bloom.BloomFilterTests.testGetSerializedAccuracy2(BloomFilterTests.java:1387)<br/></code></td><td>0.001</td>
+<code>junit.framework.AssertionFailedError: hashCode doesn't seem to have a good distribution expected:<100> but was:<1><br/>	at com.topcoder.bloom.BloomFilterTests.testHashCodeAccuracyHashFunction(BloomFilterTests.java:1153)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testGetHashFunctionFamilyAccuracy1"></a>testGetHashFunctionFamilyAccuracy1</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testIsEmpty"></a>testIsEmpty</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testUniteNull"></a>testUniteNull</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testUniteDifferentBitSetSize"></a>testUniteDifferentBitSetSize</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testUniteDifferentHashFunctionFamily"></a>testUniteDifferentHashFunctionFamily</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testUniteAccuracy1"></a>testUniteAccuracy1</td><td>Success</td><td></td><td>0.004</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testIntersectNull"></a>testIntersectNull</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testIntersectDifferentBitSetSize"></a>testIntersectDifferentBitSetSize</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testIntersectDifferentHashFunctionFamily"></a>testIntersectDifferentHashFunctionFamily</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testIntersectAccuracy1"></a>testIntersectAccuracy1</td><td>Success</td><td></td><td>0.003</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testClearAccuracy1"></a>testClearAccuracy1</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testGetSerializedBitSetAccuracy1"></a>testGetSerializedBitSetAccuracy1</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a name="testGetSerializedBitSetAccuracy2"></a>testGetSerializedBitSetAccuracy2</td><td>Failure</td><td>Bad serialization string returned expected:&lt;30:[F]0000&gt; but was:&lt;30:[E]0000&gt;<br>
+<br>
+<code>junit.framework.ComparisonFailure: Bad serialization string returned expected:<30:[F]0000> but was:<30:[E]0000><br/>	at com.topcoder.bloom.BloomFilterTests.testGetSerializedBitSetAccuracy2(BloomFilterTests.java:1349)<br/></code></td><td>0.002</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testGetSerializedAccuracy1"></a>testGetSerializedAccuracy1</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a name="testGetSerializedAccuracy2"></a>testGetSerializedAccuracy2</td><td>Failure</td><td>Bad serialization string returned expected:&lt;...FunctionFamily|4|30:[F]0000&gt; but was:&lt;...FunctionFamily|4|30:[E]0000&gt;<br>
+<br>
+<code>junit.framework.ComparisonFailure: Bad serialization string returned expected:<...FunctionFamily|4|30:[F]0000> but was:<...FunctionFamily|4|30:[E]0000><br/>	at com.topcoder.bloom.BloomFilterTests.testGetSerializedAccuracy2(BloomFilterTests.java:1388)<br/></code></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testGetHashFunctionFamilyAccuracy1"></a>testGetHashFunctionFamilyAccuracy1</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testGetHashFunctionFamilyAccuracy2"></a>testGetHashFunctionFamilyAccuracy2</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testCloneAccuracy1"></a>testCloneAccuracy1</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testCloneAccuracy1(BloomFilterTests.java:1430)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testCloneAccuracy1"></a>testCloneAccuracy1</td><td>Success</td><td></td><td>0.001</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testCloneAccuracy2"></a>testCloneAccuracy2</td><td>Error</td><td>maxHash must be positive. maxHash=-1<br>
-<br>
-<code>java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1<br/>	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)<br/>	at com.topcoder.bloom.BloomFilterTests.testCloneAccuracy2(BloomFilterTests.java:1443)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testCloneAccuracy3"></a>testCloneAccuracy3</td><td>Error</td><td>maxHash must be positive. maxHash=-1<br>
-<br>
-<code>java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1<br/>	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)<br/>	at com.topcoder.bloom.BloomFilterTests.testCloneAccuracy3(BloomFilterTests.java:1465)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testCloneAccuracy2"></a>testCloneAccuracy2</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Failure">
-<td><a name="testGetBitSetLengthAccuracy1"></a>testGetBitSetLengthAccuracy1</td><td>Failure</td><td>wrong bitSetLength expected:&lt;50&gt; but was:&lt;0&gt;<br>
+<td><a name="testCloneAccuracy3"></a>testCloneAccuracy3</td><td>Failure</td><td>clone is making a shallow copy<br>
 <br>
-<code>junit.framework.AssertionFailedError: wrong bitSetLength expected:<50> but was:<0><br/>	at com.topcoder.bloom.BloomFilterTests.testGetBitSetLengthAccuracy1(BloomFilterTests.java:1483)<br/></code></td><td>0.001</td>
+<code>junit.framework.AssertionFailedError: clone is making a shallow copy<br/>	at com.topcoder.bloom.BloomFilterTests.testCloneAccuracy3(BloomFilterTests.java:1470)<br/></code></td><td>0.001</td>
 </tr>
-<tr valign="top" class="Failure">
-<td><a name="testGetBitSetLengthAccuracy2"></a>testGetBitSetLengthAccuracy2</td><td>Failure</td><td>wrong bitSetLength expected:&lt;30&gt; but was:&lt;0&gt;<br>
-<br>
-<code>junit.framework.AssertionFailedError: wrong bitSetLength expected:<30> but was:<0><br/>	at com.topcoder.bloom.BloomFilterTests.testGetBitSetLengthAccuracy2(BloomFilterTests.java:1495)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testGetBitSetLengthAccuracy1"></a>testGetBitSetLengthAccuracy1</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testGetBitSetLengthAccuracy2"></a>testGetBitSetLengthAccuracy2</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testEqualsNull"></a>testEqualsNull</td><td>Success</td><td></td><td>0.000</td>
@@ -824,7 +738,7 @@
 <td><a name="testImplements"></a>testImplements</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructorIntZero"></a>testConstructorIntZero</td><td>Success</td><td></td><td>0.001</td>
+<td><a name="testConstructorIntZero"></a>testConstructorIntZero</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructorIntNegative"></a>testConstructorIntNegative</td><td>Success</td><td></td><td>0.000</td>
@@ -839,7 +753,7 @@
 <td><a name="testConstructorStringInvalid"></a>testConstructorStringInvalid</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructorStringNegative"></a>testConstructorStringNegative</td><td>Success</td><td></td><td>0.001</td>
+<td><a name="testConstructorStringNegative"></a>testConstructorStringNegative</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructorStringPositive"></a>testConstructorStringPositive</td><td>Success</td><td></td><td>0.000</td>
@@ -854,7 +768,7 @@
 <td><a name="testComputeHashBadFunctionIndex"></a>testComputeHashBadFunctionIndex</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testComputeHashZeroMaxHash"></a>testComputeHashZeroMaxHash</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testComputeHashZeroMaxHash"></a>testComputeHashZeroMaxHash</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testComputeHashDifferentFunctions"></a>testComputeHashDifferentFunctions</td><td>Success</td><td></td><td>0.000</td>
@@ -875,7 +789,7 @@
 <td><a name="testHashCode"></a>testHashCode</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testBloomFilterExceptionExtends"></a>testBloomFilterExceptionExtends</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testBloomFilterExceptionExtends"></a>testBloomFilterExceptionExtends</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testBloomFilterExceptionConstructor1"></a>testBloomFilterExceptionConstructor1</td><td>Success</td><td></td><td>0.000</td>
@@ -902,36 +816,34 @@
 <td><a name="testBloomFilterSerializeExceptionConstructor2"></a>testBloomFilterSerializeExceptionConstructor2</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testSpecDemo"></a>testSpecDemo</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
+<td><a name="testSpecDemo"></a>testSpecDemo</td><td>Error</td><td>object can't be built from the serialized string: For input string: "9586:HBAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHAHHHGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHAHHHHHHHHHHHHHHAHHHHHHAHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHGHHHHHHHHBHHHHHHHHGGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEBHHHHHHHHHHGHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHEHGHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHGHHHHHHHGHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHBHHHHHHHHHHHHHHBHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHGAHHHHHHEHHHHHHHHHHHHHEGHHHHHHHHHAHHHHHHHHHHHEAHAAHHHHHBHHHHHHHHHHHHHHHBHHHHHHHAHHHHHHHHBHHHHHHHHHHHAHHHHAHHHHHHHHHHHBHHHHAHHHHAHHGHHHHHHHHHHHHHHHHHHHAHHHHHHEGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHBHHHHHHHHHAHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHBHHHHHHHHAHHHGHHHHHHEHGHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHGHHHHGHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHEHHHEHHHHHHHGHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHEHHHHAHHHHHHHHGHEHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHGHHHHEHHHHHHHHHHHHHHEHHHHHHAHHHHHHHHHHHEEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHBHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHAHHHHEHHHHHHHHEHHBHHHHHHHHHAHE"<br>
 <br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.Demo.testSpecDemo(Demo.java:29)<br/></code></td><td>0.001</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "9586:HBAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHAHHHGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHAHHHHHHHHHHHHHHAHHHHHHAHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHGHHHHHHHHBHHHHHHHHGGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEBHHHHHHHHHHGHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHEHGHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHGHHHHHHHGHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHBHHHHHHHHHHHHHHBHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHGAHHHHHHEHHHHHHHHHHHHHEGHHHHHHHHHAHHHHHHHHHHHEAHAAHHHHHBHHHHHHHHHHHHHHHBHHHHHHHAHHHHHHHHBHHHHHHHHHHHAHHHHAHHHHHHHHHHHBHHHHAHHHHAHHGHHHHHHHHHHHHHHHHHHHAHHHHHHEGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHBHHHHHHHHHAHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHBHHHHHHHHAHHHGHHHHHHEHGHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHGHHHHGHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHEHHHEHHHHHHHGHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHEHHHHAHHHHHHHHGHEHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHGHHHHEHHHHHHHHHHHHHHEHHHHHHAHHHHHHHHHHHEEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHBHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHAHHHHEHHHHHHHHEHHBHHHHHHHHHAHE"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.Demo.testSpecDemo(Demo.java:93)<br/></code></td><td>0.022</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testDemoAddContains"></a>testDemoAddContains</td><td>Success</td><td></td><td>0.002</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testDemoUniteIntersect"></a>testDemoUniteIntersect</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testDemoAddContains"></a>testDemoAddContains</td><td>Error</td><td>N/A<br>
+<td><a name="testDemoSerializing"></a>testDemoSerializing</td><td>Error</td><td>object can't be built from the serialized string: For input string: "959:HGHHH7HAHHHHHGHHHBHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHAHHHHHHHGHBHEEHHHHDHHHHHHBHH7HBEHBHHHHHHHHHHHHBHHHHHH8EHHGHHHHHHHHHHHHHHHEHHHHHHHHHHHHEHEHHHAHEHHAHHBHHAHBHHH"<br>
 <br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.Demo.testDemoAddContains(Demo.java:105)<br/></code></td><td>0.001</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "959:HGHHH7HAHHHHHGHHHBHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHAHHHHHHHGHBHEEHHHHDHHHHHHBHH7HBEHBHHHHHHHHHHHHBHHHHHH8EHHGHHHHHHHHHHHHHHHEHHHHHHHHHHHHEHEHHHAHEHHAHHBHHAHBHHH"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.Demo.testDemoSerializing(Demo.java:206)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testDemoUniteIntersect"></a>testDemoUniteIntersect</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testconstruct"></a>testconstruct</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testconstruct_withClass"></a>testconstruct_withClass</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testDemoSerializing"></a>testDemoSerializing</td><td>Error</td><td>exception when building the hashFunctions object<br>
+<td><a name="testconstruct_withserializedAndFunctionFamily"></a>testconstruct_withserializedAndFunctionFamily</td><td>Error</td><td>object can't be built from the serialized string: For input string: "48:topcoder"<br>
 <br>
-<code>com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:238)<br/>	at com.topcoder.bloom.Demo.testDemoSerializing(Demo.java:194)<br/></code></td><td>0.000</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "48:topcoder"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testconstruct_withserializedAndFunctionFamily(BloomFilterAccuracyTests.java:60)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testconstruct"></a>testconstruct</td><td>Success</td><td></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testconstruct_withClass"></a>testconstruct_withClass</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
-<br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testconstruct_withClass(BloomFilterAccuracyTests.java:49)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="TableRowColor">
-<td><a name="testconstruct_withserializedAndFunctionFamily"></a>testconstruct_withserializedAndFunctionFamily</td><td>Success</td><td></td><td>0.000</td>
-</tr>
-<tr valign="top" class="TableRowColor">
-<td><a name="testInheritance"></a>testInheritance</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testInheritance"></a>testInheritance</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testconstruct_withbitSetSize"></a>testconstruct_withbitSetSize</td><td>Success</td><td></td><td>0.000</td>
@@ -939,15 +851,11 @@
 <tr valign="top" class="TableRowColor">
 <td><a name="testconstruct_withserialized"></a>testconstruct_withserialized</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testaddAndContains"></a>testaddAndContains</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testaddAndContains(BloomFilterAccuracyTests.java:96)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testaddAndContains"></a>testaddAndContains</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Failure">
-<td><a name="testaddAllAndContainsAll"></a>testaddAllAndContainsAll</td><td>Failure</td><td>The object1 is added.<br>
-<br>
-<code>junit.framework.AssertionFailedError: The object1 is added.<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testaddAllAndContainsAll(BloomFilterAccuracyTests.java:117)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testaddAllAndContainsAll"></a>testaddAllAndContainsAll</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testEquals1"></a>testEquals1</td><td>Success</td><td></td><td>0.000</td>
@@ -955,66 +863,52 @@
 <tr valign="top" class="TableRowColor">
 <td><a name="testEquals2"></a>testEquals2</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Failure">
-<td><a name="testEquals3"></a>testEquals3</td><td>Failure</td><td>The bloomFilter is euqal to the BloomFilter.<br>
-<br>
-<code>junit.framework.AssertionFailedError: The bloomFilter is euqal to the BloomFilter.<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testEquals3(BloomFilterAccuracyTests.java:151)<br/></code></td><td>0.000</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testEquals3"></a>testEquals3</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testisEmpty"></a>testisEmpty</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testunite"></a>testunite</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testintersect"></a>testintersect</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testClear"></a>testClear</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testisEmpty"></a>testisEmpty</td><td>Error</td><td>N/A<br>
+<td><a name="testgetSerializedBitSet"></a>testgetSerializedBitSet</td><td>Error</td><td>object can't be built from the serialized string: For input string: "48:topcoder"<br>
 <br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testisEmpty(BloomFilterAccuracyTests.java:160)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testunite"></a>testunite</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testunite(BloomFilterAccuracyTests.java:179)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testintersect"></a>testintersect</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testintersect(BloomFilterAccuracyTests.java:206)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testClear"></a>testClear</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testClear(BloomFilterAccuracyTests.java:224)<br/></code></td><td>0.000</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "48:topcoder"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testgetSerializedBitSet(BloomFilterAccuracyTests.java:237)<br/></code></td><td>0.000</td>
 </tr>
 <tr valign="top" class="Failure">
-<td><a name="testgetSerializedBitSet"></a>testgetSerializedBitSet</td><td>Failure</td><td>The SerializedBitSet should be the same as the set one. expected:&lt;[48:topcoder]&gt; but was:&lt;[]&gt;<br>
+<td><a name="testgetSerialized"></a>testgetSerialized</td><td>Failure</td><td>The SerializedString should be the same as the set one. expected:&lt;...FunctionFamily|5|48:[topcoder]&gt; but was:&lt;...FunctionFamily|5|48:[00000000]&gt;<br>
 <br>
-<code>junit.framework.ComparisonFailure: The SerializedBitSet should be the same as the set one. expected:<[48:topcoder]> but was:<[]><br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testgetSerializedBitSet(BloomFilterAccuracyTests.java:238)<br/></code></td><td>0.000</td>
+<code>junit.framework.ComparisonFailure: The SerializedString should be the same as the set one. expected:<...FunctionFamily|5|48:[topcoder]> but was:<...FunctionFamily|5|48:[00000000]><br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testgetSerialized(BloomFilterAccuracyTests.java:249)<br/></code></td><td>0.002</td>
 </tr>
-<tr valign="top" class="Failure">
-<td><a name="testgetSerialized"></a>testgetSerialized</td><td>Failure</td><td>The SerializedString should be the same as the set one. expected:&lt;[com.topcoder.bloom.DefaultHashFunctionFamily|5|48:topcoder]&gt; but was:&lt;[]&gt;<br>
-<br>
-<code>junit.framework.ComparisonFailure: The SerializedString should be the same as the set one. expected:<[com.topcoder.bloom.DefaultHashFunctionFamily|5|48:topcoder]> but was:<[]><br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testgetSerialized(BloomFilterAccuracyTests.java:249)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testgetHashFunctionFamily"></a>testgetHashFunctionFamily</td><td>Failure</td><td>The HashFunctionFamily should be DefaultHashFunctionFamily.<br>
-<br>
-<code>junit.framework.AssertionFailedError: The HashFunctionFamily should be DefaultHashFunctionFamily.<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testgetHashFunctionFamily(BloomFilterAccuracyTests.java:257)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testgetHashFunctionFamily"></a>testgetHashFunctionFamily</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="Failure">
 <td><a name="testhashCode"></a>testhashCode</td><td>Failure</td><td>The value should the same as the target.<br>
 <br>
-<code>junit.framework.AssertionFailedError: The value should the same as the target.<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testhashCode(BloomFilterAccuracyTests.java:271)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testgetBitSetLength"></a>testgetBitSetLength</td><td>Failure</td><td>The length of the BigSet should be 5. expected:&lt;5&gt; but was:&lt;0&gt;<br>
-<br>
-<code>junit.framework.AssertionFailedError: The length of the BigSet should be 5. expected:<5> but was:<0><br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testgetBitSetLength(BloomFilterAccuracyTests.java:279)<br/></code></td><td>0.001</td>
+<code>junit.framework.AssertionFailedError: The value should the same as the target.<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testhashCode(BloomFilterAccuracyTests.java:271)<br/></code></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testEquals"></a>testEquals</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testgetBitSetLength"></a>testgetBitSetLength</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Failure">
-<td><a name="testEqualsAndClone"></a>testEqualsAndClone</td><td>Failure</td><td>The clone object should be equal to itself.<br>
+<td><a name="testEquals"></a>testEquals</td><td>Failure</td><td>The two BloomFilters should not be equals.<br>
 <br>
-<code>junit.framework.AssertionFailedError: The clone object should be equal to itself.<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testEqualsAndClone(BloomFilterAccuracyTests.java:300)<br/></code></td><td>0.000</td>
+<code>junit.framework.AssertionFailedError: The two BloomFilters should not be equals.<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testEquals(BloomFilterAccuracyTests.java:288)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testgetSerialized"></a>testgetSerialized</td><td>Success</td><td></td><td>0.001</td>
+<td><a name="testEqualsAndClone"></a>testEqualsAndClone</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testgetSerialized"></a>testgetSerialized</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testhashCode"></a>testhashCode</td><td>Success</td><td></td><td>0.000</td>
@@ -1023,13 +917,13 @@
 <td><a name="testconstruct_Withserialized"></a>testconstruct_Withserialized</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testconstruct_WithfunctionCount"></a>testconstruct_WithfunctionCount</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testconstruct_WithfunctionCount"></a>testconstruct_WithfunctionCount</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testgetFunctionCount"></a>testgetFunctionCount</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testequals1"></a>testequals1</td><td>Success</td><td></td><td>0.001</td>
+<td><a name="testequals1"></a>testequals1</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testequals2"></a>testequals2</td><td>Success</td><td></td><td>0.000</td>
@@ -1041,7 +935,7 @@
 <td><a name="testConstructor1_InvalidCapacity"></a>testConstructor1_InvalidCapacity</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor1_InvalidErrorRate1"></a>testConstructor1_InvalidErrorRate1</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testConstructor1_InvalidErrorRate1"></a>testConstructor1_InvalidErrorRate1</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor1_InvalidErrorRate2"></a>testConstructor1_InvalidErrorRate2</td><td>Success</td><td></td><td>0.000</td>
@@ -1053,12 +947,10 @@
 <td><a name="testConstructor2_InvalidErrorRate1"></a>testConstructor2_InvalidErrorRate1</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor2_InvalidErrorRate2"></a>testConstructor2_InvalidErrorRate2</td><td>Success</td><td></td><td>0.001</td>
+<td><a name="testConstructor2_InvalidErrorRate2"></a>testConstructor2_InvalidErrorRate2</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor2_NullHashFunctionClass"></a>testConstructor2_NullHashFunctionClass</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
-<br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor2_NullHashFunctionClass(BloomFilterFailureTest.java:151)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor2_NullHashFunctionClass"></a>testConstructor2_NullHashFunctionClass</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor2_InvalidHashFunctionClass"></a>testConstructor2_InvalidHashFunctionClass</td><td>Success</td><td></td><td>0.000</td>
@@ -1066,113 +958,85 @@
 <tr valign="top" class="Failure">
 <td><a name="testConstructor3_TooLarge"></a>testConstructor3_TooLarge</td><td>Failure</td><td>IAE should be thrown.<br>
 <br>
-<code>junit.framework.AssertionFailedError: IAE should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor3_TooLarge(BloomFilterFailureTest.java:180)<br/></code></td><td>0.076</td>
+<code>junit.framework.AssertionFailedError: IAE should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor3_TooLarge(BloomFilterFailureTest.java:180)<br/></code></td><td>0.049</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor3_InvalidLength"></a>testConstructor3_InvalidLength</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor3_NullHashFunctionClass"></a>testConstructor3_NullHashFunctionClass</td><td>Error</td><td>hash functions must not be null.<br>
-<br>
-<code>java.lang.IllegalArgumentException: hash functions must not be null.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:179)<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor3_NullHashFunctionClass(BloomFilterFailureTest.java:207)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4_NullString"></a>testConstructor4_NullString</td><td>Failure</td><td>NPE should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: NPE should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_NullString(BloomFilterFailureTest.java:222)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4_InvalidString1"></a>testConstructor4_InvalidString1</td><td>Failure</td><td>BloomFilterSerializeException should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString1(BloomFilterFailureTest.java:236)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4_InvalidString2"></a>testConstructor4_InvalidString2</td><td>Failure</td><td>BloomFilterSerializeException should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString2(BloomFilterFailureTest.java:250)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4_InvalidString3"></a>testConstructor4_InvalidString3</td><td>Failure</td><td>BloomFilterSerializeException should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString3(BloomFilterFailureTest.java:264)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4_InvalidString4"></a>testConstructor4_InvalidString4</td><td>Failure</td><td>BloomFilterSerializeException should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString4(BloomFilterFailureTest.java:278)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4_InvalidString5"></a>testConstructor4_InvalidString5</td><td>Failure</td><td>BloomFilterSerializeException should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString5(BloomFilterFailureTest.java:292)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4_InvalidString6"></a>testConstructor4_InvalidString6</td><td>Failure</td><td>BloomFilterSerializeException should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString6(BloomFilterFailureTest.java:306)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4_InvalidString7"></a>testConstructor4_InvalidString7</td><td>Failure</td><td>BloomFilterSerializeException should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_InvalidString7(BloomFilterFailureTest.java:320)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4_TooLarge"></a>testConstructor4_TooLarge</td><td>Failure</td><td>BloomFilterSerializeException should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_TooLarge(BloomFilterFailureTest.java:335)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testConstructor4_NullHashFunctionFamily"></a>testConstructor4_NullHashFunctionFamily</td><td>Failure</td><td>NPE should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: NPE should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor4_NullHashFunctionFamily(BloomFilterFailureTest.java:349)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor5_NullString"></a>testConstructor5_NullString</td><td>Error</td><td>exception when building the hashFunctions object<br>
-<br>
-<code>com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:238)<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_NullString(BloomFilterFailureTest.java:362)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor3_NullHashFunctionClass"></a>testConstructor3_NullHashFunctionClass</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor5_InvalidString1"></a>testConstructor5_InvalidString1</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testConstructor4_NullString"></a>testConstructor4_NullString</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor5_InvalidString2"></a>testConstructor5_InvalidString2</td><td>Error</td><td>For input string: "13abc"<br>
-<br>
-<code>java.lang.NumberFormatException: For input string: "13abc"<br/>	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)<br/>	at java.lang.Integer.parseInt(Integer.java:481)<br/>	at java.lang.Integer.parseInt(Integer.java:514)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:242)<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString2(BloomFilterFailureTest.java:390)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4_InvalidString1"></a>testConstructor4_InvalidString1</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4_InvalidString2"></a>testConstructor4_InvalidString2</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4_InvalidString3"></a>testConstructor4_InvalidString3</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4_InvalidString4"></a>testConstructor4_InvalidString4</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4_InvalidString5"></a>testConstructor4_InvalidString5</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4_InvalidString6"></a>testConstructor4_InvalidString6</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4_InvalidString7"></a>testConstructor4_InvalidString7</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4_TooLarge"></a>testConstructor4_TooLarge</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor4_NullHashFunctionFamily"></a>testConstructor4_NullHashFunctionFamily</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor5_NullString"></a>testConstructor5_NullString</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor5_InvalidString1"></a>testConstructor5_InvalidString1</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor5_InvalidString2"></a>testConstructor5_InvalidString2</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="Failure">
 <td><a name="testConstructor5_InvalidString3"></a>testConstructor5_InvalidString3</td><td>Failure</td><td>BloomFilterSerializeException should be thrown.<br>
 <br>
 <code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString3(BloomFilterFailureTest.java:407)<br/></code></td><td>0.001</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor5_InvalidString4"></a>testConstructor5_InvalidString4</td><td>Error</td><td>For input string: "a"<br>
-<br>
-<code>java.lang.NumberFormatException: For input string: "a"<br/>	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)<br/>	at java.lang.Integer.parseInt(Integer.java:481)<br/>	at java.lang.Integer.parseInt(Integer.java:514)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:242)<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString4(BloomFilterFailureTest.java:420)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor5_InvalidString4"></a>testConstructor5_InvalidString4</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Failure">
 <td><a name="testConstructor5_InvalidString5"></a>testConstructor5_InvalidString5</td><td>Failure</td><td>BloomFilterSerializeException should be thrown.<br>
 <br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString5(BloomFilterFailureTest.java:437)<br/></code></td><td>0.000</td>
+<code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString5(BloomFilterFailureTest.java:437)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Failure">
 <td><a name="testConstructor5_InvalidString6"></a>testConstructor5_InvalidString6</td><td>Failure</td><td>BloomFilterSerializeException should be thrown.<br>
 <br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString6(BloomFilterFailureTest.java:452)<br/></code></td><td>0.001</td>
+<code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString6(BloomFilterFailureTest.java:452)<br/></code></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor5_InvalidString7"></a>testConstructor5_InvalidString7</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor5_InvalidString8"></a>testConstructor5_InvalidString8</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testConstructor5_InvalidString8"></a>testConstructor5_InvalidString8</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor5_InvalidString9"></a>testConstructor5_InvalidString9</td><td>Success</td><td></td><td>0.001</td>
+<td><a name="testConstructor5_InvalidString9"></a>testConstructor5_InvalidString9</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor5_InvalidString10"></a>testConstructor5_InvalidString10</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor5_InvalidString11"></a>testConstructor5_InvalidString11</td><td>Success</td><td></td><td>0.001</td>
+<td><a name="testConstructor5_InvalidString11"></a>testConstructor5_InvalidString11</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor5_InvalidString12"></a>testConstructor5_InvalidString12</td><td>Success</td><td></td><td>0.000</td>
@@ -1182,10 +1046,8 @@
 <br>
 <code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString13(BloomFilterFailureTest.java:554)<br/></code></td><td>0.001</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor5_InvalidString14"></a>testConstructor5_InvalidString14</td><td>Error</td><td>nbits &lt; 0: -13<br>
-<br>
-<code>java.lang.NegativeArraySizeException: nbits < 0: -13<br/>	at java.util.BitSet.<init>(BitSet.java:157)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:243)<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString14(BloomFilterFailureTest.java:567)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor5_InvalidString14"></a>testConstructor5_InvalidString14</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor5_InvalidString15"></a>testConstructor5_InvalidString15</td><td>Success</td><td></td><td>0.000</td>
@@ -1193,82 +1055,58 @@
 <tr valign="top" class="Failure">
 <td><a name="testConstructor5_TooLarge"></a>testConstructor5_TooLarge</td><td>Failure</td><td>BloomFilterSerializeException should be thrown.<br>
 <br>
-<code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_TooLarge(BloomFilterFailureTest.java:599)<br/></code></td><td>0.070</td>
+<code>junit.framework.AssertionFailedError: BloomFilterSerializeException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_TooLarge(BloomFilterFailureTest.java:599)<br/></code></td><td>0.048</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testAdd_NullObj"></a>testAdd_NullObj</td><td>Success</td><td></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testAddAll_NullObj"></a>testAddAll_NullObj</td><td>Failure</td><td>NPE should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: NPE should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testAddAll_NullObj(BloomFilterFailureTest.java:625)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testAddAll_InvalidObj"></a>testAddAll_InvalidObj</td><td>Failure</td><td>IAE should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: IAE should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testAddAll_InvalidObj(BloomFilterFailureTest.java:642)<br/></code></td><td>0.000</td>
+<td><a name="testAdd_NullObj"></a>testAdd_NullObj</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testContains_NullObj"></a>testContains_NullObj</td><td>Success</td><td></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testContainsAll_NullObj"></a>testContainsAll_NullObj</td><td>Failure</td><td>NPE should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: NPE should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testContainsAll_NullObj(BloomFilterFailureTest.java:668)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testContainsAll_InvalidObj"></a>testContainsAll_InvalidObj</td><td>Failure</td><td>IAE should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: IAE should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testContainsAll_InvalidObj(BloomFilterFailureTest.java:685)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testUnite_NullObj"></a>testUnite_NullObj</td><td>Failure</td><td>NPE should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: NPE should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testUnite_NullObj(BloomFilterFailureTest.java:698)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testUnite_InvalidObj1"></a>testUnite_InvalidObj1</td><td>Failure</td><td>IncompatibleBloomFiltersException should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testUnite_InvalidObj1(BloomFilterFailureTest.java:711)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testUnite_InvalidObj2"></a>testUnite_InvalidObj2</td><td>Failure</td><td>IncompatibleBloomFiltersException should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testUnite_InvalidObj2(BloomFilterFailureTest.java:724)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testUnite_InvalidObj3"></a>testUnite_InvalidObj3</td><td>Failure</td><td>IncompatibleBloomFiltersException should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testUnite_InvalidObj3(BloomFilterFailureTest.java:737)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testIntersect_NullObj"></a>testIntersect_NullObj</td><td>Failure</td><td>NPE should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: NPE should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testIntersect_NullObj(BloomFilterFailureTest.java:750)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testIntersect_InvalidObj1"></a>testIntersect_InvalidObj1</td><td>Failure</td><td>IncompatibleBloomFiltersException should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testIntersect_InvalidObj1(BloomFilterFailureTest.java:763)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testIntersect_InvalidObj2"></a>testIntersect_InvalidObj2</td><td>Failure</td><td>IncompatibleBloomFiltersException should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testIntersect_InvalidObj2(BloomFilterFailureTest.java:776)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testIntersect_InvalidObj3"></a>testIntersect_InvalidObj3</td><td>Failure</td><td>IncompatibleBloomFiltersException should be thrown.<br>
-<br>
-<code>junit.framework.AssertionFailedError: IncompatibleBloomFiltersException should be thrown.<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testIntersect_InvalidObj3(BloomFilterFailureTest.java:789)<br/></code></td><td>0.000</td>
+<td><a name="testAddAll_NullObj"></a>testAddAll_NullObj</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor1_InvalidInt"></a>testConstructor1_InvalidInt</td><td>Success</td><td></td><td>0.000</td>
+<td><a name="testAddAll_InvalidObj"></a>testAddAll_InvalidObj</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testContains_NullObj"></a>testContains_NullObj</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testContainsAll_NullObj"></a>testContainsAll_NullObj</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testContainsAll_InvalidObj"></a>testContainsAll_InvalidObj</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testUnite_NullObj"></a>testUnite_NullObj</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testUnite_InvalidObj1"></a>testUnite_InvalidObj1</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testUnite_InvalidObj2"></a>testUnite_InvalidObj2</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testUnite_InvalidObj3"></a>testUnite_InvalidObj3</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testIntersect_NullObj"></a>testIntersect_NullObj</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testIntersect_InvalidObj1"></a>testIntersect_InvalidObj1</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testIntersect_InvalidObj2"></a>testIntersect_InvalidObj2</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testIntersect_InvalidObj3"></a>testIntersect_InvalidObj3</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testConstructor1_InvalidInt"></a>testConstructor1_InvalidInt</td><td>Success</td><td></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor2_NullParam"></a>testConstructor2_NullParam</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testConstructor2_InvalidString1"></a>testConstructor2_InvalidString1</td><td>Success</td><td></td><td>0.001</td>
+<td><a name="testConstructor2_InvalidString1"></a>testConstructor2_InvalidString1</td><td>Success</td><td></td><td>0.000</td>
 </tr>
 <tr valign="top" class="TableRowColor">
 <td><a name="testConstructor2_InvalidString2"></a>testConstructor2_InvalidString2</td><td>Success</td><td></td><td>0.000</td>
@@ -1291,36 +1129,32 @@
 <tr valign="top" class="TableRowColor">
 <td><a name="testComputeHash_InvalidMaxHash"></a>testComputeHash_InvalidMaxHash</td><td>Success</td><td></td><td>0.000</td>
 </tr>
-<tr valign="top" class="Error">
-<td><a name="testCtor"></a>testCtor</td><td>Error</td><td>exception when building the hashFunctions object<br>
-<br>
-<code>com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:238)<br/>	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testCtor(BloomFilterStressTests.java:51)<br/></code></td><td>0.001</td>
+<tr valign="top" class="TableRowColor">
+<td><a name="testCtor"></a>testCtor</td><td>Success</td><td></td><td>0.751</td>
 </tr>
 <tr valign="top" class="Failure">
 <td><a name="testCtor2"></a>testCtor2</td><td>Failure</td><td>The length of bitset is too large.<br>
 <br>
-<code>junit.framework.AssertionFailedError: The length of bitset is too large.<br/>	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testCtor2(BloomFilterStressTests.java:66)<br/></code></td><td>0.151</td>
+<code>junit.framework.AssertionFailedError: The length of bitset is too large.<br/>	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testCtor2(BloomFilterStressTests.java:66)<br/></code></td><td>0.104</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testAdd"></a>testAdd</td><td>Success</td><td></td><td>0.224</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testAdd"></a>testAdd</td><td>Error</td><td>N/A<br>
+<td><a name="testUnit"></a>testUnit</td><td>Error</td><td>object can't be built from the serialized string: For input string: "30:22222"<br>
 <br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testAdd(BloomFilterStressTests.java:85)<br/></code></td><td>0.006</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "30:22222"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testUnit(BloomFilterStressTests.java:111)<br/></code></td><td>0.001</td>
 </tr>
-<tr valign="top" class="Failure">
-<td><a name="testUnit"></a>testUnit</td><td>Failure</td><td>The result is incorrect. expected:&lt;[30:33333]&gt; but was:&lt;[]&gt;<br>
+<tr valign="top" class="Error">
+<td><a name="testIntersect"></a>testIntersect</td><td>Error</td><td>object can't be built from the serialized string: For input string: "30:22222"<br>
 <br>
-<code>junit.framework.ComparisonFailure: The result is incorrect. expected:<[30:33333]> but was:<[]><br/>	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testUnit(BloomFilterStressTests.java:117)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Failure">
-<td><a name="testIntersect"></a>testIntersect</td><td>Failure</td><td>The result is incorrect. expected:&lt;[30:00000]&gt; but was:&lt;[]&gt;<br>
-<br>
-<code>junit.framework.ComparisonFailure: The result is incorrect. expected:<[30:00000]> but was:<[]><br/>	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testIntersect(BloomFilterStressTests.java:139)<br/></code></td><td>0.000</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "30:22222"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testIntersect(BloomFilterStressTests.java:133)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testCreate"></a>testCreate</td><td>Success</td><td></td><td>0.020</td>
+<td><a name="testCreate"></a>testCreate</td><td>Success</td><td></td><td>0.019</td>
 </tr>
 <tr valign="top" class="TableRowColor">
-<td><a name="testComputeHash"></a>testComputeHash</td><td>Success</td><td></td><td>0.029</td>
+<td><a name="testComputeHash"></a>testComputeHash</td><td>Success</td><td></td><td>0.030</td>
 </tr>
 </table>
 <div class="Properties">
@@ -1331,6 +1165,11 @@
 <div class="Properties">
 <a href="./0_AllTests-out.txt">
                         System.out &raquo;
+                    </a>
+</div>
+<div class="Properties">
+<a href="./0_AllTests-err.txt">
+                        System.err &raquo;
                     </a>
 </div>
 </body>

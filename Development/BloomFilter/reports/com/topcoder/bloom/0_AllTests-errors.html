@@ -356,7 +356,7 @@
 <th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
 </tr>
 <tr valign="top" class="Error">
-<td><a href="0_AllTests.html" title="Display all tests">AllTests</a></td><td><a href="0_AllTests.html" title="Display all tests">236</a></td><td><a href="0_AllTests-errors.html" title="Display only errors">44</a></td><td><a href="0_AllTests-fails.html" title="Display only failures">81</a></td><td>1.037</td><td>2010-11-15T16:52:29</td><td>powo</td>
+<td><a href="0_AllTests.html" title="Display all tests">AllTests</a></td><td><a href="0_AllTests.html" title="Display all tests">236</a></td><td><a href="0_AllTests-errors.html" title="Display only errors">10</a></td><td><a href="0_AllTests-fails.html" title="Display only failures">32</a></td><td>3.014</td><td>2010-11-16T15:37:24</td><td>powo</td>
 </tr>
 </table>
 <h2>Errors</h2>
@@ -365,224 +365,54 @@
 <th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testConstructor2NullClass"></a>testConstructor2NullClass</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
+<td><a name="testConstructor4AllBase64"></a>testConstructor4AllBase64</td><td>Error</td><td>object can't be built from the serialized string: For input string: "384:0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_:"<br>
 <br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor2NullClass(BloomFilterTests.java:273)<br/></code></td><td>0.001</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "384:0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_:"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4AllBase64(BloomFilterTests.java:553)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testConstructor2VerySmallBitSet"></a>testConstructor2VerySmallBitSet</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
+<td><a name="testConstructor4EmptyBitSet"></a>testConstructor4EmptyBitSet</td><td>Error</td><td>object can't be built from the serialized string: For input string: "40:0000000"<br>
 <br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor2VerySmallBitSet(BloomFilterTests.java:316)<br/></code></td><td>0.001</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "40:0000000"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4EmptyBitSet(BloomFilterTests.java:561)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testConstructor2Accuracy1"></a>testConstructor2Accuracy1</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
+<td><a name="testConstructor4FullBitSet"></a>testConstructor4FullBitSet</td><td>Error</td><td>object can't be built from the serialized string: For input string: "54::::::::::"<br>
 <br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor2Accuracy1(BloomFilterTests.java:327)<br/></code></td><td>0.001</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "54::::::::::"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4FullBitSet(BloomFilterTests.java:572)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testConstructor2Accuracy2"></a>testConstructor2Accuracy2</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
+<td><a name="testConstructor4FromSerialized"></a>testConstructor4FromSerialized</td><td>Error</td><td>object can't be built from the serialized string: For input string: "9586:HGHHGEHHHHHHHHHHHHHHHHHHHHEHHEHBHHHHGHHHHHHHAHH4EHHHHGHHHEHHHHHHHHBHHHHHHHHHHHHEHHAHHHHHHHHBEHHHHHGHHHHHHBHHHHHHHHHHBHHHHHHHHAHHHGHEHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHBHHHHHH8HHHHHHHHHEHHEHHHAHHHHHHHHHHHHHHHHHBHHHHHHHEHHHHHHHHHHHBHHEHHHH4EHHGGHHHHHHHHHEHHGHHHHHHHHHHHEHHHHHHHHHHHHHHHAHHHHHHHHHHHHHBHHHHHHHBHHABEHHHHBHHHHHHHHBAHGHHHHHHHHHHHHHHHABEHHHHHEGEHHHAHHHHHHHHHHHH9AHHHHHHHHHHHHHHHHHBHHHEHHABHHHHHEHGHAGEHHHEGHHHHHBHHHAHEHHHHHHHHHHHHHHHHBBHHHHHHHHHBHHHHEHHHHHAHHHHHHHHHHHGGHH7HHH4HEGHHHHHHHHHHHHHHHHHHHHH7HHEHHHHGHAHHAHHHHHHHHHEHEEHHHHHGHHHHBHHHHHHHHHHHHHBHHH9HHHHDHHHHHHHHHHHHBHGHH7HHHHHHHHGHHGHHHHHHHHHHHHEAHAHHHHHHHHHHHBHHEHHHHHHHBHHGHHHHHHHGBHHGHHHHHHHHHHAHHGHHAHEHHHAHHHHHHEHHHHHHHHHHHGHHEHHHHHHAHHHHHAHHHHHHBHHHBAHHHHHHBBHHHHGHHHEHHBHHHHHHHHHHHHHHBHHAHEHGAHHHHEHHH7BHEHHHHAHHHHEEHHHHHHHHHHHHAHHHHHHHAHHHHHHHHAHHHHHHHHHHHHHHHHEHHHBHHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHE7HHHAHHHGHHAHHHHHHHGHEHHHHHHHHAHHHHHAHHHHHHHHHHHGHAHHHHHHHHHBHHHHHHGHHHHHHHAHHHHHHGHHEHHBHHHHHHHHHHHHHHHBHHEHHHHHHHHHHHHHHHHHAAHAHHHHHHHHHAHHBHHGAHHHHHHHHAEHBEHHHHHHHHHHGHHHHHHHEHGEHHHHHHHHHHHHAHHHHHHHHHHHHHHH8HHHEHHHEHHHHHHHEHHHHHHHHEHGHHBHBHHEHBHHHHHHGHHAHHHHHHHHHHAGAHHHHEHHHHHHBAHHHHHHHBGHHHHHHHHHHHAHAHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHAHBHEEHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHGHHHBAEHBHEHHAEHHHEHHHHBHBHHHHHHHHHHHEHHHHHHHHHHHHHHHHHDHHHHGHA8EHHHHEHHHHHHHHHHHGHHHHHHBHHHEHHHHHHHHHHHHAHHEAHHHHBHHHHHHBHHHEHGHHHHHHHHHHHHHHHHHHHBHHHHHHHGHABHHHHHHHHHHHBHAHHHHHHHHGHHHHHGHHHHHHEHHH4HHHHBGHHHEHHHHHEHHHHBHHHHGEHHEAHHGBHHHHHHHHHHHHBGGHHHHHHHHEHHBHHHHHHGHHHHHHHHAHHHHAHHHHEHHHHHHHBHHHHHHHHHHHHHHHHHHE"<br>
 <br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor2Accuracy2(BloomFilterTests.java:340)<br/></code></td><td>0.001</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "9586:HGHHGEHHHHHHHHHHHHHHHHHHHHEHHEHBHHHHGHHHHHHHAHH4EHHHHGHHHEHHHHHHHHBHHHHHHHHHHHHEHHAHHHHHHHHBEHHHHHGHHHHHHBHHHHHHHHHHBHHHHHHHHAHHHGHEHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHBHHHHHH8HHHHHHHHHEHHEHHHAHHHHHHHHHHHHHHHHHBHHHHHHHEHHHHHHHHHHHBHHEHHHH4EHHGGHHHHHHHHHEHHGHHHHHHHHHHHEHHHHHHHHHHHHHHHAHHHHHHHHHHHHHBHHHHHHHBHHABEHHHHBHHHHHHHHBAHGHHHHHHHHHHHHHHHABEHHHHHEGEHHHAHHHHHHHHHHHH9AHHHHHHHHHHHHHHHHHBHHHEHHABHHHHHEHGHAGEHHHEGHHHHHBHHHAHEHHHHHHHHHHHHHHHHBBHHHHHHHHHBHHHHEHHHHHAHHHHHHHHHHHGGHH7HHH4HEGHHHHHHHHHHHHHHHHHHHHH7HHEHHHHGHAHHAHHHHHHHHHEHEEHHHHHGHHHHBHHHHHHHHHHHHHBHHH9HHHHDHHHHHHHHHHHHBHGHH7HHHHHHHHGHHGHHHHHHHHHHHHEAHAHHHHHHHHHHHBHHEHHHHHHHBHHGHHHHHHHGBHHGHHHHHHHHHHAHHGHHAHEHHHAHHHHHHEHHHHHHHHHHHGHHEHHHHHHAHHHHHAHHHHHHBHHHBAHHHHHHBBHHHHGHHHEHHBHHHHHHHHHHHHHHBHHAHEHGAHHHHEHHH7BHEHHHHAHHHHEEHHHHHHHHHHHHAHHHHHHHAHHHHHHHHAHHHHHHHHHHHHHHHHEHHHBHHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHE7HHHAHHHGHHAHHHHHHHGHEHHHHHHHHAHHHHHAHHHHHHHHHHHGHAHHHHHHHHHBHHHHHHGHHHHHHHAHHHHHHGHHEHHBHHHHHHHHHHHHHHHBHHEHHHHHHHHHHHHHHHHHAAHAHHHHHHHHHAHHBHHGAHHHHHHHHAEHBEHHHHHHHHHHGHHHHHHHEHGEHHHHHHHHHHHHAHHHHHHHHHHHHHHH8HHHEHHHEHHHHHHHEHHHHHHHHEHGHHBHBHHEHBHHHHHHGHHAHHHHHHHHHHAGAHHHHEHHHHHHBAHHHHHHHBGHHHHHHHHHHHAHAHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHAHBHEEHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHGHHHBAEHBHEHHAEHHHEHHHHBHBHHHHHHHHHHHEHHHHHHHHHHHHHHHHHDHHHHGHA8EHHHHEHHHHHHHHHHHGHHHHHHBHHHEHHHHHHHHHHHHAHHEAHHHHBHHHHHHBHHHEHGHHHHHHHHHHHHHHHHHHHBHHHHHHHGHABHHHHHHHHHHHBHAHHHHHHHHGHHHHHGHHHHHHEHHH4HHHHBGHHHEHHHHHEHHHHBHHHHGEHHEAHHGBHHHHHHHHHHHHBGGHHHHHHHHEHHBHHHHHHGHHHHHHHHAHHHHAHHHHEHHHHHHHBHHHHHHHHHHHHHHHHHHE"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4FromSerialized(BloomFilterTests.java:587)<br/></code></td><td>0.019</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testConstructor2Accuracy3"></a>testConstructor2Accuracy3</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
+<td><a name="testSpecDemo"></a>testSpecDemo</td><td>Error</td><td>object can't be built from the serialized string: For input string: "9586:HBAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHAHHHGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHAHHHHHHHHHHHHHHAHHHHHHAHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHGHHHHHHHHBHHHHHHHHGGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEBHHHHHHHHHHGHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHEHGHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHGHHHHHHHGHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHBHHHHHHHHHHHHHHBHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHGAHHHHHHEHHHHHHHHHHHHHEGHHHHHHHHHAHHHHHHHHHHHEAHAAHHHHHBHHHHHHHHHHHHHHHBHHHHHHHAHHHHHHHHBHHHHHHHHHHHAHHHHAHHHHHHHHHHHBHHHHAHHHHAHHGHHHHHHHHHHHHHHHHHHHAHHHHHHEGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHBHHHHHHHHHAHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHBHHHHHHHHAHHHGHHHHHHEHGHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHGHHHHGHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHEHHHEHHHHHHHGHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHEHHHHAHHHHHHHHGHEHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHGHHHHEHHHHHHHHHHHHHHEHHHHHHAHHHHHHHHHHHEEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHBHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHAHHHHEHHHHHHHHEHHBHHHHHHHHHAHE"<br>
 <br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor2Accuracy3(BloomFilterTests.java:353)<br/></code></td><td>0.001</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "9586:HBAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHAHHHGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHAHHHHHHHHHHHHHHAHHHHHHAHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHGHHHHHHHHBHHHHHHHHGGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEBHHHHHHHHHHGHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHEHGHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHGHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHGHHHHHHHGHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHBHHHHHHHHHHHHHHBHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHGAHHHHHHEHHHHHHHHHHHHHEGHHHHHHHHHAHHHHHHHHHHHEAHAAHHHHHBHHHHHHHHHHHHHHHBHHHHHHHAHHHHHHHHBHHHHHHHHHHHAHHHHAHHHHHHHHHHHBHHHHAHHHHAHHGHHHHHHHHHHHHHHHHHHHAHHHHHHEGHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHBHHHHHHHHHAHHHHHHHHHHHHHHHGHHHHHHHHHHHHHHHHBHHHHHHHHAHHHGHHHHHHEHGHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHBHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHGHHHHGHHHHHHHHHHHHGHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHEHHHEHHHHHHHGHAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHAHHHHHHHHHHHHHHHEHHHHAHHHHHHHHGHEHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHGHHHHEHHHHHHHHHHHHHHEHHHHHHAHHHHHHHHHHHEEHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHHHHHHHHHHHHHHHBHHHHHHHEHHHHHHHHHHHHHHHHHHHHHHAHHHHEHHHHHHHHEHHBHHHHHHHHHAHE"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.Demo.testSpecDemo(Demo.java:93)<br/></code></td><td>0.022</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testConstructor3NullHashFamily"></a>testConstructor3NullHashFamily</td><td>Error</td><td>hash functions must not be null.<br>
+<td><a name="testDemoSerializing"></a>testDemoSerializing</td><td>Error</td><td>object can't be built from the serialized string: For input string: "959:HGHHH7HAHHHHHGHHHBHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHAHHHHHHHGHBHEEHHHHDHHHHHHBHH7HBEHBHHHHHHHHHHHHBHHHHHH8EHHGHHHHHHHHHHHHHHHEHHHHHHHHHHHHEHEHHHAHEHHAHHBHHAHBHHH"<br>
 <br>
-<code>java.lang.IllegalArgumentException: hash functions must not be null.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:179)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor3NullHashFamily(BloomFilterTests.java:379)<br/></code></td><td>0.001</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "959:HGHHH7HAHHHHHGHHHBHHHHHHHHHHHHHHHHHHHHHHHHHEHHHHHHHAHHHHHHHGHBHEEHHHHDHHHHHHBHH7HBEHBHHHHHHHHHHHHBHHHHHH8EHHGHHHHHHHHHHHHHHHEHHHHHHHHHHHHEHEHHHAHEHHAHHBHHAHBHHH"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.Demo.testDemoSerializing(Demo.java:206)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testConstructor4FromSerialized"></a>testConstructor4FromSerialized</td><td>Error</td><td>N/A<br>
+<td><a name="testconstruct_withserializedAndFunctionFamily"></a>testconstruct_withserializedAndFunctionFamily</td><td>Error</td><td>object can't be built from the serialized string: For input string: "48:topcoder"<br>
 <br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor4FromSerialized(BloomFilterTests.java:583)<br/></code></td><td>0.001</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "48:topcoder"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testconstruct_withserializedAndFunctionFamily(BloomFilterAccuracyTests.java:60)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testConstructor5NullSerialized"></a>testConstructor5NullSerialized</td><td>Error</td><td>exception when building the hashFunctions object<br>
+<td><a name="testgetSerializedBitSet"></a>testgetSerializedBitSet</td><td>Error</td><td>object can't be built from the serialized string: For input string: "48:topcoder"<br>
 <br>
-<code>com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:238)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5NullSerialized(BloomFilterTests.java:599)<br/></code></td><td>0.001</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "48:topcoder"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testgetSerializedBitSet(BloomFilterAccuracyTests.java:237)<br/></code></td><td>0.000</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testConstructor5InvalidSerialized6"></a>testConstructor5InvalidSerialized6</td><td>Error</td><td>For input string: "4x"<br>
+<td><a name="testUnit"></a>testUnit</td><td>Error</td><td>object can't be built from the serialized string: For input string: "30:22222"<br>
 <br>
-<code>java.lang.NumberFormatException: For input string: "4x"<br/>	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)<br/>	at java.lang.Integer.parseInt(Integer.java:481)<br/>	at java.lang.Integer.parseInt(Integer.java:514)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:242)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5InvalidSerialized6(BloomFilterTests.java:695)<br/></code></td><td>0.001</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "30:22222"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testUnit(BloomFilterStressTests.java:111)<br/></code></td><td>0.001</td>
 </tr>
 <tr valign="top" class="Error">
-<td><a name="testConstructor5FromSerialized"></a>testConstructor5FromSerialized</td><td>Error</td><td>N/A<br>
+<td><a name="testIntersect"></a>testIntersect</td><td>Error</td><td>object can't be built from the serialized string: For input string: "30:22222"<br>
 <br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testConstructor5FromSerialized(BloomFilterTests.java:820)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testAddAccuracy1"></a>testAddAccuracy1</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testAddAccuracy1(BloomFilterTests.java:846)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testAddAccuracy2"></a>testAddAccuracy2</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testAddAccuracy2(BloomFilterTests.java:864)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testContainsAccuracy2"></a>testContainsAccuracy2</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testContainsAccuracy2(BloomFilterTests.java:969)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testContainsAccuracy3"></a>testContainsAccuracy3</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testContainsAccuracy3(BloomFilterTests.java:984)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testContainsAllAccuracy1"></a>testContainsAllAccuracy1</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testContainsAllAccuracy1(BloomFilterTests.java:1034)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testEqualsAccuracyDifferentContents"></a>testEqualsAccuracyDifferentContents</td><td>Error</td><td>maxHash must be positive. maxHash=-1<br>
-<br>
-<code>java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1<br/>	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)<br/>	at com.topcoder.bloom.BloomFilterTests.testEqualsAccuracyDifferentContents(BloomFilterTests.java:1095)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testEqualsAccuracyEqual"></a>testEqualsAccuracyEqual</td><td>Error</td><td>maxHash must be positive. maxHash=-1<br>
-<br>
-<code>java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1<br/>	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)<br/>	at com.topcoder.bloom.BloomFilterTests.testEqualsAccuracyEqual(BloomFilterTests.java:1107)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testHashCodeAccuracyBitSet"></a>testHashCodeAccuracyBitSet</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testHashCodeAccuracyBitSet(BloomFilterTests.java:1131)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testIsEmpty"></a>testIsEmpty</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testIsEmpty(BloomFilterTests.java:1165)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testUniteAccuracy1"></a>testUniteAccuracy1</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testUniteAccuracy1(BloomFilterTests.java:1222)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testIntersectAccuracy1"></a>testIntersectAccuracy1</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testIntersectAccuracy1(BloomFilterTests.java:1291)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testClearAccuracy1"></a>testClearAccuracy1</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testClearAccuracy1(BloomFilterTests.java:1315)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testGetSerializedBitSetAccuracy2"></a>testGetSerializedBitSetAccuracy2</td><td>Error</td><td>/ by zero<br>
-<br>
-<code>java.lang.ArithmeticException: / by zero<br/>	at com.topcoder.bloom.MockHashFunctionFamily.computeHash(MockHashFunctionFamily.java:69)<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)<br/>	at com.topcoder.bloom.BloomFilterTests.testGetSerializedBitSetAccuracy2(BloomFilterTests.java:1348)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testGetSerializedAccuracy2"></a>testGetSerializedAccuracy2</td><td>Error</td><td>/ by zero<br>
-<br>
-<code>java.lang.ArithmeticException: / by zero<br/>	at com.topcoder.bloom.MockHashFunctionFamily.computeHash(MockHashFunctionFamily.java:69)<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)<br/>	at com.topcoder.bloom.BloomFilterTests.testGetSerializedAccuracy2(BloomFilterTests.java:1387)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testCloneAccuracy1"></a>testCloneAccuracy1</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.BloomFilterTests.testCloneAccuracy1(BloomFilterTests.java:1430)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testCloneAccuracy2"></a>testCloneAccuracy2</td><td>Error</td><td>maxHash must be positive. maxHash=-1<br>
-<br>
-<code>java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1<br/>	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)<br/>	at com.topcoder.bloom.BloomFilterTests.testCloneAccuracy2(BloomFilterTests.java:1443)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testCloneAccuracy3"></a>testCloneAccuracy3</td><td>Error</td><td>maxHash must be positive. maxHash=-1<br>
-<br>
-<code>java.lang.IllegalArgumentException: maxHash must be positive. maxHash=-1<br/>	at com.topcoder.bloom.DefaultHashFunctionFamily.computeHash(DefaultHashFunctionFamily.java:120)<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:260)<br/>	at com.topcoder.bloom.BloomFilterTests.testCloneAccuracy3(BloomFilterTests.java:1465)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testSpecDemo"></a>testSpecDemo</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
-<br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.Demo.testSpecDemo(Demo.java:29)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testDemoAddContains"></a>testDemoAddContains</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.Demo.testDemoAddContains(Demo.java:105)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testDemoSerializing"></a>testDemoSerializing</td><td>Error</td><td>exception when building the hashFunctions object<br>
-<br>
-<code>com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:238)<br/>	at com.topcoder.bloom.Demo.testDemoSerializing(Demo.java:194)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testconstruct_withClass"></a>testconstruct_withClass</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
-<br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testconstruct_withClass(BloomFilterAccuracyTests.java:49)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testaddAndContains"></a>testaddAndContains</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testaddAndContains(BloomFilterAccuracyTests.java:96)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testisEmpty"></a>testisEmpty</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testisEmpty(BloomFilterAccuracyTests.java:160)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testunite"></a>testunite</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testunite(BloomFilterAccuracyTests.java:179)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testintersect"></a>testintersect</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testintersect(BloomFilterAccuracyTests.java:206)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testClear"></a>testClear</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.accuracytests.BloomFilterAccuracyTests.testClear(BloomFilterAccuracyTests.java:224)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor2_NullHashFunctionClass"></a>testConstructor2_NullHashFunctionClass</td><td>Error</td><td>Impossible to instantiate the hash function.<br>
-<br>
-<code>java.lang.IllegalArgumentException: Impossible to instantiate the hash function.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:157)<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor2_NullHashFunctionClass(BloomFilterFailureTest.java:151)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor3_NullHashFunctionClass"></a>testConstructor3_NullHashFunctionClass</td><td>Error</td><td>hash functions must not be null.<br>
-<br>
-<code>java.lang.IllegalArgumentException: hash functions must not be null.<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:179)<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor3_NullHashFunctionClass(BloomFilterFailureTest.java:207)<br/></code></td><td>0.000</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor5_NullString"></a>testConstructor5_NullString</td><td>Error</td><td>exception when building the hashFunctions object<br>
-<br>
-<code>com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:238)<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_NullString(BloomFilterFailureTest.java:362)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor5_InvalidString2"></a>testConstructor5_InvalidString2</td><td>Error</td><td>For input string: "13abc"<br>
-<br>
-<code>java.lang.NumberFormatException: For input string: "13abc"<br/>	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)<br/>	at java.lang.Integer.parseInt(Integer.java:481)<br/>	at java.lang.Integer.parseInt(Integer.java:514)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:242)<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString2(BloomFilterFailureTest.java:390)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor5_InvalidString4"></a>testConstructor5_InvalidString4</td><td>Error</td><td>For input string: "a"<br>
-<br>
-<code>java.lang.NumberFormatException: For input string: "a"<br/>	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)<br/>	at java.lang.Integer.parseInt(Integer.java:481)<br/>	at java.lang.Integer.parseInt(Integer.java:514)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:242)<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString4(BloomFilterFailureTest.java:420)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testConstructor5_InvalidString14"></a>testConstructor5_InvalidString14</td><td>Error</td><td>nbits &lt; 0: -13<br>
-<br>
-<code>java.lang.NegativeArraySizeException: nbits < 0: -13<br/>	at java.util.BitSet.<init>(BitSet.java:157)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:243)<br/>	at com.topcoder.bloom.failuretests.BloomFilterFailureTest.testConstructor5_InvalidString14(BloomFilterFailureTest.java:567)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testCtor"></a>testCtor</td><td>Error</td><td>exception when building the hashFunctions object<br>
-<br>
-<code>com.topcoder.bloom.BloomFilterSerializeException: exception when building the hashFunctions object<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:238)<br/>	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testCtor(BloomFilterStressTests.java:51)<br/></code></td><td>0.001</td>
-</tr>
-<tr valign="top" class="Error">
-<td><a name="testAdd"></a>testAdd</td><td>Error</td><td>N/A<br>
-<br>
-<code>java.lang.NullPointerException<br/>	at com.topcoder.bloom.BloomFilter.add(BloomFilter.java:259)<br/>	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testAdd(BloomFilterStressTests.java:85)<br/></code></td><td>0.006</td>
+<code>com.topcoder.bloom.BloomFilterSerializeException: object can't be built from the serialized string: For input string: "30:22222"<br/>	at com.topcoder.bloom.BloomFilter.buildBitSet(BloomFilter.java:641)<br/>	at com.topcoder.bloom.BloomFilter.<init>(BloomFilter.java:222)<br/>	at com.topcoder.bloom.stresstests.BloomFilterStressTests.testIntersect(BloomFilterStressTests.java:133)<br/></code></td><td>0.001</td>
 </tr>
 </table>
 <div class="Properties">
@@ -593,6 +423,11 @@
 <div class="Properties">
 <a href="./0_AllTests-out.txt">
                         System.out &raquo;
+                    </a>
+</div>
+<div class="Properties">
+<a href="./0_AllTests-err.txt">
+                        System.err &raquo;
                     </a>
 </div>
 </body>

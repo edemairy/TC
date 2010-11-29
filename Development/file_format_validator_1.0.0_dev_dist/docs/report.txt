@@ -1,0 +1,12 @@
+=====================================================
+File validation result report
+=====================================================
+
+File Path: %FILE_PATH%
+File Type: %FORMAT_NAME%
+Process Date: %TIMESTAMP%
+
+Validation %STATUS%.
+
+Validation errors found:
+%ERRORS%

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="config.xsd"
+        formatName="Sample CSV Format"
+        ignoredLinePattern="#.*">
+  <lineType type="header" num="1">
+    <extractor type="csv" />
+    <validators>
+      <validator type="regex" fieldIndex="1" pattern="ID"/>
+      <validator type="regex" fieldIndex="2" pattern="START"/>
+      <validator type="regex" fieldIndex="3" pattern="END"/>
+      <validator type="regex" fieldIndex="4" pattern="CODE"/>
+    </validators>
+  </lineType>
+  <lineType type="data" minNum="1">
+    <extractor type="csv" />
+    <validators>
+      <validator type="fieldType" fieldIndex="1" fieldType="Integer"/>
+      <validator type="numberComparison" fieldIndex="1"
+                 operator="greaterThan" value="0"/>
+      <validator type="fieldType" fieldIndex="2" fieldType="Integer"/>
+      <validator type="fieldType" fieldIndex="3" fieldType="Integer"/>
+      <validator type="twoNumberFieldsComparison" fieldIndex1="3" fieldIndex2="2"
+                 operator="greaterOrEqual"/>
+      <validator type="regex" fieldIndex="4" pattern="[A-Z]{3}[0-9]{3}"/>
+    </validators>
+  </lineType>
+</config>
