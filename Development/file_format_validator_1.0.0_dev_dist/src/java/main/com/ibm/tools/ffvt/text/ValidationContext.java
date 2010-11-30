@@ -2,6 +2,10 @@ package com.ibm.tools.ffvt.text;
 
 import com.ibm.tools.ffvt.text.*;
 import java.lang.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This class holds information that is specific to a file type validation context. Separate ValidationContext instance is created and used by TextFileFormatValidator for each validated file.
@@ -10,21 +14,19 @@ import java.lang.*;
  * This class is mutable and not thread safe. But it is always used by TextFileFormatValidator in thread safe manner.
  */
 public class ValidationContext {
+
     /**
      * The list of validation errors. Collection instance is initialized in the constructor and never changed after that. Cannot be null, cannot contain null/empty. Has a getter. Is used in addError().
      */
     private final List<String> errors;
-
     /**
      * The mapping from line type to the number of lines of this type that have been already processed. Collection instance is initialized in the constructor and never changed after that. Cannot be null, cannot contain null key/value or not positive value. Is used in increaseProcessedLinesNum() and getProcessedLinesNumByType().
      */
     private final Map<LineType, Integer> processedLinesNum;
-
     /**
      * The 0-based index of the currently processed line. Can be nay value. Has getter and setter.
      */
     private int lineIndex;
-
     /**
      * The 0-based position of the current line from the end of the file. Can be any value. Has getter and setter.
      */
@@ -38,6 +40,8 @@ public class ValidationContext {
      * 2. processedLinesNum = new HashMap<LineType, Integer>();
      */
     public ValidationContext() {
+        errors = new ArrayList<String>();
+        processedLinesNum = new HashMap<LineType, Integer>();
     }
 
     /**
@@ -55,6 +59,9 @@ public class ValidationContext {
      * @param error the error to be added
      */
     public void addError(String error) {
+        if (error == null) throw new IllegalArgumentException("error cannot be null");
+        if (error == "") throw new IllegalArgumentException("error cannot be empty");
+        errors.add(error);
     }
 
     /**
@@ -68,7 +75,7 @@ public class ValidationContext {
      * @return the list of validation errors
      */
     public List<String> getErrors() {
-        return null;
+        return new ArrayList<String>(errors);
     }
 
     /**
@@ -89,6 +96,13 @@ public class ValidationContext {
      * @param type the line type
      */
     public void increaseProcessedLinesNum(LineType type) {
+        if (type==null) throw new IllegalArgumentException("type cannot be null");
+        Integer num = processedLinesNum.get(type);
+        if (num == null) {
+            num = 0;
+        }
+        num = num + 1;
+        this.processedLinesNum.put(type, num);
     }
 
     /**
@@ -111,7 +125,9 @@ public class ValidationContext {
      * @return the retrieved processed lines number
      */
     public int getProcessedLinesNumByType(LineType type) {
-        return 0;
+        if (type==null) throw new IllegalArgumentException("type cannot be null");
+        Integer num = processedLinesNum.get(type);
+        return (num == null ? 0 : num);
     }
 
     /**
@@ -122,7 +138,7 @@ public class ValidationContext {
      * @return the 0-based index of the currently processed line
      */
     public int getLineIndex() {
-        return 0;
+        return this.lineIndex;
     }
 
     /**
@@ -133,6 +149,7 @@ public class ValidationContext {
      * @param lineIndex the 0-based index of the currently processed line
      */
     public void setLineIndex(int lineIndex) {
+        this.lineIndex = lineIndex;
     }
 
     /**
@@ -143,7 +160,7 @@ public class ValidationContext {
      * @return the 0-based position of the current line from the end of the file
      */
     public int getPositionFromEnd() {
-        return 0;
+        return this.positionFromEnd;
     }
 
     /**
@@ -154,6 +171,6 @@ public class ValidationContext {
      * @param positionFromEnd the 0-based position of the current line from the end of the file
      */
     public void setPositionFromEnd(int positionFromEnd) {
+        this.positionFromEnd = positionFromEnd;
     }
 }
-

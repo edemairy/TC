@@ -18,7 +18,7 @@ public class FieldExtractionException extends FileFormatValidationException {
      * @param message the detailed error message of this exception
      */
     public FieldExtractionException(String message) {
-        FileFormatValidationException(message);
+        super(message);
     }
 
     /**
@@ -31,6 +31,7 @@ public class FieldExtractionException extends FileFormatValidationException {
      * @param cause the inner cause of this exception
      */
     public FieldExtractionException(String message, Throwable cause) {
+        super(message,cause);
     }
 }
 
