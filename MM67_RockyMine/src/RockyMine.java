@@ -1,7 +1,9 @@
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 /*
  * To change this template, choose Tools | Templates
@@ -13,14 +15,38 @@ import java.util.Map;
  */
 public class RockyMine {
 
-    private class Location {
+    public class Location {
 
         public Location(int x, int y) {
             this.x = x;
             this.y = y;
         }
+
+        public Location(Location location) {
+            this.x = location.x;
+            this.y = location.y;
+        }
         private int x;
         private int y;
+
+        @Override
+        public String toString() {
+            return "(" + x + "," + y + ")";
+        }
+
+        public int getLinear() {
+            return (x * width + y);
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            Location loc = (Location) obj;
+            if (obj == null) {
+                return false;
+            } else {
+                return ((x == loc.x) && (y == loc.y));
+            }
+        }
 
         /**
          * @return the x
@@ -63,7 +89,7 @@ public class RockyMine {
      *   - the map of the gold.
      *   - the score, i.e. how much gold has been collected.
      */
-    private class TurnState {
+    public class TurnState {
 
         private int[] rocks;
         private int[] gold;
@@ -76,6 +102,14 @@ public class RockyMine {
             this.gold = gold;
             this.location = location;
             this.score = score;
+        }
+
+        private TurnState(TurnState state) {
+            this.rocks = state.rocks;
+            this.gold = state.gold;
+            this.location = state.location;
+            this.score = state.score;
+            this.countdown = state.countdown;
         }
 
         /**
@@ -151,11 +185,59 @@ public class RockyMine {
     public int width;
     private int height;
 
-    private class Graph {
+    public class MoveResult {
+
+        private char character;
+        private TurnState state;
+
+        @Override
+        public String toString() {
+            return ("[\"" + character + "\"," + state + "]");
+        }
+
+        public MoveResult(char character, TurnState state) {
+            this.character = character;
+            this.state = state;
+        }
+
+        public MoveResult(MoveResult move) {
+            this.character = move.character;
+            this.state = move.state;
+        }
+
+        /**
+         * @return the character
+         */
+        public char getCharacter() {
+            return character;
+        }
+
+        /**
+         * @param character the character to set
+         */
+        public void setCharacter(char character) {
+            this.character = character;
+        }
+
+        /**
+         * @return the state
+         */
+        public TurnState getState() {
+            return state;
+        }
+
+        /**
+         * @param state the state to set
+         */
+        public void setState(TurnState state) {
+            this.state = state;
+        }
+    }
+
+    public class Graph {
 
         private TurnState initState;
         private Map<TurnState, Map<Character, TurnState>> nextMoves;
-
 
         public Graph(TurnState initState) {
             this.initState = initState;
@@ -163,41 +245,79 @@ public class RockyMine {
         }
 
         public void addMove(TurnState start, char move, TurnState end) {
-            if ( nextMoves.containsKey(start)) {
-                nextMoves.get(start).put(move, end);
-            } else {
-                nextMoves.put(start, new HashMap<Character, TurnState>() );
+            if (!nextMoves.containsKey(start)) {
+                nextMoves.put(start, new HashMap<Character, TurnState>());
             }
+            nextMoves.get(start).put(move, end);
         }
-        
-        public char computeNextMoves(TurnState state) {
-            TurnState result = state;
+
+        public MoveResult computeNextMoves(TurnState state) {
+
             Location curPos = state.getLocation();
 
-          //  testIfValidMove(state, '-'); // Moving North
+            //  testIfValidMove(state, '-'); // Moving North
             testIfValidMove(state, 'N'); // Moving North
-            testIfValidMove(state, 'E'); // Moving North
-            testIfValidMove(state, 'W'); // Moving North
-            testIfValidMove(state, 'S'); // Moving North
+            testIfValidMove(state, 'S'); // Moving East
+            testIfValidMove(state, 'W'); // Moving West
+            testIfValidMove(state, 'E'); // Moving East
 
             Map<Character, TurnState> possibleMoves = nextMoves.get(state);
-      
+
 //            int choice = (int) (Math.random() * possibleMoves.size());
-            return possibleMoves.keySet().iterator().next();
+            Character[] moves = new Character[possibleMoves.keySet().size()];
+            possibleMoves.keySet().toArray(moves);
+            int moveChoice = (int) (moves.length * Math.random());
+
+            Iterator<Character> it = possibleMoves.keySet().iterator();
+            int bestScore = -1;
+
+            char itMove, bestMove;
+            TurnState itState, bestState;
+            bestMove = '#';
+            bestState = null;
+            while (it.hasNext()) {
+                itMove = it.next();
+                itState = possibleMoves.get(itMove);
+                if (itState.getScore() > bestScore) {
+                    bestScore = itState.getScore();
+                    bestMove = itMove;
+                    bestState = itState;
+                }
+            }
+
+
+            MoveResult result = new MoveResult(bestMove, bestState);
+            return result;
         }
 
         public void testIfValidMove(TurnState state, char move) {
-            // 0. test if the location is valid.
+            // 0. test if the location is valid regarding map size.
             Location curLoc = state.getLocation();
-            Location nextLoc = curLoc;
-            if (move == 'N') nextLoc.add(-1,0);
-            if (move == 'S') nextLoc.add(1,0);
-            if (move == 'W') nextLoc.add(0,-1);
-            if (move == 'S') nextLoc.add(0,1);
-            if  ( (nextLoc.getX()<0) ||
-                    (nextLoc.getY()<0) ||
-                    (nextLoc.getX()>=height) ||
-                    (nextLoc.getY()>=width)) {
+            Location nextLoc = new Location(curLoc);
+            switch (move) {
+                case 'N':
+                    nextLoc.add(-1, 0);
+                    break;
+                case 'S':
+                    nextLoc.add(1, 0);
+                    break;
+                case 'W':
+                    nextLoc.add(0, -1);
+                    break;
+                case 'E':
+                    nextLoc.add(0, 1);
+                    break;
+            }
+            if ((nextLoc.getX() < 0)
+                    || (nextLoc.getY() < 0)
+                    || (nextLoc.getX() >= height)
+                    || (nextLoc.getY() >= width)) {
+                return;
+            }
+            // 0. test if the location is valid regarding rocks.
+            int linearPos = nextLoc.getLinear();
+            int nbRocks = state.getRocks()[linearPos];
+            if (nbRocks != 0) {
                 return;
             }
 
@@ -205,8 +325,13 @@ public class RockyMine {
             // 1. test if there is no explosion harmful
             // 2. if no problem, add the move with the score updated.
 
-            TurnState stateAfter = state;
+            TurnState stateAfter = new TurnState(state);
             stateAfter.setLocation(nextLoc);
+            int goldToDig = stateAfter.getGold()[nextLoc.getLinear()];
+            if (goldToDig > 0) {
+                stateAfter.setScore(stateAfter.getScore() + goldToDig);
+                stateAfter.getGold()[nextLoc.getLinear()] = 0;
+            }
             addMove(state, move, stateAfter);
         }
     }
@@ -226,14 +351,17 @@ public class RockyMine {
     public String collectGold(int[] dynamite, int[] effect, int W,
             int[] gold, int[] rocks, int maxMoves) {
         this.width = W;
-        this.height = gold.length/W;
+        this.height = gold.length / W;
         String result = new String();
         TurnState initState = new TurnState(rocks, gold, new Location(0, 0), 0, new Location[0]);
         Graph graph = new Graph(initState);
         TurnState currentState = initState;
         int movesDone = 0;
         while (movesDone < maxMoves) {
-            result += graph.computeNextMoves(currentState);
+            MoveResult move = graph.computeNextMoves(currentState);
+            result += move.getCharacter();
+            currentState = move.getState();
+            System.err.println(move.getCharacter() + " - " + currentState.getLocation().toString());
             movesDone++;
         }
         return result;
