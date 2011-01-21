@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>Code Review</title>
+  <link rel="stylesheet" href="projectstyle.css" type="text/css">
+</head>
+<body>
+<div class="matrix">
+<h1>Code Review</h1>
+<p><font size="+2">Package: %packageName%<br>
+</font></p>
+<p class="author">Author: %authorFullName%</p>
+<hr>
+<br>
+<table style="width: 100%;" border="1" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <th colspan="2">Review information</th>
+    </tr>
+    <tr>
+      <td width="50%">Project / SAR</td>
+      <td width="50%">%projectName% %versionNumber%</td>
+    </tr>
+    <tr>
+      <td width="50%">Project Number</td>
+      <td width="50%">%projectNumber%</td>
+    </tr>
+    <tr>
+      <td width="50%">Project Area</td>
+      <td width="50%">%projectArea%</td>
+    </tr>
+    <tr>
+      <td width="50%">Project Manager/Release Manager</td>
+      <td width="50%">%managerFullName%</td>
+    </tr>
+    <tr>
+      <td width="50%">Program name(s) or ref - FILES TO REVIEW</td>
+      <td width="50%"><a href="%packageDiffLog%">LINK</a> to files
+-
+(Corresponding package <a href="%packageChangeLog%">ChangeLog</a>
+contains version and user info)</td>
+    </tr>
+    <tr>
+      <td width="50%">Code Review date</td>
+      <td width="50%">%reviewDate%<br>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%">Participants (with titles) in this review</td>
+      <td width="50%">%author%<br>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%">Number of defects found</td>
+      <td width="50%">%defectsNumber%<br>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%">
+      <div>This review is final (Yes/No:)<br>
+      </div>
+      <div>If No:&acute;This review must be repeated at date:<br>
+      </div>
+      </td>
+      <td width="50%">%mustBeRepeated%</td>
+    </tr>
+  </tbody>
+</table>
+<table>
+  <tbody>
+    <tr>
+      <td>
+      <table style="width: 100%;">
+        <tbody>
+          <tr>
+            <td style="text-align: right;">signed by Reviewer: <br>
+date: </td>
+            <td style="text-align: left;">%author%<br>%reviewDate%<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table style="width: 100%;">
+  <tbody>
+    <tr>
+      <th colspan="2">Approval</th>
+    </tr>
+    <tr>
+      <td width="50%">This Code Review is approved by (PM) </td>
+      <td width="50%">%managerFullName%<br>Date:%approvalDate%
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</body>
+</html>
