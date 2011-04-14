@@ -305,7 +305,7 @@
     <target name="dev_submission" depends="test">
         <jar jarfile="${dev_submission.jar}"
              basedir="."
-             includes="${configdir}/**,${javamain}/**/*.java,${javatests}/${packagedir}/**,${testlogdir}/**,${testfiles}/**,${docsdir}/**"
+             includes="build.xml,${configdir}/**,${javamain}/**/*.java,${javatests}/${packagedir}/**,${testlogdir}/**,${testfiles}/**,${docsdir}/**"
              excludes="${javatests}/${packagedir}/AllTests.java,${javatests}/${packagedir}/stresstests/*,${javatests}/${packagedir}/failuretests/*,
                        ${javatests}/${packagedir}/accuracytests/*"
         />

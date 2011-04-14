@@ -1,0 +1,85 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"></head><body>Downloads:
+<ul>
+<li><a href="http://www.topcoder.com/contest/problem/ImageScanner/ImageScannerVis.jar">ImageScannerVis.jar</a></li>
+<li><a href="http://www.topcoder.com/contest/problem/ImageScanner/ImageScannerVis.java">ImageScannerVis.java</a></li>
+<li><a href="http://www.topcoder.com/contest/problem/ImageScanner/letters.zip">letters.zip</a></li>
+</ul>
+
+<hr>
+
+To use the visualizer for testing your solution locally, you'll have to adopt your solution to read 
+the parameters from standard in and write the output to standard out. 
+This doesn't affect the functioning of the solution you submit to our server.
+<br><br>
+
+The visualizer uses pre-generated <a href="http://www.topcoder.com/contest/problem/ImageScanner/letters.zip">images</a> of letters.
+Therefore, in order for it to work properly, make sure that you download our set of images and put it in directory
+called "letters" located in the directory from which you run the visualizer.
+
+<br><br>
+
+Your program should first read the parameters <b>H</b>, <b>W</b>, <b>nb</b> and <b>nLetter</b>.
+To imitate one call of <b>ImageToScan.scan</b>, you should print '?' character (in a separate line, quotes for clarity only), 
+then print <b>row</b> parameter and flush standard out.
+After each "call" written to standard out, you should read one line representing the return of the function.
+Finally, print any non-'?' character (in a separate line) and <b>H</b> lines containing 
+the elements of your return (each one in a separate line) and flush standard out.
+
+<br><br>
+
+To do this, you should implement the following pseudocode:
+<pre>    string scan(row)
+    {   printLine('?')
+        printLine(row)
+        flush(stdout)
+        return readLine()
+    }
+    
+    main()
+    {   H = int(readLine())
+        W = int(readLine())
+        nb = int(readLine())
+        nLetter = int(readLine())
+        ret = restore(H,W,nb,nLetter)
+        printLine('!')
+        for (i=0; i&lt;H; i++)
+            printLine(ret[i])
+        flush(stdout)
+    }
+</pre>
+
+To run the visualizer with your solution, you should run:
+<pre>java -jar ImageScannerVis.jar -exec "&lt;command&gt;" -seed &lt;seed&gt;</pre>
+
+Here, &lt;command&gt; is the command to execute your program, 
+and &lt;seed&gt; is seed for test case generation.
+Additionally you can use the following options:
+
+<br><br>
+
+<ul><li>
+-novis to turn off the visualization.
+</li><li>
+-delay &lt;ms&gt; to set the delay between visualizing scans, in milliseconds.
+</li><li>
+-manual to solve the problem by hand. In manual mode you can left-click 
+on any pixel of the image to change your guess for it, left-click 
+outside of the image
+to scan the row in which you clicked, or right-click anywhere to submit 
+your guess. You won't be able to change the guesses for pixels in 
+scanned
+rows, or to scan the same row twice.
+</li><li>
+-size to set the size of "pixel" in visualization.
+</li><li>
+-hint to see the actual image as a hint.
+</li></ul>
+
+Finally, you can print any debug information of your solution to standard error, 
+and it will be forwarded to the standard out of the visualizer.
+<br><br>
+For more information on using visualizer see the following
+<a href="http://apps.topcoder.com/forums/?module=Thread&amp;&amp;threadID=670892">thread</a>.
+Note that this is not a troubleshooting thread; please use the match <a href="http://apps.topcoder.com/forums/?module=ThreadList&amp;forumID=543538">forum</a> for questions.
+</body></html>

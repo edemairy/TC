@@ -1,11 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://www.netbeans.org/ns/project/1">
-    <type>org.netbeans.modules.java.j2seproject</type>
+    <type>org.netbeans.modules.ant.freeform</type>
     <configuration>
-        <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
-            <name>BloomFilter</name>
-            <source-roots/>
-            <test-roots/>
-        </data>
+        <general-data xmlns="http://www.netbeans.org/ns/freeform-project/1">
+            <name>Bloom Filter</name>
+        </general-data>
+        <general-data xmlns="http://www.netbeans.org/ns/freeform-project/2">
+            <!-- Do not use Project Properties customizer when editing this file manually. -->
+            <name>Bloom Filter</name>
+            <properties/>
+            <folders>
+                <source-folder>
+                    <label>src/java/tests</label>
+                    <type>java</type>
+                    <location>src/java/tests</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+                <source-folder>
+                    <label>src/java/main</label>
+                    <type>java</type>
+                    <location>src/java/main</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+                <source-folder>
+                    <label>Bloom Filter</label>
+                    <location>.</location>
+                    <encoding>UTF-8</encoding>
+                </source-folder>
+            </folders>
+            <ide-actions>
+                <action name="build">
+                    <target>compile</target>
+                </action>
+                <action name="clean">
+                    <target>clean</target>
+                </action>
+                <action name="javadoc">
+                    <target>javadoc</target>
+                </action>
+                <action name="test">
+                    <target>test</target>
+                </action>
+                <action name="rebuild">
+                    <target>clean</target>
+                    <target>compile</target>
+                </action>
+            </ide-actions>
+            <view>
+                <items>
+                    <source-folder style="packages">
+                        <label>src/java/tests</label>
+                        <location>src/java/tests</location>
+                    </source-folder>
+                    <source-folder style="packages">
+                        <label>src/java/main</label>
+                        <location>src/java/main</location>
+                    </source-folder>
+                    <source-file>
+                        <location>build.xml</location>
+                    </source-file>
+                </items>
+                <context-menu>
+                    <ide-action name="build"/>
+                    <ide-action name="rebuild"/>
+                    <ide-action name="clean"/>
+                    <ide-action name="javadoc"/>
+                    <ide-action name="test"/>
+                </context-menu>
+            </view>
+        </general-data>
+        <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/2">
+            <compilation-unit>
+                <package-root>src/java/tests</package-root>
+                <unit-tests/>
+                <source-level>1.5</source-level>
+            </compilation-unit>
+            <compilation-unit>
+                <package-root>src/java/main</package-root>
+                <source-level>1.5</source-level>
+            </compilation-unit>
+        </java-data>
     </configuration>
 </project>
