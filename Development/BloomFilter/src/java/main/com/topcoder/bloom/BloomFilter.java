@@ -4,12 +4,9 @@
 package com.topcoder.bloom;
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 import java.util.BitSet;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * <p>
@@ -116,7 +113,7 @@ public class BloomFilter implements Cloneable {
      * @throws IllegalArgumentException if any of parameters is not positive, errorRate is not less than 1.0 or
      * there is not enough memory to allocate the filter.
      */
-    public BloomFilter(int capacity, float errorRate) {
+    public BloomFilter(final int capacity, final float errorRate) {
         this(capacity, errorRate, DefaultHashFunctionFamily.class);
     }
 
