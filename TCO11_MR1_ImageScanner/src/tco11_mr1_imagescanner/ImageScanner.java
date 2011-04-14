@@ -30,22 +30,22 @@ class ImageScanner {
                 if ((j - 1) >= 0) {
                     nbNeighbours += val(result[i - 1].charAt(j - 1));
                 }
-                nbNeighbours += val(result[i - 1].charAt(j));
-                if ((j - 1) >= 0) {
-                    nbNeighbours += val(result[i - 1].charAt(j - 1));
+                nbNeighbours += 2*val(result[i - 1].charAt(j));
+                if ((j + 1) < W) {
+                    nbNeighbours += val(result[i - 1].charAt(j + 1));
                 }
                 if ((i + 1) < H) {
                     if ((j - 1) >= 0) {
                         nbNeighbours += val(result[i + 1].charAt(j - 1));
                     }
                     nbNeighbours += val(result[i + 1].charAt(j));
-                    if ((j - 1) >= 0) {
-                        nbNeighbours += val(result[i + 1].charAt(j - 1));
+                    if ((j + 1) < W) {
+                        nbNeighbours += val(result[i + 1].charAt(j + 1));
                     }
                 }
 
 
-                if (nbNeighbours > 3) {
+                if (nbNeighbours > 4) {
                     buffer.append('1');
                 } else {
                     buffer.append('0');
