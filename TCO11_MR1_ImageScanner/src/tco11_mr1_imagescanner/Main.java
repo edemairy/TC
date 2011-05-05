@@ -16,7 +16,7 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         ImageScanner imageScanner = new ImageScanner();
         Scanner in = new Scanner(System.in);
         int H = Integer.decode( in.nextLine() );
