@@ -1,0 +1,66 @@
+
+<!-- saved from url=(0067)http://www.topcoder.com/contest/problem/QualityPolygons/manual.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></head><body>Downloads:
+<ul>
+<li><a href="http://www.topcoder.com/contest/problem/QualityPolygons/Tester.jar">Tester.jar</a></li>
+<li><a href="http://www.topcoder.com/contest/problem/QualityPolygons/QualityPolygonsVis.java">QualityPolygonsVis.java</a></li>
+</ul>
+<hr>
+
+To use the visualizer for testing your solution locally, you'll have to adopt your solution to read 
+the parameters from standard in and write the output to standard out. 
+This doesn't affect the functioning of the solution you submit to our server.
+<br><br>
+
+
+Your program should first read the number of elements in <b>points</b> N. After this it should read N elements of <b>points</b>, one per line.
+Finally, <b>sidesDiff</b> and <b>radiiDiff</b> follow, each in a separate line. After the calculations are done, print the number of elements
+in your return, followed by elements themselves, one per line.
+Finally, flush standard out.
+<br><br>
+
+To do this, you should implement the following pseudocode:
+<pre>    N = int(readLine())
+    for (i=0; i &lt; N; i++)
+        points[i] = int(readLine())
+    sidesDiff = int(readLine())
+    radiiDiff = int(readLine())
+    
+    ret = choosePolygons(points, sidesDiff, radiiDiff)
+    printLine(ret.size())
+    for (i=0; i &lt; ret.size(); i++)
+        printLine(ret[i])
+    flush(stdout)
+</pre>
+
+To run the tester with your solution, you should run:
+<pre>java -jar Tester.jar -exec "&lt;command&gt;" -seed &lt;seed&gt;</pre>
+
+Here, &lt;command&gt; is the command to execute your program, 
+and &lt;seed&gt; is seed for test case generation.
+Additionally you can use the following options:
+<ul><li>
+-vis to turn on visualization.
+</li><li>
+-nostrict to allow score to be calculated even if some of your polygons are invalid. The default behaviour (when this
+option is absent) is exactly as written in the problem statement, i.e., you score will be 0 if at least one of your
+polygons is invalid. If this option is present, the score will be calculated only based on valid polygons; if there
+are any invalid polygons, they will just be ignored for the purpose of score calculation.
+</li><li>
+-manual to allow editing the polygons by hand. If combined with -exec option, you will be able to edit the polygons your
+solution returns; otherwise you will have to create all polygons from the scratch. To create a new polygon, click on any
+unused point and proceed to editing it. To edit an existing one, select it by clicking on any point
+it contains. When editing a polygon, it will be highlighted in blue color; the last vertex will have a lighter color than
+the other ones. You can add a vertice to the polygon after its last vertice by clicking any unused point, or delete the last vertice by
+clicking on it. You can't edit vertices except for the last one. To delete the polygon you're editing, click "Del Poly" button. To add
+the polygon you're editing to the list of polygons, click "Add Poly" button. This will validate the polygon, add it to the list of polygons if
+it is valid, or print error message if it is not. Once you're happy with the polygons you have, click "Submit" button.
+</li><li>
+-debug to turn on extra information for manual mode: detailed reports on polygons editing and points indices on the image.
+</li></ul>
+Finally, you can print any debug information of your solution to standard error, 
+and it will be forwarded to the standard out of the tester.
+<br><br>
+For more information on using the tester, see the following <a href="http://forums.topcoder.com/?module=Thread&threadID=670892">thread</a>.
+Note that this is not troubleshooting thread; please use the <a href="http://apps.topcoder.com/forums/?module=ThreadList&forumID=544692">match forum</a> for questions.
+</body></html>
