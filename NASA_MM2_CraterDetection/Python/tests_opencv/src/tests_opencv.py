@@ -13,7 +13,7 @@ __date__ ="$Jun 16, 2011 11:28:24 AM$"
 
 
 #root_dir = "/user/edemairy/home/Dropbox/Photos/training/A15/"
-root_dir = "/user/edemairy/home/Dropbox/Photos/training/LRO/"
+root_dirs = ["/user/edemairy/home/Dropbox/Photos/training/LRO/","/user/edemairy/home/Dropbox/Photos/training/A15/"]
 #image_path = "/user/edemairy/home/Dropbox/Photos/training/A15/AS15-M-1005.lev1_sub4.tif"
 # Structure of the point list: 
 #   N : xl1 : yt1 : xr1 : yb1 : ... : xlN : ytN : xrN : ybN :
@@ -22,26 +22,30 @@ root_dir = "/user/edemairy/home/Dropbox/Photos/training/LRO/"
 
 
 if __name__ == "__main__":
-    file_names = glob.glob(root_dir+"*.jpg")
-    ground_truth = glob.glob(root_dir+"*.lms")
-    for file_name in file_names:        
-        name=os.path.split(file_name)[1]
-        file = open(ground_truth[0], "r")
-        result = re.compile(name+"(.*)").search(file.read())
-        raw_points = result.group(1)
     
-        image = cvLoadImage(file_name)
-        split_points = raw_points.split(":")
-        N = int(split_points[1])
-        for i in range(0,N):
-            point_offset = i*4+1
-            xl = int(split_points[point_offset+1])
-            yt = int(split_points[point_offset+2])
-            xr = int(split_points[point_offset+3])
-            yb = int(split_points[point_offset+4])            
-            cvRectangle(image, cvPoint(xl,yt), cvPoint(xr,yb), (100,100,255), 2)
-        cvShowImage("image", image)
-        cvWaitKey()
-    exit(0)
+    for root_dir in root_dirs:
+        file_names = glob.glob(root_dir+"*.jpg")+glob.glob(root_dir+"*.tif")
+        ground_truth = glob.glob(root_dir+"*.lms")
+        for file_name in file_names:             
+            name=os.path.split(file_name)[1]
+            save_file_name = re.sub(re.compile(name), "GT_"+name, file_name)
+            file = open(ground_truth[0], "r")
+            result = re.compile(name+"(.*)").search(file.read())
+            raw_points = result.group(1)
+    
+            image = cvLoadImage(file_name)
+            split_points = raw_points.split(":")
+            N = int(split_points[1])
+            for i in range(0,N):
+                point_offset = i*4+1
+                xl = int(split_points[point_offset+1])
+                yt = int(split_points[point_offset+2])
+                xr = int(split_points[point_offset+3])
+                yb = int(split_points[point_offset+4])            
+                cvRectangle(image, cvPoint(xl,yt), cvPoint(xr,yb), (100,100,255), 2)
+            result = cvSaveImage(save_file_name, image)
+            print "sauvegarde de %s = %d" % (save_file_name, result)
+    print "fini"
+        
     
     
