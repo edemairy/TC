@@ -1,0 +1,1 @@
+TESTER_DIR=/user/edemairy/home/Documents/TC/NASA_MM2_CraterDetection; pushd ~/Dropbox/Photos/training/A15/; java -jar /user/edemairy/home/Documents/TC/NASA_MM2_CraterDetection/CraterDetection/files/Tester.jar -exec "java -jar /user/edemairy/home/Documents/TC/NASA_MM2_CraterDetection/CraterDetection/dist/CraterDetection.jar"; popd
