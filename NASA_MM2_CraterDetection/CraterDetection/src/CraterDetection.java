@@ -1,9 +1,7 @@
-/*
+
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
- * 
- */
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -95,13 +93,21 @@ public class CraterDetection {
                 int currentPos = pos(i, j);
                 if (compos[currentPos] == 0) {
                     bfs(currentPos);
-                    numComp++;
                 }
             }
         }
-        
-        //mergeBlobs();
-        
+
+        mergeBlobs();
+
+
+        BufferedImage image = new BufferedImage(W, H, BufferedImage.TYPE_BYTE_INDEXED);
+        for (int i = 0; i < W; i++) {
+            for (int j = 0; j < H; j++) {
+                image.setRGB(i, j, compos[pos(i, j)]);
+            }
+        }
+        Graphics2D g2d = (Graphics2D) image.getGraphics();
+
         for (int comp = 1; comp < numComp; ++comp) {
             if (merged.contains(comp)) {
                 continue;
@@ -113,8 +119,9 @@ public class CraterDetection {
             int height = brn.get(comp) - ltn.get(comp);
             assert (height >= 0);
             if ((size.get(comp) > 25)
-                    && ((1.0 * width * height) / (W * H) < 0.10) //                  && (Math.sqrt(Math.pow(Math.abs(tn - cn.get(comp)), 2) + Math.pow(Math.abs(tp - cp.get(comp)), 2)) < radiusThreshold)
-                    && ((1.0 * size.get(comp) / (width * height)) > 0.65)) {
+                    && ((1.0 * width * height) / (W * H) < 0.35) //                  && (Math.sqrt(Math.pow(Math.abs(tn - cn.get(comp)), 2) + Math.pow(Math.abs(tp - cp.get(comp)), 2)) < radiusThreshold)
+//                    && ((1.0 * size.get(comp) / (width * height)) > 0.50)
+                    ) {
 
                 int xl = ltp.get(comp);
                 int yt = ltn.get(comp);
@@ -130,10 +137,20 @@ public class CraterDetection {
                 assert (yb < H);
 
                 preresult.add(this.name + " " + xl + " " + yt + " " + xr + " " + yb);
-//                g2d.drawRect( ltp.get(comp), ltn.get(comp),   width, height);
+                g2d.drawRect(ltp.get(comp), ltn.get(comp), width, height);
             }
 
         }
+
+
+        File oFile = new File("RES_" + name + ".png");
+        try {
+            ImageIO.write(image, "png", oFile);
+        } catch (IOException ex) {
+            Logger.getLogger(CraterDetection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
 
         return 0;
     }
@@ -185,66 +202,98 @@ public class CraterDetection {
                 }
             }
         }
-        this.size.put(numComp, sz);
-        this.ltn.put(numComp, new Integer(ltn));
-        this.ltp.put(numComp, new Integer(ltp));
-        this.brn.put(numComp, new Integer(brn));
-        this.brp.put(numComp, new Integer(brp));
-        assert( sz <= ((brn-ltn)*(brp-ltp)));
-        
-        cn.put(numComp, new Integer((int) sn / sz));
-        cp.put(numComp, new Integer((int) sp / sz));
+        //if ((1.0 * sz / (W * H)) < 0.4) {
+            this.size.put(numComp, sz);
+            this.ltn.put(numComp, new Integer(ltn));
+            this.ltp.put(numComp, new Integer(ltp));
+            this.brn.put(numComp, new Integer(brn));
+            this.brp.put(numComp, new Integer(brp));
+            assert (sz <= ((brn - ltn) * (brp - ltp)));
 
+            cn.put(numComp, new Integer((int) sn / sz));
+            cp.put(numComp, new Integer((int) sp / sz));
+            numComp++;
+        //}
     }
 
     private int pos(int i, int j) {
         return (i * H + j);
     }
 
+    private void printBlob(int numBlob) {
+        System.err.println("numBlob = " + numBlob);
+        System.err.println("size = " + size.get(numBlob));
+        System.err.println("xl = " + ltp.get(numBlob) + " yt = " + ltn.get(numBlob) + " xr = " + brp.get(numBlob) + " yb = " + brn.get(numBlob));
+
+    }
+
     private void mergeBlobs() {
         int numCompStart = this.numComp;
         for (int blobSource = 1; blobSource < numCompStart; blobSource++) {
+            if (merged.contains(blobSource)) {
+                continue;
+            }
+            boolean mergeDone = false;
+            int txl = ltp.get(blobSource);
+            int tyt = ltn.get(blobSource);
+            int txr = brp.get(blobSource);
+            int tyb = brn.get(blobSource);
+            int tsize = size.get(blobSource);
+            int tcn = cn.get(blobSource);
+            int tcp = cp.get(blobSource);
             for (int blobDest = 1; blobDest < numCompStart; blobDest++) {
-                int xl = Math.min(ltp.get(blobSource), ltp.get(blobDest));
-                int yt = Math.min(ltn.get(blobSource), ltn.get(blobDest));
-                int xr = Math.max(brp.get(blobSource), brp.get(blobDest));
-                int yb = Math.max(brn.get(blobSource), brn.get(blobDest));
-                int nSize = size.get(blobSource) + size.get(blobDest);
-                double r = (1.0 * nSize) / ((xr - xl) * (yb - yt));
-                
-                if (r >0.75) {
-                    System.err.println("r="+r);
+                if (merged.contains(blobDest)) {
+                    continue;
+                }
+                int xl = Math.min(txl, ltp.get(blobDest));
+                int yt = Math.min(tyt, ltn.get(blobDest));
+                int xr = Math.max(txr, brp.get(blobDest));
+                int yb = Math.max(tyb, brn.get(blobDest));
+                int maxSurface = ((xr - xl) * (yb - yt));
+                int nSize = Math.min(tsize + size.get(blobDest), maxSurface);
+                double r = (1.0 * nSize) / maxSurface;
+
+
+
+                if ( (r > 0.95) 
+                        && 
+                        (1.0*maxSurface/(W*H) < 0.35) 
+                        ){
+//                    printBlob(blobSource);
+//                    printBlob(blobDest);
+//                    System.err.println("r=" + r);
+                    mergeDone = true;
                     merged.add(blobDest);
-                    merged.add(blobSource);
-                    this.size.put(this.numComp, nSize);
-                    this.ltn.put(this.numComp, new Integer(yt));
-                    this.ltp.put(this.numComp, new Integer(xl));
-                    this.brn.put(this.numComp, new Integer(xr));
-                    this.brp.put(this.numComp, new Integer(yb));
 
-                    int newCn = size.get(blobSource) * cn.get(blobSource) + size.get(blobDest) * cn.get(blobDest);
-                    int newCp = size.get(blobSource) * cp.get(blobSource) + size.get(blobDest) * cp.get(blobDest);
+                    tyt = yt;
+                    txl = xl;
+                    tyb = yb;
+                    txr = xr;
+                    tcn = tsize * tcn + size.get(blobDest) * cn.get(blobDest);
+                    tcp = tsize * tcp + size.get(blobDest) * cp.get(blobDest);
+                    tsize = nSize;
+                    //printBlob(numComp);
 
-                    cn.put(numComp, newCn);
-                    cp.put(numComp, newCp);
-
-                    this.numComp++;
 
                 }
+            }
+            if (mergeDone) {
+                merged.add(blobSource);
+                this.size.put(this.numComp, tsize);
+                this.ltn.put(this.numComp, new Integer(tyt));
+                this.ltp.put(this.numComp, new Integer(txl));
+                this.brn.put(this.numComp, new Integer(tyb));
+                this.brp.put(this.numComp, new Integer(txr));
+                cn.put(numComp, tcn);
+                cp.put(numComp, tcp);
+//                printBlob(numComp);
+                this.numComp++;
             }
         }
     }
 
     public String[] getCraters() {
-        /*
-        BufferedImage image = new BufferedImage(W, H, BufferedImage.TYPE_BYTE_INDEXED);
-        for (int i = 0; i < H; i++) {
-        for (int j = 0; j < W; j++) {
-        image.setRGB(i, j, compos[pos(i, j)]);
-        }
-        }
-        Graphics2D g2d = (Graphics2D)image.getGraphics();
-         */
+
 
         String result[] = new String[Math.min(1000000, preresult.size())];
         System.err.println(result.length);
@@ -255,22 +304,12 @@ public class CraterDetection {
         }
 
 
-
-        /*        
-        File oFile = new File("compos.png");
-        try {
-        ImageIO.write(image, "png", oFile);
-        } catch (IOException ex) {
-        Logger.getLogger(CraterDetection.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-         */
         return result;
     }
     private ArrayList<String> preresult;
 
     public int init() {
-        threshold = 100;
+        threshold = 75;
         radiusThreshold = 10;
 
         preresult = new ArrayList<String>();
