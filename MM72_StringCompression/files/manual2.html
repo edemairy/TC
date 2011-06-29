@@ -1,0 +1,94 @@
+
+<!-- saved from url=(0070)http://www.topcoder.com/contest/problem/StringCompression/manual2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></head><body><h3> 
+Downloads
+</h3> 
+<ul> 
+<li> 
+<a href="http://www.topcoder.com/contest/problem/StringCompression/Tester.jar">Tester.jar</a> 
+</li> 
+<li> 
+<a href="http://www.topcoder.com/contest/problem/StringCompression/StringCompressionTester.java">Source Code</a> 
+</li> 
+</ul> 
+ 
+<hr> 
+ 
+<p> 
+In order to use the offline tester tool for testing your solution locally, you'll have to modify your solution
+by adding the main method that interacts with the tester via reading data from standard input and
+writing data to standard output. Since you do not change the implementation of method <b>compress</b>, this doesn't affect the way your solution
+works when being submitted to our server.
+</p> 
+
+<p>
+To simulate <b>compress</b> call on server side, your program should read the following data from standard input in this exact order
+(each integer/string is located in a separate line):
+</p><ul>
+<li>String <b>data</b>.</li>
+<li>Integer N indicating the number of elements in <b>limits</b>.</li>
+<li>Integers <b>limits</b>[0], <b>limits</b>[1], ..., <b>limits</b>[N-1], in this order.</li>
+</ul>
+<p></p>
+
+<p>
+Once this data is read, pass it to your implementation of <b>compress</b> method and let <i>ret</i> be the return value. Write the following
+data to standard output in this exact order (each integer/string in a separate line):
+</p><ul>
+<li>Integer <i>len</i> denoting the number of elements in <i>ret</i>.</li>
+<li>Strings <i>ret</i>[0], <i>ret</i>[1], ..., <i>ret</i>[<i>len</i>-1], in this exact order.</li>
+</ul> 
+<p></p> 
+
+<p>
+Make sure to flush the standard output after all this data is written.
+</p>
+ 
+<p> 
+In other words, you should implement the following pseudocode in the main method of your solution:
+</p> 
+<pre>    data = readLine()
+    N = parseInt(readLine())
+    for (i=0; i &lt; N; i++)
+        limits[i] = parseInt(readLine())
+
+    ret = compress(data, limits)
+
+    printLine(ret.length)
+    for (i=0; i &lt; ret.length; i++)
+        printLine(ret[i])
+
+    flush(stdout)
+</pre> 
+ 
+<p> 
+In order to run the tester, you should use the following command:
+</p> 
+ 
+<pre>java -jar Tester.jar -exec "&lt;command&gt;"</pre>
+ 
+<p> 
+Here &lt;command&gt; is the command you would use to execute your solution. If your compiled solution is an executable file, the command will just
+be the full path to it, for example, "C:\TopCoder\solution.exe" or "~/topcoder/solution". In case your compiled solution is to be run
+with the help of an interpreter, for example, if you program in Java, the command will be something like "java -cp C:\TopCoder Solution".
+</p> 
+
+<p> 
+Additionally you can use the following options (all are optional):
+</p> 
+ 
+<ul> 
+<li><tt>-seed &lt;value&gt;</tt>. This allows to run the tester on the testcase generated using the given seed (by default it is 1).</li> 
+<li><tt>-silent</tt>. The default behaviour of the tester is to output some debug information. You can use this option
+to suppress this output, leaving only score.</li>
+</ul> 
+ 
+<p> 
+You can print any debug information of your solution to the standard error stream and it will be forwarded to the standard output of the tester.
+</p> 
+ 
+<p> 
+For more information on using offline testers, please check the following <a href="http://forums.topcoder.com/?module=Thread&threadID=670892&start=0">recipe draft</a> 
+from TopCoder Cookbook. Note that this is not a troubleshooting thread, please use the <a href="http://apps.topcoder.com/forums/?module=ThreadList&forumID=545391">match forum</a>
+for questions instead.
+</p> </body></html>
