@@ -9,6 +9,9 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
+
+
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -18,7 +21,9 @@ import java.util.Set;
  * @author edemairy
  */
 public class StringCompression {
-
+    private static void debug(String str) {
+    //    System.err.println(str);
+    }
     /**
      * @param args the command line arguments
      */
@@ -27,22 +32,22 @@ public class StringCompression {
         Scanner scanner = new Scanner(System.in);
 
         String data = scanner.nextLine();
-        System.err.println("data=" + data);
+        debug("data=" + data);
         int N = scanner.nextInt();
         scanner.nextLine();
-        System.err.println("N=" + N);
+        debug("N=" + N);
         int limits[] = new int[N];
         for (int i = 0; i < N; i++) {
             limits[i] = scanner.nextInt();
             scanner.nextLine();
-            System.err.println("limits[" + i + "]=" + limits[i]);
+            debug("limits[" + i + "]=" + limits[i]);
         }
         String[] ret = compressor.compress(data, limits);
-        System.err.println("length=" + ret.length);
+        debug("length=" + ret.length);
         System.out.println(ret.length);
         for (int i = 0; i < ret.length; ++i) {
             System.out.println(ret[i]);
-            System.err.println(ret[i]);
+            debug(ret[i]);
         }
         System.out.flush();
     }
@@ -71,12 +76,11 @@ public class StringCompression {
         return result;
     }
 
-    public String[] compress(String data, int[] limits) {
-
-        System.err.println("data.length = " + data.length());
+    public String[] compressInternal(String data, int[] limits) {
+        debug("data.length = " + data.length());
         if (limits.length == 1) {
             if (data.length() == limits[0]) {
-                System.err.println("Bingo!");
+                debug("Bingo!");
                 String[] result = new String[1];
                 result[0] = data;
                 return result;
@@ -115,18 +119,18 @@ public class StringCompression {
 
 
 
-                    System.err.println("limits.length=" + limits.length + " l=" + l + " string=" + fmaxc + " maxc=" + maxc);
+                    debug("limits.length=" + limits.length + " l=" + l + " string=" + fmaxc + " maxc=" + maxc);
                     if (maxc != 0) {
                         StringBuffer newBuffer = new StringBuffer();
                         for (int is = 0; is < (S - l); ++is) {
                             if (delta(data.substring(is, is + l), fmaxc) < ceil) {
-                                newBuffer.append((char) (limits.length+'0'-1));
+                                newBuffer.append((char) (limits.length + '0'));
                                 is += (l - 1);
                             } else {
                                 newBuffer.append(data.charAt(is));
                             }
                         }
-                        System.err.println("newBuffer = " + newBuffer);
+                        debug("newBuffer = " + newBuffer);
                         int[] newLimitsI = new int[limitsI.length - 1];
                         int cptNewLimitsI = 0;
                         for (int j = 0; j < limitsI.length; ++j) {
@@ -135,19 +139,17 @@ public class StringCompression {
                                 cptNewLimitsI++;
                             }
                         }
-                        String[] tempResult = compress(newBuffer.toString(), newLimitsI);
+                        String[] tempResult = compressInternal(newBuffer.toString(), newLimitsI);
                         if (tempResult != null) {
-                            System.err.println("Bingo" + limits.length);
+                            debug("Bingo" + limits.length);
                             String[] result = new String[limits.length];
-//                            Set<String> bagString = new HashSet<String>(Arrays.asList(tempResult));
-//                            bagString.add(fmaxc);
-                            
-                            for (int ri = 0; ri < result.length-1; ri++) {
-                                result[ri] = tempResult[ri];                                
+
+                            for (int ri = 0; ri < result.length - 1; ri++) {
+                                result[ri] = tempResult[ri];
                             }
-                            result[result.length-1]=fmaxc;
+                            result[result.length - 1] = fmaxc;
                             for (int ri = 0; ri < result.length; ri++) {
-                                System.err.println("ri:"+ri+" "+result[ri]+" length="+result[ri].length());
+                                debug("ri:" + (ri + 1) + " " + result[ri] + " length=" + result[ri].length());
                             }
                             return result;
                         }
@@ -156,5 +158,37 @@ public class StringCompression {
             }
         }
         return null;
+    }
+
+    public String[] compress(String data, int[] limits) {
+        String[] result = compressInternal(data, limits);
+        for (int ri = 0; ri < result.length; ri++) {
+            if (result[ri].length() == limits[ri]) {
+                continue;
+            } else {
+                int ri2 = ri + 1;
+                while (result[ri2].length() != limits[ri]) {
+                    ri2++;
+                }
+                String temp = result[ri];
+                result[ri] = result[ri2];
+                result[ri2] = temp;
+                for (int ri3 = 0; ri3 < result.length; ri3++) {
+                    StringBuffer sb = new StringBuffer(result[ri3]);
+                    for (int cptSb = 0; cptSb < sb.length(); cptSb++) {
+                        char cri = (char) ('1' + ri);
+                        char cri2 = (char) ('1' + ri2);
+                        if (sb.charAt(cptSb) == cri) {
+                            sb.setCharAt(cptSb, cri2);
+                        } else if (sb.charAt(cptSb) == cri2) {
+                            sb.setCharAt(cptSb, cri);
+                        }
+
+                    }
+                    result[ri3] = sb.toString();
+                }
+            }
+        }
+        return result;
     }
 }
