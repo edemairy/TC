@@ -1,0 +1,130 @@
+<H3> 
+Downloads
+</H3> 
+<ul>
+<li>
+<A href="Tester.jar">Tester.jar</a>
+</li>
+<li> 
+<A href="data_files.zip">Data files</a> (just unpack to use; change contents of "trait_inputs.tsv" and "trait_answers.tsv" if you want
+to test not on example traits)
+</li>
+<li> 
+<A href="OrdinalTraitAssociationMappingTester.java">Source Code</a> 
+</li> 
+</ul> 
+ 
+<hr> 
+ 
+<p> 
+In order to use the offline tester tool for testing your solution locally, you'll have to modify your solution
+by adding the main method that interacts with the tester via reading data from standard input and
+writing data to standard output. Since you do not change the implementation of method <b>identifyGenes</b>, this
+doesn't affect the way your solution works when being submitted to our server.
+</p>
+
+<p>
+The tester will test your solution on one or several traits and then will calculate the overall score. In order to function properly, it needs
+to get access to 4 files:
+<ol>
+<li>Genotype data file (named "genotype.dat", tester option <tt>-gen</tt> can be used to change the name).</li>
+<li>Combined SNPs file (named "comp_id.dat", tester option <tt>-comp</tt> can be used to change the name).</li>
+<li>Trait inputs file (named "trait_inputs.tsv", tester option <tt>-inp</tt> can be used to change the name). It must be in the same format as
+<a href="v1/sample_trait_inputs.tsv">sample trait inputs</a> file, but the first line must contain the total number of traits instead of
+individual names.</li>
+<li>Trait answers file (name "trait_answers.tsv", tester option <tt>-ans</tt> can be used to change the name). It must be in the same format as
+<a href="v1/sample_trait_answers.tsv">sample trait answers</a> file, but the first line must contain the total number of traits instead of
+gene names.</li>
+</ol>
+</p> 
+
+<p>
+You can download an archive containing these 4 data files <a href="data_files.zip">here</a>. These data files can be used to test on 10 example test
+cases. You can change the contents of "trait_inputs.tsv" and "trait_answers.tsv" to test on different traits. It is not recommended to modify
+the contents of "genotype.dat" and "comp_id.dat".
+</p>
+
+<p>
+Your main method implementation should look like this:
+<ol>
+<li>Read integer <i>gLen</i> from the standard input. It denotes the number of elements in <b>genotype</b>. Then read <i>gLen</i> strings:
+<b>genotype</b>[0], <b>genotype</b>[1], ..., <b>genotype</b>[<i>gLen</i>-1].</li>
+<li>Read integer <i>tLen</i>. If it is 0, stop execution, otherwise proceed to step 3.</li>
+<li><i>tLen</i> denotes the number of elements in <b>traitData</b>. Read <i>tLen</i> integers: <b>traitData</b>[0], <b>traitData</b>[1], ...,
+<b>traitData</b>[<i>tLen</i>-1].</li>
+<li>Create an instance of your solution class file and call <tt>identifyGenes</tt> passing <b>genotype</b> and <b>traitData</b> as parameters. Let <i>ret</i> be
+the return value.</li>
+<li>Print <i>retLen</i>, the number of elements in <i>ret</i>, to the standard output. Then print elements <i>ret</i>[0], <i>ret</i>[1], ...,
+<i>ret</i>[<i>retLen</i>-1], in this exact order. Flush the standard output.</li>
+<li>Proceed to step 2.</li>
+</ol>
+</p>
+ 
+<p>
+Each integer or string that you need to read will be located in a separate line. Each integer or string that you need to print
+must be located in a separate line.
+</p>
+ 
+<p> 
+In other words, you should implement the following pseudocode in the main method of your solution:
+</p> 
+<pre>
+	gLen = int(readLine())
+	for (i = 0, 1, ..., gLen-1) {
+		genotype[i] = readLine()
+	}
+
+	while (true) {
+		tLen = int(readLine())
+		
+		if (tLen == 0) {
+			break
+		}
+
+		for (i = 0, 1, ..., tLen-1) {
+			traitData[i] = int(readLine())
+		}
+
+		ret = identifyGenes(genotype, traitData)
+
+		printLine(length(ret))
+		for (i = 0, 1, ..., length(ret)-1) {
+			printLine(ret[i])
+		}
+		flush(stdout)
+	}
+</pre> 
+ 
+<p> 
+In order to run the tester, you can use the following command:
+</p> 
+ 
+<pre>java -jar Tester.jar -exec "&lt;command&gt;"</pre>
+ 
+<p> 
+Here &lt;command&gt; is the command you would use to execute your solution. If your compiled solution is an executable file, the command will just
+be the full path to it, for example, "C:\TopCoder\solution.exe" or "~/topcoder/solution". In case your compiled solution is to be run
+with the help of an interpreter, for example, if you program in Java, the command will be something like "java -cp C:\TopCoder Solution".
+</p> 
+
+<p> 
+Additionally you can use the following options (all are optional):
+</p> 
+ 
+<ul> 
+<li><tt>-inp &lt;value&gt;, -ans &lt;value&gt;, -gen &lt;value&gt;, -comp &lt;value&gt;</tt>. Allows to change the name of
+file where the tester will look for trait inputs, trait answers, genotype or combined SNPs data, correspondingly, to <i>value</i>.</li> 
+<li><tt>-silent</tt>. The default behaviour of the tester is to output the values of X, Y and Z for each tested trait. It also outputs
+the values of average recall and precision. You can use this option
+to suppress this output, leaving only the overall score, errors and warnings.</li>
+</ul> 
+ 
+<p> 
+You can print any debug information of your solution to the standard error stream and it will be forwarded to the standard output of the tester.
+</p> 
+ 
+<p> 
+For more information on using offline testers, please check the following <a href="http://forums.topcoder.com/?module=Thread&threadID=670892&start=0">recipe draft</a> 
+from TopCoder Cookbook. Note that this is not a troubleshooting thread, please use the <a href="http://apps.topcoder.com/forums/?module=ThreadList&forumID=545693">match forum</a>
+for questions instead.
+</p> 
