@@ -1,5 +1,6 @@
 package com.ibm.support.electronic.cache.dao;
 
+import com.ibm.support.electronic.cache.CachedObjectDAO;
 import com.ibm.support.electronic.cache.Helper;
 import com.ibm.support.electronic.cache.ObjectCacheConfigurationException;
 import com.ibm.support.electronic.cache.PersistenceException;
@@ -21,7 +22,7 @@ import sun.misc.BASE64Decoder;
  * Changed in version1.1:
  * expiration timestamp of CachedObject is retrieved and saved respectively in get() and save() method implementation.
  */
-public class CachedObjectDAOImpl {
+public class CachedObjectDAOImpl implements CachedObjectDAO {
 
     /**
      * <p>
@@ -144,6 +145,7 @@ public class CachedObjectDAOImpl {
      *   connection.close();
      * @param cacheSetName 
      */
+    @Override
     public void deleteByCacheSet(String cacheSetName) throws PersistenceException {
         try {
             Helper.checkNullOrEmpty(cacheSetName,
@@ -223,6 +225,7 @@ public class CachedObjectDAOImpl {
      * @param cacheSetName 
      * @return 
      */
+    @Override
     public CachedObject get(String cacheSetName, String id) throws PersistenceException {
         try {
             String sql = "SELECT T.ID,T.CACHE_SET_NAME,T.CONTENT FROM CACHED_OBJECT T WHERE T.ID=? AND T.CACHE_SET_NAME=?";

@@ -233,14 +233,14 @@ public class CacheManagerImpl implements CacheManager {
 
         Class<?>[] constructorTypes = {Properties.class};
         // create the dao instance
-        cachedObjectDAO = (CachedObjectDAO) createReflectively(cachedObjectDAOClass, new Class[]{prop.getClass()}, new Object[]{prop});
+        cachedObjectDAO = createReflectively(CachedObjectDAO.class, cachedObjectDAOClass, constructorTypes, prop);
 
         // create the printer instance
-        cacheStatisticsPrinter = (CacheStatisticsPrinter) createReflectively(cacheStatisticsPrinterClass, new Class[]{}, new Object[]{});
-
+        cacheStatisticsPrinter = createReflectively(CacheStatisticsPrinter.class, cacheStatisticsPrinterClass, null);
+        
         // create the memory cache instance
-        memoryCache = (MemoryCache) createReflectively(memoryCacheClass, new Class[]{}, new Object[]{});
-
+        memoryCache = createReflectively(MemoryCache.class, memoryCacheClass, constructorTypes, prop);
+        
         // get the max memory size
         maxMemorySize = Helper.getIntProperty(prop, "maxMemorySize", 0) * KILOBYTES;
 
@@ -636,7 +636,7 @@ public class CacheManagerImpl implements CacheManager {
      * @param object 
      */
     @Override
-    public void put(String id, Serializable object) throws ObjectCacheException {
+    public void put(String id, Serializable object) throws ObjectCacheException, PersistenceException {
         String method = "CacheManagerImpl#put(String, Serializable)";
 
         CachedObject cachedObject;
@@ -790,7 +790,7 @@ public class CacheManagerImpl implements CacheManager {
      *   cacheStatistics.setAccessCountsById(new HashMap<String, Integer>());
      * 5 Call cacheStatistics.setPersistedItemCount(), cacheStatistics.setInMemoryItemCount(), cacheStatistics.setMissCount() to set all to 0
      */
-    public synchronized void clear() {
+    public synchronized void clear() throws PersistenceException {
         cachedObjectDAO.deleteByCacheSet(cacheSetName);
         currentInMemorySize = 0;
         memoryCache.clear();

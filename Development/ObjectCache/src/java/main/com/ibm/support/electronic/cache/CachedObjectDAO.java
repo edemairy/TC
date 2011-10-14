@@ -27,7 +27,7 @@ public interface CachedObjectDAO {
      *        It cannot be null or empty.
      * @param cacheSetName 
      */
-    public void deleteByCacheSet(String cacheSetName);
+    public void deleteByCacheSet(String cacheSetName) throws PersistenceException;
 
     /**
      * Get a CachedObject by cache set name and ID
@@ -50,7 +50,7 @@ public interface CachedObjectDAO {
      * @param cacheSetName 
      * @return 
      */
-    public CachedObject get(String cacheSetName, String id);
+    public CachedObject get(String cacheSetName, String id) throws PersistenceException;
 
     /**
      * Insert or update a CachedObject to database
@@ -68,7 +68,7 @@ public interface CachedObjectDAO {
      *  cachedObject is null;
      * @param cachedObject 
      */
-    public void save(CachedObject cachedObject);
+    public void save(CachedObject cachedObject) throws PersistenceException;
 
     /**
      * Delete a particular cached object by cache set name and id
@@ -91,6 +91,6 @@ public interface CachedObjectDAO {
      * @param id 
      * @param cacheSetName 
      */
-    public void delete(String cacheSetName, String id);
+    public void delete(String cacheSetName, String id) throws PersistenceException;
 }
 
