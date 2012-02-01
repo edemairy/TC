@@ -1,2 +1,0 @@
-1.1.2 is fixed. (+save(cachedObject:CachedObject):void implementation details)
-2.1.5 thread-safety is fixed.

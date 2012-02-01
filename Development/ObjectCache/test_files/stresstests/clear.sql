@@ -1,1 +1,0 @@
-delete from CACHED_OBJECT;
