@@ -9,7 +9,10 @@ import java.util.LinkedList;
 import java.util.Locale;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -17,11 +20,82 @@ import java.util.TreeSet;
  */
 public class SynchronousControl {
 
+    public boolean isExit(Location current) {
+        return current.getValue() == EXIT;
+    }
+
+    public boolean isWall(Location current) {
+        return current.getValue() == IMPASSABLE_WALL;
+    }
+
+    private void resetDist(RobotLocation aThis) {
+        for (int r = 0; r < caveHeight; ++r) {
+            Arrays.fill(bestDist[r], Integer.MAX_VALUE);
+        }
+        bestDist[aThis.row][aThis.col] = 0;
+    }
+
+    private int getDist(Location current) {
+        return bestDist[current.row][current.col];
+    }
+
+    private void updateDist(Location newLocation, Directions opposite, int newDist) {
+        bestDir[newLocation.row][newLocation.col] = opposite;
+        setDist(newLocation, newDist);
+    }
     private static Character EMPTY_CELL = ' ';
     private static Character IMPASSABLE_WALL = '#';
     private static Character EXIT = 'x';
     private static int nbTC;
     private static StringBuilder result = new StringBuilder();
+
+    private void computeBFS() {
+
+        for (int r = 0; r < caveHeight; ++r) {
+            Arrays.fill(bestDist[r], -1);
+        }
+        LinkedList<Location> queue = new LinkedList<Location>(exitLocation);
+        for (Location l : queue) {
+            setDist(l, 0);
+        }
+        Location current = null;
+        Location newLocation = null;
+        forCompute:
+        while (!queue.isEmpty()) {
+            current = queue.removeLast();
+
+            ford:
+            for (Directions d : Directions.values()) {
+                try {
+                    newLocation = current.add(d);
+                    if (getDist(newLocation) != -1) {
+                        continue ford;
+                    }
+                    if ((!isWall(newLocation))) {
+                        int newDist = getDist(current) + 1;
+                        updateDist(newLocation, getOpposite(d), newDist);
+                        queue.addFirst(newLocation);
+                        // imposible due to BFS
+                        //else if (getDist(newLocation) > (newDist)) {
+                        //    updateDist(newLocation, getOpposite(d), newDist);
+                        //}
+                    }
+                    if (isExit(newLocation)) {
+                        break forCompute;
+                    }
+                } catch (Location.OutsideMapException ex) {
+                }
+            }
+        }
+    }
+
+    private void setDist(Location l, int i) {
+        bestDist[l.row][l.col] = i;
+    }
+
+    private Directions getDir(RobotLocation loc) {
+        return bestDir[loc.row][loc.col];
+    }
 
     public enum Directions {
 
@@ -151,83 +225,10 @@ public class SynchronousControl {
         }
 
         private void computeBFS() {
-            bfs = new BFS();
-            LinkedList<Location> queue = new LinkedList<Location>();
-            HashSet<Location> used = new HashSet<Location>();
-            queue.add(this);
-            resetDist(this);
-            Location current = null;
-            Location newLocation = null;
-            forCompute:
-            while (!queue.isEmpty()) {
-                current = queue.removeLast();
-                used.add(current);
-                if (isExit(current)) {
-                    break forCompute;
-                }
-                ford:
-                for (Directions d : Directions.values()) {
-                    try {
-                        newLocation = current.add(d);
-                        if (used.contains(newLocation)) {
-                            continue ford;
-                        }
-                        int newDist = getDist(current) + 1;
-                        if ((!isWall(newLocation))) {
-                            updateDist(newLocation, getOpposite(d), newDist);
-                            queue.addFirst(newLocation);
-                            // imposible due to BFS
-                            //else if (getDist(newLocation) > (newDist)) {
-                            //    updateDist(newLocation, getOpposite(d), newDist);
-                            //}
-                        } else {
-                            used.add(newLocation);
-                        }
-                        if (isExit(newLocation)) {
-                            break forCompute;
-                        }
-                    } catch (OutsideMapException ex) {
-                    }
-                }
-            }
-
-            bfs.addFirst(newLocation);
-            while (!newLocation.equals(this)) {
-                try {
-                    newLocation = newLocation.add(bestDir[newLocation.row][newLocation.col]);
-                    bfs.addFirst(newLocation);
-                } catch (OutsideMapException ex) {
-                    System.err.println(ex);
-                }
-            }
         }
 
         public BFS getBFS() {
             return bfs;
-        }
-
-        private boolean isExit(Location current) {
-            return current.getValue() == EXIT;
-        }
-
-        private boolean isWall(Location current) {
-            return current.getValue() == IMPASSABLE_WALL;
-        }
-
-        private void resetDist(RobotLocation aThis) {
-            for (int r = 0; r < caveHeight; ++r) {
-                Arrays.fill(bestDist[r], Integer.MAX_VALUE);
-            }
-            bestDist[aThis.row][aThis.col] = 0;
-        }
-
-        private int getDist(Location current) {
-            return bestDist[current.row][current.col];
-        }
-
-        private void updateDist(Location newLocation, Directions opposite, int newDist) {
-            bestDir[newLocation.row][newLocation.col] = opposite;
-            bestDist[newLocation.row][newLocation.col] = newDist;
         }
 
         private boolean isActive() {
@@ -328,44 +329,34 @@ public class SynchronousControl {
         bestDist = new int[caveHeight][caveWidth];
         bestDir = new Directions[caveHeight][caveWidth];
         analyzeMap();
+        computeBFS();
         StringBuilder resultBuilder = new StringBuilder();
-        Set<RobotLocation> orderBFS = new TreeSet<RobotLocation>(new Comparator<RobotLocation>() {
-            //  @Override
-            public int compare(RobotLocation t, RobotLocation t1) {
-                return (t.getBFS().size() - t1.getBFS().size());
-            }
-        });
+
+
+
         ordersLoop:
-        do {
-            orderBFS.clear();
-            int nbActive = 0;
-            for (RobotLocation loc : robotsLocation) {
-                if (loc.isActive()) {
-                    nbActive++;
-                    loc.computeBFS();
-                    orderBFS.add(loc);
-//                    System.err.println(loc.getBFS());
-                }
-            }
-            if (nbActive == 0) {
-                break ordersLoop;
-            } else {
-                String orders = "";
+        for (RobotLocation loc : robotsLocation) {
+            while (loc.isActive()) {
                 try {
-                    RobotLocation shortestPath = orderBFS.iterator().next();
-//                    System.err.println(shortestPath);
-                    orders = shortestPath.computeOrders();
-                    resultBuilder.append(orders);
-                    for (RobotLocation loc : robotsLocation) {
-                        if (loc.isActive()) {
-                            loc.applyOrders(orders);
+                    char order = loc.orders(loc, loc.add(getDir(loc))).charAt(0);
+                    resultBuilder.append(order);
+                    for (RobotLocation l2 : robotsLocation) {
+                        if (l2.isActive()) {
+                            try {
+                                l2.applyOrders("" + order);
+                            } catch (Location.OutsideMapException ex) {
+                                ex.printStackTrace();
+                            }
                         }
                     }
+                    //                } catch (Location.OutsideMapException ex) {
+                    //                    System.err.println(ex);
+                    //                }
                 } catch (Location.OutsideMapException ex) {
-                    System.err.println(ex);
+                    ex.printStackTrace();
                 }
             }
-        } while (!orderBFS.isEmpty());
+        }
 //        System.err.println(resultBuilder);
         return resultBuilder.toString();
     }
