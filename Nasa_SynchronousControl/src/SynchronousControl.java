@@ -97,6 +97,22 @@ public class SynchronousControl {
         return bestDir[loc.row][loc.col];
     }
 
+    private int score(String f) {
+        int result = 0;
+        LinkedList<RobotLocation> afterOrders = new LinkedList<RobotLocation>();
+        for (RobotLocation loc : robotsLocation) {
+            if (loc.isActive()) {
+                afterOrders.add(loc.evalOrders(f));
+            } else {
+                afterOrders.add(loc);
+            }
+        }
+        for (RobotLocation r : afterOrders) {
+            result += getDist(r);
+        }
+        return result;
+    }
+
     public enum Directions {
 
         N, E, S, W
@@ -242,10 +258,10 @@ public class SynchronousControl {
         private String computeOrders() throws OutsideMapException {
             StringBuilder sb = new StringBuilder();
             RobotLocation current = new RobotLocation(row, col, dir);
-            for (int i = 0; i < (bfs.size() - 1); ++i) {
-                String orders = orders(current, bfs.get(i + 1));
-                current.applyOrders(orders);
-                sb.append(orders);
+            while (!isExit(current)) {
+                String o = orders(current, current.add(getDir(current)));
+                sb.append(o);
+                current.applyOrders(o);
             }
             return sb.toString();
         }
@@ -289,11 +305,22 @@ public class SynchronousControl {
             return sb.toString();
         }
 
-        private void applyOrders(String orders) throws OutsideMapException {
+        public RobotLocation evalOrders(String orders) {
+            RobotLocation result = new RobotLocation(row, col, dir);
+            result.applyOrders(orders);
+            return result;
+        }
+
+        private void applyOrders(String orders) {
+
             for (int i = 0; i < orders.length(); ++i) {
                 switch (orders.charAt(i)) {
                     case 'F':
-                        moveForward(dir);
+                        try {
+                            moveForward(dir);
+                        } catch (OutsideMapException ex) {
+                            ex.printStackTrace();
+                        }
                         break;
                     case 'R':
                         this.turnRight();
@@ -332,32 +359,43 @@ public class SynchronousControl {
         computeBFS();
         StringBuilder resultBuilder = new StringBuilder();
 
-
-
+        int nbActive;
         ordersLoop:
-        for (RobotLocation loc : robotsLocation) {
-            while (loc.isActive()) {
+        do {
+            int bscore = Integer.MAX_VALUE;
+            RobotLocation bloc = null;
+            String border = null;
+            nbActive = 0;
+
+            for (RobotLocation loc : robotsLocation) {
+                if (loc.isActive()) {
+                    ++nbActive;
+                }
+                String order;
                 try {
-                    char order = loc.orders(loc, loc.add(getDir(loc))).charAt(0);
-                    resultBuilder.append(order);
-                    for (RobotLocation l2 : robotsLocation) {
-                        if (l2.isActive()) {
-                            try {
-                                l2.applyOrders("" + order);
-                            } catch (Location.OutsideMapException ex) {
-                                ex.printStackTrace();
-                            }
-                        }
+                    order = loc.computeOrders();
+
+                    int s = score(order);
+                    if (s < bscore) {
+                        bloc = loc;
+                        bscore = s;
+                        border = order;
                     }
-                    //                } catch (Location.OutsideMapException ex) {
-                    //                    System.err.println(ex);
-                    //                }
                 } catch (Location.OutsideMapException ex) {
-                    ex.printStackTrace();
+                    Logger.getLogger(SynchronousControl.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-        }
-//        System.err.println(resultBuilder);
+            if (nbActive==0) {
+                break ordersLoop;
+            }
+            resultBuilder.append(border);
+            for (RobotLocation loc : robotsLocation) {
+                loc.applyOrders(border);
+            }
+            //                } catch (Location.OutsideMapException ex) {
+            //                    System.err.println(ex);
+            //                }
+        } while (nbActive > 0);//        System.err.println(resultBuilder);
         return resultBuilder.toString();
     }
     private LinkedList<RobotLocation> robotsLocation = new LinkedList<RobotLocation>();
