@@ -1,0 +1,191 @@
+JAVA PROFILE 1.0.1, created Fri May  3 16:32:49 2013
+
+Header for -agentlib:hprof (or -Xrunhprof) ASCII Output (JDK 5.0 JVMTI based)
+
+%W% %E%
+
+ Copyright (c) 2006 Sun Microsystems, Inc. All  Rights Reserved.
+
+WARNING!  This file format is under development, and is subject to
+change without notice.
+
+This file contains the following types of records:
+
+THREAD START
+THREAD END      mark the lifetime of Java threads
+
+TRACE           represents a Java stack trace.  Each trace consists
+                of a series of stack frames.  Other records refer to
+                TRACEs to identify (1) where object allocations have
+                taken place, (2) the frames in which GC roots were
+                found, and (3) frequently executed methods.
+
+HEAP DUMP       is a complete snapshot of all live objects in the Java
+                heap.  Following distinctions are made:
+
+                ROOT    root set as determined by GC
+                CLS     classes 
+                OBJ     instances
+                ARR     arrays
+
+SITES           is a sorted list of allocation sites.  This identifies
+                the most heavily allocated object types, and the TRACE
+                at which those allocations occurred.
+
+CPU SAMPLES     is a statistical profile of program execution.  The VM
+                periodically samples all running threads, and assigns
+                a quantum to active TRACEs in those threads.  Entries
+                in this record are TRACEs ranked by the percentage of
+                total quanta they consumed; top-ranked TRACEs are
+                typically hot spots in the program.
+
+CPU TIME        is a profile of program execution obtained by measuring
+                the time spent in individual methods (excluding the time
+                spent in callees), as well as by counting the number of
+                times each method is called. Entries in this record are
+                TRACEs ranked by the percentage of total CPU time. The
+                "count" field indicates the number of times each TRACE 
+                is invoked.
+
+MONITOR TIME    is a profile of monitor contention obtained by measuring
+                the time spent by a thread waiting to enter a monitor.
+                Entries in this record are TRACEs ranked by the percentage
+                of total monitor contention time and a brief description
+                of the monitor.  The "count" field indicates the number of 
+                times the monitor was contended at that TRACE.
+
+MONITOR DUMP    is a complete snapshot of all the monitors and threads in 
+                the System.
+
+HEAP DUMP, SITES, CPU SAMPLES|TIME and MONITOR DUMP|TIME records are generated 
+at program exit.  They can also be obtained during program execution by typing 
+Ctrl-\ (on Solaris) or by typing Ctrl-Break (on Win32).
+
+--------
+
+THREAD START (obj=50000153, id = 200001, name="main", group="main")
+THREAD END (id = 200001)
+THREAD START (obj=500002d2, id = 200005, name="DestroyJavaVM", group="main")
+THREAD START (obj=500002d7, id = 200007, name="SIGTERM handler", group="system")
+THREAD START (obj=500002d8, id = 200008, name="Thread-0", group="main")
+THREAD END (id = 200008)
+THREAD END (id = 200005)
+TRACE 300309:
+	FragileMirrors.play(FragileMirrors.java:255)
+	FragileMirrors.eval(FragileMirrors.java:204)
+	FragileMirrors.destroy(FragileMirrors.java:146)
+	FragileMirrors.main(FragileMirrors.java:176)
+TRACE 300307:
+	java.util.AbstractList.iterator(AbstractList.java:273)
+	FragileMirrors.eval(FragileMirrors.java:203)
+	FragileMirrors.destroy(FragileMirrors.java:146)
+	FragileMirrors.main(FragileMirrors.java:176)
+TRACE 300304:
+	java.lang.System.arraycopy(System.java:Unknown line)
+	FragileMirrors$Board.resetFrom(FragileMirrors.java:46)
+	FragileMirrors.resetCopyBoard(FragileMirrors.java:197)
+	FragileMirrors.eval(FragileMirrors.java:202)
+TRACE 300203:
+	java.util.zip.ZipFile.read(ZipFile.java:Unknown line)
+	java.util.zip.ZipFile.access$1200(ZipFile.java:31)
+	java.util.zip.ZipFile$ZipFileInputStream.read(ZipFile.java:459)
+	sun.misc.Resource.getBytes(Resource.java:108)
+TRACE 300266:
+	sun.net.www.ParseUtil.decode(ParseUtil.java:155)
+	sun.misc.FileURLMapper.getPath(FileURLMapper.java:47)
+	sun.misc.FileURLMapper.exists(FileURLMapper.java:56)
+	sun.misc.URLClassPath$JarLoader.getJarFile(URLClassPath.java:643)
+TRACE 300313:
+	FragileMirrors.destroy(FragileMirrors.java:146)
+	FragileMirrors.main(FragileMirrors.java:176)
+TRACE 300044:
+	sun.security.util.ManifestDigester.<init>(ManifestDigester.java:103)
+	java.util.jar.JarVerifier.processEntry(JarVerifier.java:261)
+	java.util.jar.JarVerifier.update(JarVerifier.java:199)
+	java.util.jar.JarFile.initializeVerifier(JarFile.java:327)
+TRACE 300196:
+	sun.misc.Unsafe.getInt(Unsafe.java:Unknown line)
+	sun.security.provider.ByteArrayAccess.b2iBig64(ByteArrayAccess.java:235)
+	sun.security.provider.SHA.implCompress(SHA.java:105)
+	sun.security.provider.DigestBase.engineUpdate(DigestBase.java:122)
+TRACE 300190:
+	java.math.BigInteger.multiplyToLen(BigInteger.java:1212)
+	java.math.BigInteger.oddModPow(BigInteger.java:1808)
+	java.math.BigInteger.modPow(BigInteger.java:1571)
+	sun.security.provider.DSA.generateV(DSA.java:374)
+TRACE 300089:
+	sun.security.provider.NativePRNG$1.run(NativePRNG.java:68)
+	java.security.AccessController.doPrivileged(AccessController.java:Unknown line)
+	sun.security.provider.NativePRNG.initIO(NativePRNG.java:57)
+	sun.security.provider.NativePRNG.<clinit>(NativePRNG.java:54)
+TRACE 300166:
+	java.lang.AbstractStringBuilder.<init>(AbstractStringBuilder.java:45)
+	java.lang.StringBuilder.<init>(StringBuilder.java:68)
+	sun.security.x509.AVA.toRFC2253CanonicalString(AVA.java:920)
+	sun.security.x509.RDN.toRFC2253StringInternal(RDN.java:430)
+TRACE 300035:
+	java.net.URLStreamHandler.parseURL(URLStreamHandler.java:112)
+	sun.net.www.protocol.file.Handler.parseURL(Handler.java:50)
+	java.net.URL.<init>(URL.java:596)
+	java.net.URL.<init>(URL.java:464)
+TRACE 300301:
+	java.util.regex.Pattern$Dot.isSatisfiedBy(Pattern.java:3662)
+	java.util.regex.Pattern$CharProperty.match(Pattern.java:3345)
+	java.util.regex.Pattern$Curly.match0(Pattern.java:3770)
+	java.util.regex.Pattern$Curly.match(Pattern.java:3744)
+TRACE 300302:
+	java.util.Arrays.copyOf(Arrays.java:2760)
+	java.util.Arrays.copyOf(Arrays.java:2734)
+	java.util.ArrayList.ensureCapacity(ArrayList.java:167)
+	java.util.ArrayList.add(ArrayList.java:351)
+TRACE 300303:
+	java.lang.Object.clone(Object.java:Unknown line)
+	java.util.ArrayList.clone(ArrayList.java:250)
+	FragileMirrors.destroy(FragileMirrors.java:135)
+	FragileMirrors.main(FragileMirrors.java:176)
+TRACE 300127:
+	sun.security.x509.X509Key.buildX509Key(X509Key.java:203)
+	sun.security.x509.X509Key.parse(X509Key.java:153)
+	sun.security.x509.CertificateX509Key.<init>(CertificateX509Key.java:58)
+	sun.security.x509.X509CertInfo.parse(X509CertInfo.java:688)
+TRACE 300305:
+	java.util.AbstractList$Itr.<init>(AbstractList.java:329)
+	java.util.AbstractList$Itr.<init>(AbstractList.java:318)
+	java.util.AbstractList.iterator(AbstractList.java:273)
+	FragileMirrors.eval(FragileMirrors.java:203)
+TRACE 300308:
+	FragileMirrors.destroy(FragileMirrors.java:145)
+	FragileMirrors.main(FragileMirrors.java:176)
+TRACE 300310:
+	java.lang.System.arraycopy(System.java:Unknown line)
+	java.lang.String.getChars(String.java:854)
+	java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:391)
+	java.lang.StringBuilder.append(StringBuilder.java:119)
+TRACE 300311:
+	java.util.AbstractList.iterator(AbstractList.java:273)
+	FragileMirrors.eval(FragileMirrors.java:203)
+	FragileMirrors.destroy(FragileMirrors.java:146)
+	FragileMirrors.main(FragileMirrors.java:176)
+CPU SAMPLES BEGIN (total = 100) Fri May  3 16:32:50 2013
+rank   self  accum   count trace method
+   1 59.00% 59.00%      59 300309 FragileMirrors.play
+   2 21.00% 80.00%      21 300307 java.util.AbstractList.iterator
+   3  2.00% 82.00%       2 300304 java.lang.System.arraycopy
+   4  2.00% 84.00%       2 300203 java.util.zip.ZipFile.read
+   5  1.00% 85.00%       1 300266 sun.net.www.ParseUtil.decode
+   6  1.00% 86.00%       1 300313 FragileMirrors.destroy
+   7  1.00% 87.00%       1 300044 sun.security.util.ManifestDigester.<init>
+   8  1.00% 88.00%       1 300196 sun.misc.Unsafe.getInt
+   9  1.00% 89.00%       1 300190 java.math.BigInteger.multiplyToLen
+  10  1.00% 90.00%       1 300089 sun.security.provider.NativePRNG$1.run
+  11  1.00% 91.00%       1 300166 java.lang.AbstractStringBuilder.<init>
+  12  1.00% 92.00%       1 300035 java.net.URLStreamHandler.parseURL
+  13  1.00% 93.00%       1 300301 java.util.regex.Pattern$Dot.isSatisfiedBy
+  14  1.00% 94.00%       1 300302 java.util.Arrays.copyOf
+  15  1.00% 95.00%       1 300303 java.lang.Object.clone
+  16  1.00% 96.00%       1 300127 sun.security.x509.X509Key.buildX509Key
+  17  1.00% 97.00%       1 300305 java.util.AbstractList$Itr.<init>
+  18  1.00% 98.00%       1 300308 FragileMirrors.destroy
+  19  1.00% 99.00%       1 300310 java.lang.System.arraycopy
+  20  1.00% 100.00%       1 300311 java.util.AbstractList.iterator
+CPU SAMPLES END
