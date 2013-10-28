@@ -1,0 +1,4 @@
+1.1.2 offer() instead of put() - Not fixed. The client confirmed that put() is preferred ("Therefore, put() is fine, and may be preferred"): http://apps.topcoder.com/forums/?module=Thread&threadID=802128
+1.1.2 Added caching of PreparedStatements in DBRecentMatchedRecordCountCriteriaPersistence: added 2 attributes, fixed impl notes and SDs
+1.1.2 Selena#3 should be recommended according to Appeal Response.
+1.1.3 Fixed

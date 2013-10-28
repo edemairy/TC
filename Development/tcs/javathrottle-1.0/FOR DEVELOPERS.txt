@@ -1,0 +1,12 @@
+Taking into account that TopCoder UML Tool stub code generator is far from perfect, and doesn't use advantage of specific style of my designs, I decided to upgrade it a little bit.
+
+You can find a source code of this component in generated_source_code.zip. It was produced with the advanced source code generator mentioned above. Its main features are:
+- Word-wrapping is used for javadoc.
+- Implementation notes are converted to source code and put directly to the method body instead of javadoc.
+- "throws" declaration is produced for methods.
+- "imports" are produced much more accurately.
+
+Feel free to use this code as a base for your submission, but don't forget:
+The provided TCUML has a higher priority than the generated source code (in case if generator produced some error).
+
+Good luck in the competition!
